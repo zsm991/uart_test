@@ -1,0 +1,1600 @@
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"stm32f10x_dac.c"
+  23              	.Ltext0:
+  24              		.file 1 "../StdPeripheralDriver/src/stm32f10x_dac.c"
+ 16967              		.align	2
+ 16968              		.global	DAC_DeInit
+ 16969              		.thumb
+ 16970              		.thumb_func
+ 16972              	DAC_DeInit:
+ 16973              	.LFB29:
+   1:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+   2:../StdPeripheralDriver/src/stm32f10x_dac.c ****   ******************************************************************************
+   3:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @file    stm32f10x_dac.c
+   4:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @author  MCD Application Team
+   5:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @version V3.5.0
+   6:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @date    11-March-2011
+   7:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @brief   This file provides all the DAC firmware functions.
+   8:../StdPeripheralDriver/src/stm32f10x_dac.c ****   ******************************************************************************
+   9:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @attention
+  10:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *
+  11:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+  12:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
+  13:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY
+  14:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
+  15:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
+  16:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+  17:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *
+  18:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * <h2><center>&copy; COPYRIGHT 2011 STMicroelectronics</center></h2>
+  19:../StdPeripheralDriver/src/stm32f10x_dac.c ****   ******************************************************************************
+  20:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+  21:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+  22:../StdPeripheralDriver/src/stm32f10x_dac.c **** /* Includes ------------------------------------------------------------------*/
+  23:../StdPeripheralDriver/src/stm32f10x_dac.c **** #include "stm32f10x_dac.h"
+  24:../StdPeripheralDriver/src/stm32f10x_dac.c **** #include "stm32f10x_rcc.h"
+  25:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+  26:../StdPeripheralDriver/src/stm32f10x_dac.c **** /** @addtogroup STM32F10x_StdPeriph_Driver
+  27:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @{
+  28:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+  29:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+  30:../StdPeripheralDriver/src/stm32f10x_dac.c **** /** @defgroup DAC 
+  31:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @brief DAC driver modules
+  32:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @{
+  33:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */ 
+  34:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+  35:../StdPeripheralDriver/src/stm32f10x_dac.c **** /** @defgroup DAC_Private_TypesDefinitions
+  36:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @{
+  37:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+  38:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+  39:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+  40:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @}
+  41:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+  42:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+  43:../StdPeripheralDriver/src/stm32f10x_dac.c **** /** @defgroup DAC_Private_Defines
+  44:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @{
+  45:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+  46:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+  47:../StdPeripheralDriver/src/stm32f10x_dac.c **** /* CR register Mask */
+  48:../StdPeripheralDriver/src/stm32f10x_dac.c **** #define CR_CLEAR_MASK              ((uint32_t)0x00000FFE)
+  49:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+  50:../StdPeripheralDriver/src/stm32f10x_dac.c **** /* DAC Dual Channels SWTRIG masks */
+  51:../StdPeripheralDriver/src/stm32f10x_dac.c **** #define DUAL_SWTRIG_SET            ((uint32_t)0x00000003)
+  52:../StdPeripheralDriver/src/stm32f10x_dac.c **** #define DUAL_SWTRIG_RESET          ((uint32_t)0xFFFFFFFC)
+  53:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+  54:../StdPeripheralDriver/src/stm32f10x_dac.c **** /* DHR registers offsets */
+  55:../StdPeripheralDriver/src/stm32f10x_dac.c **** #define DHR12R1_OFFSET             ((uint32_t)0x00000008)
+  56:../StdPeripheralDriver/src/stm32f10x_dac.c **** #define DHR12R2_OFFSET             ((uint32_t)0x00000014)
+  57:../StdPeripheralDriver/src/stm32f10x_dac.c **** #define DHR12RD_OFFSET             ((uint32_t)0x00000020)
+  58:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+  59:../StdPeripheralDriver/src/stm32f10x_dac.c **** /* DOR register offset */
+  60:../StdPeripheralDriver/src/stm32f10x_dac.c **** #define DOR_OFFSET                 ((uint32_t)0x0000002C)
+  61:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+  62:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @}
+  63:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+  64:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+  65:../StdPeripheralDriver/src/stm32f10x_dac.c **** /** @defgroup DAC_Private_Macros
+  66:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @{
+  67:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+  68:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+  69:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+  70:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @}
+  71:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+  72:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+  73:../StdPeripheralDriver/src/stm32f10x_dac.c **** /** @defgroup DAC_Private_Variables
+  74:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @{
+  75:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+  76:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+  77:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+  78:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @}
+  79:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+  80:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+  81:../StdPeripheralDriver/src/stm32f10x_dac.c **** /** @defgroup DAC_Private_FunctionPrototypes
+  82:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @{
+  83:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+  84:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+  85:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+  86:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @}
+  87:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+  88:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+  89:../StdPeripheralDriver/src/stm32f10x_dac.c **** /** @defgroup DAC_Private_Functions
+  90:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @{
+  91:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+  92:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+  93:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+  94:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @brief  Deinitializes the DAC peripheral registers to their default reset values.
+  95:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  None
+  96:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @retval None
+  97:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+  98:../StdPeripheralDriver/src/stm32f10x_dac.c **** void DAC_DeInit(void)
+  99:../StdPeripheralDriver/src/stm32f10x_dac.c **** {
+ 16974              		.loc 1 99 0
+ 16975              		.cfi_startproc
+ 16976              		@ args = 0, pretend = 0, frame = 0
+ 16977              		@ frame_needed = 1, uses_anonymous_args = 0
+ 16978 0000 80B5     		push	{r7, lr}
+ 16979              	.LCFI0:
+ 16980              		.cfi_def_cfa_offset 8
+ 16981 0002 00AF     		add	r7, sp, #0
+ 16982              		.cfi_offset 14, -4
+ 16983              		.cfi_offset 7, -8
+ 16984              	.LCFI1:
+ 16985              		.cfi_def_cfa_register 7
+ 100:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Enable DAC reset state */
+ 101:../StdPeripheralDriver/src/stm32f10x_dac.c ****   RCC_APB1PeriphResetCmd(RCC_APB1Periph_DAC, ENABLE);
+ 16986              		.loc 1 101 0
+ 16987 0004 4FF00050 		mov	r0, #536870912
+ 16988 0008 4FF00101 		mov	r1, #1
+ 16989 000c FFF7FEFF 		bl	RCC_APB1PeriphResetCmd
+ 102:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Release DAC from reset state */
+ 103:../StdPeripheralDriver/src/stm32f10x_dac.c ****   RCC_APB1PeriphResetCmd(RCC_APB1Periph_DAC, DISABLE);
+ 16990              		.loc 1 103 0
+ 16991 0010 4FF00050 		mov	r0, #536870912
+ 16992 0014 4FF00001 		mov	r1, #0
+ 16993 0018 FFF7FEFF 		bl	RCC_APB1PeriphResetCmd
+ 104:../StdPeripheralDriver/src/stm32f10x_dac.c **** }
+ 16994              		.loc 1 104 0
+ 16995 001c 80BD     		pop	{r7, pc}
+ 16996              		.cfi_endproc
+ 16997              	.LFE29:
+ 16999 001e 00BF     		.section	.text.DAC_Init,"ax",%progbits
+ 17000              		.align	2
+ 17001              		.global	DAC_Init
+ 17002              		.thumb
+ 17003              		.thumb_func
+ 17005              	DAC_Init:
+ 17006              	.LFB30:
+ 105:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 106:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+ 107:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @brief  Initializes the DAC peripheral according to the specified 
+ 108:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *         parameters in the DAC_InitStruct.
+ 109:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_Channel: the selected DAC channel. 
+ 110:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be one of the following values:
+ 111:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_1: DAC Channel1 selected
+ 112:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_2: DAC Channel2 selected
+ 113:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_InitStruct: pointer to a DAC_InitTypeDef structure that
+ 114:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *        contains the configuration information for the specified DAC channel.
+ 115:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @retval None
+ 116:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+ 117:../StdPeripheralDriver/src/stm32f10x_dac.c **** void DAC_Init(uint32_t DAC_Channel, DAC_InitTypeDef* DAC_InitStruct)
+ 118:../StdPeripheralDriver/src/stm32f10x_dac.c **** {
+ 17007              		.loc 1 118 0
+ 17008              		.cfi_startproc
+ 17009              		@ args = 0, pretend = 0, frame = 16
+ 17010              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17011              		@ link register save eliminated.
+ 17012 0000 80B4     		push	{r7}
+ 17013              	.LCFI2:
+ 17014              		.cfi_def_cfa_offset 4
+ 17015 0002 85B0     		sub	sp, sp, #20
+ 17016              	.LCFI3:
+ 17017              		.cfi_def_cfa_offset 24
+ 17018 0004 00AF     		add	r7, sp, #0
+ 17019              		.cfi_offset 7, -4
+ 17020              	.LCFI4:
+ 17021              		.cfi_def_cfa_register 7
+ 17022 0006 7860     		str	r0, [r7, #4]
+ 17023 0008 3960     		str	r1, [r7, #0]
+ 119:../StdPeripheralDriver/src/stm32f10x_dac.c ****   uint32_t tmpreg1 = 0, tmpreg2 = 0;
+ 17024              		.loc 1 119 0
+ 17025 000a 4FF00003 		mov	r3, #0
+ 17026 000e FB60     		str	r3, [r7, #12]
+ 17027 0010 4FF00003 		mov	r3, #0
+ 17028 0014 BB60     		str	r3, [r7, #8]
+ 120:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Check the DAC parameters */
+ 121:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_TRIGGER(DAC_InitStruct->DAC_Trigger));
+ 122:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_GENERATE_WAVE(DAC_InitStruct->DAC_WaveGeneration));
+ 123:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_LFSR_UNMASK_TRIANGLE_AMPLITUDE(DAC_InitStruct->DAC_LFSRUnmask_TriangleAmplitu
+ 124:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_OUTPUT_BUFFER_STATE(DAC_InitStruct->DAC_OutputBuffer));
+ 125:../StdPeripheralDriver/src/stm32f10x_dac.c **** /*---------------------------- DAC CR Configuration --------------------------*/
+ 126:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Get the DAC CR value */
+ 127:../StdPeripheralDriver/src/stm32f10x_dac.c ****   tmpreg1 = DAC->CR;
+ 17029              		.loc 1 127 0
+ 17030 0016 154B     		ldr	r3, .L3
+ 17031 0018 1B68     		ldr	r3, [r3, #0]
+ 17032 001a FB60     		str	r3, [r7, #12]
+ 128:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Clear BOFFx, TENx, TSELx, WAVEx and MAMPx bits */
+ 129:../StdPeripheralDriver/src/stm32f10x_dac.c ****   tmpreg1 &= ~(CR_CLEAR_MASK << DAC_Channel);
+ 17033              		.loc 1 129 0
+ 17034 001c 7B68     		ldr	r3, [r7, #4]
+ 17035 001e 40F6FE72 		movw	r2, #4094
+ 17036 0022 02FA03F3 		lsl	r3, r2, r3
+ 17037 0026 6FEA0303 		mvn	r3, r3
+ 17038 002a FA68     		ldr	r2, [r7, #12]
+ 17039 002c 02EA0303 		and	r3, r2, r3
+ 17040 0030 FB60     		str	r3, [r7, #12]
+ 130:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Configure for the selected DAC channel: buffer output, trigger, wave generation,
+ 131:../StdPeripheralDriver/src/stm32f10x_dac.c ****      mask/amplitude for wave generation */
+ 132:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Set TSELx and TENx bits according to DAC_Trigger value */
+ 133:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Set WAVEx bits according to DAC_WaveGeneration value */
+ 134:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Set MAMPx bits according to DAC_LFSRUnmask_TriangleAmplitude value */ 
+ 135:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Set BOFFx bit according to DAC_OutputBuffer value */   
+ 136:../StdPeripheralDriver/src/stm32f10x_dac.c ****   tmpreg2 = (DAC_InitStruct->DAC_Trigger | DAC_InitStruct->DAC_WaveGeneration |
+ 17041              		.loc 1 136 0
+ 17042 0032 3B68     		ldr	r3, [r7, #0]
+ 17043 0034 1A68     		ldr	r2, [r3, #0]
+ 17044 0036 3B68     		ldr	r3, [r7, #0]
+ 17045 0038 5B68     		ldr	r3, [r3, #4]
+ 17046 003a 1A43     		orrs	r2, r2, r3
+ 137:../StdPeripheralDriver/src/stm32f10x_dac.c ****              DAC_InitStruct->DAC_LFSRUnmask_TriangleAmplitude | DAC_InitStruct->DAC_OutputBuffer);
+ 17047              		.loc 1 137 0
+ 17048 003c 3B68     		ldr	r3, [r7, #0]
+ 17049 003e 9B68     		ldr	r3, [r3, #8]
+ 136:../StdPeripheralDriver/src/stm32f10x_dac.c ****   tmpreg2 = (DAC_InitStruct->DAC_Trigger | DAC_InitStruct->DAC_WaveGeneration |
+ 17050              		.loc 1 136 0
+ 17051 0040 1A43     		orrs	r2, r2, r3
+ 17052              		.loc 1 137 0
+ 17053 0042 3B68     		ldr	r3, [r7, #0]
+ 17054 0044 DB68     		ldr	r3, [r3, #12]
+ 136:../StdPeripheralDriver/src/stm32f10x_dac.c ****   tmpreg2 = (DAC_InitStruct->DAC_Trigger | DAC_InitStruct->DAC_WaveGeneration |
+ 17055              		.loc 1 136 0
+ 17056 0046 42EA0303 		orr	r3, r2, r3
+ 17057 004a BB60     		str	r3, [r7, #8]
+ 138:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Calculate CR register value depending on DAC_Channel */
+ 139:../StdPeripheralDriver/src/stm32f10x_dac.c ****   tmpreg1 |= tmpreg2 << DAC_Channel;
+ 17058              		.loc 1 139 0
+ 17059 004c 7B68     		ldr	r3, [r7, #4]
+ 17060 004e BA68     		ldr	r2, [r7, #8]
+ 17061 0050 02FA03F3 		lsl	r3, r2, r3
+ 17062 0054 FA68     		ldr	r2, [r7, #12]
+ 17063 0056 42EA0303 		orr	r3, r2, r3
+ 17064 005a FB60     		str	r3, [r7, #12]
+ 140:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Write to DAC CR */
+ 141:../StdPeripheralDriver/src/stm32f10x_dac.c ****   DAC->CR = tmpreg1;
+ 17065              		.loc 1 141 0
+ 17066 005c 034B     		ldr	r3, .L3
+ 17067 005e FA68     		ldr	r2, [r7, #12]
+ 17068 0060 1A60     		str	r2, [r3, #0]
+ 142:../StdPeripheralDriver/src/stm32f10x_dac.c **** }
+ 17069              		.loc 1 142 0
+ 17070 0062 07F11407 		add	r7, r7, #20
+ 17071 0066 BD46     		mov	sp, r7
+ 17072 0068 80BC     		pop	{r7}
+ 17073 006a 7047     		bx	lr
+ 17074              	.L4:
+ 17075              		.align	2
+ 17076              	.L3:
+ 17077 006c 00740040 		.word	1073771520
+ 17078              		.cfi_endproc
+ 17079              	.LFE30:
+ 17081              		.section	.text.DAC_StructInit,"ax",%progbits
+ 17082              		.align	2
+ 17083              		.global	DAC_StructInit
+ 17084              		.thumb
+ 17085              		.thumb_func
+ 17087              	DAC_StructInit:
+ 17088              	.LFB31:
+ 143:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 144:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+ 145:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @brief  Fills each DAC_InitStruct member with its default value.
+ 146:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_InitStruct : pointer to a DAC_InitTypeDef structure which will
+ 147:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *         be initialized.
+ 148:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @retval None
+ 149:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+ 150:../StdPeripheralDriver/src/stm32f10x_dac.c **** void DAC_StructInit(DAC_InitTypeDef* DAC_InitStruct)
+ 151:../StdPeripheralDriver/src/stm32f10x_dac.c **** {
+ 17089              		.loc 1 151 0
+ 17090              		.cfi_startproc
+ 17091              		@ args = 0, pretend = 0, frame = 8
+ 17092              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17093              		@ link register save eliminated.
+ 17094 0000 80B4     		push	{r7}
+ 17095              	.LCFI5:
+ 17096              		.cfi_def_cfa_offset 4
+ 17097 0002 83B0     		sub	sp, sp, #12
+ 17098              	.LCFI6:
+ 17099              		.cfi_def_cfa_offset 16
+ 17100 0004 00AF     		add	r7, sp, #0
+ 17101              		.cfi_offset 7, -4
+ 17102              	.LCFI7:
+ 17103              		.cfi_def_cfa_register 7
+ 17104 0006 7860     		str	r0, [r7, #4]
+ 152:../StdPeripheralDriver/src/stm32f10x_dac.c **** /*--------------- Reset DAC init structure parameters values -----------------*/
+ 153:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Initialize the DAC_Trigger member */
+ 154:../StdPeripheralDriver/src/stm32f10x_dac.c ****   DAC_InitStruct->DAC_Trigger = DAC_Trigger_None;
+ 17105              		.loc 1 154 0
+ 17106 0008 7B68     		ldr	r3, [r7, #4]
+ 17107 000a 4FF00002 		mov	r2, #0
+ 17108 000e 1A60     		str	r2, [r3, #0]
+ 155:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Initialize the DAC_WaveGeneration member */
+ 156:../StdPeripheralDriver/src/stm32f10x_dac.c ****   DAC_InitStruct->DAC_WaveGeneration = DAC_WaveGeneration_None;
+ 17109              		.loc 1 156 0
+ 17110 0010 7B68     		ldr	r3, [r7, #4]
+ 17111 0012 4FF00002 		mov	r2, #0
+ 17112 0016 5A60     		str	r2, [r3, #4]
+ 157:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Initialize the DAC_LFSRUnmask_TriangleAmplitude member */
+ 158:../StdPeripheralDriver/src/stm32f10x_dac.c ****   DAC_InitStruct->DAC_LFSRUnmask_TriangleAmplitude = DAC_LFSRUnmask_Bit0;
+ 17113              		.loc 1 158 0
+ 17114 0018 7B68     		ldr	r3, [r7, #4]
+ 17115 001a 4FF00002 		mov	r2, #0
+ 17116 001e 9A60     		str	r2, [r3, #8]
+ 159:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Initialize the DAC_OutputBuffer member */
+ 160:../StdPeripheralDriver/src/stm32f10x_dac.c ****   DAC_InitStruct->DAC_OutputBuffer = DAC_OutputBuffer_Enable;
+ 17117              		.loc 1 160 0
+ 17118 0020 7B68     		ldr	r3, [r7, #4]
+ 17119 0022 4FF00002 		mov	r2, #0
+ 17120 0026 DA60     		str	r2, [r3, #12]
+ 161:../StdPeripheralDriver/src/stm32f10x_dac.c **** }
+ 17121              		.loc 1 161 0
+ 17122 0028 07F10C07 		add	r7, r7, #12
+ 17123 002c BD46     		mov	sp, r7
+ 17124 002e 80BC     		pop	{r7}
+ 17125 0030 7047     		bx	lr
+ 17126              		.cfi_endproc
+ 17127              	.LFE31:
+ 17129 0032 00BF     		.section	.text.DAC_Cmd,"ax",%progbits
+ 17130              		.align	2
+ 17131              		.global	DAC_Cmd
+ 17132              		.thumb
+ 17133              		.thumb_func
+ 17135              	DAC_Cmd:
+ 17136              	.LFB32:
+ 162:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 163:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+ 164:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @brief  Enables or disables the specified DAC channel.
+ 165:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_Channel: the selected DAC channel. 
+ 166:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be one of the following values:
+ 167:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_1: DAC Channel1 selected
+ 168:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_2: DAC Channel2 selected
+ 169:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  NewState: new state of the DAC channel. 
+ 170:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be: ENABLE or DISABLE.
+ 171:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @retval None
+ 172:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+ 173:../StdPeripheralDriver/src/stm32f10x_dac.c **** void DAC_Cmd(uint32_t DAC_Channel, FunctionalState NewState)
+ 174:../StdPeripheralDriver/src/stm32f10x_dac.c **** {
+ 17137              		.loc 1 174 0
+ 17138              		.cfi_startproc
+ 17139              		@ args = 0, pretend = 0, frame = 8
+ 17140              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17141              		@ link register save eliminated.
+ 17142 0000 80B4     		push	{r7}
+ 17143              	.LCFI8:
+ 17144              		.cfi_def_cfa_offset 4
+ 17145 0002 83B0     		sub	sp, sp, #12
+ 17146              	.LCFI9:
+ 17147              		.cfi_def_cfa_offset 16
+ 17148 0004 00AF     		add	r7, sp, #0
+ 17149              		.cfi_offset 7, -4
+ 17150              	.LCFI10:
+ 17151              		.cfi_def_cfa_register 7
+ 17152 0006 7860     		str	r0, [r7, #4]
+ 17153 0008 0B46     		mov	r3, r1
+ 17154 000a FB70     		strb	r3, [r7, #3]
+ 175:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Check the parameters */
+ 176:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_CHANNEL(DAC_Channel));
+ 177:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
+ 178:../StdPeripheralDriver/src/stm32f10x_dac.c ****   if (NewState != DISABLE)
+ 17155              		.loc 1 178 0
+ 17156 000c FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 17157 000e 002B     		cmp	r3, #0
+ 17158 0010 0BD0     		beq	.L7
+ 179:../StdPeripheralDriver/src/stm32f10x_dac.c ****   {
+ 180:../StdPeripheralDriver/src/stm32f10x_dac.c ****     /* Enable the selected DAC channel */
+ 181:../StdPeripheralDriver/src/stm32f10x_dac.c ****     DAC->CR |= (DAC_CR_EN1 << DAC_Channel);
+ 17159              		.loc 1 181 0
+ 17160 0012 0F4B     		ldr	r3, .L9
+ 17161 0014 0E4A     		ldr	r2, .L9
+ 17162 0016 1168     		ldr	r1, [r2, #0]
+ 17163 0018 7A68     		ldr	r2, [r7, #4]
+ 17164 001a 4FF00100 		mov	r0, #1
+ 17165 001e 00FA02F2 		lsl	r2, r0, r2
+ 17166 0022 41EA0202 		orr	r2, r1, r2
+ 17167 0026 1A60     		str	r2, [r3, #0]
+ 17168 0028 0CE0     		b	.L6
+ 17169              	.L7:
+ 182:../StdPeripheralDriver/src/stm32f10x_dac.c ****   }
+ 183:../StdPeripheralDriver/src/stm32f10x_dac.c ****   else
+ 184:../StdPeripheralDriver/src/stm32f10x_dac.c ****   {
+ 185:../StdPeripheralDriver/src/stm32f10x_dac.c ****     /* Disable the selected DAC channel */
+ 186:../StdPeripheralDriver/src/stm32f10x_dac.c ****     DAC->CR &= ~(DAC_CR_EN1 << DAC_Channel);
+ 17170              		.loc 1 186 0
+ 17171 002a 094B     		ldr	r3, .L9
+ 17172 002c 084A     		ldr	r2, .L9
+ 17173 002e 1168     		ldr	r1, [r2, #0]
+ 17174 0030 7A68     		ldr	r2, [r7, #4]
+ 17175 0032 4FF00100 		mov	r0, #1
+ 17176 0036 00FA02F2 		lsl	r2, r0, r2
+ 17177 003a 6FEA0202 		mvn	r2, r2
+ 17178 003e 01EA0202 		and	r2, r1, r2
+ 17179 0042 1A60     		str	r2, [r3, #0]
+ 17180              	.L6:
+ 187:../StdPeripheralDriver/src/stm32f10x_dac.c ****   }
+ 188:../StdPeripheralDriver/src/stm32f10x_dac.c **** }
+ 17181              		.loc 1 188 0
+ 17182 0044 07F10C07 		add	r7, r7, #12
+ 17183 0048 BD46     		mov	sp, r7
+ 17184 004a 80BC     		pop	{r7}
+ 17185 004c 7047     		bx	lr
+ 17186              	.L10:
+ 17187 004e 00BF     		.align	2
+ 17188              	.L9:
+ 17189 0050 00740040 		.word	1073771520
+ 17190              		.cfi_endproc
+ 17191              	.LFE32:
+ 17193              		.section	.text.DAC_ITConfig,"ax",%progbits
+ 17194              		.align	2
+ 17195              		.global	DAC_ITConfig
+ 17196              		.thumb
+ 17197              		.thumb_func
+ 17199              	DAC_ITConfig:
+ 17200              	.LFB33:
+ 189:../StdPeripheralDriver/src/stm32f10x_dac.c **** #if defined (STM32F10X_LD_VL) || defined (STM32F10X_MD_VL) || defined (STM32F10X_HD_VL)
+ 190:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+ 191:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @brief  Enables or disables the specified DAC interrupts.
+ 192:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_Channel: the selected DAC channel. 
+ 193:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be one of the following values:
+ 194:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_1: DAC Channel1 selected
+ 195:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_2: DAC Channel2 selected
+ 196:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_IT: specifies the DAC interrupt sources to be enabled or disabled. 
+ 197:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be the following values:
+ 198:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_IT_DMAUDR: DMA underrun interrupt mask                      
+ 199:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  NewState: new state of the specified DAC interrupts.
+ 200:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be: ENABLE or DISABLE.
+ 201:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @retval None
+ 202:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */ 
+ 203:../StdPeripheralDriver/src/stm32f10x_dac.c **** void DAC_ITConfig(uint32_t DAC_Channel, uint32_t DAC_IT, FunctionalState NewState)  
+ 204:../StdPeripheralDriver/src/stm32f10x_dac.c **** {
+ 17201              		.loc 1 204 0
+ 17202              		.cfi_startproc
+ 17203              		@ args = 0, pretend = 0, frame = 16
+ 17204              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17205              		@ link register save eliminated.
+ 17206 0000 80B4     		push	{r7}
+ 17207              	.LCFI11:
+ 17208              		.cfi_def_cfa_offset 4
+ 17209 0002 85B0     		sub	sp, sp, #20
+ 17210              	.LCFI12:
+ 17211              		.cfi_def_cfa_offset 24
+ 17212 0004 00AF     		add	r7, sp, #0
+ 17213              		.cfi_offset 7, -4
+ 17214              	.LCFI13:
+ 17215              		.cfi_def_cfa_register 7
+ 17216 0006 F860     		str	r0, [r7, #12]
+ 17217 0008 B960     		str	r1, [r7, #8]
+ 17218 000a 1346     		mov	r3, r2
+ 17219 000c FB71     		strb	r3, [r7, #7]
+ 205:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Check the parameters */
+ 206:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_CHANNEL(DAC_Channel));
+ 207:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
+ 208:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_IT(DAC_IT)); 
+ 209:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 210:../StdPeripheralDriver/src/stm32f10x_dac.c ****   if (NewState != DISABLE)
+ 17220              		.loc 1 210 0
+ 17221 000e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 17222 0010 002B     		cmp	r3, #0
+ 17223 0012 0AD0     		beq	.L12
+ 211:../StdPeripheralDriver/src/stm32f10x_dac.c ****   {
+ 212:../StdPeripheralDriver/src/stm32f10x_dac.c ****     /* Enable the selected DAC interrupts */
+ 213:../StdPeripheralDriver/src/stm32f10x_dac.c ****     DAC->CR |=  (DAC_IT << DAC_Channel);
+ 17224              		.loc 1 213 0
+ 17225 0014 0D4B     		ldr	r3, .L14
+ 17226 0016 0D4A     		ldr	r2, .L14
+ 17227 0018 1168     		ldr	r1, [r2, #0]
+ 17228 001a FA68     		ldr	r2, [r7, #12]
+ 17229 001c B868     		ldr	r0, [r7, #8]
+ 17230 001e 00FA02F2 		lsl	r2, r0, r2
+ 17231 0022 41EA0202 		orr	r2, r1, r2
+ 17232 0026 1A60     		str	r2, [r3, #0]
+ 17233 0028 0BE0     		b	.L11
+ 17234              	.L12:
+ 214:../StdPeripheralDriver/src/stm32f10x_dac.c ****   }
+ 215:../StdPeripheralDriver/src/stm32f10x_dac.c ****   else
+ 216:../StdPeripheralDriver/src/stm32f10x_dac.c ****   {
+ 217:../StdPeripheralDriver/src/stm32f10x_dac.c ****     /* Disable the selected DAC interrupts */
+ 218:../StdPeripheralDriver/src/stm32f10x_dac.c ****     DAC->CR &= (~(uint32_t)(DAC_IT << DAC_Channel));
+ 17235              		.loc 1 218 0
+ 17236 002a 084B     		ldr	r3, .L14
+ 17237 002c 074A     		ldr	r2, .L14
+ 17238 002e 1168     		ldr	r1, [r2, #0]
+ 17239 0030 FA68     		ldr	r2, [r7, #12]
+ 17240 0032 B868     		ldr	r0, [r7, #8]
+ 17241 0034 00FA02F2 		lsl	r2, r0, r2
+ 17242 0038 6FEA0202 		mvn	r2, r2
+ 17243 003c 01EA0202 		and	r2, r1, r2
+ 17244 0040 1A60     		str	r2, [r3, #0]
+ 17245              	.L11:
+ 219:../StdPeripheralDriver/src/stm32f10x_dac.c ****   }
+ 220:../StdPeripheralDriver/src/stm32f10x_dac.c **** }
+ 17246              		.loc 1 220 0
+ 17247 0042 07F11407 		add	r7, r7, #20
+ 17248 0046 BD46     		mov	sp, r7
+ 17249 0048 80BC     		pop	{r7}
+ 17250 004a 7047     		bx	lr
+ 17251              	.L15:
+ 17252              		.align	2
+ 17253              	.L14:
+ 17254 004c 00740040 		.word	1073771520
+ 17255              		.cfi_endproc
+ 17256              	.LFE33:
+ 17258              		.section	.text.DAC_DMACmd,"ax",%progbits
+ 17259              		.align	2
+ 17260              		.global	DAC_DMACmd
+ 17261              		.thumb
+ 17262              		.thumb_func
+ 17264              	DAC_DMACmd:
+ 17265              	.LFB34:
+ 221:../StdPeripheralDriver/src/stm32f10x_dac.c **** #endif
+ 222:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 223:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+ 224:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @brief  Enables or disables the specified DAC channel DMA request.
+ 225:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_Channel: the selected DAC channel. 
+ 226:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be one of the following values:
+ 227:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_1: DAC Channel1 selected
+ 228:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_2: DAC Channel2 selected
+ 229:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  NewState: new state of the selected DAC channel DMA request.
+ 230:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be: ENABLE or DISABLE.
+ 231:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @retval None
+ 232:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+ 233:../StdPeripheralDriver/src/stm32f10x_dac.c **** void DAC_DMACmd(uint32_t DAC_Channel, FunctionalState NewState)
+ 234:../StdPeripheralDriver/src/stm32f10x_dac.c **** {
+ 17266              		.loc 1 234 0
+ 17267              		.cfi_startproc
+ 17268              		@ args = 0, pretend = 0, frame = 8
+ 17269              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17270              		@ link register save eliminated.
+ 17271 0000 80B4     		push	{r7}
+ 17272              	.LCFI14:
+ 17273              		.cfi_def_cfa_offset 4
+ 17274 0002 83B0     		sub	sp, sp, #12
+ 17275              	.LCFI15:
+ 17276              		.cfi_def_cfa_offset 16
+ 17277 0004 00AF     		add	r7, sp, #0
+ 17278              		.cfi_offset 7, -4
+ 17279              	.LCFI16:
+ 17280              		.cfi_def_cfa_register 7
+ 17281 0006 7860     		str	r0, [r7, #4]
+ 17282 0008 0B46     		mov	r3, r1
+ 17283 000a FB70     		strb	r3, [r7, #3]
+ 235:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Check the parameters */
+ 236:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_CHANNEL(DAC_Channel));
+ 237:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
+ 238:../StdPeripheralDriver/src/stm32f10x_dac.c ****   if (NewState != DISABLE)
+ 17284              		.loc 1 238 0
+ 17285 000c FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 17286 000e 002B     		cmp	r3, #0
+ 17287 0010 0BD0     		beq	.L17
+ 239:../StdPeripheralDriver/src/stm32f10x_dac.c ****   {
+ 240:../StdPeripheralDriver/src/stm32f10x_dac.c ****     /* Enable the selected DAC channel DMA request */
+ 241:../StdPeripheralDriver/src/stm32f10x_dac.c ****     DAC->CR |= (DAC_CR_DMAEN1 << DAC_Channel);
+ 17288              		.loc 1 241 0
+ 17289 0012 0F4B     		ldr	r3, .L19
+ 17290 0014 0E4A     		ldr	r2, .L19
+ 17291 0016 1168     		ldr	r1, [r2, #0]
+ 17292 0018 7A68     		ldr	r2, [r7, #4]
+ 17293 001a 4FF48050 		mov	r0, #4096
+ 17294 001e 00FA02F2 		lsl	r2, r0, r2
+ 17295 0022 41EA0202 		orr	r2, r1, r2
+ 17296 0026 1A60     		str	r2, [r3, #0]
+ 17297 0028 0CE0     		b	.L16
+ 17298              	.L17:
+ 242:../StdPeripheralDriver/src/stm32f10x_dac.c ****   }
+ 243:../StdPeripheralDriver/src/stm32f10x_dac.c ****   else
+ 244:../StdPeripheralDriver/src/stm32f10x_dac.c ****   {
+ 245:../StdPeripheralDriver/src/stm32f10x_dac.c ****     /* Disable the selected DAC channel DMA request */
+ 246:../StdPeripheralDriver/src/stm32f10x_dac.c ****     DAC->CR &= ~(DAC_CR_DMAEN1 << DAC_Channel);
+ 17299              		.loc 1 246 0
+ 17300 002a 094B     		ldr	r3, .L19
+ 17301 002c 084A     		ldr	r2, .L19
+ 17302 002e 1168     		ldr	r1, [r2, #0]
+ 17303 0030 7A68     		ldr	r2, [r7, #4]
+ 17304 0032 4FF48050 		mov	r0, #4096
+ 17305 0036 00FA02F2 		lsl	r2, r0, r2
+ 17306 003a 6FEA0202 		mvn	r2, r2
+ 17307 003e 01EA0202 		and	r2, r1, r2
+ 17308 0042 1A60     		str	r2, [r3, #0]
+ 17309              	.L16:
+ 247:../StdPeripheralDriver/src/stm32f10x_dac.c ****   }
+ 248:../StdPeripheralDriver/src/stm32f10x_dac.c **** }
+ 17310              		.loc 1 248 0
+ 17311 0044 07F10C07 		add	r7, r7, #12
+ 17312 0048 BD46     		mov	sp, r7
+ 17313 004a 80BC     		pop	{r7}
+ 17314 004c 7047     		bx	lr
+ 17315              	.L20:
+ 17316 004e 00BF     		.align	2
+ 17317              	.L19:
+ 17318 0050 00740040 		.word	1073771520
+ 17319              		.cfi_endproc
+ 17320              	.LFE34:
+ 17322              		.section	.text.DAC_SoftwareTriggerCmd,"ax",%progbits
+ 17323              		.align	2
+ 17324              		.global	DAC_SoftwareTriggerCmd
+ 17325              		.thumb
+ 17326              		.thumb_func
+ 17328              	DAC_SoftwareTriggerCmd:
+ 17329              	.LFB35:
+ 249:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 250:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+ 251:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @brief  Enables or disables the selected DAC channel software trigger.
+ 252:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_Channel: the selected DAC channel. 
+ 253:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be one of the following values:
+ 254:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_1: DAC Channel1 selected
+ 255:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_2: DAC Channel2 selected
+ 256:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  NewState: new state of the selected DAC channel software trigger.
+ 257:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be: ENABLE or DISABLE.
+ 258:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @retval None
+ 259:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+ 260:../StdPeripheralDriver/src/stm32f10x_dac.c **** void DAC_SoftwareTriggerCmd(uint32_t DAC_Channel, FunctionalState NewState)
+ 261:../StdPeripheralDriver/src/stm32f10x_dac.c **** {
+ 17330              		.loc 1 261 0
+ 17331              		.cfi_startproc
+ 17332              		@ args = 0, pretend = 0, frame = 8
+ 17333              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17334              		@ link register save eliminated.
+ 17335 0000 80B4     		push	{r7}
+ 17336              	.LCFI17:
+ 17337              		.cfi_def_cfa_offset 4
+ 17338 0002 83B0     		sub	sp, sp, #12
+ 17339              	.LCFI18:
+ 17340              		.cfi_def_cfa_offset 16
+ 17341 0004 00AF     		add	r7, sp, #0
+ 17342              		.cfi_offset 7, -4
+ 17343              	.LCFI19:
+ 17344              		.cfi_def_cfa_register 7
+ 17345 0006 7860     		str	r0, [r7, #4]
+ 17346 0008 0B46     		mov	r3, r1
+ 17347 000a FB70     		strb	r3, [r7, #3]
+ 262:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Check the parameters */
+ 263:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_CHANNEL(DAC_Channel));
+ 264:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
+ 265:../StdPeripheralDriver/src/stm32f10x_dac.c ****   if (NewState != DISABLE)
+ 17348              		.loc 1 265 0
+ 17349 000c FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 17350 000e 002B     		cmp	r3, #0
+ 17351 0010 0DD0     		beq	.L22
+ 266:../StdPeripheralDriver/src/stm32f10x_dac.c ****   {
+ 267:../StdPeripheralDriver/src/stm32f10x_dac.c ****     /* Enable software trigger for the selected DAC channel */
+ 268:../StdPeripheralDriver/src/stm32f10x_dac.c ****     DAC->SWTRIGR |= (uint32_t)DAC_SWTRIGR_SWTRIG1 << (DAC_Channel >> 4);
+ 17352              		.loc 1 268 0
+ 17353 0012 114B     		ldr	r3, .L24
+ 17354 0014 104A     		ldr	r2, .L24
+ 17355 0016 5168     		ldr	r1, [r2, #4]
+ 17356 0018 7A68     		ldr	r2, [r7, #4]
+ 17357 001a 4FEA1212 		lsr	r2, r2, #4
+ 17358 001e 4FF00100 		mov	r0, #1
+ 17359 0022 00FA02F2 		lsl	r2, r0, r2
+ 17360 0026 41EA0202 		orr	r2, r1, r2
+ 17361 002a 5A60     		str	r2, [r3, #4]
+ 17362 002c 0EE0     		b	.L21
+ 17363              	.L22:
+ 269:../StdPeripheralDriver/src/stm32f10x_dac.c ****   }
+ 270:../StdPeripheralDriver/src/stm32f10x_dac.c ****   else
+ 271:../StdPeripheralDriver/src/stm32f10x_dac.c ****   {
+ 272:../StdPeripheralDriver/src/stm32f10x_dac.c ****     /* Disable software trigger for the selected DAC channel */
+ 273:../StdPeripheralDriver/src/stm32f10x_dac.c ****     DAC->SWTRIGR &= ~((uint32_t)DAC_SWTRIGR_SWTRIG1 << (DAC_Channel >> 4));
+ 17364              		.loc 1 273 0
+ 17365 002e 0A4B     		ldr	r3, .L24
+ 17366 0030 094A     		ldr	r2, .L24
+ 17367 0032 5168     		ldr	r1, [r2, #4]
+ 17368 0034 7A68     		ldr	r2, [r7, #4]
+ 17369 0036 4FEA1212 		lsr	r2, r2, #4
+ 17370 003a 4FF00100 		mov	r0, #1
+ 17371 003e 00FA02F2 		lsl	r2, r0, r2
+ 17372 0042 6FEA0202 		mvn	r2, r2
+ 17373 0046 01EA0202 		and	r2, r1, r2
+ 17374 004a 5A60     		str	r2, [r3, #4]
+ 17375              	.L21:
+ 274:../StdPeripheralDriver/src/stm32f10x_dac.c ****   }
+ 275:../StdPeripheralDriver/src/stm32f10x_dac.c **** }
+ 17376              		.loc 1 275 0
+ 17377 004c 07F10C07 		add	r7, r7, #12
+ 17378 0050 BD46     		mov	sp, r7
+ 17379 0052 80BC     		pop	{r7}
+ 17380 0054 7047     		bx	lr
+ 17381              	.L25:
+ 17382 0056 00BF     		.align	2
+ 17383              	.L24:
+ 17384 0058 00740040 		.word	1073771520
+ 17385              		.cfi_endproc
+ 17386              	.LFE35:
+ 17388              		.section	.text.DAC_DualSoftwareTriggerCmd,"ax",%progbits
+ 17389              		.align	2
+ 17390              		.global	DAC_DualSoftwareTriggerCmd
+ 17391              		.thumb
+ 17392              		.thumb_func
+ 17394              	DAC_DualSoftwareTriggerCmd:
+ 17395              	.LFB36:
+ 276:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 277:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+ 278:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @brief  Enables or disables simultaneously the two DAC channels software
+ 279:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   triggers.
+ 280:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  NewState: new state of the DAC channels software triggers.
+ 281:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be: ENABLE or DISABLE.
+ 282:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @retval None
+ 283:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+ 284:../StdPeripheralDriver/src/stm32f10x_dac.c **** void DAC_DualSoftwareTriggerCmd(FunctionalState NewState)
+ 285:../StdPeripheralDriver/src/stm32f10x_dac.c **** {
+ 17396              		.loc 1 285 0
+ 17397              		.cfi_startproc
+ 17398              		@ args = 0, pretend = 0, frame = 8
+ 17399              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17400              		@ link register save eliminated.
+ 17401 0000 80B4     		push	{r7}
+ 17402              	.LCFI20:
+ 17403              		.cfi_def_cfa_offset 4
+ 17404 0002 83B0     		sub	sp, sp, #12
+ 17405              	.LCFI21:
+ 17406              		.cfi_def_cfa_offset 16
+ 17407 0004 00AF     		add	r7, sp, #0
+ 17408              		.cfi_offset 7, -4
+ 17409              	.LCFI22:
+ 17410              		.cfi_def_cfa_register 7
+ 17411 0006 0346     		mov	r3, r0
+ 17412 0008 FB71     		strb	r3, [r7, #7]
+ 286:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Check the parameters */
+ 287:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
+ 288:../StdPeripheralDriver/src/stm32f10x_dac.c ****   if (NewState != DISABLE)
+ 17413              		.loc 1 288 0
+ 17414 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 17415 000c 002B     		cmp	r3, #0
+ 17416 000e 06D0     		beq	.L27
+ 289:../StdPeripheralDriver/src/stm32f10x_dac.c ****   {
+ 290:../StdPeripheralDriver/src/stm32f10x_dac.c ****     /* Enable software trigger for both DAC channels */
+ 291:../StdPeripheralDriver/src/stm32f10x_dac.c ****     DAC->SWTRIGR |= DUAL_SWTRIG_SET ;
+ 17417              		.loc 1 291 0
+ 17418 0010 084B     		ldr	r3, .L29
+ 17419 0012 084A     		ldr	r2, .L29
+ 17420 0014 5268     		ldr	r2, [r2, #4]
+ 17421 0016 42F00302 		orr	r2, r2, #3
+ 17422 001a 5A60     		str	r2, [r3, #4]
+ 17423 001c 05E0     		b	.L26
+ 17424              	.L27:
+ 292:../StdPeripheralDriver/src/stm32f10x_dac.c ****   }
+ 293:../StdPeripheralDriver/src/stm32f10x_dac.c ****   else
+ 294:../StdPeripheralDriver/src/stm32f10x_dac.c ****   {
+ 295:../StdPeripheralDriver/src/stm32f10x_dac.c ****     /* Disable software trigger for both DAC channels */
+ 296:../StdPeripheralDriver/src/stm32f10x_dac.c ****     DAC->SWTRIGR &= DUAL_SWTRIG_RESET;
+ 17425              		.loc 1 296 0
+ 17426 001e 054B     		ldr	r3, .L29
+ 17427 0020 044A     		ldr	r2, .L29
+ 17428 0022 5268     		ldr	r2, [r2, #4]
+ 17429 0024 22F00302 		bic	r2, r2, #3
+ 17430 0028 5A60     		str	r2, [r3, #4]
+ 17431              	.L26:
+ 297:../StdPeripheralDriver/src/stm32f10x_dac.c ****   }
+ 298:../StdPeripheralDriver/src/stm32f10x_dac.c **** }
+ 17432              		.loc 1 298 0
+ 17433 002a 07F10C07 		add	r7, r7, #12
+ 17434 002e BD46     		mov	sp, r7
+ 17435 0030 80BC     		pop	{r7}
+ 17436 0032 7047     		bx	lr
+ 17437              	.L30:
+ 17438              		.align	2
+ 17439              	.L29:
+ 17440 0034 00740040 		.word	1073771520
+ 17441              		.cfi_endproc
+ 17442              	.LFE36:
+ 17444              		.section	.text.DAC_WaveGenerationCmd,"ax",%progbits
+ 17445              		.align	2
+ 17446              		.global	DAC_WaveGenerationCmd
+ 17447              		.thumb
+ 17448              		.thumb_func
+ 17450              	DAC_WaveGenerationCmd:
+ 17451              	.LFB37:
+ 299:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 300:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+ 301:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @brief  Enables or disables the selected DAC channel wave generation.
+ 302:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_Channel: the selected DAC channel. 
+ 303:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be one of the following values:
+ 304:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_1: DAC Channel1 selected
+ 305:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_2: DAC Channel2 selected
+ 306:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_Wave: Specifies the wave type to enable or disable.
+ 307:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be one of the following values:
+ 308:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Wave_Noise: noise wave generation
+ 309:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Wave_Triangle: triangle wave generation
+ 310:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  NewState: new state of the selected DAC channel wave generation.
+ 311:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be: ENABLE or DISABLE.
+ 312:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @retval None
+ 313:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+ 314:../StdPeripheralDriver/src/stm32f10x_dac.c **** void DAC_WaveGenerationCmd(uint32_t DAC_Channel, uint32_t DAC_Wave, FunctionalState NewState)
+ 315:../StdPeripheralDriver/src/stm32f10x_dac.c **** {
+ 17452              		.loc 1 315 0
+ 17453              		.cfi_startproc
+ 17454              		@ args = 0, pretend = 0, frame = 16
+ 17455              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17456              		@ link register save eliminated.
+ 17457 0000 80B4     		push	{r7}
+ 17458              	.LCFI23:
+ 17459              		.cfi_def_cfa_offset 4
+ 17460 0002 85B0     		sub	sp, sp, #20
+ 17461              	.LCFI24:
+ 17462              		.cfi_def_cfa_offset 24
+ 17463 0004 00AF     		add	r7, sp, #0
+ 17464              		.cfi_offset 7, -4
+ 17465              	.LCFI25:
+ 17466              		.cfi_def_cfa_register 7
+ 17467 0006 F860     		str	r0, [r7, #12]
+ 17468 0008 B960     		str	r1, [r7, #8]
+ 17469 000a 1346     		mov	r3, r2
+ 17470 000c FB71     		strb	r3, [r7, #7]
+ 316:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Check the parameters */
+ 317:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_CHANNEL(DAC_Channel));
+ 318:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_WAVE(DAC_Wave)); 
+ 319:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
+ 320:../StdPeripheralDriver/src/stm32f10x_dac.c ****   if (NewState != DISABLE)
+ 17471              		.loc 1 320 0
+ 17472 000e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 17473 0010 002B     		cmp	r3, #0
+ 17474 0012 0AD0     		beq	.L32
+ 321:../StdPeripheralDriver/src/stm32f10x_dac.c ****   {
+ 322:../StdPeripheralDriver/src/stm32f10x_dac.c ****     /* Enable the selected wave generation for the selected DAC channel */
+ 323:../StdPeripheralDriver/src/stm32f10x_dac.c ****     DAC->CR |= DAC_Wave << DAC_Channel;
+ 17475              		.loc 1 323 0
+ 17476 0014 0D4B     		ldr	r3, .L34
+ 17477 0016 0D4A     		ldr	r2, .L34
+ 17478 0018 1168     		ldr	r1, [r2, #0]
+ 17479 001a FA68     		ldr	r2, [r7, #12]
+ 17480 001c B868     		ldr	r0, [r7, #8]
+ 17481 001e 00FA02F2 		lsl	r2, r0, r2
+ 17482 0022 41EA0202 		orr	r2, r1, r2
+ 17483 0026 1A60     		str	r2, [r3, #0]
+ 17484 0028 0BE0     		b	.L31
+ 17485              	.L32:
+ 324:../StdPeripheralDriver/src/stm32f10x_dac.c ****   }
+ 325:../StdPeripheralDriver/src/stm32f10x_dac.c ****   else
+ 326:../StdPeripheralDriver/src/stm32f10x_dac.c ****   {
+ 327:../StdPeripheralDriver/src/stm32f10x_dac.c ****     /* Disable the selected wave generation for the selected DAC channel */
+ 328:../StdPeripheralDriver/src/stm32f10x_dac.c ****     DAC->CR &= ~(DAC_Wave << DAC_Channel);
+ 17486              		.loc 1 328 0
+ 17487 002a 084B     		ldr	r3, .L34
+ 17488 002c 074A     		ldr	r2, .L34
+ 17489 002e 1168     		ldr	r1, [r2, #0]
+ 17490 0030 FA68     		ldr	r2, [r7, #12]
+ 17491 0032 B868     		ldr	r0, [r7, #8]
+ 17492 0034 00FA02F2 		lsl	r2, r0, r2
+ 17493 0038 6FEA0202 		mvn	r2, r2
+ 17494 003c 01EA0202 		and	r2, r1, r2
+ 17495 0040 1A60     		str	r2, [r3, #0]
+ 17496              	.L31:
+ 329:../StdPeripheralDriver/src/stm32f10x_dac.c ****   }
+ 330:../StdPeripheralDriver/src/stm32f10x_dac.c **** }
+ 17497              		.loc 1 330 0
+ 17498 0042 07F11407 		add	r7, r7, #20
+ 17499 0046 BD46     		mov	sp, r7
+ 17500 0048 80BC     		pop	{r7}
+ 17501 004a 7047     		bx	lr
+ 17502              	.L35:
+ 17503              		.align	2
+ 17504              	.L34:
+ 17505 004c 00740040 		.word	1073771520
+ 17506              		.cfi_endproc
+ 17507              	.LFE37:
+ 17509              		.section	.text.DAC_SetChannel1Data,"ax",%progbits
+ 17510              		.align	2
+ 17511              		.global	DAC_SetChannel1Data
+ 17512              		.thumb
+ 17513              		.thumb_func
+ 17515              	DAC_SetChannel1Data:
+ 17516              	.LFB38:
+ 331:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 332:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+ 333:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @brief  Set the specified data holding register value for DAC channel1.
+ 334:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_Align: Specifies the data alignment for DAC channel1.
+ 335:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be one of the following values:
+ 336:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Align_8b_R: 8bit right data alignment selected
+ 337:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Align_12b_L: 12bit left data alignment selected
+ 338:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Align_12b_R: 12bit right data alignment selected
+ 339:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  Data : Data to be loaded in the selected data holding register.
+ 340:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @retval None
+ 341:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+ 342:../StdPeripheralDriver/src/stm32f10x_dac.c **** void DAC_SetChannel1Data(uint32_t DAC_Align, uint16_t Data)
+ 343:../StdPeripheralDriver/src/stm32f10x_dac.c **** {  
+ 17517              		.loc 1 343 0
+ 17518              		.cfi_startproc
+ 17519              		@ args = 0, pretend = 0, frame = 16
+ 17520              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17521              		@ link register save eliminated.
+ 17522 0000 80B4     		push	{r7}
+ 17523              	.LCFI26:
+ 17524              		.cfi_def_cfa_offset 4
+ 17525 0002 85B0     		sub	sp, sp, #20
+ 17526              	.LCFI27:
+ 17527              		.cfi_def_cfa_offset 24
+ 17528 0004 00AF     		add	r7, sp, #0
+ 17529              		.cfi_offset 7, -4
+ 17530              	.LCFI28:
+ 17531              		.cfi_def_cfa_register 7
+ 17532 0006 7860     		str	r0, [r7, #4]
+ 17533 0008 0B46     		mov	r3, r1
+ 17534 000a 7B80     		strh	r3, [r7, #2]	@ movhi
+ 344:../StdPeripheralDriver/src/stm32f10x_dac.c ****   __IO uint32_t tmp = 0;
+ 17535              		.loc 1 344 0
+ 17536 000c 4FF00003 		mov	r3, #0
+ 17537 0010 FB60     		str	r3, [r7, #12]
+ 345:../StdPeripheralDriver/src/stm32f10x_dac.c ****   
+ 346:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Check the parameters */
+ 347:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_ALIGN(DAC_Align));
+ 348:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_DATA(Data));
+ 349:../StdPeripheralDriver/src/stm32f10x_dac.c ****   
+ 350:../StdPeripheralDriver/src/stm32f10x_dac.c ****   tmp = (uint32_t)DAC_BASE; 
+ 17538              		.loc 1 350 0
+ 17539 0012 084B     		ldr	r3, .L37
+ 17540 0014 FB60     		str	r3, [r7, #12]
+ 351:../StdPeripheralDriver/src/stm32f10x_dac.c ****   tmp += DHR12R1_OFFSET + DAC_Align;
+ 17541              		.loc 1 351 0
+ 17542 0016 FA68     		ldr	r2, [r7, #12]
+ 17543 0018 7B68     		ldr	r3, [r7, #4]
+ 17544 001a D318     		adds	r3, r2, r3
+ 17545 001c 03F10803 		add	r3, r3, #8
+ 17546 0020 FB60     		str	r3, [r7, #12]
+ 352:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 353:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Set the DAC channel1 selected data holding register */
+ 354:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *(__IO uint32_t *) tmp = Data;
+ 17547              		.loc 1 354 0
+ 17548 0022 FB68     		ldr	r3, [r7, #12]
+ 17549 0024 7A88     		ldrh	r2, [r7, #2]
+ 17550 0026 1A60     		str	r2, [r3, #0]
+ 355:../StdPeripheralDriver/src/stm32f10x_dac.c **** }
+ 17551              		.loc 1 355 0
+ 17552 0028 07F11407 		add	r7, r7, #20
+ 17553 002c BD46     		mov	sp, r7
+ 17554 002e 80BC     		pop	{r7}
+ 17555 0030 7047     		bx	lr
+ 17556              	.L38:
+ 17557 0032 00BF     		.align	2
+ 17558              	.L37:
+ 17559 0034 00740040 		.word	1073771520
+ 17560              		.cfi_endproc
+ 17561              	.LFE38:
+ 17563              		.section	.text.DAC_SetChannel2Data,"ax",%progbits
+ 17564              		.align	2
+ 17565              		.global	DAC_SetChannel2Data
+ 17566              		.thumb
+ 17567              		.thumb_func
+ 17569              	DAC_SetChannel2Data:
+ 17570              	.LFB39:
+ 356:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 357:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+ 358:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @brief  Set the specified data holding register value for DAC channel2.
+ 359:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_Align: Specifies the data alignment for DAC channel2.
+ 360:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be one of the following values:
+ 361:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Align_8b_R: 8bit right data alignment selected
+ 362:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Align_12b_L: 12bit left data alignment selected
+ 363:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Align_12b_R: 12bit right data alignment selected
+ 364:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  Data : Data to be loaded in the selected data holding register.
+ 365:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @retval None
+ 366:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+ 367:../StdPeripheralDriver/src/stm32f10x_dac.c **** void DAC_SetChannel2Data(uint32_t DAC_Align, uint16_t Data)
+ 368:../StdPeripheralDriver/src/stm32f10x_dac.c **** {
+ 17571              		.loc 1 368 0
+ 17572              		.cfi_startproc
+ 17573              		@ args = 0, pretend = 0, frame = 16
+ 17574              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17575              		@ link register save eliminated.
+ 17576 0000 80B4     		push	{r7}
+ 17577              	.LCFI29:
+ 17578              		.cfi_def_cfa_offset 4
+ 17579 0002 85B0     		sub	sp, sp, #20
+ 17580              	.LCFI30:
+ 17581              		.cfi_def_cfa_offset 24
+ 17582 0004 00AF     		add	r7, sp, #0
+ 17583              		.cfi_offset 7, -4
+ 17584              	.LCFI31:
+ 17585              		.cfi_def_cfa_register 7
+ 17586 0006 7860     		str	r0, [r7, #4]
+ 17587 0008 0B46     		mov	r3, r1
+ 17588 000a 7B80     		strh	r3, [r7, #2]	@ movhi
+ 369:../StdPeripheralDriver/src/stm32f10x_dac.c ****   __IO uint32_t tmp = 0;
+ 17589              		.loc 1 369 0
+ 17590 000c 4FF00003 		mov	r3, #0
+ 17591 0010 FB60     		str	r3, [r7, #12]
+ 370:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 371:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Check the parameters */
+ 372:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_ALIGN(DAC_Align));
+ 373:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_DATA(Data));
+ 374:../StdPeripheralDriver/src/stm32f10x_dac.c ****   
+ 375:../StdPeripheralDriver/src/stm32f10x_dac.c ****   tmp = (uint32_t)DAC_BASE;
+ 17592              		.loc 1 375 0
+ 17593 0012 084B     		ldr	r3, .L40
+ 17594 0014 FB60     		str	r3, [r7, #12]
+ 376:../StdPeripheralDriver/src/stm32f10x_dac.c ****   tmp += DHR12R2_OFFSET + DAC_Align;
+ 17595              		.loc 1 376 0
+ 17596 0016 FA68     		ldr	r2, [r7, #12]
+ 17597 0018 7B68     		ldr	r3, [r7, #4]
+ 17598 001a D318     		adds	r3, r2, r3
+ 17599 001c 03F11403 		add	r3, r3, #20
+ 17600 0020 FB60     		str	r3, [r7, #12]
+ 377:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 378:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Set the DAC channel2 selected data holding register */
+ 379:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *(__IO uint32_t *)tmp = Data;
+ 17601              		.loc 1 379 0
+ 17602 0022 FB68     		ldr	r3, [r7, #12]
+ 17603 0024 7A88     		ldrh	r2, [r7, #2]
+ 17604 0026 1A60     		str	r2, [r3, #0]
+ 380:../StdPeripheralDriver/src/stm32f10x_dac.c **** }
+ 17605              		.loc 1 380 0
+ 17606 0028 07F11407 		add	r7, r7, #20
+ 17607 002c BD46     		mov	sp, r7
+ 17608 002e 80BC     		pop	{r7}
+ 17609 0030 7047     		bx	lr
+ 17610              	.L41:
+ 17611 0032 00BF     		.align	2
+ 17612              	.L40:
+ 17613 0034 00740040 		.word	1073771520
+ 17614              		.cfi_endproc
+ 17615              	.LFE39:
+ 17617              		.section	.text.DAC_SetDualChannelData,"ax",%progbits
+ 17618              		.align	2
+ 17619              		.global	DAC_SetDualChannelData
+ 17620              		.thumb
+ 17621              		.thumb_func
+ 17623              	DAC_SetDualChannelData:
+ 17624              	.LFB40:
+ 381:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 382:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+ 383:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @brief  Set the specified data holding register value for dual channel
+ 384:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   DAC.
+ 385:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_Align: Specifies the data alignment for dual channel DAC.
+ 386:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be one of the following values:
+ 387:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Align_8b_R: 8bit right data alignment selected
+ 388:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Align_12b_L: 12bit left data alignment selected
+ 389:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Align_12b_R: 12bit right data alignment selected
+ 390:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  Data2: Data for DAC Channel2 to be loaded in the selected data 
+ 391:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   holding register.
+ 392:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  Data1: Data for DAC Channel1 to be loaded in the selected data 
+ 393:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   holding register.
+ 394:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @retval None
+ 395:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+ 396:../StdPeripheralDriver/src/stm32f10x_dac.c **** void DAC_SetDualChannelData(uint32_t DAC_Align, uint16_t Data2, uint16_t Data1)
+ 397:../StdPeripheralDriver/src/stm32f10x_dac.c **** {
+ 17625              		.loc 1 397 0
+ 17626              		.cfi_startproc
+ 17627              		@ args = 0, pretend = 0, frame = 16
+ 17628              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17629              		@ link register save eliminated.
+ 17630 0000 80B4     		push	{r7}
+ 17631              	.LCFI32:
+ 17632              		.cfi_def_cfa_offset 4
+ 17633 0002 85B0     		sub	sp, sp, #20
+ 17634              	.LCFI33:
+ 17635              		.cfi_def_cfa_offset 24
+ 17636 0004 00AF     		add	r7, sp, #0
+ 17637              		.cfi_offset 7, -4
+ 17638              	.LCFI34:
+ 17639              		.cfi_def_cfa_register 7
+ 17640 0006 7860     		str	r0, [r7, #4]
+ 17641 0008 1346     		mov	r3, r2
+ 17642 000a 0A46     		mov	r2, r1	@ movhi
+ 17643 000c 7A80     		strh	r2, [r7, #2]	@ movhi
+ 17644 000e 3B80     		strh	r3, [r7, #0]	@ movhi
+ 398:../StdPeripheralDriver/src/stm32f10x_dac.c ****   uint32_t data = 0, tmp = 0;
+ 17645              		.loc 1 398 0
+ 17646 0010 4FF00003 		mov	r3, #0
+ 17647 0014 FB60     		str	r3, [r7, #12]
+ 17648 0016 4FF00003 		mov	r3, #0
+ 17649 001a BB60     		str	r3, [r7, #8]
+ 399:../StdPeripheralDriver/src/stm32f10x_dac.c ****   
+ 400:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Check the parameters */
+ 401:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_ALIGN(DAC_Align));
+ 402:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_DATA(Data1));
+ 403:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_DATA(Data2));
+ 404:../StdPeripheralDriver/src/stm32f10x_dac.c ****   
+ 405:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Calculate and set dual DAC data holding register value */
+ 406:../StdPeripheralDriver/src/stm32f10x_dac.c ****   if (DAC_Align == DAC_Align_8b_R)
+ 17650              		.loc 1 406 0
+ 17651 001c 7B68     		ldr	r3, [r7, #4]
+ 17652 001e 082B     		cmp	r3, #8
+ 17653 0020 07D1     		bne	.L43
+ 407:../StdPeripheralDriver/src/stm32f10x_dac.c ****   {
+ 408:../StdPeripheralDriver/src/stm32f10x_dac.c ****     data = ((uint32_t)Data2 << 8) | Data1; 
+ 17654              		.loc 1 408 0
+ 17655 0022 7B88     		ldrh	r3, [r7, #2]
+ 17656 0024 4FEA0322 		lsl	r2, r3, #8
+ 17657 0028 3B88     		ldrh	r3, [r7, #0]
+ 17658 002a 42EA0303 		orr	r3, r2, r3
+ 17659 002e FB60     		str	r3, [r7, #12]
+ 17660 0030 06E0     		b	.L44
+ 17661              	.L43:
+ 409:../StdPeripheralDriver/src/stm32f10x_dac.c ****   }
+ 410:../StdPeripheralDriver/src/stm32f10x_dac.c ****   else
+ 411:../StdPeripheralDriver/src/stm32f10x_dac.c ****   {
+ 412:../StdPeripheralDriver/src/stm32f10x_dac.c ****     data = ((uint32_t)Data2 << 16) | Data1;
+ 17662              		.loc 1 412 0
+ 17663 0032 7B88     		ldrh	r3, [r7, #2]
+ 17664 0034 4FEA0342 		lsl	r2, r3, #16
+ 17665 0038 3B88     		ldrh	r3, [r7, #0]
+ 17666 003a 42EA0303 		orr	r3, r2, r3
+ 17667 003e FB60     		str	r3, [r7, #12]
+ 17668              	.L44:
+ 413:../StdPeripheralDriver/src/stm32f10x_dac.c ****   }
+ 414:../StdPeripheralDriver/src/stm32f10x_dac.c ****   
+ 415:../StdPeripheralDriver/src/stm32f10x_dac.c ****   tmp = (uint32_t)DAC_BASE;
+ 17669              		.loc 1 415 0
+ 17670 0040 074B     		ldr	r3, .L45
+ 17671 0042 BB60     		str	r3, [r7, #8]
+ 416:../StdPeripheralDriver/src/stm32f10x_dac.c ****   tmp += DHR12RD_OFFSET + DAC_Align;
+ 17672              		.loc 1 416 0
+ 17673 0044 7A68     		ldr	r2, [r7, #4]
+ 17674 0046 BB68     		ldr	r3, [r7, #8]
+ 17675 0048 D318     		adds	r3, r2, r3
+ 17676 004a 03F12003 		add	r3, r3, #32
+ 17677 004e BB60     		str	r3, [r7, #8]
+ 417:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 418:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Set the dual DAC selected data holding register */
+ 419:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *(__IO uint32_t *)tmp = data;
+ 17678              		.loc 1 419 0
+ 17679 0050 BB68     		ldr	r3, [r7, #8]
+ 17680 0052 FA68     		ldr	r2, [r7, #12]
+ 17681 0054 1A60     		str	r2, [r3, #0]
+ 420:../StdPeripheralDriver/src/stm32f10x_dac.c **** }
+ 17682              		.loc 1 420 0
+ 17683 0056 07F11407 		add	r7, r7, #20
+ 17684 005a BD46     		mov	sp, r7
+ 17685 005c 80BC     		pop	{r7}
+ 17686 005e 7047     		bx	lr
+ 17687              	.L46:
+ 17688              		.align	2
+ 17689              	.L45:
+ 17690 0060 00740040 		.word	1073771520
+ 17691              		.cfi_endproc
+ 17692              	.LFE40:
+ 17694              		.section	.text.DAC_GetDataOutputValue,"ax",%progbits
+ 17695              		.align	2
+ 17696              		.global	DAC_GetDataOutputValue
+ 17697              		.thumb
+ 17698              		.thumb_func
+ 17700              	DAC_GetDataOutputValue:
+ 17701              	.LFB41:
+ 421:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 422:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+ 423:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @brief  Returns the last data output value of the selected DAC channel.
+ 424:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_Channel: the selected DAC channel. 
+ 425:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be one of the following values:
+ 426:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_1: DAC Channel1 selected
+ 427:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_2: DAC Channel2 selected
+ 428:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @retval The selected DAC channel data output value.
+ 429:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+ 430:../StdPeripheralDriver/src/stm32f10x_dac.c **** uint16_t DAC_GetDataOutputValue(uint32_t DAC_Channel)
+ 431:../StdPeripheralDriver/src/stm32f10x_dac.c **** {
+ 17702              		.loc 1 431 0
+ 17703              		.cfi_startproc
+ 17704              		@ args = 0, pretend = 0, frame = 16
+ 17705              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17706              		@ link register save eliminated.
+ 17707 0000 80B4     		push	{r7}
+ 17708              	.LCFI35:
+ 17709              		.cfi_def_cfa_offset 4
+ 17710 0002 85B0     		sub	sp, sp, #20
+ 17711              	.LCFI36:
+ 17712              		.cfi_def_cfa_offset 24
+ 17713 0004 00AF     		add	r7, sp, #0
+ 17714              		.cfi_offset 7, -4
+ 17715              	.LCFI37:
+ 17716              		.cfi_def_cfa_register 7
+ 17717 0006 7860     		str	r0, [r7, #4]
+ 432:../StdPeripheralDriver/src/stm32f10x_dac.c ****   __IO uint32_t tmp = 0;
+ 17718              		.loc 1 432 0
+ 17719 0008 4FF00003 		mov	r3, #0
+ 17720 000c FB60     		str	r3, [r7, #12]
+ 433:../StdPeripheralDriver/src/stm32f10x_dac.c ****   
+ 434:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Check the parameters */
+ 435:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_CHANNEL(DAC_Channel));
+ 436:../StdPeripheralDriver/src/stm32f10x_dac.c ****   
+ 437:../StdPeripheralDriver/src/stm32f10x_dac.c ****   tmp = (uint32_t) DAC_BASE ;
+ 17721              		.loc 1 437 0
+ 17722 000e 094B     		ldr	r3, .L48
+ 17723 0010 FB60     		str	r3, [r7, #12]
+ 438:../StdPeripheralDriver/src/stm32f10x_dac.c ****   tmp += DOR_OFFSET + ((uint32_t)DAC_Channel >> 2);
+ 17724              		.loc 1 438 0
+ 17725 0012 7B68     		ldr	r3, [r7, #4]
+ 17726 0014 4FEA9302 		lsr	r2, r3, #2
+ 17727 0018 FB68     		ldr	r3, [r7, #12]
+ 17728 001a D318     		adds	r3, r2, r3
+ 17729 001c 03F12C03 		add	r3, r3, #44
+ 17730 0020 FB60     		str	r3, [r7, #12]
+ 439:../StdPeripheralDriver/src/stm32f10x_dac.c ****   
+ 440:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Returns the DAC channel data output register value */
+ 441:../StdPeripheralDriver/src/stm32f10x_dac.c ****   return (uint16_t) (*(__IO uint32_t*) tmp);
+ 17731              		.loc 1 441 0
+ 17732 0022 FB68     		ldr	r3, [r7, #12]
+ 17733 0024 1B68     		ldr	r3, [r3, #0]
+ 17734 0026 9BB2     		uxth	r3, r3
+ 442:../StdPeripheralDriver/src/stm32f10x_dac.c **** }
+ 17735              		.loc 1 442 0
+ 17736 0028 1846     		mov	r0, r3
+ 17737 002a 07F11407 		add	r7, r7, #20
+ 17738 002e BD46     		mov	sp, r7
+ 17739 0030 80BC     		pop	{r7}
+ 17740 0032 7047     		bx	lr
+ 17741              	.L49:
+ 17742              		.align	2
+ 17743              	.L48:
+ 17744 0034 00740040 		.word	1073771520
+ 17745              		.cfi_endproc
+ 17746              	.LFE41:
+ 17748              		.section	.text.DAC_GetFlagStatus,"ax",%progbits
+ 17749              		.align	2
+ 17750              		.global	DAC_GetFlagStatus
+ 17751              		.thumb
+ 17752              		.thumb_func
+ 17754              	DAC_GetFlagStatus:
+ 17755              	.LFB42:
+ 443:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 444:../StdPeripheralDriver/src/stm32f10x_dac.c **** #if defined (STM32F10X_LD_VL) || defined (STM32F10X_MD_VL) || defined (STM32F10X_HD_VL)
+ 445:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+ 446:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @brief  Checks whether the specified DAC flag is set or not.
+ 447:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_Channel: thee selected DAC channel. 
+ 448:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be one of the following values:
+ 449:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_1: DAC Channel1 selected
+ 450:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_2: DAC Channel2 selected
+ 451:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_FLAG: specifies the flag to check. 
+ 452:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be only of the following value:
+ 453:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_FLAG_DMAUDR: DMA underrun flag                                                 
+ 454:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @retval The new state of DAC_FLAG (SET or RESET).
+ 455:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+ 456:../StdPeripheralDriver/src/stm32f10x_dac.c **** FlagStatus DAC_GetFlagStatus(uint32_t DAC_Channel, uint32_t DAC_FLAG)
+ 457:../StdPeripheralDriver/src/stm32f10x_dac.c **** {
+ 17756              		.loc 1 457 0
+ 17757              		.cfi_startproc
+ 17758              		@ args = 0, pretend = 0, frame = 16
+ 17759              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17760              		@ link register save eliminated.
+ 17761 0000 80B4     		push	{r7}
+ 17762              	.LCFI38:
+ 17763              		.cfi_def_cfa_offset 4
+ 17764 0002 85B0     		sub	sp, sp, #20
+ 17765              	.LCFI39:
+ 17766              		.cfi_def_cfa_offset 24
+ 17767 0004 00AF     		add	r7, sp, #0
+ 17768              		.cfi_offset 7, -4
+ 17769              	.LCFI40:
+ 17770              		.cfi_def_cfa_register 7
+ 17771 0006 7860     		str	r0, [r7, #4]
+ 17772 0008 3960     		str	r1, [r7, #0]
+ 458:../StdPeripheralDriver/src/stm32f10x_dac.c ****   FlagStatus bitstatus = RESET;
+ 17773              		.loc 1 458 0
+ 17774 000a 4FF00003 		mov	r3, #0
+ 17775 000e FB73     		strb	r3, [r7, #15]
+ 459:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Check the parameters */
+ 460:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_CHANNEL(DAC_Channel));
+ 461:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_FLAG(DAC_FLAG));
+ 462:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 463:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Check the status of the specified DAC flag */
+ 464:../StdPeripheralDriver/src/stm32f10x_dac.c ****   if ((DAC->SR & (DAC_FLAG << DAC_Channel)) != (uint8_t)RESET)
+ 17776              		.loc 1 464 0
+ 17777 0010 0B4B     		ldr	r3, .L53
+ 17778 0012 5A6B     		ldr	r2, [r3, #52]
+ 17779 0014 7B68     		ldr	r3, [r7, #4]
+ 17780 0016 3968     		ldr	r1, [r7, #0]
+ 17781 0018 01FA03F3 		lsl	r3, r1, r3
+ 17782 001c 02EA0303 		and	r3, r2, r3
+ 17783 0020 002B     		cmp	r3, #0
+ 17784 0022 03D0     		beq	.L51
+ 465:../StdPeripheralDriver/src/stm32f10x_dac.c ****   {
+ 466:../StdPeripheralDriver/src/stm32f10x_dac.c ****     /* DAC_FLAG is set */
+ 467:../StdPeripheralDriver/src/stm32f10x_dac.c ****     bitstatus = SET;
+ 17785              		.loc 1 467 0
+ 17786 0024 4FF00103 		mov	r3, #1
+ 17787 0028 FB73     		strb	r3, [r7, #15]
+ 17788 002a 02E0     		b	.L52
+ 17789              	.L51:
+ 468:../StdPeripheralDriver/src/stm32f10x_dac.c ****   }
+ 469:../StdPeripheralDriver/src/stm32f10x_dac.c ****   else
+ 470:../StdPeripheralDriver/src/stm32f10x_dac.c ****   {
+ 471:../StdPeripheralDriver/src/stm32f10x_dac.c ****     /* DAC_FLAG is reset */
+ 472:../StdPeripheralDriver/src/stm32f10x_dac.c ****     bitstatus = RESET;
+ 17790              		.loc 1 472 0
+ 17791 002c 4FF00003 		mov	r3, #0
+ 17792 0030 FB73     		strb	r3, [r7, #15]
+ 17793              	.L52:
+ 473:../StdPeripheralDriver/src/stm32f10x_dac.c ****   }
+ 474:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Return the DAC_FLAG status */
+ 475:../StdPeripheralDriver/src/stm32f10x_dac.c ****   return  bitstatus;
+ 17794              		.loc 1 475 0
+ 17795 0032 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 476:../StdPeripheralDriver/src/stm32f10x_dac.c **** }
+ 17796              		.loc 1 476 0
+ 17797 0034 1846     		mov	r0, r3
+ 17798 0036 07F11407 		add	r7, r7, #20
+ 17799 003a BD46     		mov	sp, r7
+ 17800 003c 80BC     		pop	{r7}
+ 17801 003e 7047     		bx	lr
+ 17802              	.L54:
+ 17803              		.align	2
+ 17804              	.L53:
+ 17805 0040 00740040 		.word	1073771520
+ 17806              		.cfi_endproc
+ 17807              	.LFE42:
+ 17809              		.section	.text.DAC_ClearFlag,"ax",%progbits
+ 17810              		.align	2
+ 17811              		.global	DAC_ClearFlag
+ 17812              		.thumb
+ 17813              		.thumb_func
+ 17815              	DAC_ClearFlag:
+ 17816              	.LFB43:
+ 477:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 478:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+ 479:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @brief  Clears the DAC channelx's pending flags.
+ 480:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_Channel: the selected DAC channel. 
+ 481:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be one of the following values:
+ 482:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_1: DAC Channel1 selected
+ 483:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_2: DAC Channel2 selected
+ 484:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_FLAG: specifies the flag to clear. 
+ 485:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be of the following value:
+ 486:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_FLAG_DMAUDR: DMA underrun flag                           
+ 487:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @retval None
+ 488:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+ 489:../StdPeripheralDriver/src/stm32f10x_dac.c **** void DAC_ClearFlag(uint32_t DAC_Channel, uint32_t DAC_FLAG)
+ 490:../StdPeripheralDriver/src/stm32f10x_dac.c **** {
+ 17817              		.loc 1 490 0
+ 17818              		.cfi_startproc
+ 17819              		@ args = 0, pretend = 0, frame = 8
+ 17820              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17821              		@ link register save eliminated.
+ 17822 0000 80B4     		push	{r7}
+ 17823              	.LCFI41:
+ 17824              		.cfi_def_cfa_offset 4
+ 17825 0002 83B0     		sub	sp, sp, #12
+ 17826              	.LCFI42:
+ 17827              		.cfi_def_cfa_offset 16
+ 17828 0004 00AF     		add	r7, sp, #0
+ 17829              		.cfi_offset 7, -4
+ 17830              	.LCFI43:
+ 17831              		.cfi_def_cfa_register 7
+ 17832 0006 7860     		str	r0, [r7, #4]
+ 17833 0008 3960     		str	r1, [r7, #0]
+ 491:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Check the parameters */
+ 492:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_CHANNEL(DAC_Channel));
+ 493:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_FLAG(DAC_FLAG));
+ 494:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 495:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Clear the selected DAC flags */
+ 496:../StdPeripheralDriver/src/stm32f10x_dac.c ****   DAC->SR = (DAC_FLAG << DAC_Channel);
+ 17834              		.loc 1 496 0
+ 17835 000a 054B     		ldr	r3, .L56
+ 17836 000c 7A68     		ldr	r2, [r7, #4]
+ 17837 000e 3968     		ldr	r1, [r7, #0]
+ 17838 0010 01FA02F2 		lsl	r2, r1, r2
+ 17839 0014 5A63     		str	r2, [r3, #52]
+ 497:../StdPeripheralDriver/src/stm32f10x_dac.c **** }
+ 17840              		.loc 1 497 0
+ 17841 0016 07F10C07 		add	r7, r7, #12
+ 17842 001a BD46     		mov	sp, r7
+ 17843 001c 80BC     		pop	{r7}
+ 17844 001e 7047     		bx	lr
+ 17845              	.L57:
+ 17846              		.align	2
+ 17847              	.L56:
+ 17848 0020 00740040 		.word	1073771520
+ 17849              		.cfi_endproc
+ 17850              	.LFE43:
+ 17852              		.section	.text.DAC_GetITStatus,"ax",%progbits
+ 17853              		.align	2
+ 17854              		.global	DAC_GetITStatus
+ 17855              		.thumb
+ 17856              		.thumb_func
+ 17858              	DAC_GetITStatus:
+ 17859              	.LFB44:
+ 498:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 499:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+ 500:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @brief  Checks whether the specified DAC interrupt has occurred or not.
+ 501:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_Channel: the selected DAC channel. 
+ 502:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be one of the following values:
+ 503:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_1: DAC Channel1 selected
+ 504:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_2: DAC Channel2 selected
+ 505:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_IT: specifies the DAC interrupt source to check. 
+ 506:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be the following values:
+ 507:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_IT_DMAUDR: DMA underrun interrupt mask                       
+ 508:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @retval The new state of DAC_IT (SET or RESET).
+ 509:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+ 510:../StdPeripheralDriver/src/stm32f10x_dac.c **** ITStatus DAC_GetITStatus(uint32_t DAC_Channel, uint32_t DAC_IT)
+ 511:../StdPeripheralDriver/src/stm32f10x_dac.c **** {
+ 17860              		.loc 1 511 0
+ 17861              		.cfi_startproc
+ 17862              		@ args = 0, pretend = 0, frame = 16
+ 17863              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17864              		@ link register save eliminated.
+ 17865 0000 80B4     		push	{r7}
+ 17866              	.LCFI44:
+ 17867              		.cfi_def_cfa_offset 4
+ 17868 0002 85B0     		sub	sp, sp, #20
+ 17869              	.LCFI45:
+ 17870              		.cfi_def_cfa_offset 24
+ 17871 0004 00AF     		add	r7, sp, #0
+ 17872              		.cfi_offset 7, -4
+ 17873              	.LCFI46:
+ 17874              		.cfi_def_cfa_register 7
+ 17875 0006 7860     		str	r0, [r7, #4]
+ 17876 0008 3960     		str	r1, [r7, #0]
+ 512:../StdPeripheralDriver/src/stm32f10x_dac.c ****   ITStatus bitstatus = RESET;
+ 17877              		.loc 1 512 0
+ 17878 000a 4FF00003 		mov	r3, #0
+ 17879 000e FB73     		strb	r3, [r7, #15]
+ 513:../StdPeripheralDriver/src/stm32f10x_dac.c ****   uint32_t enablestatus = 0;
+ 17880              		.loc 1 513 0
+ 17881 0010 4FF00003 		mov	r3, #0
+ 17882 0014 BB60     		str	r3, [r7, #8]
+ 514:../StdPeripheralDriver/src/stm32f10x_dac.c ****   
+ 515:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Check the parameters */
+ 516:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_CHANNEL(DAC_Channel));
+ 517:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_IT(DAC_IT));
+ 518:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 519:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Get the DAC_IT enable bit status */
+ 520:../StdPeripheralDriver/src/stm32f10x_dac.c ****   enablestatus = (DAC->CR & (DAC_IT << DAC_Channel)) ;
+ 17883              		.loc 1 520 0
+ 17884 0016 124B     		ldr	r3, .L61
+ 17885 0018 1A68     		ldr	r2, [r3, #0]
+ 17886 001a 7B68     		ldr	r3, [r7, #4]
+ 17887 001c 3968     		ldr	r1, [r7, #0]
+ 17888 001e 01FA03F3 		lsl	r3, r1, r3
+ 17889 0022 02EA0303 		and	r3, r2, r3
+ 17890 0026 BB60     		str	r3, [r7, #8]
+ 521:../StdPeripheralDriver/src/stm32f10x_dac.c ****   
+ 522:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Check the status of the specified DAC interrupt */
+ 523:../StdPeripheralDriver/src/stm32f10x_dac.c ****   if (((DAC->SR & (DAC_IT << DAC_Channel)) != (uint32_t)RESET) && enablestatus)
+ 17891              		.loc 1 523 0
+ 17892 0028 0D4B     		ldr	r3, .L61
+ 17893 002a 5A6B     		ldr	r2, [r3, #52]
+ 17894 002c 7B68     		ldr	r3, [r7, #4]
+ 17895 002e 3968     		ldr	r1, [r7, #0]
+ 17896 0030 01FA03F3 		lsl	r3, r1, r3
+ 17897 0034 02EA0303 		and	r3, r2, r3
+ 17898 0038 002B     		cmp	r3, #0
+ 17899 003a 06D0     		beq	.L59
+ 17900              		.loc 1 523 0 is_stmt 0 discriminator 1
+ 17901 003c BB68     		ldr	r3, [r7, #8]
+ 17902 003e 002B     		cmp	r3, #0
+ 17903 0040 03D0     		beq	.L59
+ 524:../StdPeripheralDriver/src/stm32f10x_dac.c ****   {
+ 525:../StdPeripheralDriver/src/stm32f10x_dac.c ****     /* DAC_IT is set */
+ 526:../StdPeripheralDriver/src/stm32f10x_dac.c ****     bitstatus = SET;
+ 17904              		.loc 1 526 0 is_stmt 1
+ 17905 0042 4FF00103 		mov	r3, #1
+ 17906 0046 FB73     		strb	r3, [r7, #15]
+ 17907 0048 02E0     		b	.L60
+ 17908              	.L59:
+ 527:../StdPeripheralDriver/src/stm32f10x_dac.c ****   }
+ 528:../StdPeripheralDriver/src/stm32f10x_dac.c ****   else
+ 529:../StdPeripheralDriver/src/stm32f10x_dac.c ****   {
+ 530:../StdPeripheralDriver/src/stm32f10x_dac.c ****     /* DAC_IT is reset */
+ 531:../StdPeripheralDriver/src/stm32f10x_dac.c ****     bitstatus = RESET;
+ 17909              		.loc 1 531 0
+ 17910 004a 4FF00003 		mov	r3, #0
+ 17911 004e FB73     		strb	r3, [r7, #15]
+ 17912              	.L60:
+ 532:../StdPeripheralDriver/src/stm32f10x_dac.c ****   }
+ 533:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Return the DAC_IT status */
+ 534:../StdPeripheralDriver/src/stm32f10x_dac.c ****   return  bitstatus;
+ 17913              		.loc 1 534 0
+ 17914 0050 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 535:../StdPeripheralDriver/src/stm32f10x_dac.c **** }
+ 17915              		.loc 1 535 0
+ 17916 0052 1846     		mov	r0, r3
+ 17917 0054 07F11407 		add	r7, r7, #20
+ 17918 0058 BD46     		mov	sp, r7
+ 17919 005a 80BC     		pop	{r7}
+ 17920 005c 7047     		bx	lr
+ 17921              	.L62:
+ 17922 005e 00BF     		.align	2
+ 17923              	.L61:
+ 17924 0060 00740040 		.word	1073771520
+ 17925              		.cfi_endproc
+ 17926              	.LFE44:
+ 17928              		.section	.text.DAC_ClearITPendingBit,"ax",%progbits
+ 17929              		.align	2
+ 17930              		.global	DAC_ClearITPendingBit
+ 17931              		.thumb
+ 17932              		.thumb_func
+ 17934              	DAC_ClearITPendingBit:
+ 17935              	.LFB45:
+ 536:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 537:../StdPeripheralDriver/src/stm32f10x_dac.c **** /**
+ 538:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @brief  Clears the DAC channelx's interrupt pending bits.
+ 539:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_Channel: the selected DAC channel. 
+ 540:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be one of the following values:
+ 541:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_1: DAC Channel1 selected
+ 542:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_Channel_2: DAC Channel2 selected
+ 543:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @param  DAC_IT: specifies the DAC interrupt pending bit to clear.
+ 544:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *   This parameter can be the following values:
+ 545:../StdPeripheralDriver/src/stm32f10x_dac.c ****   *     @arg DAC_IT_DMAUDR: DMA underrun interrupt mask                         
+ 546:../StdPeripheralDriver/src/stm32f10x_dac.c ****   * @retval None
+ 547:../StdPeripheralDriver/src/stm32f10x_dac.c ****   */
+ 548:../StdPeripheralDriver/src/stm32f10x_dac.c **** void DAC_ClearITPendingBit(uint32_t DAC_Channel, uint32_t DAC_IT)
+ 549:../StdPeripheralDriver/src/stm32f10x_dac.c **** {
+ 17936              		.loc 1 549 0
+ 17937              		.cfi_startproc
+ 17938              		@ args = 0, pretend = 0, frame = 8
+ 17939              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17940              		@ link register save eliminated.
+ 17941 0000 80B4     		push	{r7}
+ 17942              	.LCFI47:
+ 17943              		.cfi_def_cfa_offset 4
+ 17944 0002 83B0     		sub	sp, sp, #12
+ 17945              	.LCFI48:
+ 17946              		.cfi_def_cfa_offset 16
+ 17947 0004 00AF     		add	r7, sp, #0
+ 17948              		.cfi_offset 7, -4
+ 17949              	.LCFI49:
+ 17950              		.cfi_def_cfa_register 7
+ 17951 0006 7860     		str	r0, [r7, #4]
+ 17952 0008 3960     		str	r1, [r7, #0]
+ 550:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Check the parameters */
+ 551:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_CHANNEL(DAC_Channel));
+ 552:../StdPeripheralDriver/src/stm32f10x_dac.c ****   assert_param(IS_DAC_IT(DAC_IT)); 
+ 553:../StdPeripheralDriver/src/stm32f10x_dac.c **** 
+ 554:../StdPeripheralDriver/src/stm32f10x_dac.c ****   /* Clear the selected DAC interrupt pending bits */
+ 555:../StdPeripheralDriver/src/stm32f10x_dac.c ****   DAC->SR = (DAC_IT << DAC_Channel);
+ 17953              		.loc 1 555 0
+ 17954 000a 054B     		ldr	r3, .L64
+ 17955 000c 7A68     		ldr	r2, [r7, #4]
+ 17956 000e 3968     		ldr	r1, [r7, #0]
+ 17957 0010 01FA02F2 		lsl	r2, r1, r2
+ 17958 0014 5A63     		str	r2, [r3, #52]
+ 556:../StdPeripheralDriver/src/stm32f10x_dac.c **** }
+ 17959              		.loc 1 556 0
+ 17960 0016 07F10C07 		add	r7, r7, #12
+ 17961 001a BD46     		mov	sp, r7
+ 17962 001c 80BC     		pop	{r7}
+ 17963 001e 7047     		bx	lr
+ 17964              	.L65:
+ 17965              		.align	2
+ 17966              	.L64:
+ 17967 0020 00740040 		.word	1073771520
+ 17968              		.cfi_endproc
+ 17969              	.LFE45:
+ 17971              		.text
+ 17972              	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f10x_dac.c
+     /tmp/ccMxyfWk.s:16967  .text.DAC_DeInit:00000000 $t
+     /tmp/ccMxyfWk.s:16972  .text.DAC_DeInit:00000000 DAC_DeInit
+     /tmp/ccMxyfWk.s:17000  .text.DAC_Init:00000000 $t
+     /tmp/ccMxyfWk.s:17005  .text.DAC_Init:00000000 DAC_Init
+     /tmp/ccMxyfWk.s:17077  .text.DAC_Init:0000006c $d
+     /tmp/ccMxyfWk.s:17082  .text.DAC_StructInit:00000000 $t
+     /tmp/ccMxyfWk.s:17087  .text.DAC_StructInit:00000000 DAC_StructInit
+     /tmp/ccMxyfWk.s:17130  .text.DAC_Cmd:00000000 $t
+     /tmp/ccMxyfWk.s:17135  .text.DAC_Cmd:00000000 DAC_Cmd
+     /tmp/ccMxyfWk.s:17189  .text.DAC_Cmd:00000050 $d
+     /tmp/ccMxyfWk.s:17194  .text.DAC_ITConfig:00000000 $t
+     /tmp/ccMxyfWk.s:17199  .text.DAC_ITConfig:00000000 DAC_ITConfig
+     /tmp/ccMxyfWk.s:17254  .text.DAC_ITConfig:0000004c $d
+     /tmp/ccMxyfWk.s:17259  .text.DAC_DMACmd:00000000 $t
+     /tmp/ccMxyfWk.s:17264  .text.DAC_DMACmd:00000000 DAC_DMACmd
+     /tmp/ccMxyfWk.s:17318  .text.DAC_DMACmd:00000050 $d
+     /tmp/ccMxyfWk.s:17323  .text.DAC_SoftwareTriggerCmd:00000000 $t
+     /tmp/ccMxyfWk.s:17328  .text.DAC_SoftwareTriggerCmd:00000000 DAC_SoftwareTriggerCmd
+     /tmp/ccMxyfWk.s:17384  .text.DAC_SoftwareTriggerCmd:00000058 $d
+     /tmp/ccMxyfWk.s:17389  .text.DAC_DualSoftwareTriggerCmd:00000000 $t
+     /tmp/ccMxyfWk.s:17394  .text.DAC_DualSoftwareTriggerCmd:00000000 DAC_DualSoftwareTriggerCmd
+     /tmp/ccMxyfWk.s:17440  .text.DAC_DualSoftwareTriggerCmd:00000034 $d
+     /tmp/ccMxyfWk.s:17445  .text.DAC_WaveGenerationCmd:00000000 $t
+     /tmp/ccMxyfWk.s:17450  .text.DAC_WaveGenerationCmd:00000000 DAC_WaveGenerationCmd
+     /tmp/ccMxyfWk.s:17505  .text.DAC_WaveGenerationCmd:0000004c $d
+     /tmp/ccMxyfWk.s:17510  .text.DAC_SetChannel1Data:00000000 $t
+     /tmp/ccMxyfWk.s:17515  .text.DAC_SetChannel1Data:00000000 DAC_SetChannel1Data
+     /tmp/ccMxyfWk.s:17559  .text.DAC_SetChannel1Data:00000034 $d
+     /tmp/ccMxyfWk.s:17564  .text.DAC_SetChannel2Data:00000000 $t
+     /tmp/ccMxyfWk.s:17569  .text.DAC_SetChannel2Data:00000000 DAC_SetChannel2Data
+     /tmp/ccMxyfWk.s:17613  .text.DAC_SetChannel2Data:00000034 $d
+     /tmp/ccMxyfWk.s:17618  .text.DAC_SetDualChannelData:00000000 $t
+     /tmp/ccMxyfWk.s:17623  .text.DAC_SetDualChannelData:00000000 DAC_SetDualChannelData
+     /tmp/ccMxyfWk.s:17690  .text.DAC_SetDualChannelData:00000060 $d
+     /tmp/ccMxyfWk.s:17695  .text.DAC_GetDataOutputValue:00000000 $t
+     /tmp/ccMxyfWk.s:17700  .text.DAC_GetDataOutputValue:00000000 DAC_GetDataOutputValue
+     /tmp/ccMxyfWk.s:17744  .text.DAC_GetDataOutputValue:00000034 $d
+     /tmp/ccMxyfWk.s:17749  .text.DAC_GetFlagStatus:00000000 $t
+     /tmp/ccMxyfWk.s:17754  .text.DAC_GetFlagStatus:00000000 DAC_GetFlagStatus
+     /tmp/ccMxyfWk.s:17805  .text.DAC_GetFlagStatus:00000040 $d
+     /tmp/ccMxyfWk.s:17810  .text.DAC_ClearFlag:00000000 $t
+     /tmp/ccMxyfWk.s:17815  .text.DAC_ClearFlag:00000000 DAC_ClearFlag
+     /tmp/ccMxyfWk.s:17848  .text.DAC_ClearFlag:00000020 $d
+     /tmp/ccMxyfWk.s:17853  .text.DAC_GetITStatus:00000000 $t
+     /tmp/ccMxyfWk.s:17858  .text.DAC_GetITStatus:00000000 DAC_GetITStatus
+     /tmp/ccMxyfWk.s:17924  .text.DAC_GetITStatus:00000060 $d
+     /tmp/ccMxyfWk.s:17929  .text.DAC_ClearITPendingBit:00000000 $t
+     /tmp/ccMxyfWk.s:17934  .text.DAC_ClearITPendingBit:00000000 DAC_ClearITPendingBit
+     /tmp/ccMxyfWk.s:17967  .text.DAC_ClearITPendingBit:00000020 $d
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+RCC_APB1PeriphResetCmd

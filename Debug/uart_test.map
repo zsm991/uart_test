@@ -4,6 +4,9 @@ Discarded input sections
  .text          0x00000000        0x0 ./main.o
  .data          0x00000000        0x0 ./main.o
  .bss           0x00000000        0x0 ./main.o
+ .text          0x00000000        0x0 ./uart_test/init.o
+ .data          0x00000000        0x0 ./uart_test/init.o
+ .bss           0x00000000        0x0 ./uart_test/init.o
  .text          0x00000000        0x0 ./StdPeripheralDriver/src/misc.o
  .data          0x00000000        0x0 ./StdPeripheralDriver/src/misc.o
  .bss           0x00000000        0x0 ./StdPeripheralDriver/src/misc.o
@@ -1093,6 +1096,7 @@ RAM              0x20000000         0x00002000         xrw
 Linker script and memory map
 
 LOAD ./main.o
+LOAD ./uart_test/init.o
 LOAD ./StdPeripheralDriver/src/misc.o
 LOAD ./StdPeripheralDriver/src/stm32f10x_adc.o
 LOAD ./StdPeripheralDriver/src/stm32f10x_bkp.o
@@ -1236,77 +1240,79 @@ END GROUP
  .ARM.attributes
                 0x08000388       0x31 ./main.o
  .ARM.attributes
-                0x080003b9       0x31 ./StdPeripheralDriver/src/misc.o
+                0x080003b9       0x31 ./uart_test/init.o
  .ARM.attributes
-                0x080003ea       0x31 ./StdPeripheralDriver/src/stm32f10x_adc.o
+                0x080003ea       0x31 ./StdPeripheralDriver/src/misc.o
  .ARM.attributes
-                0x0800041b       0x31 ./StdPeripheralDriver/src/stm32f10x_bkp.o
+                0x0800041b       0x31 ./StdPeripheralDriver/src/stm32f10x_adc.o
  .ARM.attributes
-                0x0800044c       0x31 ./StdPeripheralDriver/src/stm32f10x_can.o
+                0x0800044c       0x31 ./StdPeripheralDriver/src/stm32f10x_bkp.o
  .ARM.attributes
-                0x0800047d       0x31 ./StdPeripheralDriver/src/stm32f10x_cec.o
+                0x0800047d       0x31 ./StdPeripheralDriver/src/stm32f10x_can.o
  .ARM.attributes
-                0x080004ae       0x31 ./StdPeripheralDriver/src/stm32f10x_crc.o
+                0x080004ae       0x31 ./StdPeripheralDriver/src/stm32f10x_cec.o
  .ARM.attributes
-                0x080004df       0x31 ./StdPeripheralDriver/src/stm32f10x_dac.o
+                0x080004df       0x31 ./StdPeripheralDriver/src/stm32f10x_crc.o
  .ARM.attributes
-                0x08000510       0x31 ./StdPeripheralDriver/src/stm32f10x_dbgmcu.o
+                0x08000510       0x31 ./StdPeripheralDriver/src/stm32f10x_dac.o
  .ARM.attributes
-                0x08000541       0x31 ./StdPeripheralDriver/src/stm32f10x_dma.o
+                0x08000541       0x31 ./StdPeripheralDriver/src/stm32f10x_dbgmcu.o
  .ARM.attributes
-                0x08000572       0x31 ./StdPeripheralDriver/src/stm32f10x_exti.o
+                0x08000572       0x31 ./StdPeripheralDriver/src/stm32f10x_dma.o
  .ARM.attributes
-                0x080005a3       0x31 ./StdPeripheralDriver/src/stm32f10x_flash.o
+                0x080005a3       0x31 ./StdPeripheralDriver/src/stm32f10x_exti.o
  .ARM.attributes
-                0x080005d4       0x31 ./StdPeripheralDriver/src/stm32f10x_fsmc.o
+                0x080005d4       0x31 ./StdPeripheralDriver/src/stm32f10x_flash.o
  .ARM.attributes
-                0x08000605       0x31 ./StdPeripheralDriver/src/stm32f10x_gpio.o
+                0x08000605       0x31 ./StdPeripheralDriver/src/stm32f10x_fsmc.o
  .ARM.attributes
-                0x08000636       0x31 ./StdPeripheralDriver/src/stm32f10x_i2c.o
+                0x08000636       0x31 ./StdPeripheralDriver/src/stm32f10x_gpio.o
  .ARM.attributes
-                0x08000667       0x31 ./StdPeripheralDriver/src/stm32f10x_iwdg.o
+                0x08000667       0x31 ./StdPeripheralDriver/src/stm32f10x_i2c.o
  .ARM.attributes
-                0x08000698       0x31 ./StdPeripheralDriver/src/stm32f10x_pwr.o
+                0x08000698       0x31 ./StdPeripheralDriver/src/stm32f10x_iwdg.o
  .ARM.attributes
-                0x080006c9       0x31 ./StdPeripheralDriver/src/stm32f10x_rcc.o
+                0x080006c9       0x31 ./StdPeripheralDriver/src/stm32f10x_pwr.o
  .ARM.attributes
-                0x080006fa       0x31 ./StdPeripheralDriver/src/stm32f10x_rtc.o
+                0x080006fa       0x31 ./StdPeripheralDriver/src/stm32f10x_rcc.o
  .ARM.attributes
-                0x0800072b       0x31 ./StdPeripheralDriver/src/stm32f10x_sdio.o
+                0x0800072b       0x31 ./StdPeripheralDriver/src/stm32f10x_rtc.o
  .ARM.attributes
-                0x0800075c       0x31 ./StdPeripheralDriver/src/stm32f10x_spi.o
+                0x0800075c       0x31 ./StdPeripheralDriver/src/stm32f10x_sdio.o
  .ARM.attributes
-                0x0800078d       0x31 ./StdPeripheralDriver/src/stm32f10x_tim.o
+                0x0800078d       0x31 ./StdPeripheralDriver/src/stm32f10x_spi.o
  .ARM.attributes
-                0x080007be       0x31 ./StdPeripheralDriver/src/stm32f10x_usart.o
+                0x080007be       0x31 ./StdPeripheralDriver/src/stm32f10x_tim.o
  .ARM.attributes
-                0x080007ef       0x31 ./StdPeripheralDriver/src/stm32f10x_wwdg.o
+                0x080007ef       0x31 ./StdPeripheralDriver/src/stm32f10x_usart.o
  .ARM.attributes
-                0x08000820       0x31 ./CMSIS/core_cm3.o
+                0x08000820       0x31 ./StdPeripheralDriver/src/stm32f10x_wwdg.o
  .ARM.attributes
-                0x08000851       0x21 ./CMSIS/startup_stm32f10x_md_vl.o
+                0x08000851       0x31 ./CMSIS/core_cm3.o
  .ARM.attributes
-                0x08000872       0x31 ./CMSIS/system_stm32f10x.o
+                0x08000882       0x21 ./CMSIS/startup_stm32f10x_md_vl.o
+ .ARM.attributes
+                0x080008a3       0x31 ./CMSIS/system_stm32f10x.o
 
-.preinit_array  0x080008a3        0x0
-                0x080008a3                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x080008d4        0x0
+                0x080008d4                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x080008a3                PROVIDE (__preinit_array_end, .)
+                0x080008d4                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x080008a3        0x0
-                0x080008a3                PROVIDE (__init_array_start, .)
+.init_array     0x080008d4        0x0
+                0x080008d4                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
-                0x080008a3                PROVIDE (__init_array_end, .)
+                0x080008d4                PROVIDE (__init_array_end, .)
 
-.fini_array     0x080008a3        0x0
-                0x080008a3                PROVIDE (__fini_array_start, .)
+.fini_array     0x080008d4        0x0
+                0x080008d4                PROVIDE (__fini_array_start, .)
  *(.fini_array*)
  *(SORT(.fini_array.*))
-                0x080008a3                PROVIDE (__fini_array_end, .)
-                0x080008a3                _sidata = .
+                0x080008d4                PROVIDE (__fini_array_end, .)
+                0x080008d4                _sidata = .
 
-.data           0x20000000        0x0 load address 0x080008a3
+.data           0x20000000        0x0 load address 0x080008d4
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -1341,146 +1347,151 @@ END GROUP
  libgcc.a(*)
 OUTPUT(uart_test.elf elf32-littlearm)
 
-.debug_abbrev   0x00000000     0x225b
+.debug_abbrev   0x00000000     0x2271
  .debug_abbrev  0x00000000       0x6e ./main.o
- .debug_abbrev  0x0000006e      0x139 ./StdPeripheralDriver/src/misc.o
- .debug_abbrev  0x000001a7      0x178 ./StdPeripheralDriver/src/stm32f10x_adc.o
- .debug_abbrev  0x0000031f      0x15a ./StdPeripheralDriver/src/stm32f10x_bkp.o
- .debug_abbrev  0x00000479      0x1b0 ./StdPeripheralDriver/src/stm32f10x_can.o
- .debug_abbrev  0x00000629      0x18d ./StdPeripheralDriver/src/stm32f10x_cec.o
- .debug_abbrev  0x000007b6      0x10e ./StdPeripheralDriver/src/stm32f10x_crc.o
- .debug_abbrev  0x000008c4      0x176 ./StdPeripheralDriver/src/stm32f10x_dac.o
- .debug_abbrev  0x00000a3a       0xde ./StdPeripheralDriver/src/stm32f10x_dbgmcu.o
- .debug_abbrev  0x00000b18      0x152 ./StdPeripheralDriver/src/stm32f10x_dma.o
- .debug_abbrev  0x00000c6a      0x14e ./StdPeripheralDriver/src/stm32f10x_exti.o
- .debug_abbrev  0x00000db8      0x166 ./StdPeripheralDriver/src/stm32f10x_flash.o
- .debug_abbrev  0x00000f1e      0x16a ./StdPeripheralDriver/src/stm32f10x_fsmc.o
- .debug_abbrev  0x00001088      0x1a8 ./StdPeripheralDriver/src/stm32f10x_gpio.o
- .debug_abbrev  0x00001230      0x161 ./StdPeripheralDriver/src/stm32f10x_i2c.o
- .debug_abbrev  0x00001391       0xfe ./StdPeripheralDriver/src/stm32f10x_iwdg.o
- .debug_abbrev  0x0000148f      0x188 ./StdPeripheralDriver/src/stm32f10x_pwr.o
- .debug_abbrev  0x00001617      0x195 ./StdPeripheralDriver/src/stm32f10x_rcc.o
- .debug_abbrev  0x000017ac      0x16a ./StdPeripheralDriver/src/stm32f10x_rtc.o
- .debug_abbrev  0x00001916      0x1a6 ./StdPeripheralDriver/src/stm32f10x_sdio.o
- .debug_abbrev  0x00001abc      0x161 ./StdPeripheralDriver/src/stm32f10x_spi.o
- .debug_abbrev  0x00001c1d      0x176 ./StdPeripheralDriver/src/stm32f10x_tim.o
- .debug_abbrev  0x00001d93      0x15f ./StdPeripheralDriver/src/stm32f10x_usart.o
- .debug_abbrev  0x00001ef2       0xfc ./StdPeripheralDriver/src/stm32f10x_wwdg.o
- .debug_abbrev  0x00001fee       0xd9 ./CMSIS/core_cm3.o
- .debug_abbrev  0x000020c7       0x12 ./CMSIS/startup_stm32f10x_md_vl.o
- .debug_abbrev  0x000020d9      0x182 ./CMSIS/system_stm32f10x.o
+ .debug_abbrev  0x0000006e       0x16 ./uart_test/init.o
+ .debug_abbrev  0x00000084      0x139 ./StdPeripheralDriver/src/misc.o
+ .debug_abbrev  0x000001bd      0x178 ./StdPeripheralDriver/src/stm32f10x_adc.o
+ .debug_abbrev  0x00000335      0x15a ./StdPeripheralDriver/src/stm32f10x_bkp.o
+ .debug_abbrev  0x0000048f      0x1b0 ./StdPeripheralDriver/src/stm32f10x_can.o
+ .debug_abbrev  0x0000063f      0x18d ./StdPeripheralDriver/src/stm32f10x_cec.o
+ .debug_abbrev  0x000007cc      0x10e ./StdPeripheralDriver/src/stm32f10x_crc.o
+ .debug_abbrev  0x000008da      0x176 ./StdPeripheralDriver/src/stm32f10x_dac.o
+ .debug_abbrev  0x00000a50       0xde ./StdPeripheralDriver/src/stm32f10x_dbgmcu.o
+ .debug_abbrev  0x00000b2e      0x152 ./StdPeripheralDriver/src/stm32f10x_dma.o
+ .debug_abbrev  0x00000c80      0x14e ./StdPeripheralDriver/src/stm32f10x_exti.o
+ .debug_abbrev  0x00000dce      0x166 ./StdPeripheralDriver/src/stm32f10x_flash.o
+ .debug_abbrev  0x00000f34      0x16a ./StdPeripheralDriver/src/stm32f10x_fsmc.o
+ .debug_abbrev  0x0000109e      0x1a8 ./StdPeripheralDriver/src/stm32f10x_gpio.o
+ .debug_abbrev  0x00001246      0x161 ./StdPeripheralDriver/src/stm32f10x_i2c.o
+ .debug_abbrev  0x000013a7       0xfe ./StdPeripheralDriver/src/stm32f10x_iwdg.o
+ .debug_abbrev  0x000014a5      0x188 ./StdPeripheralDriver/src/stm32f10x_pwr.o
+ .debug_abbrev  0x0000162d      0x195 ./StdPeripheralDriver/src/stm32f10x_rcc.o
+ .debug_abbrev  0x000017c2      0x16a ./StdPeripheralDriver/src/stm32f10x_rtc.o
+ .debug_abbrev  0x0000192c      0x1a6 ./StdPeripheralDriver/src/stm32f10x_sdio.o
+ .debug_abbrev  0x00001ad2      0x161 ./StdPeripheralDriver/src/stm32f10x_spi.o
+ .debug_abbrev  0x00001c33      0x176 ./StdPeripheralDriver/src/stm32f10x_tim.o
+ .debug_abbrev  0x00001da9      0x15f ./StdPeripheralDriver/src/stm32f10x_usart.o
+ .debug_abbrev  0x00001f08       0xfc ./StdPeripheralDriver/src/stm32f10x_wwdg.o
+ .debug_abbrev  0x00002004       0xd9 ./CMSIS/core_cm3.o
+ .debug_abbrev  0x000020dd       0x12 ./CMSIS/startup_stm32f10x_md_vl.o
+ .debug_abbrev  0x000020ef      0x182 ./CMSIS/system_stm32f10x.o
 
-.debug_info     0x00000000     0xbd00
+.debug_info     0x00000000     0xbd29
  .debug_info    0x00000000       0xc2 ./main.o
- .debug_info    0x000000c2      0x54e ./StdPeripheralDriver/src/misc.o
- .debug_info    0x00000610      0xc16 ./StdPeripheralDriver/src/stm32f10x_adc.o
- .debug_info    0x00001226      0x881 ./StdPeripheralDriver/src/stm32f10x_bkp.o
- .debug_info    0x00001aa7      0xc5f ./StdPeripheralDriver/src/stm32f10x_can.o
- .debug_info    0x00002706      0x444 ./StdPeripheralDriver/src/stm32f10x_cec.o
- .debug_info    0x00002b4a      0x208 ./StdPeripheralDriver/src/stm32f10x_crc.o
- .debug_info    0x00002d52      0x679 ./StdPeripheralDriver/src/stm32f10x_dac.o
- .debug_info    0x000033cb      0x162 ./StdPeripheralDriver/src/stm32f10x_dbgmcu.o
- .debug_info    0x0000352d      0x4aa ./StdPeripheralDriver/src/stm32f10x_dma.o
- .debug_info    0x000039d7      0x369 ./StdPeripheralDriver/src/stm32f10x_exti.o
- .debug_info    0x00003d40      0x821 ./StdPeripheralDriver/src/stm32f10x_flash.o
- .debug_info    0x00004561      0x9a1 ./StdPeripheralDriver/src/stm32f10x_fsmc.o
- .debug_info    0x00004f02      0x72b ./StdPeripheralDriver/src/stm32f10x_gpio.o
- .debug_info    0x0000562d      0xb9c ./StdPeripheralDriver/src/stm32f10x_i2c.o
- .debug_info    0x000061c9      0x208 ./StdPeripheralDriver/src/stm32f10x_iwdg.o
- .debug_info    0x000063d1      0x463 ./StdPeripheralDriver/src/stm32f10x_pwr.o
- .debug_info    0x00006834      0x97e ./StdPeripheralDriver/src/stm32f10x_rcc.o
- .debug_info    0x000071b2      0x472 ./StdPeripheralDriver/src/stm32f10x_rtc.o
- .debug_info    0x00007624      0x897 ./StdPeripheralDriver/src/stm32f10x_sdio.o
- .debug_info    0x00007ebb      0x979 ./StdPeripheralDriver/src/stm32f10x_spi.o
- .debug_info    0x00008834     0x1e20 ./StdPeripheralDriver/src/stm32f10x_tim.o
- .debug_info    0x0000a654      0xa74 ./StdPeripheralDriver/src/stm32f10x_usart.o
- .debug_info    0x0000b0c8      0x23d ./StdPeripheralDriver/src/stm32f10x_wwdg.o
- .debug_info    0x0000b305      0x550 ./CMSIS/core_cm3.o
- .debug_info    0x0000b855       0x70 ./CMSIS/startup_stm32f10x_md_vl.o
- .debug_info    0x0000b8c5      0x43b ./CMSIS/system_stm32f10x.o
+ .debug_info    0x000000c2       0x29 ./uart_test/init.o
+ .debug_info    0x000000eb      0x54e ./StdPeripheralDriver/src/misc.o
+ .debug_info    0x00000639      0xc16 ./StdPeripheralDriver/src/stm32f10x_adc.o
+ .debug_info    0x0000124f      0x881 ./StdPeripheralDriver/src/stm32f10x_bkp.o
+ .debug_info    0x00001ad0      0xc5f ./StdPeripheralDriver/src/stm32f10x_can.o
+ .debug_info    0x0000272f      0x444 ./StdPeripheralDriver/src/stm32f10x_cec.o
+ .debug_info    0x00002b73      0x208 ./StdPeripheralDriver/src/stm32f10x_crc.o
+ .debug_info    0x00002d7b      0x679 ./StdPeripheralDriver/src/stm32f10x_dac.o
+ .debug_info    0x000033f4      0x162 ./StdPeripheralDriver/src/stm32f10x_dbgmcu.o
+ .debug_info    0x00003556      0x4aa ./StdPeripheralDriver/src/stm32f10x_dma.o
+ .debug_info    0x00003a00      0x369 ./StdPeripheralDriver/src/stm32f10x_exti.o
+ .debug_info    0x00003d69      0x821 ./StdPeripheralDriver/src/stm32f10x_flash.o
+ .debug_info    0x0000458a      0x9a1 ./StdPeripheralDriver/src/stm32f10x_fsmc.o
+ .debug_info    0x00004f2b      0x72b ./StdPeripheralDriver/src/stm32f10x_gpio.o
+ .debug_info    0x00005656      0xb9c ./StdPeripheralDriver/src/stm32f10x_i2c.o
+ .debug_info    0x000061f2      0x208 ./StdPeripheralDriver/src/stm32f10x_iwdg.o
+ .debug_info    0x000063fa      0x463 ./StdPeripheralDriver/src/stm32f10x_pwr.o
+ .debug_info    0x0000685d      0x97e ./StdPeripheralDriver/src/stm32f10x_rcc.o
+ .debug_info    0x000071db      0x472 ./StdPeripheralDriver/src/stm32f10x_rtc.o
+ .debug_info    0x0000764d      0x897 ./StdPeripheralDriver/src/stm32f10x_sdio.o
+ .debug_info    0x00007ee4      0x979 ./StdPeripheralDriver/src/stm32f10x_spi.o
+ .debug_info    0x0000885d     0x1e20 ./StdPeripheralDriver/src/stm32f10x_tim.o
+ .debug_info    0x0000a67d      0xa74 ./StdPeripheralDriver/src/stm32f10x_usart.o
+ .debug_info    0x0000b0f1      0x23d ./StdPeripheralDriver/src/stm32f10x_wwdg.o
+ .debug_info    0x0000b32e      0x550 ./CMSIS/core_cm3.o
+ .debug_info    0x0000b87e       0x70 ./CMSIS/startup_stm32f10x_md_vl.o
+ .debug_info    0x0000b8ee      0x43b ./CMSIS/system_stm32f10x.o
 
-.debug_line     0x00000000     0x5f8e
+.debug_line     0x00000000     0x5fc2
  .debug_line    0x00000000      0x194 ./main.o
- .debug_line    0x00000194      0x237 ./StdPeripheralDriver/src/misc.o
- .debug_line    0x000003cb      0x529 ./StdPeripheralDriver/src/stm32f10x_adc.o
- .debug_line    0x000008f4      0x2d7 ./StdPeripheralDriver/src/stm32f10x_bkp.o
- .debug_line    0x00000bcb      0x571 ./StdPeripheralDriver/src/stm32f10x_can.o
- .debug_line    0x0000113c      0x317 ./StdPeripheralDriver/src/stm32f10x_cec.o
- .debug_line    0x00001453      0x25d ./StdPeripheralDriver/src/stm32f10x_crc.o
- .debug_line    0x000016b0      0x35b ./StdPeripheralDriver/src/stm32f10x_dac.o
- .debug_line    0x00001a0b      0x21b ./StdPeripheralDriver/src/stm32f10x_dbgmcu.o
- .debug_line    0x00001c26      0x309 ./StdPeripheralDriver/src/stm32f10x_dma.o
- .debug_line    0x00001f2f      0x297 ./StdPeripheralDriver/src/stm32f10x_exti.o
- .debug_line    0x000021c6      0x4cc ./StdPeripheralDriver/src/stm32f10x_flash.o
- .debug_line    0x00002692      0x459 ./StdPeripheralDriver/src/stm32f10x_fsmc.o
- .debug_line    0x00002aeb      0x3b4 ./StdPeripheralDriver/src/stm32f10x_gpio.o
- .debug_line    0x00002e9f      0x4ca ./StdPeripheralDriver/src/stm32f10x_i2c.o
- .debug_line    0x00003369      0x24f ./StdPeripheralDriver/src/stm32f10x_iwdg.o
- .debug_line    0x000035b8      0x2cd ./StdPeripheralDriver/src/stm32f10x_pwr.o
- .debug_line    0x00003885      0x4c7 ./StdPeripheralDriver/src/stm32f10x_rcc.o
- .debug_line    0x00003d4c      0x308 ./StdPeripheralDriver/src/stm32f10x_rtc.o
- .debug_line    0x00004054      0x451 ./StdPeripheralDriver/src/stm32f10x_sdio.o
- .debug_line    0x000044a5      0x415 ./StdPeripheralDriver/src/stm32f10x_spi.o
- .debug_line    0x000048ba      0xa94 ./StdPeripheralDriver/src/stm32f10x_tim.o
- .debug_line    0x0000534e      0x48d ./StdPeripheralDriver/src/stm32f10x_usart.o
- .debug_line    0x000057db      0x289 ./StdPeripheralDriver/src/stm32f10x_wwdg.o
- .debug_line    0x00005a64      0x2ba ./CMSIS/core_cm3.o
- .debug_line    0x00005d1e       0x77 ./CMSIS/startup_stm32f10x_md_vl.o
- .debug_line    0x00005d95      0x1f9 ./CMSIS/system_stm32f10x.o
+ .debug_line    0x00000194       0x34 ./uart_test/init.o
+ .debug_line    0x000001c8      0x237 ./StdPeripheralDriver/src/misc.o
+ .debug_line    0x000003ff      0x529 ./StdPeripheralDriver/src/stm32f10x_adc.o
+ .debug_line    0x00000928      0x2d7 ./StdPeripheralDriver/src/stm32f10x_bkp.o
+ .debug_line    0x00000bff      0x571 ./StdPeripheralDriver/src/stm32f10x_can.o
+ .debug_line    0x00001170      0x317 ./StdPeripheralDriver/src/stm32f10x_cec.o
+ .debug_line    0x00001487      0x25d ./StdPeripheralDriver/src/stm32f10x_crc.o
+ .debug_line    0x000016e4      0x35b ./StdPeripheralDriver/src/stm32f10x_dac.o
+ .debug_line    0x00001a3f      0x21b ./StdPeripheralDriver/src/stm32f10x_dbgmcu.o
+ .debug_line    0x00001c5a      0x309 ./StdPeripheralDriver/src/stm32f10x_dma.o
+ .debug_line    0x00001f63      0x297 ./StdPeripheralDriver/src/stm32f10x_exti.o
+ .debug_line    0x000021fa      0x4cc ./StdPeripheralDriver/src/stm32f10x_flash.o
+ .debug_line    0x000026c6      0x459 ./StdPeripheralDriver/src/stm32f10x_fsmc.o
+ .debug_line    0x00002b1f      0x3b4 ./StdPeripheralDriver/src/stm32f10x_gpio.o
+ .debug_line    0x00002ed3      0x4ca ./StdPeripheralDriver/src/stm32f10x_i2c.o
+ .debug_line    0x0000339d      0x24f ./StdPeripheralDriver/src/stm32f10x_iwdg.o
+ .debug_line    0x000035ec      0x2cd ./StdPeripheralDriver/src/stm32f10x_pwr.o
+ .debug_line    0x000038b9      0x4c7 ./StdPeripheralDriver/src/stm32f10x_rcc.o
+ .debug_line    0x00003d80      0x308 ./StdPeripheralDriver/src/stm32f10x_rtc.o
+ .debug_line    0x00004088      0x451 ./StdPeripheralDriver/src/stm32f10x_sdio.o
+ .debug_line    0x000044d9      0x415 ./StdPeripheralDriver/src/stm32f10x_spi.o
+ .debug_line    0x000048ee      0xa94 ./StdPeripheralDriver/src/stm32f10x_tim.o
+ .debug_line    0x00005382      0x48d ./StdPeripheralDriver/src/stm32f10x_usart.o
+ .debug_line    0x0000580f      0x289 ./StdPeripheralDriver/src/stm32f10x_wwdg.o
+ .debug_line    0x00005a98      0x2ba ./CMSIS/core_cm3.o
+ .debug_line    0x00005d52       0x77 ./CMSIS/startup_stm32f10x_md_vl.o
+ .debug_line    0x00005dc9      0x1f9 ./CMSIS/system_stm32f10x.o
 
-.debug_macinfo  0x00000000   0x56d37e
+.debug_macinfo  0x00000000   0x56f563
  .debug_macinfo
                 0x00000000    0x34c2b ./main.o
  .debug_macinfo
-                0x00034c2b    0x3512b ./StdPeripheralDriver/src/misc.o
+                0x00034c2b     0x21e5 ./uart_test/init.o
  .debug_macinfo
-                0x00069d56    0x399af ./StdPeripheralDriver/src/stm32f10x_adc.o
+                0x00036e10    0x3512b ./StdPeripheralDriver/src/misc.o
  .debug_macinfo
-                0x000a3705    0x37f5e ./StdPeripheralDriver/src/stm32f10x_bkp.o
+                0x0006bf3b    0x399af ./StdPeripheralDriver/src/stm32f10x_adc.o
  .debug_macinfo
-                0x000db663    0x38fd9 ./StdPeripheralDriver/src/stm32f10x_can.o
+                0x000a58ea    0x37f5e ./StdPeripheralDriver/src/stm32f10x_bkp.o
  .debug_macinfo
-                0x0011463c    0x37af4 ./StdPeripheralDriver/src/stm32f10x_cec.o
+                0x000dd848    0x38fd9 ./StdPeripheralDriver/src/stm32f10x_can.o
  .debug_macinfo
-                0x0014c130    0x34c44 ./StdPeripheralDriver/src/stm32f10x_crc.o
+                0x00116821    0x37af4 ./StdPeripheralDriver/src/stm32f10x_cec.o
  .debug_macinfo
-                0x00180d74    0x38407 ./StdPeripheralDriver/src/stm32f10x_dac.o
+                0x0014e315    0x34c44 ./StdPeripheralDriver/src/stm32f10x_crc.o
  .debug_macinfo
-                0x001b917b    0x3511a ./StdPeripheralDriver/src/stm32f10x_dbgmcu.o
+                0x00182f59    0x38407 ./StdPeripheralDriver/src/stm32f10x_dac.o
  .debug_macinfo
-                0x001ee295    0x39aaf ./StdPeripheralDriver/src/stm32f10x_dma.o
+                0x001bb360    0x3511a ./StdPeripheralDriver/src/stm32f10x_dbgmcu.o
  .debug_macinfo
-                0x00227d44    0x3527b ./StdPeripheralDriver/src/stm32f10x_exti.o
+                0x001f047a    0x39aaf ./StdPeripheralDriver/src/stm32f10x_dma.o
  .debug_macinfo
-                0x0025cfbf    0x3676c ./StdPeripheralDriver/src/stm32f10x_flash.o
+                0x00229f29    0x3527b ./StdPeripheralDriver/src/stm32f10x_exti.o
  .debug_macinfo
-                0x0029372b    0x38b5a ./StdPeripheralDriver/src/stm32f10x_fsmc.o
+                0x0025f1a4    0x3676c ./StdPeripheralDriver/src/stm32f10x_flash.o
  .debug_macinfo
-                0x002cc285    0x391f5 ./StdPeripheralDriver/src/stm32f10x_gpio.o
+                0x00295910    0x38b5a ./StdPeripheralDriver/src/stm32f10x_fsmc.o
  .debug_macinfo
-                0x0030547a    0x393c8 ./StdPeripheralDriver/src/stm32f10x_i2c.o
+                0x002ce46a    0x391f5 ./StdPeripheralDriver/src/stm32f10x_gpio.o
  .debug_macinfo
-                0x0033e842    0x3503b ./StdPeripheralDriver/src/stm32f10x_iwdg.o
+                0x0030765f    0x393c8 ./StdPeripheralDriver/src/stm32f10x_i2c.o
  .debug_macinfo
-                0x0037387d    0x37897 ./StdPeripheralDriver/src/stm32f10x_pwr.o
+                0x00340a27    0x3503b ./StdPeripheralDriver/src/stm32f10x_iwdg.o
  .debug_macinfo
-                0x003ab114    0x37995 ./StdPeripheralDriver/src/stm32f10x_rcc.o
+                0x00375a62    0x37897 ./StdPeripheralDriver/src/stm32f10x_pwr.o
  .debug_macinfo
-                0x003e2aa9    0x34f6e ./StdPeripheralDriver/src/stm32f10x_rtc.o
+                0x003ad2f9    0x37995 ./StdPeripheralDriver/src/stm32f10x_rcc.o
  .debug_macinfo
-                0x00417a17    0x39829 ./StdPeripheralDriver/src/stm32f10x_sdio.o
+                0x003e4c8e    0x34f6e ./StdPeripheralDriver/src/stm32f10x_rtc.o
  .debug_macinfo
-                0x00451240    0x38c83 ./StdPeripheralDriver/src/stm32f10x_spi.o
+                0x00419bfc    0x39829 ./StdPeripheralDriver/src/stm32f10x_sdio.o
  .debug_macinfo
-                0x00489ec3    0x3bdad ./StdPeripheralDriver/src/stm32f10x_tim.o
+                0x00453425    0x38c83 ./StdPeripheralDriver/src/stm32f10x_spi.o
  .debug_macinfo
-                0x004c5c70    0x38b05 ./StdPeripheralDriver/src/stm32f10x_usart.o
+                0x0048c0a8    0x3bdad ./StdPeripheralDriver/src/stm32f10x_tim.o
  .debug_macinfo
-                0x004fe775    0x374cf ./StdPeripheralDriver/src/stm32f10x_wwdg.o
+                0x004c7e55    0x38b05 ./StdPeripheralDriver/src/stm32f10x_usart.o
  .debug_macinfo
-                0x00535c44     0x2adb ./CMSIS/core_cm3.o
+                0x0050095a    0x374cf ./StdPeripheralDriver/src/stm32f10x_wwdg.o
  .debug_macinfo
-                0x0053871f    0x34c5f ./CMSIS/system_stm32f10x.o
+                0x00537e29     0x2adb ./CMSIS/core_cm3.o
+ .debug_macinfo
+                0x0053a904    0x34c5f ./CMSIS/system_stm32f10x.o
 
 .debug_loc      0x00000000     0x6bdc
  .debug_loc     0x00000000       0x58 ./main.o
@@ -1705,63 +1716,66 @@ OUTPUT(uart_test.elf elf32-littlearm)
  .debug_ranges  0x00001088       0x20 ./CMSIS/startup_stm32f10x_md_vl.o
  .debug_ranges  0x000010a8       0x28 ./CMSIS/system_stm32f10x.o
 
-.debug_str      0x00000000     0x4bbe
+.debug_str      0x00000000     0x4bfb
  .debug_str     0x00000000       0xa6 ./main.o
                                  0xda (size before relaxing)
- .debug_str     0x000000a6      0x261 ./StdPeripheralDriver/src/misc.o
+ .debug_str     0x000000a6       0x3d ./uart_test/init.o
+                                 0x49 (size before relaxing)
+ .debug_str     0x000000e3      0x261 ./StdPeripheralDriver/src/misc.o
                                 0x332 (size before relaxing)
- .debug_str     0x00000307      0x533 ./StdPeripheralDriver/src/stm32f10x_adc.o
+ .debug_str     0x00000344      0x533 ./StdPeripheralDriver/src/stm32f10x_adc.o
                                 0x66a (size before relaxing)
- .debug_str     0x0000083a      0x3b4 ./StdPeripheralDriver/src/stm32f10x_bkp.o
+ .debug_str     0x00000877      0x3b4 ./StdPeripheralDriver/src/stm32f10x_bkp.o
                                 0x524 (size before relaxing)
- .debug_str     0x00000bee      0x514 ./StdPeripheralDriver/src/stm32f10x_can.o
+ .debug_str     0x00000c2b      0x514 ./StdPeripheralDriver/src/stm32f10x_can.o
                                 0x69d (size before relaxing)
- .debug_str     0x00001102      0x19c ./StdPeripheralDriver/src/stm32f10x_cec.o
+ .debug_str     0x0000113f      0x19c ./StdPeripheralDriver/src/stm32f10x_cec.o
                                 0x2e5 (size before relaxing)
- .debug_str     0x0000129e       0xb2 ./StdPeripheralDriver/src/stm32f10x_crc.o
+ .debug_str     0x000012db       0xb2 ./StdPeripheralDriver/src/stm32f10x_crc.o
                                 0x1aa (size before relaxing)
- .debug_str     0x00001350      0x265 ./StdPeripheralDriver/src/stm32f10x_dac.o
+ .debug_str     0x0000138d      0x265 ./StdPeripheralDriver/src/stm32f10x_dac.o
                                 0x3b2 (size before relaxing)
- .debug_str     0x000015b5       0x80 ./StdPeripheralDriver/src/stm32f10x_dbgmcu.o
+ .debug_str     0x000015f2       0x80 ./StdPeripheralDriver/src/stm32f10x_dbgmcu.o
                                 0x176 (size before relaxing)
- .debug_str     0x00001635      0x206 ./StdPeripheralDriver/src/stm32f10x_dma.o
+ .debug_str     0x00001672      0x206 ./StdPeripheralDriver/src/stm32f10x_dma.o
                                 0x330 (size before relaxing)
- .debug_str     0x0000183b      0x1af ./StdPeripheralDriver/src/stm32f10x_exti.o
+ .debug_str     0x00001878      0x1af ./StdPeripheralDriver/src/stm32f10x_exti.o
                                 0x2cd (size before relaxing)
- .debug_str     0x000019ea      0x40f ./StdPeripheralDriver/src/stm32f10x_flash.o
+ .debug_str     0x00001a27      0x40f ./StdPeripheralDriver/src/stm32f10x_flash.o
                                 0x557 (size before relaxing)
- .debug_str     0x00001df9      0x5bd ./StdPeripheralDriver/src/stm32f10x_fsmc.o
+ .debug_str     0x00001e36      0x5bd ./StdPeripheralDriver/src/stm32f10x_fsmc.o
                                 0x6f3 (size before relaxing)
- .debug_str     0x000023b6      0x366 ./StdPeripheralDriver/src/stm32f10x_gpio.o
+ .debug_str     0x000023f3      0x366 ./StdPeripheralDriver/src/stm32f10x_gpio.o
                                 0x488 (size before relaxing)
- .debug_str     0x0000271c      0x428 ./StdPeripheralDriver/src/stm32f10x_i2c.o
+ .debug_str     0x00002759      0x428 ./StdPeripheralDriver/src/stm32f10x_i2c.o
                                 0x5d5 (size before relaxing)
- .debug_str     0x00002b44       0xca ./StdPeripheralDriver/src/stm32f10x_iwdg.o
+ .debug_str     0x00002b81       0xca ./StdPeripheralDriver/src/stm32f10x_iwdg.o
                                 0x1cb (size before relaxing)
- .debug_str     0x00002c0e      0x10a ./StdPeripheralDriver/src/stm32f10x_pwr.o
+ .debug_str     0x00002c4b      0x10a ./StdPeripheralDriver/src/stm32f10x_pwr.o
                                 0x281 (size before relaxing)
- .debug_str     0x00002d18      0x403 ./StdPeripheralDriver/src/stm32f10x_rcc.o
+ .debug_str     0x00002d55      0x403 ./StdPeripheralDriver/src/stm32f10x_rcc.o
                                 0x5dc (size before relaxing)
- .debug_str     0x0000311b      0x182 ./StdPeripheralDriver/src/stm32f10x_rtc.o
+ .debug_str     0x00003158      0x182 ./StdPeripheralDriver/src/stm32f10x_rtc.o
                                 0x311 (size before relaxing)
- .debug_str     0x0000329d      0x463 ./StdPeripheralDriver/src/stm32f10x_sdio.o
+ .debug_str     0x000032da      0x463 ./StdPeripheralDriver/src/stm32f10x_sdio.o
                                 0x5aa (size before relaxing)
- .debug_str     0x00003700      0x353 ./StdPeripheralDriver/src/stm32f10x_spi.o
+ .debug_str     0x0000373d      0x353 ./StdPeripheralDriver/src/stm32f10x_spi.o
                                 0x56c (size before relaxing)
- .debug_str     0x00003a53      0xae4 ./StdPeripheralDriver/src/stm32f10x_tim.o
+ .debug_str     0x00003a90      0xae4 ./StdPeripheralDriver/src/stm32f10x_tim.o
                                 0xd4c (size before relaxing)
- .debug_str     0x00004537      0x412 ./StdPeripheralDriver/src/stm32f10x_usart.o
+ .debug_str     0x00004574      0x412 ./StdPeripheralDriver/src/stm32f10x_usart.o
                                 0x5ff (size before relaxing)
- .debug_str     0x00004949       0xc6 ./StdPeripheralDriver/src/stm32f10x_wwdg.o
+ .debug_str     0x00004986       0xc6 ./StdPeripheralDriver/src/stm32f10x_wwdg.o
                                 0x1d7 (size before relaxing)
- .debug_str     0x00004a0f      0x146 ./CMSIS/core_cm3.o
+ .debug_str     0x00004a4c      0x146 ./CMSIS/core_cm3.o
                                 0x22f (size before relaxing)
- .debug_str     0x00004b55       0x69 ./CMSIS/system_stm32f10x.o
+ .debug_str     0x00004b92       0x69 ./CMSIS/system_stm32f10x.o
                                 0x232 (size before relaxing)
 
 .comment        0x00000000       0x2a
  .comment       0x00000000       0x2a ./main.o
                                  0x2b (size before relaxing)
+ .comment       0x00000000       0x2b ./uart_test/init.o
  .comment       0x00000000       0x2b ./StdPeripheralDriver/src/misc.o
  .comment       0x00000000       0x2b ./StdPeripheralDriver/src/stm32f10x_adc.o
  .comment       0x00000000       0x2b ./StdPeripheralDriver/src/stm32f10x_bkp.o

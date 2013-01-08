@@ -11,29 +11,29 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   3 ._user_heap_stack 00000100  20000000  20000000  00010000  2**0
                   ALLOC
-  4 .debug_abbrev 0000225b  00000000  00000000  000083b7  2**0
+  4 .debug_abbrev 00002271  00000000  00000000  000083b7  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   0000bd00  00000000  00000000  0000a612  2**0
+  5 .debug_info   0000bd29  00000000  00000000  0000a628  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_line   00005f8e  00000000  00000000  00016312  2**0
+  6 .debug_line   00005fc2  00000000  00000000  00016351  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_macinfo 0056d37e  00000000  00000000  0001c2a0  2**0
+  7 .debug_macinfo 0056f563  00000000  00000000  0001c313  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_loc    00006bdc  00000000  00000000  0058961e  2**0
+  8 .debug_loc    00006bdc  00000000  00000000  0058b876  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_pubnames 00002ca9  00000000  00000000  005901fa  2**0
+  9 .debug_pubnames 00002ca9  00000000  00000000  00592452  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_pubtypes 00000ed4  00000000  00000000  00592ea3  2**0
+ 10 .debug_pubtypes 00000ed4  00000000  00000000  005950fb  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_aranges 00001278  00000000  00000000  00593d78  2**3
+ 11 .debug_aranges 00001278  00000000  00000000  00595fd0  2**3
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 000010d0  00000000  00000000  00594ff0  2**3
+ 12 .debug_ranges 000010d0  00000000  00000000  00597248  2**3
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    00004bbe  00000000  00000000  005960c0  2**0
+ 13 .debug_str    00004bfb  00000000  00000000  00598318  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .comment      0000002a  00000000  00000000  0059ac7e  2**0
+ 14 .comment      0000002a  00000000  00000000  0059cf13  2**0
                   CONTENTS, READONLY
- 15 .debug_frame  000039c4  00000000  00000000  0059aca8  2**2
+ 15 .debug_frame  000039c4  00000000  00000000  0059cf40  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -83,7 +83,7 @@ Disassembly of section .text:
  800020e:	f000 f80f 	bl	8000230 <SystemInit>
  8000212:	f7ff ffe3 	bl	80001dc <main>
  8000216:	4770      	bx	lr
- 8000218:	080008a3 	.word	0x080008a3
+ 8000218:	080008d4 	.word	0x080008d4
  800021c:	20000000 	.word	0x20000000
  8000220:	20000000 	.word	0x20000000
  8000224:	20000000 	.word	0x20000000

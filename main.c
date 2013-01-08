@@ -2,5 +2,8 @@
 
 int main(void)
 {
-	do __NOP(); while (1);
+	zinit();  // Initialize peripheria
+
+
+	while (1);
 }

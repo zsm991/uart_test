@@ -5,12 +5,14 @@
  *      Author: serg
  */
 
+#include "stm32f10x.h"
 
 void send_to_uart(uint8_t data)
 {
 
-while(!(USART1->SR & USART_SR_TC)); //Ждем пока бит TC в регистре SR станет 1
+while(!(USART1->SR & USART_SR_TC)); //пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ TC пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ SR пїЅпїЅпїЅпїЅпїЅпїЅ 1
 {
-	USART1->DR=data; //Отсылаем байт через UART
+	USART1->DR=data; //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ UART
 }
 }
+

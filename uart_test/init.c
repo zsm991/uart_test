@@ -8,7 +8,16 @@
  */
 
 #include "init.h"
-#include "vldiscovery.h"
+
+//#include "vldiscovery.h"
+//#include "system_stm32f10x.h"
+//#include "core_cm3.h"
+#include "stm32f10x_usart.h"
+#include "stm32f10x_gpio.h"
+//#include "misc.h"
+
+#include "stm32f10x_rcc.h"
+
 
 void zinit (void)
 {
@@ -26,7 +35,7 @@ void zinit (void)
 	GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_IN_FLOATING;
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
 
-     //Configure USART1 Tx (PA9) as alternate function push-pull
+    //Configure USART1 Tx (PA9) as alternate function push-pull
 	 GPIO_InitStructure.GPIO_Pin   = GPIO_Pin_9;
 	 GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	 GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_AF_PP;
@@ -43,6 +52,8 @@ void zinit (void)
 	USART_Init(USART1, &USART_InitStructure);
 	          USART_Cmd(USART1, ENABLE);
 
-}
+}/*
 
-*/}
+
+*/
+

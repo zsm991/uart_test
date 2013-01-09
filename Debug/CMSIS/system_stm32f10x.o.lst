@@ -1102,21 +1102,21 @@
  16604              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 system_stm32f10x.c
-     /tmp/ccvBF4i8.s:16185  .data.SystemCoreClock:00000000 SystemCoreClock
-     /tmp/ccvBF4i8.s:16182  .data.SystemCoreClock:00000000 $d
-     /tmp/ccvBF4i8.s:16192  .data.AHBPrescTable:00000000 AHBPrescTable
-     /tmp/ccvBF4i8.s:16189  .data.AHBPrescTable:00000000 $d
-     /tmp/ccvBF4i8.s:16210  .text.SystemInit:00000000 $t
-     /tmp/ccvBF4i8.s:16215  .text.SystemInit:00000000 SystemInit
-     /tmp/ccvBF4i8.s:16436  .text.SetSysClock:00000000 SetSysClock
-     /tmp/ccvBF4i8.s:16280  .text.SystemInit:00000064 $d
-     /tmp/ccvBF4i8.s:16287  .text.SystemCoreClockUpdate:00000000 $t
-     /tmp/ccvBF4i8.s:16292  .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
-     /tmp/ccvBF4i8.s:16423  .text.SystemCoreClockUpdate:000000d0 $d
-     /tmp/ccvBF4i8.s:16432  .text.SetSysClock:00000000 $t
-     /tmp/ccvBF4i8.s:16462  .text.SetSysClockTo24:00000000 SetSysClockTo24
-     /tmp/ccvBF4i8.s:16458  .text.SetSysClockTo24:00000000 $t
-     /tmp/ccvBF4i8.s:16599  .text.SetSysClockTo24:000000d8 $d
+     /tmp/ccObhhHl.s:16185  .data.SystemCoreClock:00000000 SystemCoreClock
+     /tmp/ccObhhHl.s:16182  .data.SystemCoreClock:00000000 $d
+     /tmp/ccObhhHl.s:16192  .data.AHBPrescTable:00000000 AHBPrescTable
+     /tmp/ccObhhHl.s:16189  .data.AHBPrescTable:00000000 $d
+     /tmp/ccObhhHl.s:16210  .text.SystemInit:00000000 $t
+     /tmp/ccObhhHl.s:16215  .text.SystemInit:00000000 SystemInit
+     /tmp/ccObhhHl.s:16436  .text.SetSysClock:00000000 SetSysClock
+     /tmp/ccObhhHl.s:16280  .text.SystemInit:00000064 $d
+     /tmp/ccObhhHl.s:16287  .text.SystemCoreClockUpdate:00000000 $t
+     /tmp/ccObhhHl.s:16292  .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
+     /tmp/ccObhhHl.s:16423  .text.SystemCoreClockUpdate:000000d0 $d
+     /tmp/ccObhhHl.s:16432  .text.SetSysClock:00000000 $t
+     /tmp/ccObhhHl.s:16462  .text.SetSysClockTo24:00000000 SetSysClockTo24
+     /tmp/ccObhhHl.s:16458  .text.SetSysClockTo24:00000000 $t
+     /tmp/ccObhhHl.s:16599  .text.SetSysClockTo24:000000d8 $d
                      .debug_frame:00000010 $d
 
 NO UNDEFINED SYMBOLS

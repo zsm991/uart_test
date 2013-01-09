@@ -1548,33 +1548,33 @@
  18120              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f10x_dma.c
-     /tmp/cc8RP9Eu.s:17270  .text.DMA_DeInit:00000000 $t
-     /tmp/cc8RP9Eu.s:17275  .text.DMA_DeInit:00000000 DMA_DeInit
-     /tmp/cc8RP9Eu.s:17479  .text.DMA_DeInit:00000148 $d
-     /tmp/cc8RP9Eu.s:17497  .text.DMA_Init:00000000 $t
-     /tmp/cc8RP9Eu.s:17502  .text.DMA_Init:00000000 DMA_Init
-     /tmp/cc8RP9Eu.s:17598  .text.DMA_StructInit:00000000 $t
-     /tmp/cc8RP9Eu.s:17603  .text.DMA_StructInit:00000000 DMA_StructInit
-     /tmp/cc8RP9Eu.s:17674  .text.DMA_Cmd:00000000 $t
-     /tmp/cc8RP9Eu.s:17679  .text.DMA_Cmd:00000000 DMA_Cmd
-     /tmp/cc8RP9Eu.s:17728  .text.DMA_ITConfig:00000000 $t
-     /tmp/cc8RP9Eu.s:17733  .text.DMA_ITConfig:00000000 DMA_ITConfig
-     /tmp/cc8RP9Eu.s:17785  .text.DMA_SetCurrDataCounter:00000000 $t
-     /tmp/cc8RP9Eu.s:17790  .text.DMA_SetCurrDataCounter:00000000 DMA_SetCurrDataCounter
-     /tmp/cc8RP9Eu.s:17823  .text.DMA_GetCurrDataCounter:00000000 $t
-     /tmp/cc8RP9Eu.s:17828  .text.DMA_GetCurrDataCounter:00000000 DMA_GetCurrDataCounter
-     /tmp/cc8RP9Eu.s:17860  .text.DMA_GetFlagStatus:00000000 $t
-     /tmp/cc8RP9Eu.s:17865  .text.DMA_GetFlagStatus:00000000 DMA_GetFlagStatus
-     /tmp/cc8RP9Eu.s:17931  .text.DMA_GetFlagStatus:00000054 $d
-     /tmp/cc8RP9Eu.s:17937  .text.DMA_ClearFlag:00000000 $t
-     /tmp/cc8RP9Eu.s:17942  .text.DMA_ClearFlag:00000000 DMA_ClearFlag
-     /tmp/cc8RP9Eu.s:17984  .text.DMA_ClearFlag:0000002c $d
-     /tmp/cc8RP9Eu.s:17990  .text.DMA_GetITStatus:00000000 $t
-     /tmp/cc8RP9Eu.s:17995  .text.DMA_GetITStatus:00000000 DMA_GetITStatus
-     /tmp/cc8RP9Eu.s:18061  .text.DMA_GetITStatus:00000054 $d
-     /tmp/cc8RP9Eu.s:18067  .text.DMA_ClearITPendingBit:00000000 $t
-     /tmp/cc8RP9Eu.s:18072  .text.DMA_ClearITPendingBit:00000000 DMA_ClearITPendingBit
-     /tmp/cc8RP9Eu.s:18114  .text.DMA_ClearITPendingBit:0000002c $d
+     /tmp/ccGGmVYB.s:17270  .text.DMA_DeInit:00000000 $t
+     /tmp/ccGGmVYB.s:17275  .text.DMA_DeInit:00000000 DMA_DeInit
+     /tmp/ccGGmVYB.s:17479  .text.DMA_DeInit:00000148 $d
+     /tmp/ccGGmVYB.s:17497  .text.DMA_Init:00000000 $t
+     /tmp/ccGGmVYB.s:17502  .text.DMA_Init:00000000 DMA_Init
+     /tmp/ccGGmVYB.s:17598  .text.DMA_StructInit:00000000 $t
+     /tmp/ccGGmVYB.s:17603  .text.DMA_StructInit:00000000 DMA_StructInit
+     /tmp/ccGGmVYB.s:17674  .text.DMA_Cmd:00000000 $t
+     /tmp/ccGGmVYB.s:17679  .text.DMA_Cmd:00000000 DMA_Cmd
+     /tmp/ccGGmVYB.s:17728  .text.DMA_ITConfig:00000000 $t
+     /tmp/ccGGmVYB.s:17733  .text.DMA_ITConfig:00000000 DMA_ITConfig
+     /tmp/ccGGmVYB.s:17785  .text.DMA_SetCurrDataCounter:00000000 $t
+     /tmp/ccGGmVYB.s:17790  .text.DMA_SetCurrDataCounter:00000000 DMA_SetCurrDataCounter
+     /tmp/ccGGmVYB.s:17823  .text.DMA_GetCurrDataCounter:00000000 $t
+     /tmp/ccGGmVYB.s:17828  .text.DMA_GetCurrDataCounter:00000000 DMA_GetCurrDataCounter
+     /tmp/ccGGmVYB.s:17860  .text.DMA_GetFlagStatus:00000000 $t
+     /tmp/ccGGmVYB.s:17865  .text.DMA_GetFlagStatus:00000000 DMA_GetFlagStatus
+     /tmp/ccGGmVYB.s:17931  .text.DMA_GetFlagStatus:00000054 $d
+     /tmp/ccGGmVYB.s:17937  .text.DMA_ClearFlag:00000000 $t
+     /tmp/ccGGmVYB.s:17942  .text.DMA_ClearFlag:00000000 DMA_ClearFlag
+     /tmp/ccGGmVYB.s:17984  .text.DMA_ClearFlag:0000002c $d
+     /tmp/ccGGmVYB.s:17990  .text.DMA_GetITStatus:00000000 $t
+     /tmp/ccGGmVYB.s:17995  .text.DMA_GetITStatus:00000000 DMA_GetITStatus
+     /tmp/ccGGmVYB.s:18061  .text.DMA_GetITStatus:00000054 $d
+     /tmp/ccGGmVYB.s:18067  .text.DMA_ClearITPendingBit:00000000 $t
+     /tmp/ccGGmVYB.s:18072  .text.DMA_ClearITPendingBit:00000000 DMA_ClearITPendingBit
+     /tmp/ccGGmVYB.s:18114  .text.DMA_ClearITPendingBit:0000002c $d
                      .debug_frame:00000010 $d
 
 NO UNDEFINED SYMBOLS

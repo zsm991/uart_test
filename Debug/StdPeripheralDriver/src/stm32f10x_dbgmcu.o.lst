@@ -291,15 +291,15 @@
  16401              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f10x_dbgmcu.c
-     /tmp/ccnmnedC.s:16268  .text.DBGMCU_GetREVID:00000000 $t
-     /tmp/ccnmnedC.s:16273  .text.DBGMCU_GetREVID:00000000 DBGMCU_GetREVID
-     /tmp/ccnmnedC.s:16299  .text.DBGMCU_GetREVID:00000014 $d
-     /tmp/ccnmnedC.s:16304  .text.DBGMCU_GetDEVID:00000000 $t
-     /tmp/ccnmnedC.s:16309  .text.DBGMCU_GetDEVID:00000000 DBGMCU_GetDEVID
-     /tmp/ccnmnedC.s:16336  .text.DBGMCU_GetDEVID:00000018 $d
-     /tmp/ccnmnedC.s:16341  .text.DBGMCU_Config:00000000 $t
-     /tmp/ccnmnedC.s:16346  .text.DBGMCU_Config:00000000 DBGMCU_Config
-     /tmp/ccnmnedC.s:16396  .text.DBGMCU_Config:00000040 $d
+     /tmp/ccx1v2Dz.s:16268  .text.DBGMCU_GetREVID:00000000 $t
+     /tmp/ccx1v2Dz.s:16273  .text.DBGMCU_GetREVID:00000000 DBGMCU_GetREVID
+     /tmp/ccx1v2Dz.s:16299  .text.DBGMCU_GetREVID:00000014 $d
+     /tmp/ccx1v2Dz.s:16304  .text.DBGMCU_GetDEVID:00000000 $t
+     /tmp/ccx1v2Dz.s:16309  .text.DBGMCU_GetDEVID:00000000 DBGMCU_GetDEVID
+     /tmp/ccx1v2Dz.s:16336  .text.DBGMCU_GetDEVID:00000018 $d
+     /tmp/ccx1v2Dz.s:16341  .text.DBGMCU_Config:00000000 $t
+     /tmp/ccx1v2Dz.s:16346  .text.DBGMCU_Config:00000000 DBGMCU_Config
+     /tmp/ccx1v2Dz.s:16396  .text.DBGMCU_Config:00000040 $d
                      .debug_frame:00000010 $d
 
 NO UNDEFINED SYMBOLS

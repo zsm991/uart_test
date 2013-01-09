@@ -1,2 +1,2 @@
 tar ext :4242
-load Debug/stm32vld_template.elf
+load Debug/uart_test.elf

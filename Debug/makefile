@@ -46,7 +46,7 @@ all: uart_test.elf secondary-outputs
 uart_test.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM Sourcery Linux GCC C Linker'
-	arm-none-eabi-gcc -T""/home/serg/arm/workspace/uart_test/stm32f100rb.ld"" -nostartfiles -Xlinker --gc-sections -Wl,-Map,uart_test.map -mcpu=cortex-m3 -mthumb -g3 -gdwarf-2 -o"uart_test.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -T"D:\Cloud\Yandex\MCU\STM32\TestProjects\Eclipse\workspace\uart_test\stm32f100rb.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,uart_test.map -mcpu=cortex-m3 -mthumb -g3 -gdwarf-2 -o"uart_test.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

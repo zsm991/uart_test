@@ -19,11 +19,17 @@
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.cross.arm.gnu.buildArtefactType.application" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.cross.arm.gnu.buildArtefactType.application" description="" id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.debug.842061010" name="Debug" parent="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.debug">
 					<folderInfo id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.debug.842061010." name="/" resourcePath="">
-						<toolChain id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.toolchain.debug.1699401766" name="ARM Linux GCC (Sourcery G++ Lite)" superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.toolchain.debug">
+						<toolChain id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.toolchain.debug.1699401766" name="ARM Linux GCC (Sourcery G++ Lite)" resourceTypeBasedDiscovery="true" superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.toolchain.debug">
 							<option id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.option.debugging.level.1223932116" name="Debug level" superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.option.debugging.level" value="org.eclipse.cdt.cross.arm.gnu.base.option.debugging.level.max" valueType="enumerated"/>
 							<targetPlatform id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.platform.debug.1265590654" isAbstract="false" name="Linux Platform" superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.platform.debug"/>
 							<builder buildPath="${workspace_loc:/template/Debug}" id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.builder.debug.860225161" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="ARM Sourcery Linux GNU Make builder" stopOnErr="false" superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.builder.debug"/>
 							<tool id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.assembler.debug.152616881" name="ARM Sourcery Linux GCC Assembler" superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.assembler.debug">
+								<option id="org.eclipse.cdt.cross.arm.gnu.assembler.option.include.paths.1796393787" name="Include paths (-I)" superClass="org.eclipse.cdt.cross.arm.gnu.assembler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/CMSIS}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/StdPeripheralDriver/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/StdPeripheralDriver/src}&quot;"/>
+								</option>
 								<inputType id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.assembler.base.input.133912347" superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.assembler.base.input"/>
 							</tool>
 							<tool id="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.c.compiler.debug.936532712" name="ARM Sourcery Linux GCC C Compiler" superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.c.compiler.debug">
@@ -34,8 +40,9 @@
 								</option>
 								<option id="org.eclipse.cdt.cross.arm.gnu.c.compiler.option.include.paths.1330299212" name="Include paths (-I)" superClass="org.eclipse.cdt.cross.arm.gnu.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/CMSIS}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/StdPeripheralDriver/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/StdPeripheralDriver/inc}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/uart_test}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
 								</option>
 								<option id="org.eclipse.cdt.cross.arm.gnu.c.compiler.option.optimization.functionsections.814243481" name="Function sections (-ffunction-sections)" superClass="org.eclipse.cdt.cross.arm.gnu.c.compiler.option.optimization.functionsections" value="true" valueType="boolean"/>
 								<option id="org.eclipse.cdt.cross.arm.gnu.c.compiler.option.optimization.datasections.1509434014" name="Function sections (-fdata-sections)" superClass="org.eclipse.cdt.cross.arm.gnu.c.compiler.option.optimization.datasections" value="true" valueType="boolean"/>
@@ -427,7 +434,7 @@
 						<parser enabled="true"/>
 					</scannerInfoProvider>
 				</profile>
-				<scannerConfigBuildInfo instanceId="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.release.1046250363;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.release.1046250363.;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.c.compiler.release.1699444423;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.c.compiler.base.input.981504279">
+				<scannerConfigBuildInfo instanceId="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.release.1046250363;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.release.1046250363.;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.assembler.release.1839455475;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.assembler.base.input.1100274540">
 					<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.cross.arm.gnu.ARM_CS_GCCManagedMakePerProjectProfileC"/>
 					<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
 						<buildOutputProvider>
@@ -790,7 +797,7 @@
 						</scannerInfoProvider>
 					</profile>
 				</scannerConfigBuildInfo>
-				<scannerConfigBuildInfo instanceId="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.release.1046250363;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.release.1046250363.;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.assembler.release.1839455475;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.assembler.base.input.1100274540">
+				<scannerConfigBuildInfo instanceId="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.release.1046250363;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.release.1046250363.;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.c.compiler.release.1699444423;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.c.compiler.base.input.981504279">
 					<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.cross.arm.gnu.ARM_CS_GCCManagedMakePerProjectProfileC"/>
 					<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
 						<buildOutputProvider>
@@ -2307,7 +2314,7 @@
 						<parser enabled="true"/>
 					</scannerInfoProvider>
 				</profile>
-				<scannerConfigBuildInfo instanceId="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.release.1046250363;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.release.1046250363.;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.c.compiler.release.1699444423;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.c.compiler.base.input.981504279">
+				<scannerConfigBuildInfo instanceId="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.release.1046250363;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.release.1046250363.;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.assembler.release.1839455475;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.assembler.base.input.1100274540">
 					<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.cross.arm.gnu.ARM_CS_GCCManagedMakePerProjectProfileC"/>
 					<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
 						<buildOutputProvider>
@@ -2670,7 +2677,7 @@
 						</scannerInfoProvider>
 					</profile>
 				</scannerConfigBuildInfo>
-				<scannerConfigBuildInfo instanceId="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.release.1046250363;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.release.1046250363.;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.assembler.release.1839455475;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.assembler.base.input.1100274540">
+				<scannerConfigBuildInfo instanceId="org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.release.1046250363;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.release.1046250363.;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.elf.c.compiler.release.1699444423;org.eclipse.cdt.cross.arm.gnu.sourcery.linux.c.compiler.base.input.981504279">
 					<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.cross.arm.gnu.ARM_CS_GCCManagedMakePerProjectProfileC"/>
 					<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
 						<buildOutputProvider>

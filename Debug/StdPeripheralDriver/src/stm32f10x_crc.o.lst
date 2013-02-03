@@ -13,12 +13,12 @@
   13              		.file	"stm32f10x_crc.c"
   23              	.Ltext0:
   24              		.file 1 "../StdPeripheralDriver/src/stm32f10x_crc.c"
- 16183              		.align	2
- 16184              		.global	CRC_ResetDR
- 16185              		.thumb
- 16186              		.thumb_func
- 16188              	CRC_ResetDR:
- 16189              	.LFB29:
+ 17476              		.align	2
+ 17477              		.global	CRC_ResetDR
+ 17478              		.thumb
+ 17479              		.thumb_func
+ 17481              	CRC_ResetDR:
+ 17482              	.LFB29:
    1:../StdPeripheralDriver/src/stm32f10x_crc.c **** /**
    2:../StdPeripheralDriver/src/stm32f10x_crc.c ****   ******************************************************************************
    3:../StdPeripheralDriver/src/stm32f10x_crc.c ****   * @file    stm32f10x_crc.c
@@ -103,42 +103,42 @@
   82:../StdPeripheralDriver/src/stm32f10x_crc.c ****   */
   83:../StdPeripheralDriver/src/stm32f10x_crc.c **** void CRC_ResetDR(void)
   84:../StdPeripheralDriver/src/stm32f10x_crc.c **** {
- 16190              		.loc 1 84 0
- 16191              		.cfi_startproc
- 16192              		@ args = 0, pretend = 0, frame = 0
- 16193              		@ frame_needed = 1, uses_anonymous_args = 0
- 16194              		@ link register save eliminated.
- 16195 0000 80B4     		push	{r7}
- 16196              	.LCFI0:
- 16197              		.cfi_def_cfa_offset 4
- 16198 0002 00AF     		add	r7, sp, #0
- 16199              		.cfi_offset 7, -4
- 16200              	.LCFI1:
- 16201              		.cfi_def_cfa_register 7
+ 17483              		.loc 1 84 0
+ 17484              		.cfi_startproc
+ 17485              		@ args = 0, pretend = 0, frame = 0
+ 17486              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17487              		@ link register save eliminated.
+ 17488 0000 80B4     		push	{r7}
+ 17489              	.LCFI0:
+ 17490              		.cfi_def_cfa_offset 4
+ 17491 0002 00AF     		add	r7, sp, #0
+ 17492              		.cfi_offset 7, -4
+ 17493              	.LCFI1:
+ 17494              		.cfi_def_cfa_register 7
   85:../StdPeripheralDriver/src/stm32f10x_crc.c ****   /* Reset CRC generator */
   86:../StdPeripheralDriver/src/stm32f10x_crc.c ****   CRC->CR = CRC_CR_RESET;
- 16202              		.loc 1 86 0
- 16203 0004 034B     		ldr	r3, .L2
- 16204 0006 4FF00102 		mov	r2, #1
- 16205 000a 9A60     		str	r2, [r3, #8]
+ 17495              		.loc 1 86 0
+ 17496 0004 034B     		ldr	r3, .L2
+ 17497 0006 4FF00102 		mov	r2, #1
+ 17498 000a 9A60     		str	r2, [r3, #8]
   87:../StdPeripheralDriver/src/stm32f10x_crc.c **** }
- 16206              		.loc 1 87 0
- 16207 000c BD46     		mov	sp, r7
- 16208 000e 80BC     		pop	{r7}
- 16209 0010 7047     		bx	lr
- 16210              	.L3:
- 16211 0012 00BF     		.align	2
- 16212              	.L2:
- 16213 0014 00300240 		.word	1073885184
- 16214              		.cfi_endproc
- 16215              	.LFE29:
- 16217              		.section	.text.CRC_CalcCRC,"ax",%progbits
- 16218              		.align	2
- 16219              		.global	CRC_CalcCRC
- 16220              		.thumb
- 16221              		.thumb_func
- 16223              	CRC_CalcCRC:
- 16224              	.LFB30:
+ 17499              		.loc 1 87 0
+ 17500 000c BD46     		mov	sp, r7
+ 17501 000e 80BC     		pop	{r7}
+ 17502 0010 7047     		bx	lr
+ 17503              	.L3:
+ 17504 0012 00BF     		.align	2
+ 17505              	.L2:
+ 17506 0014 00300240 		.word	1073885184
+ 17507              		.cfi_endproc
+ 17508              	.LFE29:
+ 17510              		.section	.text.CRC_CalcCRC,"ax",%progbits
+ 17511              		.align	2
+ 17512              		.global	CRC_CalcCRC
+ 17513              		.thumb
+ 17514              		.thumb_func
+ 17516              	CRC_CalcCRC:
+ 17517              	.LFB30:
   88:../StdPeripheralDriver/src/stm32f10x_crc.c **** 
   89:../StdPeripheralDriver/src/stm32f10x_crc.c **** /**
   90:../StdPeripheralDriver/src/stm32f10x_crc.c ****   * @brief  Computes the 32-bit CRC of a given data word(32-bit).
@@ -147,52 +147,52 @@
   93:../StdPeripheralDriver/src/stm32f10x_crc.c ****   */
   94:../StdPeripheralDriver/src/stm32f10x_crc.c **** uint32_t CRC_CalcCRC(uint32_t Data)
   95:../StdPeripheralDriver/src/stm32f10x_crc.c **** {
- 16225              		.loc 1 95 0
- 16226              		.cfi_startproc
- 16227              		@ args = 0, pretend = 0, frame = 8
- 16228              		@ frame_needed = 1, uses_anonymous_args = 0
- 16229              		@ link register save eliminated.
- 16230 0000 80B4     		push	{r7}
- 16231              	.LCFI2:
- 16232              		.cfi_def_cfa_offset 4
- 16233 0002 83B0     		sub	sp, sp, #12
- 16234              	.LCFI3:
- 16235              		.cfi_def_cfa_offset 16
- 16236 0004 00AF     		add	r7, sp, #0
- 16237              		.cfi_offset 7, -4
- 16238              	.LCFI4:
- 16239              		.cfi_def_cfa_register 7
- 16240 0006 7860     		str	r0, [r7, #4]
+ 17518              		.loc 1 95 0
+ 17519              		.cfi_startproc
+ 17520              		@ args = 0, pretend = 0, frame = 8
+ 17521              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17522              		@ link register save eliminated.
+ 17523 0000 80B4     		push	{r7}
+ 17524              	.LCFI2:
+ 17525              		.cfi_def_cfa_offset 4
+ 17526 0002 83B0     		sub	sp, sp, #12
+ 17527              	.LCFI3:
+ 17528              		.cfi_def_cfa_offset 16
+ 17529 0004 00AF     		add	r7, sp, #0
+ 17530              		.cfi_offset 7, -4
+ 17531              	.LCFI4:
+ 17532              		.cfi_def_cfa_register 7
+ 17533 0006 7860     		str	r0, [r7, #4]
   96:../StdPeripheralDriver/src/stm32f10x_crc.c ****   CRC->DR = Data;
- 16241              		.loc 1 96 0
- 16242 0008 054B     		ldr	r3, .L5
- 16243 000a 7A68     		ldr	r2, [r7, #4]
- 16244 000c 1A60     		str	r2, [r3, #0]
+ 17534              		.loc 1 96 0
+ 17535 0008 054B     		ldr	r3, .L5
+ 17536 000a 7A68     		ldr	r2, [r7, #4]
+ 17537 000c 1A60     		str	r2, [r3, #0]
   97:../StdPeripheralDriver/src/stm32f10x_crc.c ****   
   98:../StdPeripheralDriver/src/stm32f10x_crc.c ****   return (CRC->DR);
- 16245              		.loc 1 98 0
- 16246 000e 044B     		ldr	r3, .L5
- 16247 0010 1B68     		ldr	r3, [r3, #0]
+ 17538              		.loc 1 98 0
+ 17539 000e 044B     		ldr	r3, .L5
+ 17540 0010 1B68     		ldr	r3, [r3, #0]
   99:../StdPeripheralDriver/src/stm32f10x_crc.c **** }
- 16248              		.loc 1 99 0
- 16249 0012 1846     		mov	r0, r3
- 16250 0014 07F10C07 		add	r7, r7, #12
- 16251 0018 BD46     		mov	sp, r7
- 16252 001a 80BC     		pop	{r7}
- 16253 001c 7047     		bx	lr
- 16254              	.L6:
- 16255 001e 00BF     		.align	2
- 16256              	.L5:
- 16257 0020 00300240 		.word	1073885184
- 16258              		.cfi_endproc
- 16259              	.LFE30:
- 16261              		.section	.text.CRC_CalcBlockCRC,"ax",%progbits
- 16262              		.align	2
- 16263              		.global	CRC_CalcBlockCRC
- 16264              		.thumb
- 16265              		.thumb_func
- 16267              	CRC_CalcBlockCRC:
- 16268              	.LFB31:
+ 17541              		.loc 1 99 0
+ 17542 0012 1846     		mov	r0, r3
+ 17543 0014 07F10C07 		add	r7, r7, #12
+ 17544 0018 BD46     		mov	sp, r7
+ 17545 001a 80BC     		pop	{r7}
+ 17546 001c 7047     		bx	lr
+ 17547              	.L6:
+ 17548 001e 00BF     		.align	2
+ 17549              	.L5:
+ 17550 0020 00300240 		.word	1073885184
+ 17551              		.cfi_endproc
+ 17552              	.LFE30:
+ 17554              		.section	.text.CRC_CalcBlockCRC,"ax",%progbits
+ 17555              		.align	2
+ 17556              		.global	CRC_CalcBlockCRC
+ 17557              		.thumb
+ 17558              		.thumb_func
+ 17560              	CRC_CalcBlockCRC:
+ 17561              	.LFB31:
  100:../StdPeripheralDriver/src/stm32f10x_crc.c **** 
  101:../StdPeripheralDriver/src/stm32f10x_crc.c **** /**
  102:../StdPeripheralDriver/src/stm32f10x_crc.c ****   * @brief  Computes the 32-bit CRC of a given buffer of data word(32-bit).
@@ -202,81 +202,81 @@
  106:../StdPeripheralDriver/src/stm32f10x_crc.c ****   */
  107:../StdPeripheralDriver/src/stm32f10x_crc.c **** uint32_t CRC_CalcBlockCRC(uint32_t pBuffer[], uint32_t BufferLength)
  108:../StdPeripheralDriver/src/stm32f10x_crc.c **** {
- 16269              		.loc 1 108 0
- 16270              		.cfi_startproc
- 16271              		@ args = 0, pretend = 0, frame = 16
- 16272              		@ frame_needed = 1, uses_anonymous_args = 0
- 16273              		@ link register save eliminated.
- 16274 0000 80B4     		push	{r7}
- 16275              	.LCFI5:
- 16276              		.cfi_def_cfa_offset 4
- 16277 0002 85B0     		sub	sp, sp, #20
- 16278              	.LCFI6:
- 16279              		.cfi_def_cfa_offset 24
- 16280 0004 00AF     		add	r7, sp, #0
- 16281              		.cfi_offset 7, -4
- 16282              	.LCFI7:
- 16283              		.cfi_def_cfa_register 7
- 16284 0006 7860     		str	r0, [r7, #4]
- 16285 0008 3960     		str	r1, [r7, #0]
+ 17562              		.loc 1 108 0
+ 17563              		.cfi_startproc
+ 17564              		@ args = 0, pretend = 0, frame = 16
+ 17565              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17566              		@ link register save eliminated.
+ 17567 0000 80B4     		push	{r7}
+ 17568              	.LCFI5:
+ 17569              		.cfi_def_cfa_offset 4
+ 17570 0002 85B0     		sub	sp, sp, #20
+ 17571              	.LCFI6:
+ 17572              		.cfi_def_cfa_offset 24
+ 17573 0004 00AF     		add	r7, sp, #0
+ 17574              		.cfi_offset 7, -4
+ 17575              	.LCFI7:
+ 17576              		.cfi_def_cfa_register 7
+ 17577 0006 7860     		str	r0, [r7, #4]
+ 17578 0008 3960     		str	r1, [r7, #0]
  109:../StdPeripheralDriver/src/stm32f10x_crc.c ****   uint32_t index = 0;
- 16286              		.loc 1 109 0
- 16287 000a 4FF00003 		mov	r3, #0
- 16288 000e FB60     		str	r3, [r7, #12]
+ 17579              		.loc 1 109 0
+ 17580 000a 4FF00003 		mov	r3, #0
+ 17581 000e FB60     		str	r3, [r7, #12]
  110:../StdPeripheralDriver/src/stm32f10x_crc.c ****   
  111:../StdPeripheralDriver/src/stm32f10x_crc.c ****   for(index = 0; index < BufferLength; index++)
- 16289              		.loc 1 111 0
- 16290 0010 4FF00003 		mov	r3, #0
- 16291 0014 FB60     		str	r3, [r7, #12]
- 16292 0016 0BE0     		b	.L8
- 16293              	.L9:
+ 17582              		.loc 1 111 0
+ 17583 0010 4FF00003 		mov	r3, #0
+ 17584 0014 FB60     		str	r3, [r7, #12]
+ 17585 0016 0BE0     		b	.L8
+ 17586              	.L9:
  112:../StdPeripheralDriver/src/stm32f10x_crc.c ****   {
  113:../StdPeripheralDriver/src/stm32f10x_crc.c ****     CRC->DR = pBuffer[index];
- 16294              		.loc 1 113 0 discriminator 2
- 16295 0018 0B4B     		ldr	r3, .L10
- 16296 001a FA68     		ldr	r2, [r7, #12]
- 16297 001c 4FEA8202 		lsl	r2, r2, #2
- 16298 0020 7968     		ldr	r1, [r7, #4]
- 16299 0022 8A18     		adds	r2, r1, r2
- 16300 0024 1268     		ldr	r2, [r2, #0]
- 16301 0026 1A60     		str	r2, [r3, #0]
+ 17587              		.loc 1 113 0 discriminator 2
+ 17588 0018 0B4B     		ldr	r3, .L10
+ 17589 001a FA68     		ldr	r2, [r7, #12]
+ 17590 001c 4FEA8202 		lsl	r2, r2, #2
+ 17591 0020 7968     		ldr	r1, [r7, #4]
+ 17592 0022 8A18     		adds	r2, r1, r2
+ 17593 0024 1268     		ldr	r2, [r2, #0]
+ 17594 0026 1A60     		str	r2, [r3, #0]
  111:../StdPeripheralDriver/src/stm32f10x_crc.c ****   for(index = 0; index < BufferLength; index++)
- 16302              		.loc 1 111 0 discriminator 2
- 16303 0028 FB68     		ldr	r3, [r7, #12]
- 16304 002a 03F10103 		add	r3, r3, #1
- 16305 002e FB60     		str	r3, [r7, #12]
- 16306              	.L8:
+ 17595              		.loc 1 111 0 discriminator 2
+ 17596 0028 FB68     		ldr	r3, [r7, #12]
+ 17597 002a 03F10103 		add	r3, r3, #1
+ 17598 002e FB60     		str	r3, [r7, #12]
+ 17599              	.L8:
  111:../StdPeripheralDriver/src/stm32f10x_crc.c ****   for(index = 0; index < BufferLength; index++)
- 16307              		.loc 1 111 0 is_stmt 0 discriminator 1
- 16308 0030 FA68     		ldr	r2, [r7, #12]
- 16309 0032 3B68     		ldr	r3, [r7, #0]
- 16310 0034 9A42     		cmp	r2, r3
- 16311 0036 EFD3     		bcc	.L9
+ 17600              		.loc 1 111 0 is_stmt 0 discriminator 1
+ 17601 0030 FA68     		ldr	r2, [r7, #12]
+ 17602 0032 3B68     		ldr	r3, [r7, #0]
+ 17603 0034 9A42     		cmp	r2, r3
+ 17604 0036 EFD3     		bcc	.L9
  114:../StdPeripheralDriver/src/stm32f10x_crc.c ****   }
  115:../StdPeripheralDriver/src/stm32f10x_crc.c ****   return (CRC->DR);
- 16312              		.loc 1 115 0 is_stmt 1
- 16313 0038 034B     		ldr	r3, .L10
- 16314 003a 1B68     		ldr	r3, [r3, #0]
+ 17605              		.loc 1 115 0 is_stmt 1
+ 17606 0038 034B     		ldr	r3, .L10
+ 17607 003a 1B68     		ldr	r3, [r3, #0]
  116:../StdPeripheralDriver/src/stm32f10x_crc.c **** }
- 16315              		.loc 1 116 0
- 16316 003c 1846     		mov	r0, r3
- 16317 003e 07F11407 		add	r7, r7, #20
- 16318 0042 BD46     		mov	sp, r7
- 16319 0044 80BC     		pop	{r7}
- 16320 0046 7047     		bx	lr
- 16321              	.L11:
- 16322              		.align	2
- 16323              	.L10:
- 16324 0048 00300240 		.word	1073885184
- 16325              		.cfi_endproc
- 16326              	.LFE31:
- 16328              		.section	.text.CRC_GetCRC,"ax",%progbits
- 16329              		.align	2
- 16330              		.global	CRC_GetCRC
- 16331              		.thumb
- 16332              		.thumb_func
- 16334              	CRC_GetCRC:
- 16335              	.LFB32:
+ 17608              		.loc 1 116 0
+ 17609 003c 1846     		mov	r0, r3
+ 17610 003e 07F11407 		add	r7, r7, #20
+ 17611 0042 BD46     		mov	sp, r7
+ 17612 0044 80BC     		pop	{r7}
+ 17613 0046 7047     		bx	lr
+ 17614              	.L11:
+ 17615              		.align	2
+ 17616              	.L10:
+ 17617 0048 00300240 		.word	1073885184
+ 17618              		.cfi_endproc
+ 17619              	.LFE31:
+ 17621              		.section	.text.CRC_GetCRC,"ax",%progbits
+ 17622              		.align	2
+ 17623              		.global	CRC_GetCRC
+ 17624              		.thumb
+ 17625              		.thumb_func
+ 17627              	CRC_GetCRC:
+ 17628              	.LFB32:
  117:../StdPeripheralDriver/src/stm32f10x_crc.c **** 
  118:../StdPeripheralDriver/src/stm32f10x_crc.c **** /**
  119:../StdPeripheralDriver/src/stm32f10x_crc.c ****   * @brief  Returns the current CRC value.
@@ -285,41 +285,41 @@
  122:../StdPeripheralDriver/src/stm32f10x_crc.c ****   */
  123:../StdPeripheralDriver/src/stm32f10x_crc.c **** uint32_t CRC_GetCRC(void)
  124:../StdPeripheralDriver/src/stm32f10x_crc.c **** {
- 16336              		.loc 1 124 0
- 16337              		.cfi_startproc
- 16338              		@ args = 0, pretend = 0, frame = 0
- 16339              		@ frame_needed = 1, uses_anonymous_args = 0
- 16340              		@ link register save eliminated.
- 16341 0000 80B4     		push	{r7}
- 16342              	.LCFI8:
- 16343              		.cfi_def_cfa_offset 4
- 16344 0002 00AF     		add	r7, sp, #0
- 16345              		.cfi_offset 7, -4
- 16346              	.LCFI9:
- 16347              		.cfi_def_cfa_register 7
+ 17629              		.loc 1 124 0
+ 17630              		.cfi_startproc
+ 17631              		@ args = 0, pretend = 0, frame = 0
+ 17632              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17633              		@ link register save eliminated.
+ 17634 0000 80B4     		push	{r7}
+ 17635              	.LCFI8:
+ 17636              		.cfi_def_cfa_offset 4
+ 17637 0002 00AF     		add	r7, sp, #0
+ 17638              		.cfi_offset 7, -4
+ 17639              	.LCFI9:
+ 17640              		.cfi_def_cfa_register 7
  125:../StdPeripheralDriver/src/stm32f10x_crc.c ****   return (CRC->DR);
- 16348              		.loc 1 125 0
- 16349 0004 024B     		ldr	r3, .L13
- 16350 0006 1B68     		ldr	r3, [r3, #0]
+ 17641              		.loc 1 125 0
+ 17642 0004 024B     		ldr	r3, .L13
+ 17643 0006 1B68     		ldr	r3, [r3, #0]
  126:../StdPeripheralDriver/src/stm32f10x_crc.c **** }
- 16351              		.loc 1 126 0
- 16352 0008 1846     		mov	r0, r3
- 16353 000a BD46     		mov	sp, r7
- 16354 000c 80BC     		pop	{r7}
- 16355 000e 7047     		bx	lr
- 16356              	.L14:
- 16357              		.align	2
- 16358              	.L13:
- 16359 0010 00300240 		.word	1073885184
- 16360              		.cfi_endproc
- 16361              	.LFE32:
- 16363              		.section	.text.CRC_SetIDRegister,"ax",%progbits
- 16364              		.align	2
- 16365              		.global	CRC_SetIDRegister
- 16366              		.thumb
- 16367              		.thumb_func
- 16369              	CRC_SetIDRegister:
- 16370              	.LFB33:
+ 17644              		.loc 1 126 0
+ 17645 0008 1846     		mov	r0, r3
+ 17646 000a BD46     		mov	sp, r7
+ 17647 000c 80BC     		pop	{r7}
+ 17648 000e 7047     		bx	lr
+ 17649              	.L14:
+ 17650              		.align	2
+ 17651              	.L13:
+ 17652 0010 00300240 		.word	1073885184
+ 17653              		.cfi_endproc
+ 17654              	.LFE32:
+ 17656              		.section	.text.CRC_SetIDRegister,"ax",%progbits
+ 17657              		.align	2
+ 17658              		.global	CRC_SetIDRegister
+ 17659              		.thumb
+ 17660              		.thumb_func
+ 17662              	CRC_SetIDRegister:
+ 17663              	.LFB33:
  127:../StdPeripheralDriver/src/stm32f10x_crc.c **** 
  128:../StdPeripheralDriver/src/stm32f10x_crc.c **** /**
  129:../StdPeripheralDriver/src/stm32f10x_crc.c ****   * @brief  Stores a 8-bit data in the Independent Data(ID) register.
@@ -328,47 +328,47 @@
  132:../StdPeripheralDriver/src/stm32f10x_crc.c ****   */
  133:../StdPeripheralDriver/src/stm32f10x_crc.c **** void CRC_SetIDRegister(uint8_t IDValue)
  134:../StdPeripheralDriver/src/stm32f10x_crc.c **** {
- 16371              		.loc 1 134 0
- 16372              		.cfi_startproc
- 16373              		@ args = 0, pretend = 0, frame = 8
- 16374              		@ frame_needed = 1, uses_anonymous_args = 0
- 16375              		@ link register save eliminated.
- 16376 0000 80B4     		push	{r7}
- 16377              	.LCFI10:
- 16378              		.cfi_def_cfa_offset 4
- 16379 0002 83B0     		sub	sp, sp, #12
- 16380              	.LCFI11:
- 16381              		.cfi_def_cfa_offset 16
- 16382 0004 00AF     		add	r7, sp, #0
- 16383              		.cfi_offset 7, -4
- 16384              	.LCFI12:
- 16385              		.cfi_def_cfa_register 7
- 16386 0006 0346     		mov	r3, r0
- 16387 0008 FB71     		strb	r3, [r7, #7]
+ 17664              		.loc 1 134 0
+ 17665              		.cfi_startproc
+ 17666              		@ args = 0, pretend = 0, frame = 8
+ 17667              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17668              		@ link register save eliminated.
+ 17669 0000 80B4     		push	{r7}
+ 17670              	.LCFI10:
+ 17671              		.cfi_def_cfa_offset 4
+ 17672 0002 83B0     		sub	sp, sp, #12
+ 17673              	.LCFI11:
+ 17674              		.cfi_def_cfa_offset 16
+ 17675 0004 00AF     		add	r7, sp, #0
+ 17676              		.cfi_offset 7, -4
+ 17677              	.LCFI12:
+ 17678              		.cfi_def_cfa_register 7
+ 17679 0006 0346     		mov	r3, r0
+ 17680 0008 FB71     		strb	r3, [r7, #7]
  135:../StdPeripheralDriver/src/stm32f10x_crc.c ****   CRC->IDR = IDValue;
- 16388              		.loc 1 135 0
- 16389 000a 044B     		ldr	r3, .L16
- 16390 000c FA79     		ldrb	r2, [r7, #7]
- 16391 000e 1A71     		strb	r2, [r3, #4]
+ 17681              		.loc 1 135 0
+ 17682 000a 044B     		ldr	r3, .L16
+ 17683 000c FA79     		ldrb	r2, [r7, #7]
+ 17684 000e 1A71     		strb	r2, [r3, #4]
  136:../StdPeripheralDriver/src/stm32f10x_crc.c **** }
- 16392              		.loc 1 136 0
- 16393 0010 07F10C07 		add	r7, r7, #12
- 16394 0014 BD46     		mov	sp, r7
- 16395 0016 80BC     		pop	{r7}
- 16396 0018 7047     		bx	lr
- 16397              	.L17:
- 16398 001a 00BF     		.align	2
- 16399              	.L16:
- 16400 001c 00300240 		.word	1073885184
- 16401              		.cfi_endproc
- 16402              	.LFE33:
- 16404              		.section	.text.CRC_GetIDRegister,"ax",%progbits
- 16405              		.align	2
- 16406              		.global	CRC_GetIDRegister
- 16407              		.thumb
- 16408              		.thumb_func
- 16410              	CRC_GetIDRegister:
- 16411              	.LFB34:
+ 17685              		.loc 1 136 0
+ 17686 0010 07F10C07 		add	r7, r7, #12
+ 17687 0014 BD46     		mov	sp, r7
+ 17688 0016 80BC     		pop	{r7}
+ 17689 0018 7047     		bx	lr
+ 17690              	.L17:
+ 17691 001a 00BF     		.align	2
+ 17692              	.L16:
+ 17693 001c 00300240 		.word	1073885184
+ 17694              		.cfi_endproc
+ 17695              	.LFE33:
+ 17697              		.section	.text.CRC_GetIDRegister,"ax",%progbits
+ 17698              		.align	2
+ 17699              		.global	CRC_GetIDRegister
+ 17700              		.thumb
+ 17701              		.thumb_func
+ 17703              	CRC_GetIDRegister:
+ 17704              	.LFB34:
  137:../StdPeripheralDriver/src/stm32f10x_crc.c **** 
  138:../StdPeripheralDriver/src/stm32f10x_crc.c **** /**
  139:../StdPeripheralDriver/src/stm32f10x_crc.c ****   * @brief  Returns the 8-bit data stored in the Independent Data(ID) register
@@ -377,57 +377,57 @@
  142:../StdPeripheralDriver/src/stm32f10x_crc.c ****   */
  143:../StdPeripheralDriver/src/stm32f10x_crc.c **** uint8_t CRC_GetIDRegister(void)
  144:../StdPeripheralDriver/src/stm32f10x_crc.c **** {
- 16412              		.loc 1 144 0
- 16413              		.cfi_startproc
- 16414              		@ args = 0, pretend = 0, frame = 0
- 16415              		@ frame_needed = 1, uses_anonymous_args = 0
- 16416              		@ link register save eliminated.
- 16417 0000 80B4     		push	{r7}
- 16418              	.LCFI13:
- 16419              		.cfi_def_cfa_offset 4
- 16420 0002 00AF     		add	r7, sp, #0
- 16421              		.cfi_offset 7, -4
- 16422              	.LCFI14:
- 16423              		.cfi_def_cfa_register 7
+ 17705              		.loc 1 144 0
+ 17706              		.cfi_startproc
+ 17707              		@ args = 0, pretend = 0, frame = 0
+ 17708              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17709              		@ link register save eliminated.
+ 17710 0000 80B4     		push	{r7}
+ 17711              	.LCFI13:
+ 17712              		.cfi_def_cfa_offset 4
+ 17713 0002 00AF     		add	r7, sp, #0
+ 17714              		.cfi_offset 7, -4
+ 17715              	.LCFI14:
+ 17716              		.cfi_def_cfa_register 7
  145:../StdPeripheralDriver/src/stm32f10x_crc.c ****   return (CRC->IDR);
- 16424              		.loc 1 145 0
- 16425 0004 034B     		ldr	r3, .L19
- 16426 0006 1B79     		ldrb	r3, [r3, #4]
- 16427 0008 DBB2     		uxtb	r3, r3
+ 17717              		.loc 1 145 0
+ 17718 0004 034B     		ldr	r3, .L19
+ 17719 0006 1B79     		ldrb	r3, [r3, #4]
+ 17720 0008 DBB2     		uxtb	r3, r3
  146:../StdPeripheralDriver/src/stm32f10x_crc.c **** }
- 16428              		.loc 1 146 0
- 16429 000a 1846     		mov	r0, r3
- 16430 000c BD46     		mov	sp, r7
- 16431 000e 80BC     		pop	{r7}
- 16432 0010 7047     		bx	lr
- 16433              	.L20:
- 16434 0012 00BF     		.align	2
- 16435              	.L19:
- 16436 0014 00300240 		.word	1073885184
- 16437              		.cfi_endproc
- 16438              	.LFE34:
- 16440              		.text
- 16441              	.Letext0:
+ 17721              		.loc 1 146 0
+ 17722 000a 1846     		mov	r0, r3
+ 17723 000c BD46     		mov	sp, r7
+ 17724 000e 80BC     		pop	{r7}
+ 17725 0010 7047     		bx	lr
+ 17726              	.L20:
+ 17727 0012 00BF     		.align	2
+ 17728              	.L19:
+ 17729 0014 00300240 		.word	1073885184
+ 17730              		.cfi_endproc
+ 17731              	.LFE34:
+ 17733              		.text
+ 17734              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f10x_crc.c
-     /tmp/ccLJv0Wr.s:16183  .text.CRC_ResetDR:00000000 $t
-     /tmp/ccLJv0Wr.s:16188  .text.CRC_ResetDR:00000000 CRC_ResetDR
-     /tmp/ccLJv0Wr.s:16213  .text.CRC_ResetDR:00000014 $d
-     /tmp/ccLJv0Wr.s:16218  .text.CRC_CalcCRC:00000000 $t
-     /tmp/ccLJv0Wr.s:16223  .text.CRC_CalcCRC:00000000 CRC_CalcCRC
-     /tmp/ccLJv0Wr.s:16257  .text.CRC_CalcCRC:00000020 $d
-     /tmp/ccLJv0Wr.s:16262  .text.CRC_CalcBlockCRC:00000000 $t
-     /tmp/ccLJv0Wr.s:16267  .text.CRC_CalcBlockCRC:00000000 CRC_CalcBlockCRC
-     /tmp/ccLJv0Wr.s:16324  .text.CRC_CalcBlockCRC:00000048 $d
-     /tmp/ccLJv0Wr.s:16329  .text.CRC_GetCRC:00000000 $t
-     /tmp/ccLJv0Wr.s:16334  .text.CRC_GetCRC:00000000 CRC_GetCRC
-     /tmp/ccLJv0Wr.s:16359  .text.CRC_GetCRC:00000010 $d
-     /tmp/ccLJv0Wr.s:16364  .text.CRC_SetIDRegister:00000000 $t
-     /tmp/ccLJv0Wr.s:16369  .text.CRC_SetIDRegister:00000000 CRC_SetIDRegister
-     /tmp/ccLJv0Wr.s:16400  .text.CRC_SetIDRegister:0000001c $d
-     /tmp/ccLJv0Wr.s:16405  .text.CRC_GetIDRegister:00000000 $t
-     /tmp/ccLJv0Wr.s:16410  .text.CRC_GetIDRegister:00000000 CRC_GetIDRegister
-     /tmp/ccLJv0Wr.s:16436  .text.CRC_GetIDRegister:00000014 $d
+     /tmp/ccalnz3O.s:17476  .text.CRC_ResetDR:00000000 $t
+     /tmp/ccalnz3O.s:17481  .text.CRC_ResetDR:00000000 CRC_ResetDR
+     /tmp/ccalnz3O.s:17506  .text.CRC_ResetDR:00000014 $d
+     /tmp/ccalnz3O.s:17511  .text.CRC_CalcCRC:00000000 $t
+     /tmp/ccalnz3O.s:17516  .text.CRC_CalcCRC:00000000 CRC_CalcCRC
+     /tmp/ccalnz3O.s:17550  .text.CRC_CalcCRC:00000020 $d
+     /tmp/ccalnz3O.s:17555  .text.CRC_CalcBlockCRC:00000000 $t
+     /tmp/ccalnz3O.s:17560  .text.CRC_CalcBlockCRC:00000000 CRC_CalcBlockCRC
+     /tmp/ccalnz3O.s:17617  .text.CRC_CalcBlockCRC:00000048 $d
+     /tmp/ccalnz3O.s:17622  .text.CRC_GetCRC:00000000 $t
+     /tmp/ccalnz3O.s:17627  .text.CRC_GetCRC:00000000 CRC_GetCRC
+     /tmp/ccalnz3O.s:17652  .text.CRC_GetCRC:00000010 $d
+     /tmp/ccalnz3O.s:17657  .text.CRC_SetIDRegister:00000000 $t
+     /tmp/ccalnz3O.s:17662  .text.CRC_SetIDRegister:00000000 CRC_SetIDRegister
+     /tmp/ccalnz3O.s:17693  .text.CRC_SetIDRegister:0000001c $d
+     /tmp/ccalnz3O.s:17698  .text.CRC_GetIDRegister:00000000 $t
+     /tmp/ccalnz3O.s:17703  .text.CRC_GetIDRegister:00000000 CRC_GetIDRegister
+     /tmp/ccalnz3O.s:17729  .text.CRC_GetIDRegister:00000014 $d
                      .debug_frame:00000010 $d
 
 NO UNDEFINED SYMBOLS

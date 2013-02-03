@@ -13,12 +13,12 @@
   13              		.file	"stm32f10x_iwdg.c"
   23              	.Ltext0:
   24              		.file 1 "../StdPeripheralDriver/src/stm32f10x_iwdg.c"
- 16242              		.align	2
- 16243              		.global	IWDG_WriteAccessCmd
- 16244              		.thumb
- 16245              		.thumb_func
- 16247              	IWDG_WriteAccessCmd:
- 16248              	.LFB29:
+ 17535              		.align	2
+ 17536              		.global	IWDG_WriteAccessCmd
+ 17537              		.thumb
+ 17538              		.thumb_func
+ 17540              	IWDG_WriteAccessCmd:
+ 17541              	.LFB29:
    1:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** /**
    2:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   ******************************************************************************
    3:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   * @file    stm32f10x_iwdg.c
@@ -112,49 +112,49 @@
   91:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   */
   92:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** void IWDG_WriteAccessCmd(uint16_t IWDG_WriteAccess)
   93:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** {
- 16249              		.loc 1 93 0
- 16250              		.cfi_startproc
- 16251              		@ args = 0, pretend = 0, frame = 8
- 16252              		@ frame_needed = 1, uses_anonymous_args = 0
- 16253              		@ link register save eliminated.
- 16254 0000 80B4     		push	{r7}
- 16255              	.LCFI0:
- 16256              		.cfi_def_cfa_offset 4
- 16257 0002 83B0     		sub	sp, sp, #12
- 16258              	.LCFI1:
- 16259              		.cfi_def_cfa_offset 16
- 16260 0004 00AF     		add	r7, sp, #0
- 16261              		.cfi_offset 7, -4
- 16262              	.LCFI2:
- 16263              		.cfi_def_cfa_register 7
- 16264 0006 0346     		mov	r3, r0
- 16265 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 17542              		.loc 1 93 0
+ 17543              		.cfi_startproc
+ 17544              		@ args = 0, pretend = 0, frame = 8
+ 17545              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17546              		@ link register save eliminated.
+ 17547 0000 80B4     		push	{r7}
+ 17548              	.LCFI0:
+ 17549              		.cfi_def_cfa_offset 4
+ 17550 0002 83B0     		sub	sp, sp, #12
+ 17551              	.LCFI1:
+ 17552              		.cfi_def_cfa_offset 16
+ 17553 0004 00AF     		add	r7, sp, #0
+ 17554              		.cfi_offset 7, -4
+ 17555              	.LCFI2:
+ 17556              		.cfi_def_cfa_register 7
+ 17557 0006 0346     		mov	r3, r0
+ 17558 0008 FB80     		strh	r3, [r7, #6]	@ movhi
   94:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   /* Check the parameters */
   95:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   assert_param(IS_IWDG_WRITE_ACCESS(IWDG_WriteAccess));
   96:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   IWDG->KR = IWDG_WriteAccess;
- 16266              		.loc 1 96 0
- 16267 000a 044B     		ldr	r3, .L2
- 16268 000c FA88     		ldrh	r2, [r7, #6]
- 16269 000e 1A60     		str	r2, [r3, #0]
+ 17559              		.loc 1 96 0
+ 17560 000a 044B     		ldr	r3, .L2
+ 17561 000c FA88     		ldrh	r2, [r7, #6]
+ 17562 000e 1A60     		str	r2, [r3, #0]
   97:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** }
- 16270              		.loc 1 97 0
- 16271 0010 07F10C07 		add	r7, r7, #12
- 16272 0014 BD46     		mov	sp, r7
- 16273 0016 80BC     		pop	{r7}
- 16274 0018 7047     		bx	lr
- 16275              	.L3:
- 16276 001a 00BF     		.align	2
- 16277              	.L2:
- 16278 001c 00300040 		.word	1073754112
- 16279              		.cfi_endproc
- 16280              	.LFE29:
- 16282              		.section	.text.IWDG_SetPrescaler,"ax",%progbits
- 16283              		.align	2
- 16284              		.global	IWDG_SetPrescaler
- 16285              		.thumb
- 16286              		.thumb_func
- 16288              	IWDG_SetPrescaler:
- 16289              	.LFB30:
+ 17563              		.loc 1 97 0
+ 17564 0010 07F10C07 		add	r7, r7, #12
+ 17565 0014 BD46     		mov	sp, r7
+ 17566 0016 80BC     		pop	{r7}
+ 17567 0018 7047     		bx	lr
+ 17568              	.L3:
+ 17569 001a 00BF     		.align	2
+ 17570              	.L2:
+ 17571 001c 00300040 		.word	1073754112
+ 17572              		.cfi_endproc
+ 17573              	.LFE29:
+ 17575              		.section	.text.IWDG_SetPrescaler,"ax",%progbits
+ 17576              		.align	2
+ 17577              		.global	IWDG_SetPrescaler
+ 17578              		.thumb
+ 17579              		.thumb_func
+ 17581              	IWDG_SetPrescaler:
+ 17582              	.LFB30:
   98:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** 
   99:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** /**
  100:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   * @brief  Sets IWDG Prescaler value.
@@ -171,49 +171,49 @@
  111:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   */
  112:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** void IWDG_SetPrescaler(uint8_t IWDG_Prescaler)
  113:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** {
- 16290              		.loc 1 113 0
- 16291              		.cfi_startproc
- 16292              		@ args = 0, pretend = 0, frame = 8
- 16293              		@ frame_needed = 1, uses_anonymous_args = 0
- 16294              		@ link register save eliminated.
- 16295 0000 80B4     		push	{r7}
- 16296              	.LCFI3:
- 16297              		.cfi_def_cfa_offset 4
- 16298 0002 83B0     		sub	sp, sp, #12
- 16299              	.LCFI4:
- 16300              		.cfi_def_cfa_offset 16
- 16301 0004 00AF     		add	r7, sp, #0
- 16302              		.cfi_offset 7, -4
- 16303              	.LCFI5:
- 16304              		.cfi_def_cfa_register 7
- 16305 0006 0346     		mov	r3, r0
- 16306 0008 FB71     		strb	r3, [r7, #7]
+ 17583              		.loc 1 113 0
+ 17584              		.cfi_startproc
+ 17585              		@ args = 0, pretend = 0, frame = 8
+ 17586              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17587              		@ link register save eliminated.
+ 17588 0000 80B4     		push	{r7}
+ 17589              	.LCFI3:
+ 17590              		.cfi_def_cfa_offset 4
+ 17591 0002 83B0     		sub	sp, sp, #12
+ 17592              	.LCFI4:
+ 17593              		.cfi_def_cfa_offset 16
+ 17594 0004 00AF     		add	r7, sp, #0
+ 17595              		.cfi_offset 7, -4
+ 17596              	.LCFI5:
+ 17597              		.cfi_def_cfa_register 7
+ 17598 0006 0346     		mov	r3, r0
+ 17599 0008 FB71     		strb	r3, [r7, #7]
  114:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   /* Check the parameters */
  115:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   assert_param(IS_IWDG_PRESCALER(IWDG_Prescaler));
  116:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   IWDG->PR = IWDG_Prescaler;
- 16307              		.loc 1 116 0
- 16308 000a 044B     		ldr	r3, .L5
- 16309 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 16310 000e 5A60     		str	r2, [r3, #4]
+ 17600              		.loc 1 116 0
+ 17601 000a 044B     		ldr	r3, .L5
+ 17602 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 17603 000e 5A60     		str	r2, [r3, #4]
  117:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** }
- 16311              		.loc 1 117 0
- 16312 0010 07F10C07 		add	r7, r7, #12
- 16313 0014 BD46     		mov	sp, r7
- 16314 0016 80BC     		pop	{r7}
- 16315 0018 7047     		bx	lr
- 16316              	.L6:
- 16317 001a 00BF     		.align	2
- 16318              	.L5:
- 16319 001c 00300040 		.word	1073754112
- 16320              		.cfi_endproc
- 16321              	.LFE30:
- 16323              		.section	.text.IWDG_SetReload,"ax",%progbits
- 16324              		.align	2
- 16325              		.global	IWDG_SetReload
- 16326              		.thumb
- 16327              		.thumb_func
- 16329              	IWDG_SetReload:
- 16330              	.LFB31:
+ 17604              		.loc 1 117 0
+ 17605 0010 07F10C07 		add	r7, r7, #12
+ 17606 0014 BD46     		mov	sp, r7
+ 17607 0016 80BC     		pop	{r7}
+ 17608 0018 7047     		bx	lr
+ 17609              	.L6:
+ 17610 001a 00BF     		.align	2
+ 17611              	.L5:
+ 17612 001c 00300040 		.word	1073754112
+ 17613              		.cfi_endproc
+ 17614              	.LFE30:
+ 17616              		.section	.text.IWDG_SetReload,"ax",%progbits
+ 17617              		.align	2
+ 17618              		.global	IWDG_SetReload
+ 17619              		.thumb
+ 17620              		.thumb_func
+ 17622              	IWDG_SetReload:
+ 17623              	.LFB31:
  118:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** 
  119:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** /**
  120:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   * @brief  Sets IWDG Reload value.
@@ -223,49 +223,49 @@
  124:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   */
  125:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** void IWDG_SetReload(uint16_t Reload)
  126:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** {
- 16331              		.loc 1 126 0
- 16332              		.cfi_startproc
- 16333              		@ args = 0, pretend = 0, frame = 8
- 16334              		@ frame_needed = 1, uses_anonymous_args = 0
- 16335              		@ link register save eliminated.
- 16336 0000 80B4     		push	{r7}
- 16337              	.LCFI6:
- 16338              		.cfi_def_cfa_offset 4
- 16339 0002 83B0     		sub	sp, sp, #12
- 16340              	.LCFI7:
- 16341              		.cfi_def_cfa_offset 16
- 16342 0004 00AF     		add	r7, sp, #0
- 16343              		.cfi_offset 7, -4
- 16344              	.LCFI8:
- 16345              		.cfi_def_cfa_register 7
- 16346 0006 0346     		mov	r3, r0
- 16347 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 17624              		.loc 1 126 0
+ 17625              		.cfi_startproc
+ 17626              		@ args = 0, pretend = 0, frame = 8
+ 17627              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17628              		@ link register save eliminated.
+ 17629 0000 80B4     		push	{r7}
+ 17630              	.LCFI6:
+ 17631              		.cfi_def_cfa_offset 4
+ 17632 0002 83B0     		sub	sp, sp, #12
+ 17633              	.LCFI7:
+ 17634              		.cfi_def_cfa_offset 16
+ 17635 0004 00AF     		add	r7, sp, #0
+ 17636              		.cfi_offset 7, -4
+ 17637              	.LCFI8:
+ 17638              		.cfi_def_cfa_register 7
+ 17639 0006 0346     		mov	r3, r0
+ 17640 0008 FB80     		strh	r3, [r7, #6]	@ movhi
  127:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   /* Check the parameters */
  128:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   assert_param(IS_IWDG_RELOAD(Reload));
  129:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   IWDG->RLR = Reload;
- 16348              		.loc 1 129 0
- 16349 000a 044B     		ldr	r3, .L8
- 16350 000c FA88     		ldrh	r2, [r7, #6]
- 16351 000e 9A60     		str	r2, [r3, #8]
+ 17641              		.loc 1 129 0
+ 17642 000a 044B     		ldr	r3, .L8
+ 17643 000c FA88     		ldrh	r2, [r7, #6]
+ 17644 000e 9A60     		str	r2, [r3, #8]
  130:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** }
- 16352              		.loc 1 130 0
- 16353 0010 07F10C07 		add	r7, r7, #12
- 16354 0014 BD46     		mov	sp, r7
- 16355 0016 80BC     		pop	{r7}
- 16356 0018 7047     		bx	lr
- 16357              	.L9:
- 16358 001a 00BF     		.align	2
- 16359              	.L8:
- 16360 001c 00300040 		.word	1073754112
- 16361              		.cfi_endproc
- 16362              	.LFE31:
- 16364              		.section	.text.IWDG_ReloadCounter,"ax",%progbits
- 16365              		.align	2
- 16366              		.global	IWDG_ReloadCounter
- 16367              		.thumb
- 16368              		.thumb_func
- 16370              	IWDG_ReloadCounter:
- 16371              	.LFB32:
+ 17645              		.loc 1 130 0
+ 17646 0010 07F10C07 		add	r7, r7, #12
+ 17647 0014 BD46     		mov	sp, r7
+ 17648 0016 80BC     		pop	{r7}
+ 17649 0018 7047     		bx	lr
+ 17650              	.L9:
+ 17651 001a 00BF     		.align	2
+ 17652              	.L8:
+ 17653 001c 00300040 		.word	1073754112
+ 17654              		.cfi_endproc
+ 17655              	.LFE31:
+ 17657              		.section	.text.IWDG_ReloadCounter,"ax",%progbits
+ 17658              		.align	2
+ 17659              		.global	IWDG_ReloadCounter
+ 17660              		.thumb
+ 17661              		.thumb_func
+ 17663              	IWDG_ReloadCounter:
+ 17664              	.LFB32:
  131:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** 
  132:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** /**
  133:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   * @brief  Reloads IWDG counter with value defined in the reload register
@@ -275,41 +275,41 @@
  137:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   */
  138:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** void IWDG_ReloadCounter(void)
  139:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** {
- 16372              		.loc 1 139 0
- 16373              		.cfi_startproc
- 16374              		@ args = 0, pretend = 0, frame = 0
- 16375              		@ frame_needed = 1, uses_anonymous_args = 0
- 16376              		@ link register save eliminated.
- 16377 0000 80B4     		push	{r7}
- 16378              	.LCFI9:
- 16379              		.cfi_def_cfa_offset 4
- 16380 0002 00AF     		add	r7, sp, #0
- 16381              		.cfi_offset 7, -4
- 16382              	.LCFI10:
- 16383              		.cfi_def_cfa_register 7
+ 17665              		.loc 1 139 0
+ 17666              		.cfi_startproc
+ 17667              		@ args = 0, pretend = 0, frame = 0
+ 17668              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17669              		@ link register save eliminated.
+ 17670 0000 80B4     		push	{r7}
+ 17671              	.LCFI9:
+ 17672              		.cfi_def_cfa_offset 4
+ 17673 0002 00AF     		add	r7, sp, #0
+ 17674              		.cfi_offset 7, -4
+ 17675              	.LCFI10:
+ 17676              		.cfi_def_cfa_register 7
  140:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   IWDG->KR = KR_KEY_Reload;
- 16384              		.loc 1 140 0
- 16385 0004 034B     		ldr	r3, .L11
- 16386 0006 4AF6AA22 		movw	r2, #43690
- 16387 000a 1A60     		str	r2, [r3, #0]
+ 17677              		.loc 1 140 0
+ 17678 0004 034B     		ldr	r3, .L11
+ 17679 0006 4AF6AA22 		movw	r2, #43690
+ 17680 000a 1A60     		str	r2, [r3, #0]
  141:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** }
- 16388              		.loc 1 141 0
- 16389 000c BD46     		mov	sp, r7
- 16390 000e 80BC     		pop	{r7}
- 16391 0010 7047     		bx	lr
- 16392              	.L12:
- 16393 0012 00BF     		.align	2
- 16394              	.L11:
- 16395 0014 00300040 		.word	1073754112
- 16396              		.cfi_endproc
- 16397              	.LFE32:
- 16399              		.section	.text.IWDG_Enable,"ax",%progbits
- 16400              		.align	2
- 16401              		.global	IWDG_Enable
- 16402              		.thumb
- 16403              		.thumb_func
- 16405              	IWDG_Enable:
- 16406              	.LFB33:
+ 17681              		.loc 1 141 0
+ 17682 000c BD46     		mov	sp, r7
+ 17683 000e 80BC     		pop	{r7}
+ 17684 0010 7047     		bx	lr
+ 17685              	.L12:
+ 17686 0012 00BF     		.align	2
+ 17687              	.L11:
+ 17688 0014 00300040 		.word	1073754112
+ 17689              		.cfi_endproc
+ 17690              	.LFE32:
+ 17692              		.section	.text.IWDG_Enable,"ax",%progbits
+ 17693              		.align	2
+ 17694              		.global	IWDG_Enable
+ 17695              		.thumb
+ 17696              		.thumb_func
+ 17698              	IWDG_Enable:
+ 17699              	.LFB33:
  142:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** 
  143:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** /**
  144:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   * @brief  Enables IWDG (write access to IWDG_PR and IWDG_RLR registers disabled).
@@ -318,41 +318,41 @@
  147:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   */
  148:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** void IWDG_Enable(void)
  149:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** {
- 16407              		.loc 1 149 0
- 16408              		.cfi_startproc
- 16409              		@ args = 0, pretend = 0, frame = 0
- 16410              		@ frame_needed = 1, uses_anonymous_args = 0
- 16411              		@ link register save eliminated.
- 16412 0000 80B4     		push	{r7}
- 16413              	.LCFI11:
- 16414              		.cfi_def_cfa_offset 4
- 16415 0002 00AF     		add	r7, sp, #0
- 16416              		.cfi_offset 7, -4
- 16417              	.LCFI12:
- 16418              		.cfi_def_cfa_register 7
+ 17700              		.loc 1 149 0
+ 17701              		.cfi_startproc
+ 17702              		@ args = 0, pretend = 0, frame = 0
+ 17703              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17704              		@ link register save eliminated.
+ 17705 0000 80B4     		push	{r7}
+ 17706              	.LCFI11:
+ 17707              		.cfi_def_cfa_offset 4
+ 17708 0002 00AF     		add	r7, sp, #0
+ 17709              		.cfi_offset 7, -4
+ 17710              	.LCFI12:
+ 17711              		.cfi_def_cfa_register 7
  150:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   IWDG->KR = KR_KEY_Enable;
- 16419              		.loc 1 150 0
- 16420 0004 034B     		ldr	r3, .L14
- 16421 0006 4CF6CC42 		movw	r2, #52428
- 16422 000a 1A60     		str	r2, [r3, #0]
+ 17712              		.loc 1 150 0
+ 17713 0004 034B     		ldr	r3, .L14
+ 17714 0006 4CF6CC42 		movw	r2, #52428
+ 17715 000a 1A60     		str	r2, [r3, #0]
  151:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** }
- 16423              		.loc 1 151 0
- 16424 000c BD46     		mov	sp, r7
- 16425 000e 80BC     		pop	{r7}
- 16426 0010 7047     		bx	lr
- 16427              	.L15:
- 16428 0012 00BF     		.align	2
- 16429              	.L14:
- 16430 0014 00300040 		.word	1073754112
- 16431              		.cfi_endproc
- 16432              	.LFE33:
- 16434              		.section	.text.IWDG_GetFlagStatus,"ax",%progbits
- 16435              		.align	2
- 16436              		.global	IWDG_GetFlagStatus
- 16437              		.thumb
- 16438              		.thumb_func
- 16440              	IWDG_GetFlagStatus:
- 16441              	.LFB34:
+ 17716              		.loc 1 151 0
+ 17717 000c BD46     		mov	sp, r7
+ 17718 000e 80BC     		pop	{r7}
+ 17719 0010 7047     		bx	lr
+ 17720              	.L15:
+ 17721 0012 00BF     		.align	2
+ 17722              	.L14:
+ 17723 0014 00300040 		.word	1073754112
+ 17724              		.cfi_endproc
+ 17725              	.LFE33:
+ 17727              		.section	.text.IWDG_GetFlagStatus,"ax",%progbits
+ 17728              		.align	2
+ 17729              		.global	IWDG_GetFlagStatus
+ 17730              		.thumb
+ 17731              		.thumb_func
+ 17733              	IWDG_GetFlagStatus:
+ 17734              	.LFB34:
  152:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** 
  153:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** /**
  154:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   * @brief  Checks whether the specified IWDG flag is set or not.
@@ -364,92 +364,92 @@
  160:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   */
  161:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** FlagStatus IWDG_GetFlagStatus(uint16_t IWDG_FLAG)
  162:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** {
- 16442              		.loc 1 162 0
- 16443              		.cfi_startproc
- 16444              		@ args = 0, pretend = 0, frame = 16
- 16445              		@ frame_needed = 1, uses_anonymous_args = 0
- 16446              		@ link register save eliminated.
- 16447 0000 80B4     		push	{r7}
- 16448              	.LCFI13:
- 16449              		.cfi_def_cfa_offset 4
- 16450 0002 85B0     		sub	sp, sp, #20
- 16451              	.LCFI14:
- 16452              		.cfi_def_cfa_offset 24
- 16453 0004 00AF     		add	r7, sp, #0
- 16454              		.cfi_offset 7, -4
- 16455              	.LCFI15:
- 16456              		.cfi_def_cfa_register 7
- 16457 0006 0346     		mov	r3, r0
- 16458 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 17735              		.loc 1 162 0
+ 17736              		.cfi_startproc
+ 17737              		@ args = 0, pretend = 0, frame = 16
+ 17738              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17739              		@ link register save eliminated.
+ 17740 0000 80B4     		push	{r7}
+ 17741              	.LCFI13:
+ 17742              		.cfi_def_cfa_offset 4
+ 17743 0002 85B0     		sub	sp, sp, #20
+ 17744              	.LCFI14:
+ 17745              		.cfi_def_cfa_offset 24
+ 17746 0004 00AF     		add	r7, sp, #0
+ 17747              		.cfi_offset 7, -4
+ 17748              	.LCFI15:
+ 17749              		.cfi_def_cfa_register 7
+ 17750 0006 0346     		mov	r3, r0
+ 17751 0008 FB80     		strh	r3, [r7, #6]	@ movhi
  163:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   FlagStatus bitstatus = RESET;
- 16459              		.loc 1 163 0
- 16460 000a 4FF00003 		mov	r3, #0
- 16461 000e FB73     		strb	r3, [r7, #15]
+ 17752              		.loc 1 163 0
+ 17753 000a 4FF00003 		mov	r3, #0
+ 17754 000e FB73     		strb	r3, [r7, #15]
  164:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   /* Check the parameters */
  165:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   assert_param(IS_IWDG_FLAG(IWDG_FLAG));
  166:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   if ((IWDG->SR & IWDG_FLAG) != (uint32_t)RESET)
- 16462              		.loc 1 166 0
- 16463 0010 0A4B     		ldr	r3, .L19
- 16464 0012 DA68     		ldr	r2, [r3, #12]
- 16465 0014 FB88     		ldrh	r3, [r7, #6]
- 16466 0016 02EA0303 		and	r3, r2, r3
- 16467 001a 002B     		cmp	r3, #0
- 16468 001c 03D0     		beq	.L17
+ 17755              		.loc 1 166 0
+ 17756 0010 0A4B     		ldr	r3, .L19
+ 17757 0012 DA68     		ldr	r2, [r3, #12]
+ 17758 0014 FB88     		ldrh	r3, [r7, #6]
+ 17759 0016 02EA0303 		and	r3, r2, r3
+ 17760 001a 002B     		cmp	r3, #0
+ 17761 001c 03D0     		beq	.L17
  167:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   {
  168:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****     bitstatus = SET;
- 16469              		.loc 1 168 0
- 16470 001e 4FF00103 		mov	r3, #1
- 16471 0022 FB73     		strb	r3, [r7, #15]
- 16472 0024 02E0     		b	.L18
- 16473              	.L17:
+ 17762              		.loc 1 168 0
+ 17763 001e 4FF00103 		mov	r3, #1
+ 17764 0022 FB73     		strb	r3, [r7, #15]
+ 17765 0024 02E0     		b	.L18
+ 17766              	.L17:
  169:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   }
  170:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   else
  171:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   {
  172:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****     bitstatus = RESET;
- 16474              		.loc 1 172 0
- 16475 0026 4FF00003 		mov	r3, #0
- 16476 002a FB73     		strb	r3, [r7, #15]
- 16477              	.L18:
+ 17767              		.loc 1 172 0
+ 17768 0026 4FF00003 		mov	r3, #0
+ 17769 002a FB73     		strb	r3, [r7, #15]
+ 17770              	.L18:
  173:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   }
  174:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   /* Return the flag status */
  175:../StdPeripheralDriver/src/stm32f10x_iwdg.c ****   return bitstatus;
- 16478              		.loc 1 175 0
- 16479 002c FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 17771              		.loc 1 175 0
+ 17772 002c FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  176:../StdPeripheralDriver/src/stm32f10x_iwdg.c **** }
- 16480              		.loc 1 176 0
- 16481 002e 1846     		mov	r0, r3
- 16482 0030 07F11407 		add	r7, r7, #20
- 16483 0034 BD46     		mov	sp, r7
- 16484 0036 80BC     		pop	{r7}
- 16485 0038 7047     		bx	lr
- 16486              	.L20:
- 16487 003a 00BF     		.align	2
- 16488              	.L19:
- 16489 003c 00300040 		.word	1073754112
- 16490              		.cfi_endproc
- 16491              	.LFE34:
- 16493              		.text
- 16494              	.Letext0:
+ 17773              		.loc 1 176 0
+ 17774 002e 1846     		mov	r0, r3
+ 17775 0030 07F11407 		add	r7, r7, #20
+ 17776 0034 BD46     		mov	sp, r7
+ 17777 0036 80BC     		pop	{r7}
+ 17778 0038 7047     		bx	lr
+ 17779              	.L20:
+ 17780 003a 00BF     		.align	2
+ 17781              	.L19:
+ 17782 003c 00300040 		.word	1073754112
+ 17783              		.cfi_endproc
+ 17784              	.LFE34:
+ 17786              		.text
+ 17787              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f10x_iwdg.c
-     /tmp/ccAjouPF.s:16242  .text.IWDG_WriteAccessCmd:00000000 $t
-     /tmp/ccAjouPF.s:16247  .text.IWDG_WriteAccessCmd:00000000 IWDG_WriteAccessCmd
-     /tmp/ccAjouPF.s:16278  .text.IWDG_WriteAccessCmd:0000001c $d
-     /tmp/ccAjouPF.s:16283  .text.IWDG_SetPrescaler:00000000 $t
-     /tmp/ccAjouPF.s:16288  .text.IWDG_SetPrescaler:00000000 IWDG_SetPrescaler
-     /tmp/ccAjouPF.s:16319  .text.IWDG_SetPrescaler:0000001c $d
-     /tmp/ccAjouPF.s:16324  .text.IWDG_SetReload:00000000 $t
-     /tmp/ccAjouPF.s:16329  .text.IWDG_SetReload:00000000 IWDG_SetReload
-     /tmp/ccAjouPF.s:16360  .text.IWDG_SetReload:0000001c $d
-     /tmp/ccAjouPF.s:16365  .text.IWDG_ReloadCounter:00000000 $t
-     /tmp/ccAjouPF.s:16370  .text.IWDG_ReloadCounter:00000000 IWDG_ReloadCounter
-     /tmp/ccAjouPF.s:16395  .text.IWDG_ReloadCounter:00000014 $d
-     /tmp/ccAjouPF.s:16400  .text.IWDG_Enable:00000000 $t
-     /tmp/ccAjouPF.s:16405  .text.IWDG_Enable:00000000 IWDG_Enable
-     /tmp/ccAjouPF.s:16430  .text.IWDG_Enable:00000014 $d
-     /tmp/ccAjouPF.s:16435  .text.IWDG_GetFlagStatus:00000000 $t
-     /tmp/ccAjouPF.s:16440  .text.IWDG_GetFlagStatus:00000000 IWDG_GetFlagStatus
-     /tmp/ccAjouPF.s:16489  .text.IWDG_GetFlagStatus:0000003c $d
+     /tmp/ccwFC7Jz.s:17535  .text.IWDG_WriteAccessCmd:00000000 $t
+     /tmp/ccwFC7Jz.s:17540  .text.IWDG_WriteAccessCmd:00000000 IWDG_WriteAccessCmd
+     /tmp/ccwFC7Jz.s:17571  .text.IWDG_WriteAccessCmd:0000001c $d
+     /tmp/ccwFC7Jz.s:17576  .text.IWDG_SetPrescaler:00000000 $t
+     /tmp/ccwFC7Jz.s:17581  .text.IWDG_SetPrescaler:00000000 IWDG_SetPrescaler
+     /tmp/ccwFC7Jz.s:17612  .text.IWDG_SetPrescaler:0000001c $d
+     /tmp/ccwFC7Jz.s:17617  .text.IWDG_SetReload:00000000 $t
+     /tmp/ccwFC7Jz.s:17622  .text.IWDG_SetReload:00000000 IWDG_SetReload
+     /tmp/ccwFC7Jz.s:17653  .text.IWDG_SetReload:0000001c $d
+     /tmp/ccwFC7Jz.s:17658  .text.IWDG_ReloadCounter:00000000 $t
+     /tmp/ccwFC7Jz.s:17663  .text.IWDG_ReloadCounter:00000000 IWDG_ReloadCounter
+     /tmp/ccwFC7Jz.s:17688  .text.IWDG_ReloadCounter:00000014 $d
+     /tmp/ccwFC7Jz.s:17693  .text.IWDG_Enable:00000000 $t
+     /tmp/ccwFC7Jz.s:17698  .text.IWDG_Enable:00000000 IWDG_Enable
+     /tmp/ccwFC7Jz.s:17723  .text.IWDG_Enable:00000014 $d
+     /tmp/ccwFC7Jz.s:17728  .text.IWDG_GetFlagStatus:00000000 $t
+     /tmp/ccwFC7Jz.s:17733  .text.IWDG_GetFlagStatus:00000000 IWDG_GetFlagStatus
+     /tmp/ccwFC7Jz.s:17782  .text.IWDG_GetFlagStatus:0000003c $d
                      .debug_frame:00000010 $d
 
 NO UNDEFINED SYMBOLS

@@ -14,7 +14,7 @@
   10              	  *                - Set the initial SP
   11              	  *                - Set the initial PC == Reset_Handler,
   12              	  *                - Set the vector table entries with the exceptions ISR address
-  13              	  *                - Configure the clock system
+  13              	  *                - Configure the clock system                 
   14              	  *                - Branches to main in the C library (which eventually
   15              	  *                  calls main()).
   16              	  *            After Reset the Cortex-M3 processor is in Thread mode,
@@ -32,7 +32,7 @@
   28              	  * <h2><center>&copy; COPYRIGHT 2011 STMicroelectronics</center></h2>
   29              	  ******************************************************************************
   30              	  */
-  31              	
+  31              	    
   32              	  .syntax unified
   33              	  .cpu cortex-m3
   34              	  .fpu softvfp
@@ -41,10 +41,10 @@
   37              	.global  g_pfnVectors
   38              	.global  Default_Handler
   39              	
-  40              	/* start address for the initialization values of the .data section.
+  40              	/* start address for the initialization values of the .data section. 
   41              	defined in linker script */
   42 0000 00000000 	.word  _sidata
-  43              	/* start address for the .data section. defined in linker script */
+  43              	/* start address for the .data section. defined in linker script */  
   44 0004 00000000 	.word  _sdata
   45              	/* end address for the .data section. defined in linker script */
   46 0008 00000000 	.word  _edata
@@ -58,16 +58,16 @@
   54              	 * @brief  This is the code that gets called when the processor first
   55              	 *          starts execution following a reset event. Only the absolutely
   56              	 *          necessary set is performed, after which the application
-  57              	 *          supplied main() routine is called.
+  57              	 *          supplied main() routine is called. 
   58              	 * @param  None
   59              	 * @retval None
   60              	*/
   61              	
   62              	  .section  .text.Reset_Handler
   63              	  .weak  Reset_Handler
-  65              	Reset_Handler:
+  65              	Reset_Handler:  
   66              	
-  67              	/* Copy the data segment initializers from flash to SRAM */
+  67              	/* Copy the data segment initializers from flash to SRAM */  
   68 0000 0021     	  movs  r1, #0
   69 0002 03E0     	  b     LoopCopyDataInit
   70              	
@@ -76,7 +76,7 @@
   73 0006 5B58     	  ldr   r3, [r3, r1]
   74 0008 4350     	  str   r3, [r0, r1]
   75 000a 0431     	  adds  r1, r1, #4
-  76              	
+  76              	    
   77              	LoopCopyDataInit:
   78 000c 0948     	  ldr   r0, =_sdata
   79 000e 0A4B     	  ldr   r3, =_edata
@@ -85,27 +85,27 @@
   82 0014 F6D3     	  bcc   CopyDataInit
   83 0016 094A     	  ldr   r2, =_sbss
   84 0018 02E0     	  b     LoopFillZerobss
-  85              	/* Zero fill the bss segment. */
+  85              	/* Zero fill the bss segment. */  
   86              	FillZerobss:
   87 001a 0023     	  movs  r3, #0
   88 001c 42F8043B 	  str   r3, [r2], #4
-  89              	
+  89              	    
   90              	LoopFillZerobss:
   91 0020 074B     	  ldr   r3, = _ebss
   92 0022 9A42     	  cmp   r2, r3
   93 0024 F9D3     	  bcc   FillZerobss
   94              	/* Call the clock system intitialization function.*/
-  95 0026 FFF7FEFF 	  bl  SystemInit
+  95 0026 FFF7FEFF 	  bl  SystemInit   
   96              	/* Call the application's entry point.*/
   97 002a FFF7FEFF 	  bl    main
-  98 002e 7047     	  bx    lr
+  98 002e 7047     	  bx    lr    
  100              	
  101              	/**
- 102              	 * @brief  This is the code that gets called when the processor receives an
+ 102              	 * @brief  This is the code that gets called when the processor receives an 
  103              	 *         unexpected interrupt. This simply enters an infinite loop, preserving
  104              	 *         the system state for examination by a debugger.
- 105              	 * @param  None
- 106              	 * @retval None
+ 105              	 * @param  None     
+ 106              	 * @retval None       
  107              	*/
  108              	  .section  .text.Default_Handler,"ax",%progbits
  109              	Default_Handler:
@@ -116,8 +116,8 @@
  115              	* The minimal vector table for a Cortex M3. Note that the proper constructs
  116              	* must be placed on this to ensure that it ends up at physical address
  117              	* 0x0000.0000.
- 118              	*
- 119              	******************************************************************************/
+ 118              	* 
+ 119              	******************************************************************************/    
  120              	  .section  .isr_vector,"a",%progbits
  123              	
  124              	g_pfnVectors:
@@ -179,7 +179,7 @@
  180 00dc 00000000 	  .word  USART3_IRQHandler
  181 00e0 00000000 	  .word  EXTI15_10_IRQHandler
  182 00e4 00000000 	  .word  RTCAlarm_IRQHandler
- 183 00e8 00000000 	  .word  CEC_IRQHandler
+ 183 00e8 00000000 	  .word  CEC_IRQHandler  
  184 00ec 00000000 	  .word  0
  185 00f0 00000000 	  .word  0
  186 00f4 00000000 	  .word  0
@@ -187,12 +187,12 @@
  188 00fc 00000000 	  .word  0
  189 0100 00000000 	  .word  0
  190 0104 00000000 	  .word  0
- 191 0108 00000000 	  .word  0
+ 191 0108 00000000 	  .word  0  
  192 010c 00000000 	  .word  0
  193 0110 00000000 	  .word  0
  194 0114 00000000 	  .word  0
  195 0118 00000000 	  .word  TIM6_DAC_IRQHandler
- 196 011c 00000000 	  .word  TIM7_IRQHandler
+ 196 011c 00000000 	  .word  TIM7_IRQHandler  
  197 0120 00000000 	  .word  0
  198 0124 00000000 	  .word  0
  199 0128 00000000 	  .word  0
@@ -236,24 +236,24 @@
  237 01c0 00000000 	  .word  0
  238 01c4 00000000 	  .word  0
  239 01c8 00000000 	  .word  0
- 240 01cc 5FF808F1 	  .word  BootRAM          /* @0x01CC. This is for boot in RAM mode for
+ 240 01cc 5FF808F1 	  .word  BootRAM          /* @0x01CC. This is for boot in RAM mode for 
  241              	                            STM32F10x Medium Value Line Density devices. */
- 242              	
+ 242              	   
  243              	/*******************************************************************************
- 244              	* Provide weak aliases for each Exception handler to the Default_Handler.
- 245              	* As they are weak aliases, any function with the same name will override
+ 244              	* Provide weak aliases for each Exception handler to the Default_Handler. 
+ 245              	* As they are weak aliases, any function with the same name will override 
  246              	* this definition.
  247              	*******************************************************************************/
- 248              	
+ 248              	    
  249              	  .weak  NMI_Handler
  250              	  .thumb_set NMI_Handler,Default_Handler
- 251              	
+ 251              	  
  252              	  .weak  HardFault_Handler
  253              	  .thumb_set HardFault_Handler,Default_Handler
- 254              	
+ 254              	  
  255              	  .weak  MemManage_Handler
  256              	  .thumb_set MemManage_Handler,Default_Handler
- 257              	
+ 257              	  
  258              	  .weak  BusFault_Handler
  259              	  .thumb_set BusFault_Handler,Default_Handler
  260              	
@@ -393,7 +393,7 @@
  394              	  .thumb_set TIM6_DAC_IRQHandler,Default_Handler
  395              	
  396              	  .weak  TIM7_IRQHandler
- 397              	  .thumb_set TIM7_IRQHandler,Default_Handler
+ 397              	  .thumb_set TIM7_IRQHandler,Default_Handler  
 DEFINED SYMBOLS
 ../CMSIS/startup_stm32f10x_md_vl.S:124    .isr_vector:00000000 g_pfnVectors
 ../CMSIS/startup_stm32f10x_md_vl.S:109    .text.Default_Handler:00000000 Default_Handler

@@ -13,12 +13,12 @@
   13              		.file	"stm32f10x_sdio.c"
   23              	.Ltext0:
   24              		.file 1 "../StdPeripheralDriver/src/stm32f10x_sdio.c"
- 17255              		.align	2
- 17256              		.global	SDIO_DeInit
- 17257              		.thumb
- 17258              		.thumb_func
- 17260              	SDIO_DeInit:
- 17261              	.LFB29:
+ 17996              		.align	2
+ 17997              		.global	SDIO_DeInit
+ 17998              		.thumb
+ 17999              		.thumb_func
+ 18001              	SDIO_DeInit:
+ 18002              	.LFB29:
    1:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
    2:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   ******************************************************************************
    3:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @file    stm32f10x_sdio.c
@@ -181,82 +181,82 @@
  160:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  161:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_DeInit(void)
  162:../StdPeripheralDriver/src/stm32f10x_sdio.c **** {
- 17262              		.loc 1 162 0
- 17263              		.cfi_startproc
- 17264              		@ args = 0, pretend = 0, frame = 0
- 17265              		@ frame_needed = 1, uses_anonymous_args = 0
- 17266              		@ link register save eliminated.
- 17267 0000 80B4     		push	{r7}
- 17268              	.LCFI0:
- 17269              		.cfi_def_cfa_offset 4
- 17270 0002 00AF     		add	r7, sp, #0
- 17271              		.cfi_offset 7, -4
- 17272              	.LCFI1:
- 17273              		.cfi_def_cfa_register 7
+ 18003              		.loc 1 162 0
+ 18004              		.cfi_startproc
+ 18005              		@ args = 0, pretend = 0, frame = 0
+ 18006              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18007              		@ link register save eliminated.
+ 18008 0000 80B4     		push	{r7}
+ 18009              	.LCFI0:
+ 18010              		.cfi_def_cfa_offset 4
+ 18011 0002 00AF     		add	r7, sp, #0
+ 18012              		.cfi_offset 7, -4
+ 18013              	.LCFI1:
+ 18014              		.cfi_def_cfa_register 7
  163:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->POWER = 0x00000000;
- 17274              		.loc 1 163 0
- 17275 0004 124B     		ldr	r3, .L2
- 17276 0006 4FF00002 		mov	r2, #0
- 17277 000a 1A60     		str	r2, [r3, #0]
+ 18015              		.loc 1 163 0
+ 18016 0004 124B     		ldr	r3, .L2
+ 18017 0006 4FF00002 		mov	r2, #0
+ 18018 000a 1A60     		str	r2, [r3, #0]
  164:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->CLKCR = 0x00000000;
- 17278              		.loc 1 164 0
- 17279 000c 104B     		ldr	r3, .L2
- 17280 000e 4FF00002 		mov	r2, #0
- 17281 0012 5A60     		str	r2, [r3, #4]
+ 18019              		.loc 1 164 0
+ 18020 000c 104B     		ldr	r3, .L2
+ 18021 000e 4FF00002 		mov	r2, #0
+ 18022 0012 5A60     		str	r2, [r3, #4]
  165:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->ARG = 0x00000000;
- 17282              		.loc 1 165 0
- 17283 0014 0E4B     		ldr	r3, .L2
- 17284 0016 4FF00002 		mov	r2, #0
- 17285 001a 9A60     		str	r2, [r3, #8]
+ 18023              		.loc 1 165 0
+ 18024 0014 0E4B     		ldr	r3, .L2
+ 18025 0016 4FF00002 		mov	r2, #0
+ 18026 001a 9A60     		str	r2, [r3, #8]
  166:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->CMD = 0x00000000;
- 17286              		.loc 1 166 0
- 17287 001c 0C4B     		ldr	r3, .L2
- 17288 001e 4FF00002 		mov	r2, #0
- 17289 0022 DA60     		str	r2, [r3, #12]
+ 18027              		.loc 1 166 0
+ 18028 001c 0C4B     		ldr	r3, .L2
+ 18029 001e 4FF00002 		mov	r2, #0
+ 18030 0022 DA60     		str	r2, [r3, #12]
  167:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->DTIMER = 0x00000000;
- 17290              		.loc 1 167 0
- 17291 0024 0A4B     		ldr	r3, .L2
- 17292 0026 4FF00002 		mov	r2, #0
- 17293 002a 5A62     		str	r2, [r3, #36]
+ 18031              		.loc 1 167 0
+ 18032 0024 0A4B     		ldr	r3, .L2
+ 18033 0026 4FF00002 		mov	r2, #0
+ 18034 002a 5A62     		str	r2, [r3, #36]
  168:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->DLEN = 0x00000000;
- 17294              		.loc 1 168 0
- 17295 002c 084B     		ldr	r3, .L2
- 17296 002e 4FF00002 		mov	r2, #0
- 17297 0032 9A62     		str	r2, [r3, #40]
+ 18035              		.loc 1 168 0
+ 18036 002c 084B     		ldr	r3, .L2
+ 18037 002e 4FF00002 		mov	r2, #0
+ 18038 0032 9A62     		str	r2, [r3, #40]
  169:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->DCTRL = 0x00000000;
- 17298              		.loc 1 169 0
- 17299 0034 064B     		ldr	r3, .L2
- 17300 0036 4FF00002 		mov	r2, #0
- 17301 003a DA62     		str	r2, [r3, #44]
+ 18039              		.loc 1 169 0
+ 18040 0034 064B     		ldr	r3, .L2
+ 18041 0036 4FF00002 		mov	r2, #0
+ 18042 003a DA62     		str	r2, [r3, #44]
  170:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->ICR = 0x00C007FF;
- 17302              		.loc 1 170 0
- 17303 003c 044B     		ldr	r3, .L2
- 17304 003e 054A     		ldr	r2, .L2+4
- 17305 0040 9A63     		str	r2, [r3, #56]
+ 18043              		.loc 1 170 0
+ 18044 003c 044B     		ldr	r3, .L2
+ 18045 003e 054A     		ldr	r2, .L2+4
+ 18046 0040 9A63     		str	r2, [r3, #56]
  171:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->MASK = 0x00000000;
- 17306              		.loc 1 171 0
- 17307 0042 034B     		ldr	r3, .L2
- 17308 0044 4FF00002 		mov	r2, #0
- 17309 0048 DA63     		str	r2, [r3, #60]
+ 18047              		.loc 1 171 0
+ 18048 0042 034B     		ldr	r3, .L2
+ 18049 0044 4FF00002 		mov	r2, #0
+ 18050 0048 DA63     		str	r2, [r3, #60]
  172:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 17310              		.loc 1 172 0
- 17311 004a BD46     		mov	sp, r7
- 17312 004c 80BC     		pop	{r7}
- 17313 004e 7047     		bx	lr
- 17314              	.L3:
- 17315              		.align	2
- 17316              	.L2:
- 17317 0050 00800140 		.word	1073840128
- 17318 0054 FF07C000 		.word	12584959
- 17319              		.cfi_endproc
- 17320              	.LFE29:
- 17322              		.section	.text.SDIO_Init,"ax",%progbits
- 17323              		.align	2
- 17324              		.global	SDIO_Init
- 17325              		.thumb
- 17326              		.thumb_func
- 17328              	SDIO_Init:
- 17329              	.LFB30:
+ 18051              		.loc 1 172 0
+ 18052 004a BD46     		mov	sp, r7
+ 18053 004c 80BC     		pop	{r7}
+ 18054 004e 7047     		bx	lr
+ 18055              	.L3:
+ 18056              		.align	2
+ 18057              	.L2:
+ 18058 0050 00800140 		.word	1073840128
+ 18059 0054 FF07C000 		.word	12584959
+ 18060              		.cfi_endproc
+ 18061              	.LFE29:
+ 18063              		.section	.text.SDIO_Init,"ax",%progbits
+ 18064              		.align	2
+ 18065              		.global	SDIO_Init
+ 18066              		.thumb
+ 18067              		.thumb_func
+ 18069              	SDIO_Init:
+ 18070              	.LFB30:
  173:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  174:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  175:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Initializes the SDIO peripheral according to the specified 
@@ -267,26 +267,26 @@
  180:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  181:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_Init(SDIO_InitTypeDef* SDIO_InitStruct)
  182:../StdPeripheralDriver/src/stm32f10x_sdio.c **** {
- 17330              		.loc 1 182 0
- 17331              		.cfi_startproc
- 17332              		@ args = 0, pretend = 0, frame = 16
- 17333              		@ frame_needed = 1, uses_anonymous_args = 0
- 17334              		@ link register save eliminated.
- 17335 0000 80B4     		push	{r7}
- 17336              	.LCFI2:
- 17337              		.cfi_def_cfa_offset 4
- 17338 0002 85B0     		sub	sp, sp, #20
- 17339              	.LCFI3:
- 17340              		.cfi_def_cfa_offset 24
- 17341 0004 00AF     		add	r7, sp, #0
- 17342              		.cfi_offset 7, -4
- 17343              	.LCFI4:
- 17344              		.cfi_def_cfa_register 7
- 17345 0006 7860     		str	r0, [r7, #4]
+ 18071              		.loc 1 182 0
+ 18072              		.cfi_startproc
+ 18073              		@ args = 0, pretend = 0, frame = 16
+ 18074              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18075              		@ link register save eliminated.
+ 18076 0000 80B4     		push	{r7}
+ 18077              	.LCFI2:
+ 18078              		.cfi_def_cfa_offset 4
+ 18079 0002 85B0     		sub	sp, sp, #20
+ 18080              	.LCFI3:
+ 18081              		.cfi_def_cfa_offset 24
+ 18082 0004 00AF     		add	r7, sp, #0
+ 18083              		.cfi_offset 7, -4
+ 18084              	.LCFI4:
+ 18085              		.cfi_def_cfa_register 7
+ 18086 0006 7860     		str	r0, [r7, #4]
  183:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   uint32_t tmpreg = 0;
- 17346              		.loc 1 183 0
- 17347 0008 4FF00003 		mov	r3, #0
- 17348 000c FB60     		str	r3, [r7, #12]
+ 18087              		.loc 1 183 0
+ 18088 0008 4FF00003 		mov	r3, #0
+ 18089 000c FB60     		str	r3, [r7, #12]
  184:../StdPeripheralDriver/src/stm32f10x_sdio.c ****     
  185:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  186:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_SDIO_CLOCK_EDGE(SDIO_InitStruct->SDIO_ClockEdge));
@@ -298,18 +298,18 @@
  192:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /*---------------------------- SDIO CLKCR Configuration ------------------------*/  
  193:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Get the SDIO CLKCR value */
  194:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   tmpreg = SDIO->CLKCR;
- 17349              		.loc 1 194 0
- 17350 000e 144B     		ldr	r3, .L5
- 17351 0010 5B68     		ldr	r3, [r3, #4]
- 17352 0012 FB60     		str	r3, [r7, #12]
+ 18090              		.loc 1 194 0
+ 18091 000e 144B     		ldr	r3, .L5
+ 18092 0010 5B68     		ldr	r3, [r3, #4]
+ 18093 0012 FB60     		str	r3, [r7, #12]
  195:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  196:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Clear CLKDIV, PWRSAV, BYPASS, WIDBUS, NEGEDGE, HWFC_EN bits */
  197:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   tmpreg &= CLKCR_CLEAR_MASK;
- 17353              		.loc 1 197 0
- 17354 0014 FB68     		ldr	r3, [r7, #12]
- 17355 0016 23F4FC43 		bic	r3, r3, #32256
- 17356 001a 23F0FF03 		bic	r3, r3, #255
- 17357 001e FB60     		str	r3, [r7, #12]
+ 18094              		.loc 1 197 0
+ 18095 0014 FB68     		ldr	r3, [r7, #12]
+ 18096 0016 23F4FC43 		bic	r3, r3, #32256
+ 18097 001a 23F0FF03 		bic	r3, r3, #255
+ 18098 001e FB60     		str	r3, [r7, #12]
  198:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  199:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Set CLKDIV bits according to SDIO_ClockDiv value */
  200:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Set PWRSAV bit according to SDIO_ClockPowerSave value */
@@ -318,66 +318,66 @@
  203:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Set NEGEDGE bits according to SDIO_ClockEdge value */
  204:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Set HWFC_EN bits according to SDIO_HardwareFlowControl value */
  205:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   tmpreg |= (SDIO_InitStruct->SDIO_ClockDiv  | SDIO_InitStruct->SDIO_ClockPowerSave |
- 17358              		.loc 1 205 0
- 17359 0020 7B68     		ldr	r3, [r7, #4]
- 17360 0022 1B7D     		ldrb	r3, [r3, #20]	@ zero_extendqisi2
- 17361 0024 1A46     		mov	r2, r3
- 17362 0026 7B68     		ldr	r3, [r7, #4]
- 17363 0028 9B68     		ldr	r3, [r3, #8]
- 17364 002a 1A43     		orrs	r2, r2, r3
+ 18099              		.loc 1 205 0
+ 18100 0020 7B68     		ldr	r3, [r7, #4]
+ 18101 0022 1B7D     		ldrb	r3, [r3, #20]	@ zero_extendqisi2
+ 18102 0024 1A46     		mov	r2, r3
+ 18103 0026 7B68     		ldr	r3, [r7, #4]
+ 18104 0028 9B68     		ldr	r3, [r3, #8]
+ 18105 002a 1A43     		orrs	r2, r2, r3
  206:../StdPeripheralDriver/src/stm32f10x_sdio.c ****              SDIO_InitStruct->SDIO_ClockBypass | SDIO_InitStruct->SDIO_BusWide |
- 17365              		.loc 1 206 0
- 17366 002c 7B68     		ldr	r3, [r7, #4]
- 17367 002e 5B68     		ldr	r3, [r3, #4]
+ 18106              		.loc 1 206 0
+ 18107 002c 7B68     		ldr	r3, [r7, #4]
+ 18108 002e 5B68     		ldr	r3, [r3, #4]
  205:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   tmpreg |= (SDIO_InitStruct->SDIO_ClockDiv  | SDIO_InitStruct->SDIO_ClockPowerSave |
- 17368              		.loc 1 205 0
- 17369 0030 1A43     		orrs	r2, r2, r3
- 17370              		.loc 1 206 0
- 17371 0032 7B68     		ldr	r3, [r7, #4]
- 17372 0034 DB68     		ldr	r3, [r3, #12]
- 17373 0036 1A43     		orrs	r2, r2, r3
+ 18109              		.loc 1 205 0
+ 18110 0030 1A43     		orrs	r2, r2, r3
+ 18111              		.loc 1 206 0
+ 18112 0032 7B68     		ldr	r3, [r7, #4]
+ 18113 0034 DB68     		ldr	r3, [r3, #12]
+ 18114 0036 1A43     		orrs	r2, r2, r3
  207:../StdPeripheralDriver/src/stm32f10x_sdio.c ****              SDIO_InitStruct->SDIO_ClockEdge | SDIO_InitStruct->SDIO_HardwareFlowControl); 
- 17374              		.loc 1 207 0
- 17375 0038 7B68     		ldr	r3, [r7, #4]
- 17376 003a 1B68     		ldr	r3, [r3, #0]
+ 18115              		.loc 1 207 0
+ 18116 0038 7B68     		ldr	r3, [r7, #4]
+ 18117 003a 1B68     		ldr	r3, [r3, #0]
  206:../StdPeripheralDriver/src/stm32f10x_sdio.c ****              SDIO_InitStruct->SDIO_ClockBypass | SDIO_InitStruct->SDIO_BusWide |
- 17377              		.loc 1 206 0
- 17378 003c 1A43     		orrs	r2, r2, r3
- 17379              		.loc 1 207 0
- 17380 003e 7B68     		ldr	r3, [r7, #4]
- 17381 0040 1B69     		ldr	r3, [r3, #16]
- 17382 0042 42EA0303 		orr	r3, r2, r3
+ 18118              		.loc 1 206 0
+ 18119 003c 1A43     		orrs	r2, r2, r3
+ 18120              		.loc 1 207 0
+ 18121 003e 7B68     		ldr	r3, [r7, #4]
+ 18122 0040 1B69     		ldr	r3, [r3, #16]
+ 18123 0042 42EA0303 		orr	r3, r2, r3
  205:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   tmpreg |= (SDIO_InitStruct->SDIO_ClockDiv  | SDIO_InitStruct->SDIO_ClockPowerSave |
- 17383              		.loc 1 205 0
- 17384 0046 FA68     		ldr	r2, [r7, #12]
- 17385 0048 42EA0303 		orr	r3, r2, r3
- 17386 004c FB60     		str	r3, [r7, #12]
+ 18124              		.loc 1 205 0
+ 18125 0046 FA68     		ldr	r2, [r7, #12]
+ 18126 0048 42EA0303 		orr	r3, r2, r3
+ 18127 004c FB60     		str	r3, [r7, #12]
  208:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  209:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Write to SDIO CLKCR */
  210:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->CLKCR = tmpreg;
- 17387              		.loc 1 210 0
- 17388 004e 044B     		ldr	r3, .L5
- 17389 0050 FA68     		ldr	r2, [r7, #12]
- 17390 0052 5A60     		str	r2, [r3, #4]
+ 18128              		.loc 1 210 0
+ 18129 004e 044B     		ldr	r3, .L5
+ 18130 0050 FA68     		ldr	r2, [r7, #12]
+ 18131 0052 5A60     		str	r2, [r3, #4]
  211:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 17391              		.loc 1 211 0
- 17392 0054 07F11407 		add	r7, r7, #20
- 17393 0058 BD46     		mov	sp, r7
- 17394 005a 80BC     		pop	{r7}
- 17395 005c 7047     		bx	lr
- 17396              	.L6:
- 17397 005e 00BF     		.align	2
- 17398              	.L5:
- 17399 0060 00800140 		.word	1073840128
- 17400              		.cfi_endproc
- 17401              	.LFE30:
- 17403              		.section	.text.SDIO_StructInit,"ax",%progbits
- 17404              		.align	2
- 17405              		.global	SDIO_StructInit
- 17406              		.thumb
- 17407              		.thumb_func
- 17409              	SDIO_StructInit:
- 17410              	.LFB31:
+ 18132              		.loc 1 211 0
+ 18133 0054 07F11407 		add	r7, r7, #20
+ 18134 0058 BD46     		mov	sp, r7
+ 18135 005a 80BC     		pop	{r7}
+ 18136 005c 7047     		bx	lr
+ 18137              	.L6:
+ 18138 005e 00BF     		.align	2
+ 18139              	.L5:
+ 18140 0060 00800140 		.word	1073840128
+ 18141              		.cfi_endproc
+ 18142              	.LFE30:
+ 18144              		.section	.text.SDIO_StructInit,"ax",%progbits
+ 18145              		.align	2
+ 18146              		.global	SDIO_StructInit
+ 18147              		.thumb
+ 18148              		.thumb_func
+ 18150              	SDIO_StructInit:
+ 18151              	.LFB31:
  212:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  213:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  214:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Fills each SDIO_InitStruct member with its default value.
@@ -387,68 +387,68 @@
  218:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  219:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_StructInit(SDIO_InitTypeDef* SDIO_InitStruct)
  220:../StdPeripheralDriver/src/stm32f10x_sdio.c **** {
- 17411              		.loc 1 220 0
- 17412              		.cfi_startproc
- 17413              		@ args = 0, pretend = 0, frame = 8
- 17414              		@ frame_needed = 1, uses_anonymous_args = 0
- 17415              		@ link register save eliminated.
- 17416 0000 80B4     		push	{r7}
- 17417              	.LCFI5:
- 17418              		.cfi_def_cfa_offset 4
- 17419 0002 83B0     		sub	sp, sp, #12
- 17420              	.LCFI6:
- 17421              		.cfi_def_cfa_offset 16
- 17422 0004 00AF     		add	r7, sp, #0
- 17423              		.cfi_offset 7, -4
- 17424              	.LCFI7:
- 17425              		.cfi_def_cfa_register 7
- 17426 0006 7860     		str	r0, [r7, #4]
+ 18152              		.loc 1 220 0
+ 18153              		.cfi_startproc
+ 18154              		@ args = 0, pretend = 0, frame = 8
+ 18155              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18156              		@ link register save eliminated.
+ 18157 0000 80B4     		push	{r7}
+ 18158              	.LCFI5:
+ 18159              		.cfi_def_cfa_offset 4
+ 18160 0002 83B0     		sub	sp, sp, #12
+ 18161              	.LCFI6:
+ 18162              		.cfi_def_cfa_offset 16
+ 18163 0004 00AF     		add	r7, sp, #0
+ 18164              		.cfi_offset 7, -4
+ 18165              	.LCFI7:
+ 18166              		.cfi_def_cfa_register 7
+ 18167 0006 7860     		str	r0, [r7, #4]
  221:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* SDIO_InitStruct members default value */
  222:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO_InitStruct->SDIO_ClockDiv = 0x00;
- 17427              		.loc 1 222 0
- 17428 0008 7B68     		ldr	r3, [r7, #4]
- 17429 000a 4FF00002 		mov	r2, #0
- 17430 000e 1A75     		strb	r2, [r3, #20]
+ 18168              		.loc 1 222 0
+ 18169 0008 7B68     		ldr	r3, [r7, #4]
+ 18170 000a 4FF00002 		mov	r2, #0
+ 18171 000e 1A75     		strb	r2, [r3, #20]
  223:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO_InitStruct->SDIO_ClockEdge = SDIO_ClockEdge_Rising;
- 17431              		.loc 1 223 0
- 17432 0010 7B68     		ldr	r3, [r7, #4]
- 17433 0012 4FF00002 		mov	r2, #0
- 17434 0016 1A60     		str	r2, [r3, #0]
+ 18172              		.loc 1 223 0
+ 18173 0010 7B68     		ldr	r3, [r7, #4]
+ 18174 0012 4FF00002 		mov	r2, #0
+ 18175 0016 1A60     		str	r2, [r3, #0]
  224:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO_InitStruct->SDIO_ClockBypass = SDIO_ClockBypass_Disable;
- 17435              		.loc 1 224 0
- 17436 0018 7B68     		ldr	r3, [r7, #4]
- 17437 001a 4FF00002 		mov	r2, #0
- 17438 001e 5A60     		str	r2, [r3, #4]
+ 18176              		.loc 1 224 0
+ 18177 0018 7B68     		ldr	r3, [r7, #4]
+ 18178 001a 4FF00002 		mov	r2, #0
+ 18179 001e 5A60     		str	r2, [r3, #4]
  225:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO_InitStruct->SDIO_ClockPowerSave = SDIO_ClockPowerSave_Disable;
- 17439              		.loc 1 225 0
- 17440 0020 7B68     		ldr	r3, [r7, #4]
- 17441 0022 4FF00002 		mov	r2, #0
- 17442 0026 9A60     		str	r2, [r3, #8]
+ 18180              		.loc 1 225 0
+ 18181 0020 7B68     		ldr	r3, [r7, #4]
+ 18182 0022 4FF00002 		mov	r2, #0
+ 18183 0026 9A60     		str	r2, [r3, #8]
  226:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO_InitStruct->SDIO_BusWide = SDIO_BusWide_1b;
- 17443              		.loc 1 226 0
- 17444 0028 7B68     		ldr	r3, [r7, #4]
- 17445 002a 4FF00002 		mov	r2, #0
- 17446 002e DA60     		str	r2, [r3, #12]
+ 18184              		.loc 1 226 0
+ 18185 0028 7B68     		ldr	r3, [r7, #4]
+ 18186 002a 4FF00002 		mov	r2, #0
+ 18187 002e DA60     		str	r2, [r3, #12]
  227:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO_InitStruct->SDIO_HardwareFlowControl = SDIO_HardwareFlowControl_Disable;
- 17447              		.loc 1 227 0
- 17448 0030 7B68     		ldr	r3, [r7, #4]
- 17449 0032 4FF00002 		mov	r2, #0
- 17450 0036 1A61     		str	r2, [r3, #16]
+ 18188              		.loc 1 227 0
+ 18189 0030 7B68     		ldr	r3, [r7, #4]
+ 18190 0032 4FF00002 		mov	r2, #0
+ 18191 0036 1A61     		str	r2, [r3, #16]
  228:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 17451              		.loc 1 228 0
- 17452 0038 07F10C07 		add	r7, r7, #12
- 17453 003c BD46     		mov	sp, r7
- 17454 003e 80BC     		pop	{r7}
- 17455 0040 7047     		bx	lr
- 17456              		.cfi_endproc
- 17457              	.LFE31:
- 17459 0042 00BF     		.section	.text.SDIO_ClockCmd,"ax",%progbits
- 17460              		.align	2
- 17461              		.global	SDIO_ClockCmd
- 17462              		.thumb
- 17463              		.thumb_func
- 17465              	SDIO_ClockCmd:
- 17466              	.LFB32:
+ 18192              		.loc 1 228 0
+ 18193 0038 07F10C07 		add	r7, r7, #12
+ 18194 003c BD46     		mov	sp, r7
+ 18195 003e 80BC     		pop	{r7}
+ 18196 0040 7047     		bx	lr
+ 18197              		.cfi_endproc
+ 18198              	.LFE31:
+ 18200 0042 00BF     		.section	.text.SDIO_ClockCmd,"ax",%progbits
+ 18201              		.align	2
+ 18202              		.global	SDIO_ClockCmd
+ 18203              		.thumb
+ 18204              		.thumb_func
+ 18206              	SDIO_ClockCmd:
+ 18207              	.LFB32:
  229:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  230:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  231:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Enables or disables the SDIO Clock.
@@ -457,50 +457,50 @@
  234:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  235:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_ClockCmd(FunctionalState NewState)
  236:../StdPeripheralDriver/src/stm32f10x_sdio.c **** {
- 17467              		.loc 1 236 0
- 17468              		.cfi_startproc
- 17469              		@ args = 0, pretend = 0, frame = 8
- 17470              		@ frame_needed = 1, uses_anonymous_args = 0
- 17471              		@ link register save eliminated.
- 17472 0000 80B4     		push	{r7}
- 17473              	.LCFI8:
- 17474              		.cfi_def_cfa_offset 4
- 17475 0002 83B0     		sub	sp, sp, #12
- 17476              	.LCFI9:
- 17477              		.cfi_def_cfa_offset 16
- 17478 0004 00AF     		add	r7, sp, #0
- 17479              		.cfi_offset 7, -4
- 17480              	.LCFI10:
- 17481              		.cfi_def_cfa_register 7
- 17482 0006 0346     		mov	r3, r0
- 17483 0008 FB71     		strb	r3, [r7, #7]
+ 18208              		.loc 1 236 0
+ 18209              		.cfi_startproc
+ 18210              		@ args = 0, pretend = 0, frame = 8
+ 18211              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18212              		@ link register save eliminated.
+ 18213 0000 80B4     		push	{r7}
+ 18214              	.LCFI8:
+ 18215              		.cfi_def_cfa_offset 4
+ 18216 0002 83B0     		sub	sp, sp, #12
+ 18217              	.LCFI9:
+ 18218              		.cfi_def_cfa_offset 16
+ 18219 0004 00AF     		add	r7, sp, #0
+ 18220              		.cfi_offset 7, -4
+ 18221              	.LCFI10:
+ 18222              		.cfi_def_cfa_register 7
+ 18223 0006 0346     		mov	r3, r0
+ 18224 0008 FB71     		strb	r3, [r7, #7]
  237:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  238:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
  239:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  240:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   *(__IO uint32_t *) CLKCR_CLKEN_BB = (uint32_t)NewState;
- 17484              		.loc 1 240 0
- 17485 000a 044B     		ldr	r3, .L9
- 17486 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 17487 000e 1A60     		str	r2, [r3, #0]
+ 18225              		.loc 1 240 0
+ 18226 000a 044B     		ldr	r3, .L9
+ 18227 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 18228 000e 1A60     		str	r2, [r3, #0]
  241:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 17488              		.loc 1 241 0
- 17489 0010 07F10C07 		add	r7, r7, #12
- 17490 0014 BD46     		mov	sp, r7
- 17491 0016 80BC     		pop	{r7}
- 17492 0018 7047     		bx	lr
- 17493              	.L10:
- 17494 001a 00BF     		.align	2
- 17495              	.L9:
- 17496 001c A0003042 		.word	1110442144
- 17497              		.cfi_endproc
- 17498              	.LFE32:
- 17500              		.section	.text.SDIO_SetPowerState,"ax",%progbits
- 17501              		.align	2
- 17502              		.global	SDIO_SetPowerState
- 17503              		.thumb
- 17504              		.thumb_func
- 17506              	SDIO_SetPowerState:
- 17507              	.LFB33:
+ 18229              		.loc 1 241 0
+ 18230 0010 07F10C07 		add	r7, r7, #12
+ 18231 0014 BD46     		mov	sp, r7
+ 18232 0016 80BC     		pop	{r7}
+ 18233 0018 7047     		bx	lr
+ 18234              	.L10:
+ 18235 001a 00BF     		.align	2
+ 18236              	.L9:
+ 18237 001c A0003042 		.word	1110442144
+ 18238              		.cfi_endproc
+ 18239              	.LFE32:
+ 18241              		.section	.text.SDIO_SetPowerState,"ax",%progbits
+ 18242              		.align	2
+ 18243              		.global	SDIO_SetPowerState
+ 18244              		.thumb
+ 18245              		.thumb_func
+ 18247              	SDIO_SetPowerState:
+ 18248              	.LFB33:
  242:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  243:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  244:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Sets the power status of the controller.
@@ -512,59 +512,59 @@
  250:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  251:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_SetPowerState(uint32_t SDIO_PowerState)
  252:../StdPeripheralDriver/src/stm32f10x_sdio.c **** {
- 17508              		.loc 1 252 0
- 17509              		.cfi_startproc
- 17510              		@ args = 0, pretend = 0, frame = 8
- 17511              		@ frame_needed = 1, uses_anonymous_args = 0
- 17512              		@ link register save eliminated.
- 17513 0000 80B4     		push	{r7}
- 17514              	.LCFI11:
- 17515              		.cfi_def_cfa_offset 4
- 17516 0002 83B0     		sub	sp, sp, #12
- 17517              	.LCFI12:
- 17518              		.cfi_def_cfa_offset 16
- 17519 0004 00AF     		add	r7, sp, #0
- 17520              		.cfi_offset 7, -4
- 17521              	.LCFI13:
- 17522              		.cfi_def_cfa_register 7
- 17523 0006 7860     		str	r0, [r7, #4]
+ 18249              		.loc 1 252 0
+ 18250              		.cfi_startproc
+ 18251              		@ args = 0, pretend = 0, frame = 8
+ 18252              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18253              		@ link register save eliminated.
+ 18254 0000 80B4     		push	{r7}
+ 18255              	.LCFI11:
+ 18256              		.cfi_def_cfa_offset 4
+ 18257 0002 83B0     		sub	sp, sp, #12
+ 18258              	.LCFI12:
+ 18259              		.cfi_def_cfa_offset 16
+ 18260 0004 00AF     		add	r7, sp, #0
+ 18261              		.cfi_offset 7, -4
+ 18262              	.LCFI13:
+ 18263              		.cfi_def_cfa_register 7
+ 18264 0006 7860     		str	r0, [r7, #4]
  253:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  254:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_SDIO_POWER_STATE(SDIO_PowerState));
  255:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  256:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->POWER &= PWR_PWRCTRL_MASK;
- 17524              		.loc 1 256 0
- 17525 0008 084B     		ldr	r3, .L12
- 17526 000a 084A     		ldr	r2, .L12
- 17527 000c 1268     		ldr	r2, [r2, #0]
- 17528 000e 22F00302 		bic	r2, r2, #3
- 17529 0012 1A60     		str	r2, [r3, #0]
+ 18265              		.loc 1 256 0
+ 18266 0008 084B     		ldr	r3, .L12
+ 18267 000a 084A     		ldr	r2, .L12
+ 18268 000c 1268     		ldr	r2, [r2, #0]
+ 18269 000e 22F00302 		bic	r2, r2, #3
+ 18270 0012 1A60     		str	r2, [r3, #0]
  257:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->POWER |= SDIO_PowerState;
- 17530              		.loc 1 257 0
- 17531 0014 054B     		ldr	r3, .L12
- 17532 0016 054A     		ldr	r2, .L12
- 17533 0018 1168     		ldr	r1, [r2, #0]
- 17534 001a 7A68     		ldr	r2, [r7, #4]
- 17535 001c 41EA0202 		orr	r2, r1, r2
- 17536 0020 1A60     		str	r2, [r3, #0]
+ 18271              		.loc 1 257 0
+ 18272 0014 054B     		ldr	r3, .L12
+ 18273 0016 054A     		ldr	r2, .L12
+ 18274 0018 1168     		ldr	r1, [r2, #0]
+ 18275 001a 7A68     		ldr	r2, [r7, #4]
+ 18276 001c 41EA0202 		orr	r2, r1, r2
+ 18277 0020 1A60     		str	r2, [r3, #0]
  258:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 17537              		.loc 1 258 0
- 17538 0022 07F10C07 		add	r7, r7, #12
- 17539 0026 BD46     		mov	sp, r7
- 17540 0028 80BC     		pop	{r7}
- 17541 002a 7047     		bx	lr
- 17542              	.L13:
- 17543              		.align	2
- 17544              	.L12:
- 17545 002c 00800140 		.word	1073840128
- 17546              		.cfi_endproc
- 17547              	.LFE33:
- 17549              		.section	.text.SDIO_GetPowerState,"ax",%progbits
- 17550              		.align	2
- 17551              		.global	SDIO_GetPowerState
- 17552              		.thumb
- 17553              		.thumb_func
- 17555              	SDIO_GetPowerState:
- 17556              	.LFB34:
+ 18278              		.loc 1 258 0
+ 18279 0022 07F10C07 		add	r7, r7, #12
+ 18280 0026 BD46     		mov	sp, r7
+ 18281 0028 80BC     		pop	{r7}
+ 18282 002a 7047     		bx	lr
+ 18283              	.L13:
+ 18284              		.align	2
+ 18285              	.L12:
+ 18286 002c 00800140 		.word	1073840128
+ 18287              		.cfi_endproc
+ 18288              	.LFE33:
+ 18290              		.section	.text.SDIO_GetPowerState,"ax",%progbits
+ 18291              		.align	2
+ 18292              		.global	SDIO_GetPowerState
+ 18293              		.thumb
+ 18294              		.thumb_func
+ 18296              	SDIO_GetPowerState:
+ 18297              	.LFB34:
  259:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  260:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  261:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Gets the power status of the controller.
@@ -577,42 +577,42 @@
  268:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  269:../StdPeripheralDriver/src/stm32f10x_sdio.c **** uint32_t SDIO_GetPowerState(void)
  270:../StdPeripheralDriver/src/stm32f10x_sdio.c **** {
- 17557              		.loc 1 270 0
- 17558              		.cfi_startproc
- 17559              		@ args = 0, pretend = 0, frame = 0
- 17560              		@ frame_needed = 1, uses_anonymous_args = 0
- 17561              		@ link register save eliminated.
- 17562 0000 80B4     		push	{r7}
- 17563              	.LCFI14:
- 17564              		.cfi_def_cfa_offset 4
- 17565 0002 00AF     		add	r7, sp, #0
- 17566              		.cfi_offset 7, -4
- 17567              	.LCFI15:
- 17568              		.cfi_def_cfa_register 7
+ 18298              		.loc 1 270 0
+ 18299              		.cfi_startproc
+ 18300              		@ args = 0, pretend = 0, frame = 0
+ 18301              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18302              		@ link register save eliminated.
+ 18303 0000 80B4     		push	{r7}
+ 18304              	.LCFI14:
+ 18305              		.cfi_def_cfa_offset 4
+ 18306 0002 00AF     		add	r7, sp, #0
+ 18307              		.cfi_offset 7, -4
+ 18308              	.LCFI15:
+ 18309              		.cfi_def_cfa_register 7
  271:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   return (SDIO->POWER & (~PWR_PWRCTRL_MASK));
- 17569              		.loc 1 271 0
- 17570 0004 034B     		ldr	r3, .L15
- 17571 0006 1B68     		ldr	r3, [r3, #0]
- 17572 0008 03F00303 		and	r3, r3, #3
+ 18310              		.loc 1 271 0
+ 18311 0004 034B     		ldr	r3, .L15
+ 18312 0006 1B68     		ldr	r3, [r3, #0]
+ 18313 0008 03F00303 		and	r3, r3, #3
  272:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 17573              		.loc 1 272 0
- 17574 000c 1846     		mov	r0, r3
- 17575 000e BD46     		mov	sp, r7
- 17576 0010 80BC     		pop	{r7}
- 17577 0012 7047     		bx	lr
- 17578              	.L16:
- 17579              		.align	2
- 17580              	.L15:
- 17581 0014 00800140 		.word	1073840128
- 17582              		.cfi_endproc
- 17583              	.LFE34:
- 17585              		.section	.text.SDIO_ITConfig,"ax",%progbits
- 17586              		.align	2
- 17587              		.global	SDIO_ITConfig
- 17588              		.thumb
- 17589              		.thumb_func
- 17591              	SDIO_ITConfig:
- 17592              	.LFB35:
+ 18314              		.loc 1 272 0
+ 18315 000c 1846     		mov	r0, r3
+ 18316 000e BD46     		mov	sp, r7
+ 18317 0010 80BC     		pop	{r7}
+ 18318 0012 7047     		bx	lr
+ 18319              	.L16:
+ 18320              		.align	2
+ 18321              	.L15:
+ 18322 0014 00800140 		.word	1073840128
+ 18323              		.cfi_endproc
+ 18324              	.LFE34:
+ 18326              		.section	.text.SDIO_ITConfig,"ax",%progbits
+ 18327              		.align	2
+ 18328              		.global	SDIO_ITConfig
+ 18329              		.thumb
+ 18330              		.thumb_func
+ 18332              	SDIO_ITConfig:
+ 18333              	.LFB35:
  273:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  274:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  275:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Enables or disables the SDIO interrupts.
@@ -649,79 +649,79 @@
  306:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  307:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_ITConfig(uint32_t SDIO_IT, FunctionalState NewState)
  308:../StdPeripheralDriver/src/stm32f10x_sdio.c **** {
- 17593              		.loc 1 308 0
- 17594              		.cfi_startproc
- 17595              		@ args = 0, pretend = 0, frame = 8
- 17596              		@ frame_needed = 1, uses_anonymous_args = 0
- 17597              		@ link register save eliminated.
- 17598 0000 80B4     		push	{r7}
- 17599              	.LCFI16:
- 17600              		.cfi_def_cfa_offset 4
- 17601 0002 83B0     		sub	sp, sp, #12
- 17602              	.LCFI17:
- 17603              		.cfi_def_cfa_offset 16
- 17604 0004 00AF     		add	r7, sp, #0
- 17605              		.cfi_offset 7, -4
- 17606              	.LCFI18:
- 17607              		.cfi_def_cfa_register 7
- 17608 0006 7860     		str	r0, [r7, #4]
- 17609 0008 0B46     		mov	r3, r1
- 17610 000a FB70     		strb	r3, [r7, #3]
+ 18334              		.loc 1 308 0
+ 18335              		.cfi_startproc
+ 18336              		@ args = 0, pretend = 0, frame = 8
+ 18337              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18338              		@ link register save eliminated.
+ 18339 0000 80B4     		push	{r7}
+ 18340              	.LCFI16:
+ 18341              		.cfi_def_cfa_offset 4
+ 18342 0002 83B0     		sub	sp, sp, #12
+ 18343              	.LCFI17:
+ 18344              		.cfi_def_cfa_offset 16
+ 18345 0004 00AF     		add	r7, sp, #0
+ 18346              		.cfi_offset 7, -4
+ 18347              	.LCFI18:
+ 18348              		.cfi_def_cfa_register 7
+ 18349 0006 7860     		str	r0, [r7, #4]
+ 18350 0008 0B46     		mov	r3, r1
+ 18351 000a FB70     		strb	r3, [r7, #3]
  309:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  310:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_SDIO_IT(SDIO_IT));
  311:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
  312:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  313:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   if (NewState != DISABLE)
- 17611              		.loc 1 313 0
- 17612 000c FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
- 17613 000e 002B     		cmp	r3, #0
- 17614 0010 07D0     		beq	.L18
+ 18352              		.loc 1 313 0
+ 18353 000c FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 18354 000e 002B     		cmp	r3, #0
+ 18355 0010 07D0     		beq	.L18
  314:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   {
  315:../StdPeripheralDriver/src/stm32f10x_sdio.c ****     /* Enable the SDIO interrupts */
  316:../StdPeripheralDriver/src/stm32f10x_sdio.c ****     SDIO->MASK |= SDIO_IT;
- 17615              		.loc 1 316 0
- 17616 0012 0B4B     		ldr	r3, .L20
- 17617 0014 0A4A     		ldr	r2, .L20
- 17618 0016 D16B     		ldr	r1, [r2, #60]
- 17619 0018 7A68     		ldr	r2, [r7, #4]
- 17620 001a 41EA0202 		orr	r2, r1, r2
- 17621 001e DA63     		str	r2, [r3, #60]
- 17622 0020 08E0     		b	.L17
- 17623              	.L18:
+ 18356              		.loc 1 316 0
+ 18357 0012 0B4B     		ldr	r3, .L20
+ 18358 0014 0A4A     		ldr	r2, .L20
+ 18359 0016 D16B     		ldr	r1, [r2, #60]
+ 18360 0018 7A68     		ldr	r2, [r7, #4]
+ 18361 001a 41EA0202 		orr	r2, r1, r2
+ 18362 001e DA63     		str	r2, [r3, #60]
+ 18363 0020 08E0     		b	.L17
+ 18364              	.L18:
  317:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   }
  318:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   else
  319:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   {
  320:../StdPeripheralDriver/src/stm32f10x_sdio.c ****     /* Disable the SDIO interrupts */
  321:../StdPeripheralDriver/src/stm32f10x_sdio.c ****     SDIO->MASK &= ~SDIO_IT;
- 17624              		.loc 1 321 0
- 17625 0022 074B     		ldr	r3, .L20
- 17626 0024 064A     		ldr	r2, .L20
- 17627 0026 D16B     		ldr	r1, [r2, #60]
- 17628 0028 7A68     		ldr	r2, [r7, #4]
- 17629 002a 6FEA0202 		mvn	r2, r2
- 17630 002e 01EA0202 		and	r2, r1, r2
- 17631 0032 DA63     		str	r2, [r3, #60]
- 17632              	.L17:
+ 18365              		.loc 1 321 0
+ 18366 0022 074B     		ldr	r3, .L20
+ 18367 0024 064A     		ldr	r2, .L20
+ 18368 0026 D16B     		ldr	r1, [r2, #60]
+ 18369 0028 7A68     		ldr	r2, [r7, #4]
+ 18370 002a 6FEA0202 		mvn	r2, r2
+ 18371 002e 01EA0202 		and	r2, r1, r2
+ 18372 0032 DA63     		str	r2, [r3, #60]
+ 18373              	.L17:
  322:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   } 
  323:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 17633              		.loc 1 323 0
- 17634 0034 07F10C07 		add	r7, r7, #12
- 17635 0038 BD46     		mov	sp, r7
- 17636 003a 80BC     		pop	{r7}
- 17637 003c 7047     		bx	lr
- 17638              	.L21:
- 17639 003e 00BF     		.align	2
- 17640              	.L20:
- 17641 0040 00800140 		.word	1073840128
- 17642              		.cfi_endproc
- 17643              	.LFE35:
- 17645              		.section	.text.SDIO_DMACmd,"ax",%progbits
- 17646              		.align	2
- 17647              		.global	SDIO_DMACmd
- 17648              		.thumb
- 17649              		.thumb_func
- 17651              	SDIO_DMACmd:
- 17652              	.LFB36:
+ 18374              		.loc 1 323 0
+ 18375 0034 07F10C07 		add	r7, r7, #12
+ 18376 0038 BD46     		mov	sp, r7
+ 18377 003a 80BC     		pop	{r7}
+ 18378 003c 7047     		bx	lr
+ 18379              	.L21:
+ 18380 003e 00BF     		.align	2
+ 18381              	.L20:
+ 18382 0040 00800140 		.word	1073840128
+ 18383              		.cfi_endproc
+ 18384              	.LFE35:
+ 18386              		.section	.text.SDIO_DMACmd,"ax",%progbits
+ 18387              		.align	2
+ 18388              		.global	SDIO_DMACmd
+ 18389              		.thumb
+ 18390              		.thumb_func
+ 18392              	SDIO_DMACmd:
+ 18393              	.LFB36:
  324:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  325:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  326:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Enables or disables the SDIO DMA request.
@@ -731,50 +731,50 @@
  330:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  331:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_DMACmd(FunctionalState NewState)
  332:../StdPeripheralDriver/src/stm32f10x_sdio.c **** {
- 17653              		.loc 1 332 0
- 17654              		.cfi_startproc
- 17655              		@ args = 0, pretend = 0, frame = 8
- 17656              		@ frame_needed = 1, uses_anonymous_args = 0
- 17657              		@ link register save eliminated.
- 17658 0000 80B4     		push	{r7}
- 17659              	.LCFI19:
- 17660              		.cfi_def_cfa_offset 4
- 17661 0002 83B0     		sub	sp, sp, #12
- 17662              	.LCFI20:
- 17663              		.cfi_def_cfa_offset 16
- 17664 0004 00AF     		add	r7, sp, #0
- 17665              		.cfi_offset 7, -4
- 17666              	.LCFI21:
- 17667              		.cfi_def_cfa_register 7
- 17668 0006 0346     		mov	r3, r0
- 17669 0008 FB71     		strb	r3, [r7, #7]
+ 18394              		.loc 1 332 0
+ 18395              		.cfi_startproc
+ 18396              		@ args = 0, pretend = 0, frame = 8
+ 18397              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18398              		@ link register save eliminated.
+ 18399 0000 80B4     		push	{r7}
+ 18400              	.LCFI19:
+ 18401              		.cfi_def_cfa_offset 4
+ 18402 0002 83B0     		sub	sp, sp, #12
+ 18403              	.LCFI20:
+ 18404              		.cfi_def_cfa_offset 16
+ 18405 0004 00AF     		add	r7, sp, #0
+ 18406              		.cfi_offset 7, -4
+ 18407              	.LCFI21:
+ 18408              		.cfi_def_cfa_register 7
+ 18409 0006 0346     		mov	r3, r0
+ 18410 0008 FB71     		strb	r3, [r7, #7]
  333:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  334:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
  335:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  336:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   *(__IO uint32_t *) DCTRL_DMAEN_BB = (uint32_t)NewState;
- 17670              		.loc 1 336 0
- 17671 000a 044B     		ldr	r3, .L23
- 17672 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 17673 000e 1A60     		str	r2, [r3, #0]
+ 18411              		.loc 1 336 0
+ 18412 000a 044B     		ldr	r3, .L23
+ 18413 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 18414 000e 1A60     		str	r2, [r3, #0]
  337:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 17674              		.loc 1 337 0
- 17675 0010 07F10C07 		add	r7, r7, #12
- 17676 0014 BD46     		mov	sp, r7
- 17677 0016 80BC     		pop	{r7}
- 17678 0018 7047     		bx	lr
- 17679              	.L24:
- 17680 001a 00BF     		.align	2
- 17681              	.L23:
- 17682 001c 8C053042 		.word	1110443404
- 17683              		.cfi_endproc
- 17684              	.LFE36:
- 17686              		.section	.text.SDIO_SendCommand,"ax",%progbits
- 17687              		.align	2
- 17688              		.global	SDIO_SendCommand
- 17689              		.thumb
- 17690              		.thumb_func
- 17692              	SDIO_SendCommand:
- 17693              	.LFB37:
+ 18415              		.loc 1 337 0
+ 18416 0010 07F10C07 		add	r7, r7, #12
+ 18417 0014 BD46     		mov	sp, r7
+ 18418 0016 80BC     		pop	{r7}
+ 18419 0018 7047     		bx	lr
+ 18420              	.L24:
+ 18421 001a 00BF     		.align	2
+ 18422              	.L23:
+ 18423 001c 8C053042 		.word	1110443404
+ 18424              		.cfi_endproc
+ 18425              	.LFE36:
+ 18427              		.section	.text.SDIO_SendCommand,"ax",%progbits
+ 18428              		.align	2
+ 18429              		.global	SDIO_SendCommand
+ 18430              		.thumb
+ 18431              		.thumb_func
+ 18433              	SDIO_SendCommand:
+ 18434              	.LFB37:
  338:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  339:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  340:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Initializes the SDIO Command according to the specified 
@@ -785,26 +785,26 @@
  345:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  346:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_SendCommand(SDIO_CmdInitTypeDef *SDIO_CmdInitStruct)
  347:../StdPeripheralDriver/src/stm32f10x_sdio.c **** {
- 17694              		.loc 1 347 0
- 17695              		.cfi_startproc
- 17696              		@ args = 0, pretend = 0, frame = 16
- 17697              		@ frame_needed = 1, uses_anonymous_args = 0
- 17698              		@ link register save eliminated.
- 17699 0000 80B4     		push	{r7}
- 17700              	.LCFI22:
- 17701              		.cfi_def_cfa_offset 4
- 17702 0002 85B0     		sub	sp, sp, #20
- 17703              	.LCFI23:
- 17704              		.cfi_def_cfa_offset 24
- 17705 0004 00AF     		add	r7, sp, #0
- 17706              		.cfi_offset 7, -4
- 17707              	.LCFI24:
- 17708              		.cfi_def_cfa_register 7
- 17709 0006 7860     		str	r0, [r7, #4]
+ 18435              		.loc 1 347 0
+ 18436              		.cfi_startproc
+ 18437              		@ args = 0, pretend = 0, frame = 16
+ 18438              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18439              		@ link register save eliminated.
+ 18440 0000 80B4     		push	{r7}
+ 18441              	.LCFI22:
+ 18442              		.cfi_def_cfa_offset 4
+ 18443 0002 85B0     		sub	sp, sp, #20
+ 18444              	.LCFI23:
+ 18445              		.cfi_def_cfa_offset 24
+ 18446 0004 00AF     		add	r7, sp, #0
+ 18447              		.cfi_offset 7, -4
+ 18448              	.LCFI24:
+ 18449              		.cfi_def_cfa_register 7
+ 18450 0006 7860     		str	r0, [r7, #4]
  348:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   uint32_t tmpreg = 0;
- 17710              		.loc 1 348 0
- 17711 0008 4FF00003 		mov	r3, #0
- 17712 000c FB60     		str	r3, [r7, #12]
+ 18451              		.loc 1 348 0
+ 18452 0008 4FF00003 		mov	r3, #0
+ 18453 000c FB60     		str	r3, [r7, #12]
  349:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  350:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  351:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_SDIO_CMD_INDEX(SDIO_CmdInitStruct->SDIO_CmdIndex));
@@ -815,76 +815,76 @@
  356:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /*---------------------------- SDIO ARG Configuration ------------------------*/
  357:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Set the SDIO Argument value */
  358:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->ARG = SDIO_CmdInitStruct->SDIO_Argument;
- 17713              		.loc 1 358 0
- 17714 000e 124B     		ldr	r3, .L26
- 17715 0010 7A68     		ldr	r2, [r7, #4]
- 17716 0012 1268     		ldr	r2, [r2, #0]
- 17717 0014 9A60     		str	r2, [r3, #8]
+ 18454              		.loc 1 358 0
+ 18455 000e 124B     		ldr	r3, .L26
+ 18456 0010 7A68     		ldr	r2, [r7, #4]
+ 18457 0012 1268     		ldr	r2, [r2, #0]
+ 18458 0014 9A60     		str	r2, [r3, #8]
  359:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  360:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /*---------------------------- SDIO CMD Configuration ------------------------*/  
  361:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Get the SDIO CMD value */
  362:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   tmpreg = SDIO->CMD;
- 17718              		.loc 1 362 0
- 17719 0016 104B     		ldr	r3, .L26
- 17720 0018 DB68     		ldr	r3, [r3, #12]
- 17721 001a FB60     		str	r3, [r7, #12]
+ 18459              		.loc 1 362 0
+ 18460 0016 104B     		ldr	r3, .L26
+ 18461 0018 DB68     		ldr	r3, [r3, #12]
+ 18462 001a FB60     		str	r3, [r7, #12]
  363:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Clear CMDINDEX, WAITRESP, WAITINT, WAITPEND, CPSMEN bits */
  364:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   tmpreg &= CMD_CLEAR_MASK;
- 17722              		.loc 1 364 0
- 17723 001c FB68     		ldr	r3, [r7, #12]
- 17724 001e 23F4FE63 		bic	r3, r3, #2032
- 17725 0022 23F00F03 		bic	r3, r3, #15
- 17726 0026 FB60     		str	r3, [r7, #12]
+ 18463              		.loc 1 364 0
+ 18464 001c FB68     		ldr	r3, [r7, #12]
+ 18465 001e 23F4FE63 		bic	r3, r3, #2032
+ 18466 0022 23F00F03 		bic	r3, r3, #15
+ 18467 0026 FB60     		str	r3, [r7, #12]
  365:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Set CMDINDEX bits according to SDIO_CmdIndex value */
  366:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Set WAITRESP bits according to SDIO_Response value */
  367:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Set WAITINT and WAITPEND bits according to SDIO_Wait value */
  368:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Set CPSMEN bits according to SDIO_CPSM value */
  369:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   tmpreg |= (uint32_t)SDIO_CmdInitStruct->SDIO_CmdIndex | SDIO_CmdInitStruct->SDIO_Response
- 17727              		.loc 1 369 0
- 17728 0028 7B68     		ldr	r3, [r7, #4]
- 17729 002a 5A68     		ldr	r2, [r3, #4]
- 17730 002c 7B68     		ldr	r3, [r7, #4]
- 17731 002e 9B68     		ldr	r3, [r3, #8]
- 17732 0030 1A43     		orrs	r2, r2, r3
+ 18468              		.loc 1 369 0
+ 18469 0028 7B68     		ldr	r3, [r7, #4]
+ 18470 002a 5A68     		ldr	r2, [r3, #4]
+ 18471 002c 7B68     		ldr	r3, [r7, #4]
+ 18472 002e 9B68     		ldr	r3, [r3, #8]
+ 18473 0030 1A43     		orrs	r2, r2, r3
  370:../StdPeripheralDriver/src/stm32f10x_sdio.c ****            | SDIO_CmdInitStruct->SDIO_Wait | SDIO_CmdInitStruct->SDIO_CPSM;
- 17733              		.loc 1 370 0
- 17734 0032 7B68     		ldr	r3, [r7, #4]
- 17735 0034 DB68     		ldr	r3, [r3, #12]
- 17736 0036 1A43     		orrs	r2, r2, r3
- 17737 0038 7B68     		ldr	r3, [r7, #4]
- 17738 003a 1B69     		ldr	r3, [r3, #16]
- 17739 003c 42EA0303 		orr	r3, r2, r3
+ 18474              		.loc 1 370 0
+ 18475 0032 7B68     		ldr	r3, [r7, #4]
+ 18476 0034 DB68     		ldr	r3, [r3, #12]
+ 18477 0036 1A43     		orrs	r2, r2, r3
+ 18478 0038 7B68     		ldr	r3, [r7, #4]
+ 18479 003a 1B69     		ldr	r3, [r3, #16]
+ 18480 003c 42EA0303 		orr	r3, r2, r3
  369:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   tmpreg |= (uint32_t)SDIO_CmdInitStruct->SDIO_CmdIndex | SDIO_CmdInitStruct->SDIO_Response
- 17740              		.loc 1 369 0
- 17741 0040 FA68     		ldr	r2, [r7, #12]
- 17742 0042 42EA0303 		orr	r3, r2, r3
- 17743 0046 FB60     		str	r3, [r7, #12]
+ 18481              		.loc 1 369 0
+ 18482 0040 FA68     		ldr	r2, [r7, #12]
+ 18483 0042 42EA0303 		orr	r3, r2, r3
+ 18484 0046 FB60     		str	r3, [r7, #12]
  371:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  372:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Write to SDIO CMD */
  373:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->CMD = tmpreg;
- 17744              		.loc 1 373 0
- 17745 0048 034B     		ldr	r3, .L26
- 17746 004a FA68     		ldr	r2, [r7, #12]
- 17747 004c DA60     		str	r2, [r3, #12]
+ 18485              		.loc 1 373 0
+ 18486 0048 034B     		ldr	r3, .L26
+ 18487 004a FA68     		ldr	r2, [r7, #12]
+ 18488 004c DA60     		str	r2, [r3, #12]
  374:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 17748              		.loc 1 374 0
- 17749 004e 07F11407 		add	r7, r7, #20
- 17750 0052 BD46     		mov	sp, r7
- 17751 0054 80BC     		pop	{r7}
- 17752 0056 7047     		bx	lr
- 17753              	.L27:
- 17754              		.align	2
- 17755              	.L26:
- 17756 0058 00800140 		.word	1073840128
- 17757              		.cfi_endproc
- 17758              	.LFE37:
- 17760              		.section	.text.SDIO_CmdStructInit,"ax",%progbits
- 17761              		.align	2
- 17762              		.global	SDIO_CmdStructInit
- 17763              		.thumb
- 17764              		.thumb_func
- 17766              	SDIO_CmdStructInit:
- 17767              	.LFB38:
+ 18489              		.loc 1 374 0
+ 18490 004e 07F11407 		add	r7, r7, #20
+ 18491 0052 BD46     		mov	sp, r7
+ 18492 0054 80BC     		pop	{r7}
+ 18493 0056 7047     		bx	lr
+ 18494              	.L27:
+ 18495              		.align	2
+ 18496              	.L26:
+ 18497 0058 00800140 		.word	1073840128
+ 18498              		.cfi_endproc
+ 18499              	.LFE37:
+ 18501              		.section	.text.SDIO_CmdStructInit,"ax",%progbits
+ 18502              		.align	2
+ 18503              		.global	SDIO_CmdStructInit
+ 18504              		.thumb
+ 18505              		.thumb_func
+ 18507              	SDIO_CmdStructInit:
+ 18508              	.LFB38:
  375:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  376:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  377:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Fills each SDIO_CmdInitStruct member with its default value.
@@ -894,63 +894,63 @@
  381:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  382:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_CmdStructInit(SDIO_CmdInitTypeDef* SDIO_CmdInitStruct)
  383:../StdPeripheralDriver/src/stm32f10x_sdio.c **** {
- 17768              		.loc 1 383 0
- 17769              		.cfi_startproc
- 17770              		@ args = 0, pretend = 0, frame = 8
- 17771              		@ frame_needed = 1, uses_anonymous_args = 0
- 17772              		@ link register save eliminated.
- 17773 0000 80B4     		push	{r7}
- 17774              	.LCFI25:
- 17775              		.cfi_def_cfa_offset 4
- 17776 0002 83B0     		sub	sp, sp, #12
- 17777              	.LCFI26:
- 17778              		.cfi_def_cfa_offset 16
- 17779 0004 00AF     		add	r7, sp, #0
- 17780              		.cfi_offset 7, -4
- 17781              	.LCFI27:
- 17782              		.cfi_def_cfa_register 7
- 17783 0006 7860     		str	r0, [r7, #4]
+ 18509              		.loc 1 383 0
+ 18510              		.cfi_startproc
+ 18511              		@ args = 0, pretend = 0, frame = 8
+ 18512              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18513              		@ link register save eliminated.
+ 18514 0000 80B4     		push	{r7}
+ 18515              	.LCFI25:
+ 18516              		.cfi_def_cfa_offset 4
+ 18517 0002 83B0     		sub	sp, sp, #12
+ 18518              	.LCFI26:
+ 18519              		.cfi_def_cfa_offset 16
+ 18520 0004 00AF     		add	r7, sp, #0
+ 18521              		.cfi_offset 7, -4
+ 18522              	.LCFI27:
+ 18523              		.cfi_def_cfa_register 7
+ 18524 0006 7860     		str	r0, [r7, #4]
  384:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* SDIO_CmdInitStruct members default value */
  385:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO_CmdInitStruct->SDIO_Argument = 0x00;
- 17784              		.loc 1 385 0
- 17785 0008 7B68     		ldr	r3, [r7, #4]
- 17786 000a 4FF00002 		mov	r2, #0
- 17787 000e 1A60     		str	r2, [r3, #0]
+ 18525              		.loc 1 385 0
+ 18526 0008 7B68     		ldr	r3, [r7, #4]
+ 18527 000a 4FF00002 		mov	r2, #0
+ 18528 000e 1A60     		str	r2, [r3, #0]
  386:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO_CmdInitStruct->SDIO_CmdIndex = 0x00;
- 17788              		.loc 1 386 0
- 17789 0010 7B68     		ldr	r3, [r7, #4]
- 17790 0012 4FF00002 		mov	r2, #0
- 17791 0016 5A60     		str	r2, [r3, #4]
+ 18529              		.loc 1 386 0
+ 18530 0010 7B68     		ldr	r3, [r7, #4]
+ 18531 0012 4FF00002 		mov	r2, #0
+ 18532 0016 5A60     		str	r2, [r3, #4]
  387:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO_CmdInitStruct->SDIO_Response = SDIO_Response_No;
- 17792              		.loc 1 387 0
- 17793 0018 7B68     		ldr	r3, [r7, #4]
- 17794 001a 4FF00002 		mov	r2, #0
- 17795 001e 9A60     		str	r2, [r3, #8]
+ 18533              		.loc 1 387 0
+ 18534 0018 7B68     		ldr	r3, [r7, #4]
+ 18535 001a 4FF00002 		mov	r2, #0
+ 18536 001e 9A60     		str	r2, [r3, #8]
  388:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO_CmdInitStruct->SDIO_Wait = SDIO_Wait_No;
- 17796              		.loc 1 388 0
- 17797 0020 7B68     		ldr	r3, [r7, #4]
- 17798 0022 4FF00002 		mov	r2, #0
- 17799 0026 DA60     		str	r2, [r3, #12]
+ 18537              		.loc 1 388 0
+ 18538 0020 7B68     		ldr	r3, [r7, #4]
+ 18539 0022 4FF00002 		mov	r2, #0
+ 18540 0026 DA60     		str	r2, [r3, #12]
  389:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO_CmdInitStruct->SDIO_CPSM = SDIO_CPSM_Disable;
- 17800              		.loc 1 389 0
- 17801 0028 7B68     		ldr	r3, [r7, #4]
- 17802 002a 4FF00002 		mov	r2, #0
- 17803 002e 1A61     		str	r2, [r3, #16]
+ 18541              		.loc 1 389 0
+ 18542 0028 7B68     		ldr	r3, [r7, #4]
+ 18543 002a 4FF00002 		mov	r2, #0
+ 18544 002e 1A61     		str	r2, [r3, #16]
  390:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 17804              		.loc 1 390 0
- 17805 0030 07F10C07 		add	r7, r7, #12
- 17806 0034 BD46     		mov	sp, r7
- 17807 0036 80BC     		pop	{r7}
- 17808 0038 7047     		bx	lr
- 17809              		.cfi_endproc
- 17810              	.LFE38:
- 17812 003a 00BF     		.section	.text.SDIO_GetCommandResponse,"ax",%progbits
- 17813              		.align	2
- 17814              		.global	SDIO_GetCommandResponse
- 17815              		.thumb
- 17816              		.thumb_func
- 17818              	SDIO_GetCommandResponse:
- 17819              	.LFB39:
+ 18545              		.loc 1 390 0
+ 18546 0030 07F10C07 		add	r7, r7, #12
+ 18547 0034 BD46     		mov	sp, r7
+ 18548 0036 80BC     		pop	{r7}
+ 18549 0038 7047     		bx	lr
+ 18550              		.cfi_endproc
+ 18551              	.LFE38:
+ 18553 003a 00BF     		.section	.text.SDIO_GetCommandResponse,"ax",%progbits
+ 18554              		.align	2
+ 18555              		.global	SDIO_GetCommandResponse
+ 18556              		.thumb
+ 18557              		.thumb_func
+ 18559              	SDIO_GetCommandResponse:
+ 18560              	.LFB39:
  391:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  392:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  393:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Returns command index of last command for which response received.
@@ -959,42 +959,42 @@
  396:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  397:../StdPeripheralDriver/src/stm32f10x_sdio.c **** uint8_t SDIO_GetCommandResponse(void)
  398:../StdPeripheralDriver/src/stm32f10x_sdio.c **** {
- 17820              		.loc 1 398 0
- 17821              		.cfi_startproc
- 17822              		@ args = 0, pretend = 0, frame = 0
- 17823              		@ frame_needed = 1, uses_anonymous_args = 0
- 17824              		@ link register save eliminated.
- 17825 0000 80B4     		push	{r7}
- 17826              	.LCFI28:
- 17827              		.cfi_def_cfa_offset 4
- 17828 0002 00AF     		add	r7, sp, #0
- 17829              		.cfi_offset 7, -4
- 17830              	.LCFI29:
- 17831              		.cfi_def_cfa_register 7
+ 18561              		.loc 1 398 0
+ 18562              		.cfi_startproc
+ 18563              		@ args = 0, pretend = 0, frame = 0
+ 18564              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18565              		@ link register save eliminated.
+ 18566 0000 80B4     		push	{r7}
+ 18567              	.LCFI28:
+ 18568              		.cfi_def_cfa_offset 4
+ 18569 0002 00AF     		add	r7, sp, #0
+ 18570              		.cfi_offset 7, -4
+ 18571              	.LCFI29:
+ 18572              		.cfi_def_cfa_register 7
  399:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   return (uint8_t)(SDIO->RESPCMD);
- 17832              		.loc 1 399 0
- 17833 0004 034B     		ldr	r3, .L30
- 17834 0006 1B69     		ldr	r3, [r3, #16]
- 17835 0008 DBB2     		uxtb	r3, r3
+ 18573              		.loc 1 399 0
+ 18574 0004 034B     		ldr	r3, .L30
+ 18575 0006 1B69     		ldr	r3, [r3, #16]
+ 18576 0008 DBB2     		uxtb	r3, r3
  400:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 17836              		.loc 1 400 0
- 17837 000a 1846     		mov	r0, r3
- 17838 000c BD46     		mov	sp, r7
- 17839 000e 80BC     		pop	{r7}
- 17840 0010 7047     		bx	lr
- 17841              	.L31:
- 17842 0012 00BF     		.align	2
- 17843              	.L30:
- 17844 0014 00800140 		.word	1073840128
- 17845              		.cfi_endproc
- 17846              	.LFE39:
- 17848              		.section	.text.SDIO_GetResponse,"ax",%progbits
- 17849              		.align	2
- 17850              		.global	SDIO_GetResponse
- 17851              		.thumb
- 17852              		.thumb_func
- 17854              	SDIO_GetResponse:
- 17855              	.LFB40:
+ 18577              		.loc 1 400 0
+ 18578 000a 1846     		mov	r0, r3
+ 18579 000c BD46     		mov	sp, r7
+ 18580 000e 80BC     		pop	{r7}
+ 18581 0010 7047     		bx	lr
+ 18582              	.L31:
+ 18583 0012 00BF     		.align	2
+ 18584              	.L30:
+ 18585 0014 00800140 		.word	1073840128
+ 18586              		.cfi_endproc
+ 18587              	.LFE39:
+ 18589              		.section	.text.SDIO_GetResponse,"ax",%progbits
+ 18590              		.align	2
+ 18591              		.global	SDIO_GetResponse
+ 18592              		.thumb
+ 18593              		.thumb_func
+ 18595              	SDIO_GetResponse:
+ 18596              	.LFB40:
  401:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  402:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  403:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Returns response received from the card for the last command.
@@ -1008,61 +1008,61 @@
  411:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  412:../StdPeripheralDriver/src/stm32f10x_sdio.c **** uint32_t SDIO_GetResponse(uint32_t SDIO_RESP)
  413:../StdPeripheralDriver/src/stm32f10x_sdio.c **** {
- 17856              		.loc 1 413 0
- 17857              		.cfi_startproc
- 17858              		@ args = 0, pretend = 0, frame = 16
- 17859              		@ frame_needed = 1, uses_anonymous_args = 0
- 17860              		@ link register save eliminated.
- 17861 0000 80B4     		push	{r7}
- 17862              	.LCFI30:
- 17863              		.cfi_def_cfa_offset 4
- 17864 0002 85B0     		sub	sp, sp, #20
- 17865              	.LCFI31:
- 17866              		.cfi_def_cfa_offset 24
- 17867 0004 00AF     		add	r7, sp, #0
- 17868              		.cfi_offset 7, -4
- 17869              	.LCFI32:
- 17870              		.cfi_def_cfa_register 7
- 17871 0006 7860     		str	r0, [r7, #4]
+ 18597              		.loc 1 413 0
+ 18598              		.cfi_startproc
+ 18599              		@ args = 0, pretend = 0, frame = 16
+ 18600              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18601              		@ link register save eliminated.
+ 18602 0000 80B4     		push	{r7}
+ 18603              	.LCFI30:
+ 18604              		.cfi_def_cfa_offset 4
+ 18605 0002 85B0     		sub	sp, sp, #20
+ 18606              	.LCFI31:
+ 18607              		.cfi_def_cfa_offset 24
+ 18608 0004 00AF     		add	r7, sp, #0
+ 18609              		.cfi_offset 7, -4
+ 18610              	.LCFI32:
+ 18611              		.cfi_def_cfa_register 7
+ 18612 0006 7860     		str	r0, [r7, #4]
  414:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   __IO uint32_t tmp = 0;
- 17872              		.loc 1 414 0
- 17873 0008 4FF00003 		mov	r3, #0
- 17874 000c FB60     		str	r3, [r7, #12]
+ 18613              		.loc 1 414 0
+ 18614 0008 4FF00003 		mov	r3, #0
+ 18615 000c FB60     		str	r3, [r7, #12]
  415:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  416:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  417:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_SDIO_RESP(SDIO_RESP));
  418:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  419:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   tmp = SDIO_RESP_ADDR + SDIO_RESP;
- 17875              		.loc 1 419 0
- 17876 000e 7A68     		ldr	r2, [r7, #4]
- 17877 0010 054B     		ldr	r3, .L33
- 17878 0012 D318     		adds	r3, r2, r3
- 17879 0014 FB60     		str	r3, [r7, #12]
+ 18616              		.loc 1 419 0
+ 18617 000e 7A68     		ldr	r2, [r7, #4]
+ 18618 0010 054B     		ldr	r3, .L33
+ 18619 0012 D318     		adds	r3, r2, r3
+ 18620 0014 FB60     		str	r3, [r7, #12]
  420:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  421:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   return (*(__IO uint32_t *) tmp); 
- 17880              		.loc 1 421 0
- 17881 0016 FB68     		ldr	r3, [r7, #12]
- 17882 0018 1B68     		ldr	r3, [r3, #0]
+ 18621              		.loc 1 421 0
+ 18622 0016 FB68     		ldr	r3, [r7, #12]
+ 18623 0018 1B68     		ldr	r3, [r3, #0]
  422:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 17883              		.loc 1 422 0
- 17884 001a 1846     		mov	r0, r3
- 17885 001c 07F11407 		add	r7, r7, #20
- 17886 0020 BD46     		mov	sp, r7
- 17887 0022 80BC     		pop	{r7}
- 17888 0024 7047     		bx	lr
- 17889              	.L34:
- 17890 0026 00BF     		.align	2
- 17891              	.L33:
- 17892 0028 14800140 		.word	1073840148
- 17893              		.cfi_endproc
- 17894              	.LFE40:
- 17896              		.section	.text.SDIO_DataConfig,"ax",%progbits
- 17897              		.align	2
- 17898              		.global	SDIO_DataConfig
- 17899              		.thumb
- 17900              		.thumb_func
- 17902              	SDIO_DataConfig:
- 17903              	.LFB41:
+ 18624              		.loc 1 422 0
+ 18625 001a 1846     		mov	r0, r3
+ 18626 001c 07F11407 		add	r7, r7, #20
+ 18627 0020 BD46     		mov	sp, r7
+ 18628 0022 80BC     		pop	{r7}
+ 18629 0024 7047     		bx	lr
+ 18630              	.L34:
+ 18631 0026 00BF     		.align	2
+ 18632              	.L33:
+ 18633 0028 14800140 		.word	1073840148
+ 18634              		.cfi_endproc
+ 18635              	.LFE40:
+ 18637              		.section	.text.SDIO_DataConfig,"ax",%progbits
+ 18638              		.align	2
+ 18639              		.global	SDIO_DataConfig
+ 18640              		.thumb
+ 18641              		.thumb_func
+ 18643              	SDIO_DataConfig:
+ 18644              	.LFB41:
  423:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  424:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  425:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Initializes the SDIO data path according to the specified 
@@ -1073,26 +1073,26 @@
  430:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  431:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_DataConfig(SDIO_DataInitTypeDef* SDIO_DataInitStruct)
  432:../StdPeripheralDriver/src/stm32f10x_sdio.c **** {
- 17904              		.loc 1 432 0
- 17905              		.cfi_startproc
- 17906              		@ args = 0, pretend = 0, frame = 16
- 17907              		@ frame_needed = 1, uses_anonymous_args = 0
- 17908              		@ link register save eliminated.
- 17909 0000 80B4     		push	{r7}
- 17910              	.LCFI33:
- 17911              		.cfi_def_cfa_offset 4
- 17912 0002 85B0     		sub	sp, sp, #20
- 17913              	.LCFI34:
- 17914              		.cfi_def_cfa_offset 24
- 17915 0004 00AF     		add	r7, sp, #0
- 17916              		.cfi_offset 7, -4
- 17917              	.LCFI35:
- 17918              		.cfi_def_cfa_register 7
- 17919 0006 7860     		str	r0, [r7, #4]
+ 18645              		.loc 1 432 0
+ 18646              		.cfi_startproc
+ 18647              		@ args = 0, pretend = 0, frame = 16
+ 18648              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18649              		@ link register save eliminated.
+ 18650 0000 80B4     		push	{r7}
+ 18651              	.LCFI33:
+ 18652              		.cfi_def_cfa_offset 4
+ 18653 0002 85B0     		sub	sp, sp, #20
+ 18654              	.LCFI34:
+ 18655              		.cfi_def_cfa_offset 24
+ 18656 0004 00AF     		add	r7, sp, #0
+ 18657              		.cfi_offset 7, -4
+ 18658              	.LCFI35:
+ 18659              		.cfi_def_cfa_register 7
+ 18660 0006 7860     		str	r0, [r7, #4]
  433:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   uint32_t tmpreg = 0;
- 17920              		.loc 1 433 0
- 17921 0008 4FF00003 		mov	r3, #0
- 17922 000c FB60     		str	r3, [r7, #12]
+ 18661              		.loc 1 433 0
+ 18662 0008 4FF00003 		mov	r3, #0
+ 18663 000c FB60     		str	r3, [r7, #12]
  434:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  435:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  436:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_SDIO_DATA_LENGTH(SDIO_DataInitStruct->SDIO_DataLength));
@@ -1104,84 +1104,84 @@
  442:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /*---------------------------- SDIO DTIMER Configuration ---------------------*/
  443:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Set the SDIO Data TimeOut value */
  444:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->DTIMER = SDIO_DataInitStruct->SDIO_DataTimeOut;
- 17923              		.loc 1 444 0
- 17924 000e 134B     		ldr	r3, .L36
- 17925 0010 7A68     		ldr	r2, [r7, #4]
- 17926 0012 1268     		ldr	r2, [r2, #0]
- 17927 0014 5A62     		str	r2, [r3, #36]
+ 18664              		.loc 1 444 0
+ 18665 000e 134B     		ldr	r3, .L36
+ 18666 0010 7A68     		ldr	r2, [r7, #4]
+ 18667 0012 1268     		ldr	r2, [r2, #0]
+ 18668 0014 5A62     		str	r2, [r3, #36]
  445:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  446:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /*---------------------------- SDIO DLEN Configuration -----------------------*/
  447:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Set the SDIO DataLength value */
  448:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->DLEN = SDIO_DataInitStruct->SDIO_DataLength;
- 17928              		.loc 1 448 0
- 17929 0016 114B     		ldr	r3, .L36
- 17930 0018 7A68     		ldr	r2, [r7, #4]
- 17931 001a 5268     		ldr	r2, [r2, #4]
- 17932 001c 9A62     		str	r2, [r3, #40]
+ 18669              		.loc 1 448 0
+ 18670 0016 114B     		ldr	r3, .L36
+ 18671 0018 7A68     		ldr	r2, [r7, #4]
+ 18672 001a 5268     		ldr	r2, [r2, #4]
+ 18673 001c 9A62     		str	r2, [r3, #40]
  449:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  450:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /*---------------------------- SDIO DCTRL Configuration ----------------------*/  
  451:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Get the SDIO DCTRL value */
  452:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   tmpreg = SDIO->DCTRL;
- 17933              		.loc 1 452 0
- 17934 001e 0F4B     		ldr	r3, .L36
- 17935 0020 DB6A     		ldr	r3, [r3, #44]
- 17936 0022 FB60     		str	r3, [r7, #12]
+ 18674              		.loc 1 452 0
+ 18675 001e 0F4B     		ldr	r3, .L36
+ 18676 0020 DB6A     		ldr	r3, [r3, #44]
+ 18677 0022 FB60     		str	r3, [r7, #12]
  453:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Clear DEN, DTMODE, DTDIR and DBCKSIZE bits */
  454:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   tmpreg &= DCTRL_CLEAR_MASK;
- 17937              		.loc 1 454 0
- 17938 0024 FB68     		ldr	r3, [r7, #12]
- 17939 0026 23F0F703 		bic	r3, r3, #247
- 17940 002a FB60     		str	r3, [r7, #12]
+ 18678              		.loc 1 454 0
+ 18679 0024 FB68     		ldr	r3, [r7, #12]
+ 18680 0026 23F0F703 		bic	r3, r3, #247
+ 18681 002a FB60     		str	r3, [r7, #12]
  455:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Set DEN bit according to SDIO_DPSM value */
  456:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Set DTMODE bit according to SDIO_TransferMode value */
  457:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Set DTDIR bit according to SDIO_TransferDir value */
  458:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Set DBCKSIZE bits according to SDIO_DataBlockSize value */
  459:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   tmpreg |= (uint32_t)SDIO_DataInitStruct->SDIO_DataBlockSize | SDIO_DataInitStruct->SDIO_TransferD
- 17941              		.loc 1 459 0
- 17942 002c 7B68     		ldr	r3, [r7, #4]
- 17943 002e 9A68     		ldr	r2, [r3, #8]
- 17944 0030 7B68     		ldr	r3, [r7, #4]
- 17945 0032 DB68     		ldr	r3, [r3, #12]
- 17946 0034 1A43     		orrs	r2, r2, r3
+ 18682              		.loc 1 459 0
+ 18683 002c 7B68     		ldr	r3, [r7, #4]
+ 18684 002e 9A68     		ldr	r2, [r3, #8]
+ 18685 0030 7B68     		ldr	r3, [r7, #4]
+ 18686 0032 DB68     		ldr	r3, [r3, #12]
+ 18687 0034 1A43     		orrs	r2, r2, r3
  460:../StdPeripheralDriver/src/stm32f10x_sdio.c ****            | SDIO_DataInitStruct->SDIO_TransferMode | SDIO_DataInitStruct->SDIO_DPSM;
- 17947              		.loc 1 460 0
- 17948 0036 7B68     		ldr	r3, [r7, #4]
- 17949 0038 1B69     		ldr	r3, [r3, #16]
- 17950 003a 1A43     		orrs	r2, r2, r3
- 17951 003c 7B68     		ldr	r3, [r7, #4]
- 17952 003e 5B69     		ldr	r3, [r3, #20]
- 17953 0040 42EA0303 		orr	r3, r2, r3
+ 18688              		.loc 1 460 0
+ 18689 0036 7B68     		ldr	r3, [r7, #4]
+ 18690 0038 1B69     		ldr	r3, [r3, #16]
+ 18691 003a 1A43     		orrs	r2, r2, r3
+ 18692 003c 7B68     		ldr	r3, [r7, #4]
+ 18693 003e 5B69     		ldr	r3, [r3, #20]
+ 18694 0040 42EA0303 		orr	r3, r2, r3
  459:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   tmpreg |= (uint32_t)SDIO_DataInitStruct->SDIO_DataBlockSize | SDIO_DataInitStruct->SDIO_TransferD
- 17954              		.loc 1 459 0
- 17955 0044 FA68     		ldr	r2, [r7, #12]
- 17956 0046 42EA0303 		orr	r3, r2, r3
- 17957 004a FB60     		str	r3, [r7, #12]
+ 18695              		.loc 1 459 0
+ 18696 0044 FA68     		ldr	r2, [r7, #12]
+ 18697 0046 42EA0303 		orr	r3, r2, r3
+ 18698 004a FB60     		str	r3, [r7, #12]
  461:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  462:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Write to SDIO DCTRL */
  463:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->DCTRL = tmpreg;
- 17958              		.loc 1 463 0
- 17959 004c 034B     		ldr	r3, .L36
- 17960 004e FA68     		ldr	r2, [r7, #12]
- 17961 0050 DA62     		str	r2, [r3, #44]
+ 18699              		.loc 1 463 0
+ 18700 004c 034B     		ldr	r3, .L36
+ 18701 004e FA68     		ldr	r2, [r7, #12]
+ 18702 0050 DA62     		str	r2, [r3, #44]
  464:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 17962              		.loc 1 464 0
- 17963 0052 07F11407 		add	r7, r7, #20
- 17964 0056 BD46     		mov	sp, r7
- 17965 0058 80BC     		pop	{r7}
- 17966 005a 7047     		bx	lr
- 17967              	.L37:
- 17968              		.align	2
- 17969              	.L36:
- 17970 005c 00800140 		.word	1073840128
- 17971              		.cfi_endproc
- 17972              	.LFE41:
- 17974              		.section	.text.SDIO_DataStructInit,"ax",%progbits
- 17975              		.align	2
- 17976              		.global	SDIO_DataStructInit
- 17977              		.thumb
- 17978              		.thumb_func
- 17980              	SDIO_DataStructInit:
- 17981              	.LFB42:
+ 18703              		.loc 1 464 0
+ 18704 0052 07F11407 		add	r7, r7, #20
+ 18705 0056 BD46     		mov	sp, r7
+ 18706 0058 80BC     		pop	{r7}
+ 18707 005a 7047     		bx	lr
+ 18708              	.L37:
+ 18709              		.align	2
+ 18710              	.L36:
+ 18711 005c 00800140 		.word	1073840128
+ 18712              		.cfi_endproc
+ 18713              	.LFE41:
+ 18715              		.section	.text.SDIO_DataStructInit,"ax",%progbits
+ 18716              		.align	2
+ 18717              		.global	SDIO_DataStructInit
+ 18718              		.thumb
+ 18719              		.thumb_func
+ 18721              	SDIO_DataStructInit:
+ 18722              	.LFB42:
  465:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  466:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  467:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Fills each SDIO_DataInitStruct member with its default value.
@@ -1191,68 +1191,68 @@
  471:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  472:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_DataStructInit(SDIO_DataInitTypeDef* SDIO_DataInitStruct)
  473:../StdPeripheralDriver/src/stm32f10x_sdio.c **** {
- 17982              		.loc 1 473 0
- 17983              		.cfi_startproc
- 17984              		@ args = 0, pretend = 0, frame = 8
- 17985              		@ frame_needed = 1, uses_anonymous_args = 0
- 17986              		@ link register save eliminated.
- 17987 0000 80B4     		push	{r7}
- 17988              	.LCFI36:
- 17989              		.cfi_def_cfa_offset 4
- 17990 0002 83B0     		sub	sp, sp, #12
- 17991              	.LCFI37:
- 17992              		.cfi_def_cfa_offset 16
- 17993 0004 00AF     		add	r7, sp, #0
- 17994              		.cfi_offset 7, -4
- 17995              	.LCFI38:
- 17996              		.cfi_def_cfa_register 7
- 17997 0006 7860     		str	r0, [r7, #4]
+ 18723              		.loc 1 473 0
+ 18724              		.cfi_startproc
+ 18725              		@ args = 0, pretend = 0, frame = 8
+ 18726              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18727              		@ link register save eliminated.
+ 18728 0000 80B4     		push	{r7}
+ 18729              	.LCFI36:
+ 18730              		.cfi_def_cfa_offset 4
+ 18731 0002 83B0     		sub	sp, sp, #12
+ 18732              	.LCFI37:
+ 18733              		.cfi_def_cfa_offset 16
+ 18734 0004 00AF     		add	r7, sp, #0
+ 18735              		.cfi_offset 7, -4
+ 18736              	.LCFI38:
+ 18737              		.cfi_def_cfa_register 7
+ 18738 0006 7860     		str	r0, [r7, #4]
  474:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* SDIO_DataInitStruct members default value */
  475:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO_DataInitStruct->SDIO_DataTimeOut = 0xFFFFFFFF;
- 17998              		.loc 1 475 0
- 17999 0008 7B68     		ldr	r3, [r7, #4]
- 18000 000a 4FF0FF32 		mov	r2, #-1
- 18001 000e 1A60     		str	r2, [r3, #0]
+ 18739              		.loc 1 475 0
+ 18740 0008 7B68     		ldr	r3, [r7, #4]
+ 18741 000a 4FF0FF32 		mov	r2, #-1
+ 18742 000e 1A60     		str	r2, [r3, #0]
  476:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO_DataInitStruct->SDIO_DataLength = 0x00;
- 18002              		.loc 1 476 0
- 18003 0010 7B68     		ldr	r3, [r7, #4]
- 18004 0012 4FF00002 		mov	r2, #0
- 18005 0016 5A60     		str	r2, [r3, #4]
+ 18743              		.loc 1 476 0
+ 18744 0010 7B68     		ldr	r3, [r7, #4]
+ 18745 0012 4FF00002 		mov	r2, #0
+ 18746 0016 5A60     		str	r2, [r3, #4]
  477:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO_DataInitStruct->SDIO_DataBlockSize = SDIO_DataBlockSize_1b;
- 18006              		.loc 1 477 0
- 18007 0018 7B68     		ldr	r3, [r7, #4]
- 18008 001a 4FF00002 		mov	r2, #0
- 18009 001e 9A60     		str	r2, [r3, #8]
+ 18747              		.loc 1 477 0
+ 18748 0018 7B68     		ldr	r3, [r7, #4]
+ 18749 001a 4FF00002 		mov	r2, #0
+ 18750 001e 9A60     		str	r2, [r3, #8]
  478:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO_DataInitStruct->SDIO_TransferDir = SDIO_TransferDir_ToCard;
- 18010              		.loc 1 478 0
- 18011 0020 7B68     		ldr	r3, [r7, #4]
- 18012 0022 4FF00002 		mov	r2, #0
- 18013 0026 DA60     		str	r2, [r3, #12]
+ 18751              		.loc 1 478 0
+ 18752 0020 7B68     		ldr	r3, [r7, #4]
+ 18753 0022 4FF00002 		mov	r2, #0
+ 18754 0026 DA60     		str	r2, [r3, #12]
  479:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO_DataInitStruct->SDIO_TransferMode = SDIO_TransferMode_Block;  
- 18014              		.loc 1 479 0
- 18015 0028 7B68     		ldr	r3, [r7, #4]
- 18016 002a 4FF00002 		mov	r2, #0
- 18017 002e 1A61     		str	r2, [r3, #16]
+ 18755              		.loc 1 479 0
+ 18756 0028 7B68     		ldr	r3, [r7, #4]
+ 18757 002a 4FF00002 		mov	r2, #0
+ 18758 002e 1A61     		str	r2, [r3, #16]
  480:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO_DataInitStruct->SDIO_DPSM = SDIO_DPSM_Disable;
- 18018              		.loc 1 480 0
- 18019 0030 7B68     		ldr	r3, [r7, #4]
- 18020 0032 4FF00002 		mov	r2, #0
- 18021 0036 5A61     		str	r2, [r3, #20]
+ 18759              		.loc 1 480 0
+ 18760 0030 7B68     		ldr	r3, [r7, #4]
+ 18761 0032 4FF00002 		mov	r2, #0
+ 18762 0036 5A61     		str	r2, [r3, #20]
  481:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 18022              		.loc 1 481 0
- 18023 0038 07F10C07 		add	r7, r7, #12
- 18024 003c BD46     		mov	sp, r7
- 18025 003e 80BC     		pop	{r7}
- 18026 0040 7047     		bx	lr
- 18027              		.cfi_endproc
- 18028              	.LFE42:
- 18030 0042 00BF     		.section	.text.SDIO_GetDataCounter,"ax",%progbits
- 18031              		.align	2
- 18032              		.global	SDIO_GetDataCounter
- 18033              		.thumb
- 18034              		.thumb_func
- 18036              	SDIO_GetDataCounter:
- 18037              	.LFB43:
+ 18763              		.loc 1 481 0
+ 18764 0038 07F10C07 		add	r7, r7, #12
+ 18765 003c BD46     		mov	sp, r7
+ 18766 003e 80BC     		pop	{r7}
+ 18767 0040 7047     		bx	lr
+ 18768              		.cfi_endproc
+ 18769              	.LFE42:
+ 18771 0042 00BF     		.section	.text.SDIO_GetDataCounter,"ax",%progbits
+ 18772              		.align	2
+ 18773              		.global	SDIO_GetDataCounter
+ 18774              		.thumb
+ 18775              		.thumb_func
+ 18777              	SDIO_GetDataCounter:
+ 18778              	.LFB43:
  482:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  483:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  484:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Returns number of remaining data bytes to be transferred.
@@ -1261,41 +1261,41 @@
  487:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  488:../StdPeripheralDriver/src/stm32f10x_sdio.c **** uint32_t SDIO_GetDataCounter(void)
  489:../StdPeripheralDriver/src/stm32f10x_sdio.c **** { 
- 18038              		.loc 1 489 0
- 18039              		.cfi_startproc
- 18040              		@ args = 0, pretend = 0, frame = 0
- 18041              		@ frame_needed = 1, uses_anonymous_args = 0
- 18042              		@ link register save eliminated.
- 18043 0000 80B4     		push	{r7}
- 18044              	.LCFI39:
- 18045              		.cfi_def_cfa_offset 4
- 18046 0002 00AF     		add	r7, sp, #0
- 18047              		.cfi_offset 7, -4
- 18048              	.LCFI40:
- 18049              		.cfi_def_cfa_register 7
+ 18779              		.loc 1 489 0
+ 18780              		.cfi_startproc
+ 18781              		@ args = 0, pretend = 0, frame = 0
+ 18782              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18783              		@ link register save eliminated.
+ 18784 0000 80B4     		push	{r7}
+ 18785              	.LCFI39:
+ 18786              		.cfi_def_cfa_offset 4
+ 18787 0002 00AF     		add	r7, sp, #0
+ 18788              		.cfi_offset 7, -4
+ 18789              	.LCFI40:
+ 18790              		.cfi_def_cfa_register 7
  490:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   return SDIO->DCOUNT;
- 18050              		.loc 1 490 0
- 18051 0004 024B     		ldr	r3, .L40
- 18052 0006 1B6B     		ldr	r3, [r3, #48]
+ 18791              		.loc 1 490 0
+ 18792 0004 024B     		ldr	r3, .L40
+ 18793 0006 1B6B     		ldr	r3, [r3, #48]
  491:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 18053              		.loc 1 491 0
- 18054 0008 1846     		mov	r0, r3
- 18055 000a BD46     		mov	sp, r7
- 18056 000c 80BC     		pop	{r7}
- 18057 000e 7047     		bx	lr
- 18058              	.L41:
- 18059              		.align	2
- 18060              	.L40:
- 18061 0010 00800140 		.word	1073840128
- 18062              		.cfi_endproc
- 18063              	.LFE43:
- 18065              		.section	.text.SDIO_ReadData,"ax",%progbits
- 18066              		.align	2
- 18067              		.global	SDIO_ReadData
- 18068              		.thumb
- 18069              		.thumb_func
- 18071              	SDIO_ReadData:
- 18072              	.LFB44:
+ 18794              		.loc 1 491 0
+ 18795 0008 1846     		mov	r0, r3
+ 18796 000a BD46     		mov	sp, r7
+ 18797 000c 80BC     		pop	{r7}
+ 18798 000e 7047     		bx	lr
+ 18799              	.L41:
+ 18800              		.align	2
+ 18801              	.L40:
+ 18802 0010 00800140 		.word	1073840128
+ 18803              		.cfi_endproc
+ 18804              	.LFE43:
+ 18806              		.section	.text.SDIO_ReadData,"ax",%progbits
+ 18807              		.align	2
+ 18808              		.global	SDIO_ReadData
+ 18809              		.thumb
+ 18810              		.thumb_func
+ 18812              	SDIO_ReadData:
+ 18813              	.LFB44:
  492:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  493:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  494:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Read one data word from Rx FIFO.
@@ -1304,41 +1304,41 @@
  497:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  498:../StdPeripheralDriver/src/stm32f10x_sdio.c **** uint32_t SDIO_ReadData(void)
  499:../StdPeripheralDriver/src/stm32f10x_sdio.c **** { 
- 18073              		.loc 1 499 0
- 18074              		.cfi_startproc
- 18075              		@ args = 0, pretend = 0, frame = 0
- 18076              		@ frame_needed = 1, uses_anonymous_args = 0
- 18077              		@ link register save eliminated.
- 18078 0000 80B4     		push	{r7}
- 18079              	.LCFI41:
- 18080              		.cfi_def_cfa_offset 4
- 18081 0002 00AF     		add	r7, sp, #0
- 18082              		.cfi_offset 7, -4
- 18083              	.LCFI42:
- 18084              		.cfi_def_cfa_register 7
+ 18814              		.loc 1 499 0
+ 18815              		.cfi_startproc
+ 18816              		@ args = 0, pretend = 0, frame = 0
+ 18817              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18818              		@ link register save eliminated.
+ 18819 0000 80B4     		push	{r7}
+ 18820              	.LCFI41:
+ 18821              		.cfi_def_cfa_offset 4
+ 18822 0002 00AF     		add	r7, sp, #0
+ 18823              		.cfi_offset 7, -4
+ 18824              	.LCFI42:
+ 18825              		.cfi_def_cfa_register 7
  500:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   return SDIO->FIFO;
- 18085              		.loc 1 500 0
- 18086 0004 034B     		ldr	r3, .L43
- 18087 0006 D3F88030 		ldr	r3, [r3, #128]
+ 18826              		.loc 1 500 0
+ 18827 0004 034B     		ldr	r3, .L43
+ 18828 0006 D3F88030 		ldr	r3, [r3, #128]
  501:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 18088              		.loc 1 501 0
- 18089 000a 1846     		mov	r0, r3
- 18090 000c BD46     		mov	sp, r7
- 18091 000e 80BC     		pop	{r7}
- 18092 0010 7047     		bx	lr
- 18093              	.L44:
- 18094 0012 00BF     		.align	2
- 18095              	.L43:
- 18096 0014 00800140 		.word	1073840128
- 18097              		.cfi_endproc
- 18098              	.LFE44:
- 18100              		.section	.text.SDIO_WriteData,"ax",%progbits
- 18101              		.align	2
- 18102              		.global	SDIO_WriteData
- 18103              		.thumb
- 18104              		.thumb_func
- 18106              	SDIO_WriteData:
- 18107              	.LFB45:
+ 18829              		.loc 1 501 0
+ 18830 000a 1846     		mov	r0, r3
+ 18831 000c BD46     		mov	sp, r7
+ 18832 000e 80BC     		pop	{r7}
+ 18833 0010 7047     		bx	lr
+ 18834              	.L44:
+ 18835 0012 00BF     		.align	2
+ 18836              	.L43:
+ 18837 0014 00800140 		.word	1073840128
+ 18838              		.cfi_endproc
+ 18839              	.LFE44:
+ 18841              		.section	.text.SDIO_WriteData,"ax",%progbits
+ 18842              		.align	2
+ 18843              		.global	SDIO_WriteData
+ 18844              		.thumb
+ 18845              		.thumb_func
+ 18847              	SDIO_WriteData:
+ 18848              	.LFB45:
  502:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  503:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  504:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Write one data word to Tx FIFO.
@@ -1347,46 +1347,46 @@
  507:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  508:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_WriteData(uint32_t Data)
  509:../StdPeripheralDriver/src/stm32f10x_sdio.c **** { 
- 18108              		.loc 1 509 0
- 18109              		.cfi_startproc
- 18110              		@ args = 0, pretend = 0, frame = 8
- 18111              		@ frame_needed = 1, uses_anonymous_args = 0
- 18112              		@ link register save eliminated.
- 18113 0000 80B4     		push	{r7}
- 18114              	.LCFI43:
- 18115              		.cfi_def_cfa_offset 4
- 18116 0002 83B0     		sub	sp, sp, #12
- 18117              	.LCFI44:
- 18118              		.cfi_def_cfa_offset 16
- 18119 0004 00AF     		add	r7, sp, #0
- 18120              		.cfi_offset 7, -4
- 18121              	.LCFI45:
- 18122              		.cfi_def_cfa_register 7
- 18123 0006 7860     		str	r0, [r7, #4]
+ 18849              		.loc 1 509 0
+ 18850              		.cfi_startproc
+ 18851              		@ args = 0, pretend = 0, frame = 8
+ 18852              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18853              		@ link register save eliminated.
+ 18854 0000 80B4     		push	{r7}
+ 18855              	.LCFI43:
+ 18856              		.cfi_def_cfa_offset 4
+ 18857 0002 83B0     		sub	sp, sp, #12
+ 18858              	.LCFI44:
+ 18859              		.cfi_def_cfa_offset 16
+ 18860 0004 00AF     		add	r7, sp, #0
+ 18861              		.cfi_offset 7, -4
+ 18862              	.LCFI45:
+ 18863              		.cfi_def_cfa_register 7
+ 18864 0006 7860     		str	r0, [r7, #4]
  510:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->FIFO = Data;
- 18124              		.loc 1 510 0
- 18125 0008 044B     		ldr	r3, .L46
- 18126 000a 7A68     		ldr	r2, [r7, #4]
- 18127 000c C3F88020 		str	r2, [r3, #128]
+ 18865              		.loc 1 510 0
+ 18866 0008 044B     		ldr	r3, .L46
+ 18867 000a 7A68     		ldr	r2, [r7, #4]
+ 18868 000c C3F88020 		str	r2, [r3, #128]
  511:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 18128              		.loc 1 511 0
- 18129 0010 07F10C07 		add	r7, r7, #12
- 18130 0014 BD46     		mov	sp, r7
- 18131 0016 80BC     		pop	{r7}
- 18132 0018 7047     		bx	lr
- 18133              	.L47:
- 18134 001a 00BF     		.align	2
- 18135              	.L46:
- 18136 001c 00800140 		.word	1073840128
- 18137              		.cfi_endproc
- 18138              	.LFE45:
- 18140              		.section	.text.SDIO_GetFIFOCount,"ax",%progbits
- 18141              		.align	2
- 18142              		.global	SDIO_GetFIFOCount
- 18143              		.thumb
- 18144              		.thumb_func
- 18146              	SDIO_GetFIFOCount:
- 18147              	.LFB46:
+ 18869              		.loc 1 511 0
+ 18870 0010 07F10C07 		add	r7, r7, #12
+ 18871 0014 BD46     		mov	sp, r7
+ 18872 0016 80BC     		pop	{r7}
+ 18873 0018 7047     		bx	lr
+ 18874              	.L47:
+ 18875 001a 00BF     		.align	2
+ 18876              	.L46:
+ 18877 001c 00800140 		.word	1073840128
+ 18878              		.cfi_endproc
+ 18879              	.LFE45:
+ 18881              		.section	.text.SDIO_GetFIFOCount,"ax",%progbits
+ 18882              		.align	2
+ 18883              		.global	SDIO_GetFIFOCount
+ 18884              		.thumb
+ 18885              		.thumb_func
+ 18887              	SDIO_GetFIFOCount:
+ 18888              	.LFB46:
  512:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  513:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  514:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Returns the number of words left to be written to or read from FIFO.	
@@ -1395,41 +1395,41 @@
  517:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  518:../StdPeripheralDriver/src/stm32f10x_sdio.c **** uint32_t SDIO_GetFIFOCount(void)
  519:../StdPeripheralDriver/src/stm32f10x_sdio.c **** { 
- 18148              		.loc 1 519 0
- 18149              		.cfi_startproc
- 18150              		@ args = 0, pretend = 0, frame = 0
- 18151              		@ frame_needed = 1, uses_anonymous_args = 0
- 18152              		@ link register save eliminated.
- 18153 0000 80B4     		push	{r7}
- 18154              	.LCFI46:
- 18155              		.cfi_def_cfa_offset 4
- 18156 0002 00AF     		add	r7, sp, #0
- 18157              		.cfi_offset 7, -4
- 18158              	.LCFI47:
- 18159              		.cfi_def_cfa_register 7
+ 18889              		.loc 1 519 0
+ 18890              		.cfi_startproc
+ 18891              		@ args = 0, pretend = 0, frame = 0
+ 18892              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18893              		@ link register save eliminated.
+ 18894 0000 80B4     		push	{r7}
+ 18895              	.LCFI46:
+ 18896              		.cfi_def_cfa_offset 4
+ 18897 0002 00AF     		add	r7, sp, #0
+ 18898              		.cfi_offset 7, -4
+ 18899              	.LCFI47:
+ 18900              		.cfi_def_cfa_register 7
  520:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   return SDIO->FIFOCNT;
- 18160              		.loc 1 520 0
- 18161 0004 024B     		ldr	r3, .L49
- 18162 0006 9B6C     		ldr	r3, [r3, #72]
+ 18901              		.loc 1 520 0
+ 18902 0004 024B     		ldr	r3, .L49
+ 18903 0006 9B6C     		ldr	r3, [r3, #72]
  521:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 18163              		.loc 1 521 0
- 18164 0008 1846     		mov	r0, r3
- 18165 000a BD46     		mov	sp, r7
- 18166 000c 80BC     		pop	{r7}
- 18167 000e 7047     		bx	lr
- 18168              	.L50:
- 18169              		.align	2
- 18170              	.L49:
- 18171 0010 00800140 		.word	1073840128
- 18172              		.cfi_endproc
- 18173              	.LFE46:
- 18175              		.section	.text.SDIO_StartSDIOReadWait,"ax",%progbits
- 18176              		.align	2
- 18177              		.global	SDIO_StartSDIOReadWait
- 18178              		.thumb
- 18179              		.thumb_func
- 18181              	SDIO_StartSDIOReadWait:
- 18182              	.LFB47:
+ 18904              		.loc 1 521 0
+ 18905 0008 1846     		mov	r0, r3
+ 18906 000a BD46     		mov	sp, r7
+ 18907 000c 80BC     		pop	{r7}
+ 18908 000e 7047     		bx	lr
+ 18909              	.L50:
+ 18910              		.align	2
+ 18911              	.L49:
+ 18912 0010 00800140 		.word	1073840128
+ 18913              		.cfi_endproc
+ 18914              	.LFE46:
+ 18916              		.section	.text.SDIO_StartSDIOReadWait,"ax",%progbits
+ 18917              		.align	2
+ 18918              		.global	SDIO_StartSDIOReadWait
+ 18919              		.thumb
+ 18920              		.thumb_func
+ 18922              	SDIO_StartSDIOReadWait:
+ 18923              	.LFB47:
  522:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  523:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  524:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Starts the SD I/O Read Wait operation.	
@@ -1439,50 +1439,50 @@
  528:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  529:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_StartSDIOReadWait(FunctionalState NewState)
  530:../StdPeripheralDriver/src/stm32f10x_sdio.c **** { 
- 18183              		.loc 1 530 0
- 18184              		.cfi_startproc
- 18185              		@ args = 0, pretend = 0, frame = 8
- 18186              		@ frame_needed = 1, uses_anonymous_args = 0
- 18187              		@ link register save eliminated.
- 18188 0000 80B4     		push	{r7}
- 18189              	.LCFI48:
- 18190              		.cfi_def_cfa_offset 4
- 18191 0002 83B0     		sub	sp, sp, #12
- 18192              	.LCFI49:
- 18193              		.cfi_def_cfa_offset 16
- 18194 0004 00AF     		add	r7, sp, #0
- 18195              		.cfi_offset 7, -4
- 18196              	.LCFI50:
- 18197              		.cfi_def_cfa_register 7
- 18198 0006 0346     		mov	r3, r0
- 18199 0008 FB71     		strb	r3, [r7, #7]
+ 18924              		.loc 1 530 0
+ 18925              		.cfi_startproc
+ 18926              		@ args = 0, pretend = 0, frame = 8
+ 18927              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18928              		@ link register save eliminated.
+ 18929 0000 80B4     		push	{r7}
+ 18930              	.LCFI48:
+ 18931              		.cfi_def_cfa_offset 4
+ 18932 0002 83B0     		sub	sp, sp, #12
+ 18933              	.LCFI49:
+ 18934              		.cfi_def_cfa_offset 16
+ 18935 0004 00AF     		add	r7, sp, #0
+ 18936              		.cfi_offset 7, -4
+ 18937              	.LCFI50:
+ 18938              		.cfi_def_cfa_register 7
+ 18939 0006 0346     		mov	r3, r0
+ 18940 0008 FB71     		strb	r3, [r7, #7]
  531:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  532:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
  533:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  534:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   *(__IO uint32_t *) DCTRL_RWSTART_BB = (uint32_t) NewState;
- 18200              		.loc 1 534 0
- 18201 000a 044B     		ldr	r3, .L52
- 18202 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 18203 000e 1A60     		str	r2, [r3, #0]
+ 18941              		.loc 1 534 0
+ 18942 000a 044B     		ldr	r3, .L52
+ 18943 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 18944 000e 1A60     		str	r2, [r3, #0]
  535:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 18204              		.loc 1 535 0
- 18205 0010 07F10C07 		add	r7, r7, #12
- 18206 0014 BD46     		mov	sp, r7
- 18207 0016 80BC     		pop	{r7}
- 18208 0018 7047     		bx	lr
- 18209              	.L53:
- 18210 001a 00BF     		.align	2
- 18211              	.L52:
- 18212 001c A0053042 		.word	1110443424
- 18213              		.cfi_endproc
- 18214              	.LFE47:
- 18216              		.section	.text.SDIO_StopSDIOReadWait,"ax",%progbits
- 18217              		.align	2
- 18218              		.global	SDIO_StopSDIOReadWait
- 18219              		.thumb
- 18220              		.thumb_func
- 18222              	SDIO_StopSDIOReadWait:
- 18223              	.LFB48:
+ 18945              		.loc 1 535 0
+ 18946 0010 07F10C07 		add	r7, r7, #12
+ 18947 0014 BD46     		mov	sp, r7
+ 18948 0016 80BC     		pop	{r7}
+ 18949 0018 7047     		bx	lr
+ 18950              	.L53:
+ 18951 001a 00BF     		.align	2
+ 18952              	.L52:
+ 18953 001c A0053042 		.word	1110443424
+ 18954              		.cfi_endproc
+ 18955              	.LFE47:
+ 18957              		.section	.text.SDIO_StopSDIOReadWait,"ax",%progbits
+ 18958              		.align	2
+ 18959              		.global	SDIO_StopSDIOReadWait
+ 18960              		.thumb
+ 18961              		.thumb_func
+ 18963              	SDIO_StopSDIOReadWait:
+ 18964              	.LFB48:
  536:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  537:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  538:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Stops the SD I/O Read Wait operation.	
@@ -1492,50 +1492,50 @@
  542:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  543:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_StopSDIOReadWait(FunctionalState NewState)
  544:../StdPeripheralDriver/src/stm32f10x_sdio.c **** { 
- 18224              		.loc 1 544 0
- 18225              		.cfi_startproc
- 18226              		@ args = 0, pretend = 0, frame = 8
- 18227              		@ frame_needed = 1, uses_anonymous_args = 0
- 18228              		@ link register save eliminated.
- 18229 0000 80B4     		push	{r7}
- 18230              	.LCFI51:
- 18231              		.cfi_def_cfa_offset 4
- 18232 0002 83B0     		sub	sp, sp, #12
- 18233              	.LCFI52:
- 18234              		.cfi_def_cfa_offset 16
- 18235 0004 00AF     		add	r7, sp, #0
- 18236              		.cfi_offset 7, -4
- 18237              	.LCFI53:
- 18238              		.cfi_def_cfa_register 7
- 18239 0006 0346     		mov	r3, r0
- 18240 0008 FB71     		strb	r3, [r7, #7]
+ 18965              		.loc 1 544 0
+ 18966              		.cfi_startproc
+ 18967              		@ args = 0, pretend = 0, frame = 8
+ 18968              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18969              		@ link register save eliminated.
+ 18970 0000 80B4     		push	{r7}
+ 18971              	.LCFI51:
+ 18972              		.cfi_def_cfa_offset 4
+ 18973 0002 83B0     		sub	sp, sp, #12
+ 18974              	.LCFI52:
+ 18975              		.cfi_def_cfa_offset 16
+ 18976 0004 00AF     		add	r7, sp, #0
+ 18977              		.cfi_offset 7, -4
+ 18978              	.LCFI53:
+ 18979              		.cfi_def_cfa_register 7
+ 18980 0006 0346     		mov	r3, r0
+ 18981 0008 FB71     		strb	r3, [r7, #7]
  545:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  546:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
  547:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  548:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   *(__IO uint32_t *) DCTRL_RWSTOP_BB = (uint32_t) NewState;
- 18241              		.loc 1 548 0
- 18242 000a 044B     		ldr	r3, .L55
- 18243 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 18244 000e 1A60     		str	r2, [r3, #0]
+ 18982              		.loc 1 548 0
+ 18983 000a 044B     		ldr	r3, .L55
+ 18984 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 18985 000e 1A60     		str	r2, [r3, #0]
  549:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 18245              		.loc 1 549 0
- 18246 0010 07F10C07 		add	r7, r7, #12
- 18247 0014 BD46     		mov	sp, r7
- 18248 0016 80BC     		pop	{r7}
- 18249 0018 7047     		bx	lr
- 18250              	.L56:
- 18251 001a 00BF     		.align	2
- 18252              	.L55:
- 18253 001c A4053042 		.word	1110443428
- 18254              		.cfi_endproc
- 18255              	.LFE48:
- 18257              		.section	.text.SDIO_SetSDIOReadWaitMode,"ax",%progbits
- 18258              		.align	2
- 18259              		.global	SDIO_SetSDIOReadWaitMode
- 18260              		.thumb
- 18261              		.thumb_func
- 18263              	SDIO_SetSDIOReadWaitMode:
- 18264              	.LFB49:
+ 18986              		.loc 1 549 0
+ 18987 0010 07F10C07 		add	r7, r7, #12
+ 18988 0014 BD46     		mov	sp, r7
+ 18989 0016 80BC     		pop	{r7}
+ 18990 0018 7047     		bx	lr
+ 18991              	.L56:
+ 18992 001a 00BF     		.align	2
+ 18993              	.L55:
+ 18994 001c A4053042 		.word	1110443428
+ 18995              		.cfi_endproc
+ 18996              	.LFE48:
+ 18998              		.section	.text.SDIO_SetSDIOReadWaitMode,"ax",%progbits
+ 18999              		.align	2
+ 19000              		.global	SDIO_SetSDIOReadWaitMode
+ 19001              		.thumb
+ 19002              		.thumb_func
+ 19004              	SDIO_SetSDIOReadWaitMode:
+ 19005              	.LFB49:
  550:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  551:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  552:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Sets one of the two options of inserting read wait interval.
@@ -1547,49 +1547,49 @@
  558:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  559:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_SetSDIOReadWaitMode(uint32_t SDIO_ReadWaitMode)
  560:../StdPeripheralDriver/src/stm32f10x_sdio.c **** {
- 18265              		.loc 1 560 0
- 18266              		.cfi_startproc
- 18267              		@ args = 0, pretend = 0, frame = 8
- 18268              		@ frame_needed = 1, uses_anonymous_args = 0
- 18269              		@ link register save eliminated.
- 18270 0000 80B4     		push	{r7}
- 18271              	.LCFI54:
- 18272              		.cfi_def_cfa_offset 4
- 18273 0002 83B0     		sub	sp, sp, #12
- 18274              	.LCFI55:
- 18275              		.cfi_def_cfa_offset 16
- 18276 0004 00AF     		add	r7, sp, #0
- 18277              		.cfi_offset 7, -4
- 18278              	.LCFI56:
- 18279              		.cfi_def_cfa_register 7
- 18280 0006 7860     		str	r0, [r7, #4]
+ 19006              		.loc 1 560 0
+ 19007              		.cfi_startproc
+ 19008              		@ args = 0, pretend = 0, frame = 8
+ 19009              		@ frame_needed = 1, uses_anonymous_args = 0
+ 19010              		@ link register save eliminated.
+ 19011 0000 80B4     		push	{r7}
+ 19012              	.LCFI54:
+ 19013              		.cfi_def_cfa_offset 4
+ 19014 0002 83B0     		sub	sp, sp, #12
+ 19015              	.LCFI55:
+ 19016              		.cfi_def_cfa_offset 16
+ 19017 0004 00AF     		add	r7, sp, #0
+ 19018              		.cfi_offset 7, -4
+ 19019              	.LCFI56:
+ 19020              		.cfi_def_cfa_register 7
+ 19021 0006 7860     		str	r0, [r7, #4]
  561:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  562:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_SDIO_READWAIT_MODE(SDIO_ReadWaitMode));
  563:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  564:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   *(__IO uint32_t *) DCTRL_RWMOD_BB = SDIO_ReadWaitMode;
- 18281              		.loc 1 564 0
- 18282 0008 034B     		ldr	r3, .L58
- 18283 000a 7A68     		ldr	r2, [r7, #4]
- 18284 000c 1A60     		str	r2, [r3, #0]
+ 19022              		.loc 1 564 0
+ 19023 0008 034B     		ldr	r3, .L58
+ 19024 000a 7A68     		ldr	r2, [r7, #4]
+ 19025 000c 1A60     		str	r2, [r3, #0]
  565:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 18285              		.loc 1 565 0
- 18286 000e 07F10C07 		add	r7, r7, #12
- 18287 0012 BD46     		mov	sp, r7
- 18288 0014 80BC     		pop	{r7}
- 18289 0016 7047     		bx	lr
- 18290              	.L59:
- 18291              		.align	2
- 18292              	.L58:
- 18293 0018 A8053042 		.word	1110443432
- 18294              		.cfi_endproc
- 18295              	.LFE49:
- 18297              		.section	.text.SDIO_SetSDIOOperation,"ax",%progbits
- 18298              		.align	2
- 18299              		.global	SDIO_SetSDIOOperation
- 18300              		.thumb
- 18301              		.thumb_func
- 18303              	SDIO_SetSDIOOperation:
- 18304              	.LFB50:
+ 19026              		.loc 1 565 0
+ 19027 000e 07F10C07 		add	r7, r7, #12
+ 19028 0012 BD46     		mov	sp, r7
+ 19029 0014 80BC     		pop	{r7}
+ 19030 0016 7047     		bx	lr
+ 19031              	.L59:
+ 19032              		.align	2
+ 19033              	.L58:
+ 19034 0018 A8053042 		.word	1110443432
+ 19035              		.cfi_endproc
+ 19036              	.LFE49:
+ 19038              		.section	.text.SDIO_SetSDIOOperation,"ax",%progbits
+ 19039              		.align	2
+ 19040              		.global	SDIO_SetSDIOOperation
+ 19041              		.thumb
+ 19042              		.thumb_func
+ 19044              	SDIO_SetSDIOOperation:
+ 19045              	.LFB50:
  566:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  567:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  568:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Enables or disables the SD I/O Mode Operation.
@@ -1599,50 +1599,50 @@
  572:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  573:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_SetSDIOOperation(FunctionalState NewState)
  574:../StdPeripheralDriver/src/stm32f10x_sdio.c **** { 
- 18305              		.loc 1 574 0
- 18306              		.cfi_startproc
- 18307              		@ args = 0, pretend = 0, frame = 8
- 18308              		@ frame_needed = 1, uses_anonymous_args = 0
- 18309              		@ link register save eliminated.
- 18310 0000 80B4     		push	{r7}
- 18311              	.LCFI57:
- 18312              		.cfi_def_cfa_offset 4
- 18313 0002 83B0     		sub	sp, sp, #12
- 18314              	.LCFI58:
- 18315              		.cfi_def_cfa_offset 16
- 18316 0004 00AF     		add	r7, sp, #0
- 18317              		.cfi_offset 7, -4
- 18318              	.LCFI59:
- 18319              		.cfi_def_cfa_register 7
- 18320 0006 0346     		mov	r3, r0
- 18321 0008 FB71     		strb	r3, [r7, #7]
+ 19046              		.loc 1 574 0
+ 19047              		.cfi_startproc
+ 19048              		@ args = 0, pretend = 0, frame = 8
+ 19049              		@ frame_needed = 1, uses_anonymous_args = 0
+ 19050              		@ link register save eliminated.
+ 19051 0000 80B4     		push	{r7}
+ 19052              	.LCFI57:
+ 19053              		.cfi_def_cfa_offset 4
+ 19054 0002 83B0     		sub	sp, sp, #12
+ 19055              	.LCFI58:
+ 19056              		.cfi_def_cfa_offset 16
+ 19057 0004 00AF     		add	r7, sp, #0
+ 19058              		.cfi_offset 7, -4
+ 19059              	.LCFI59:
+ 19060              		.cfi_def_cfa_register 7
+ 19061 0006 0346     		mov	r3, r0
+ 19062 0008 FB71     		strb	r3, [r7, #7]
  575:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  576:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
  577:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  578:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   *(__IO uint32_t *) DCTRL_SDIOEN_BB = (uint32_t)NewState;
- 18322              		.loc 1 578 0
- 18323 000a 044B     		ldr	r3, .L61
- 18324 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 18325 000e 1A60     		str	r2, [r3, #0]
+ 19063              		.loc 1 578 0
+ 19064 000a 044B     		ldr	r3, .L61
+ 19065 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 19066 000e 1A60     		str	r2, [r3, #0]
  579:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 18326              		.loc 1 579 0
- 18327 0010 07F10C07 		add	r7, r7, #12
- 18328 0014 BD46     		mov	sp, r7
- 18329 0016 80BC     		pop	{r7}
- 18330 0018 7047     		bx	lr
- 18331              	.L62:
- 18332 001a 00BF     		.align	2
- 18333              	.L61:
- 18334 001c AC053042 		.word	1110443436
- 18335              		.cfi_endproc
- 18336              	.LFE50:
- 18338              		.section	.text.SDIO_SendSDIOSuspendCmd,"ax",%progbits
- 18339              		.align	2
- 18340              		.global	SDIO_SendSDIOSuspendCmd
- 18341              		.thumb
- 18342              		.thumb_func
- 18344              	SDIO_SendSDIOSuspendCmd:
- 18345              	.LFB51:
+ 19067              		.loc 1 579 0
+ 19068 0010 07F10C07 		add	r7, r7, #12
+ 19069 0014 BD46     		mov	sp, r7
+ 19070 0016 80BC     		pop	{r7}
+ 19071 0018 7047     		bx	lr
+ 19072              	.L62:
+ 19073 001a 00BF     		.align	2
+ 19074              	.L61:
+ 19075 001c AC053042 		.word	1110443436
+ 19076              		.cfi_endproc
+ 19077              	.LFE50:
+ 19079              		.section	.text.SDIO_SendSDIOSuspendCmd,"ax",%progbits
+ 19080              		.align	2
+ 19081              		.global	SDIO_SendSDIOSuspendCmd
+ 19082              		.thumb
+ 19083              		.thumb_func
+ 19085              	SDIO_SendSDIOSuspendCmd:
+ 19086              	.LFB51:
  580:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  581:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  582:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Enables or disables the SD I/O Mode suspend command sending.
@@ -1652,50 +1652,50 @@
  586:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  587:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_SendSDIOSuspendCmd(FunctionalState NewState)
  588:../StdPeripheralDriver/src/stm32f10x_sdio.c **** { 
- 18346              		.loc 1 588 0
- 18347              		.cfi_startproc
- 18348              		@ args = 0, pretend = 0, frame = 8
- 18349              		@ frame_needed = 1, uses_anonymous_args = 0
- 18350              		@ link register save eliminated.
- 18351 0000 80B4     		push	{r7}
- 18352              	.LCFI60:
- 18353              		.cfi_def_cfa_offset 4
- 18354 0002 83B0     		sub	sp, sp, #12
- 18355              	.LCFI61:
- 18356              		.cfi_def_cfa_offset 16
- 18357 0004 00AF     		add	r7, sp, #0
- 18358              		.cfi_offset 7, -4
- 18359              	.LCFI62:
- 18360              		.cfi_def_cfa_register 7
- 18361 0006 0346     		mov	r3, r0
- 18362 0008 FB71     		strb	r3, [r7, #7]
+ 19087              		.loc 1 588 0
+ 19088              		.cfi_startproc
+ 19089              		@ args = 0, pretend = 0, frame = 8
+ 19090              		@ frame_needed = 1, uses_anonymous_args = 0
+ 19091              		@ link register save eliminated.
+ 19092 0000 80B4     		push	{r7}
+ 19093              	.LCFI60:
+ 19094              		.cfi_def_cfa_offset 4
+ 19095 0002 83B0     		sub	sp, sp, #12
+ 19096              	.LCFI61:
+ 19097              		.cfi_def_cfa_offset 16
+ 19098 0004 00AF     		add	r7, sp, #0
+ 19099              		.cfi_offset 7, -4
+ 19100              	.LCFI62:
+ 19101              		.cfi_def_cfa_register 7
+ 19102 0006 0346     		mov	r3, r0
+ 19103 0008 FB71     		strb	r3, [r7, #7]
  589:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  590:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
  591:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  592:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   *(__IO uint32_t *) CMD_SDIOSUSPEND_BB = (uint32_t)NewState;
- 18363              		.loc 1 592 0
- 18364 000a 044B     		ldr	r3, .L64
- 18365 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 18366 000e 1A60     		str	r2, [r3, #0]
+ 19104              		.loc 1 592 0
+ 19105 000a 044B     		ldr	r3, .L64
+ 19106 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 19107 000e 1A60     		str	r2, [r3, #0]
  593:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 18367              		.loc 1 593 0
- 18368 0010 07F10C07 		add	r7, r7, #12
- 18369 0014 BD46     		mov	sp, r7
- 18370 0016 80BC     		pop	{r7}
- 18371 0018 7047     		bx	lr
- 18372              	.L65:
- 18373 001a 00BF     		.align	2
- 18374              	.L64:
- 18375 001c AC013042 		.word	1110442412
- 18376              		.cfi_endproc
- 18377              	.LFE51:
- 18379              		.section	.text.SDIO_CommandCompletionCmd,"ax",%progbits
- 18380              		.align	2
- 18381              		.global	SDIO_CommandCompletionCmd
- 18382              		.thumb
- 18383              		.thumb_func
- 18385              	SDIO_CommandCompletionCmd:
- 18386              	.LFB52:
+ 19108              		.loc 1 593 0
+ 19109 0010 07F10C07 		add	r7, r7, #12
+ 19110 0014 BD46     		mov	sp, r7
+ 19111 0016 80BC     		pop	{r7}
+ 19112 0018 7047     		bx	lr
+ 19113              	.L65:
+ 19114 001a 00BF     		.align	2
+ 19115              	.L64:
+ 19116 001c AC013042 		.word	1110442412
+ 19117              		.cfi_endproc
+ 19118              	.LFE51:
+ 19120              		.section	.text.SDIO_CommandCompletionCmd,"ax",%progbits
+ 19121              		.align	2
+ 19122              		.global	SDIO_CommandCompletionCmd
+ 19123              		.thumb
+ 19124              		.thumb_func
+ 19126              	SDIO_CommandCompletionCmd:
+ 19127              	.LFB52:
  594:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  595:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  596:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Enables or disables the command completion signal.
@@ -1705,50 +1705,50 @@
  600:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  601:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_CommandCompletionCmd(FunctionalState NewState)
  602:../StdPeripheralDriver/src/stm32f10x_sdio.c **** { 
- 18387              		.loc 1 602 0
- 18388              		.cfi_startproc
- 18389              		@ args = 0, pretend = 0, frame = 8
- 18390              		@ frame_needed = 1, uses_anonymous_args = 0
- 18391              		@ link register save eliminated.
- 18392 0000 80B4     		push	{r7}
- 18393              	.LCFI63:
- 18394              		.cfi_def_cfa_offset 4
- 18395 0002 83B0     		sub	sp, sp, #12
- 18396              	.LCFI64:
- 18397              		.cfi_def_cfa_offset 16
- 18398 0004 00AF     		add	r7, sp, #0
- 18399              		.cfi_offset 7, -4
- 18400              	.LCFI65:
- 18401              		.cfi_def_cfa_register 7
- 18402 0006 0346     		mov	r3, r0
- 18403 0008 FB71     		strb	r3, [r7, #7]
+ 19128              		.loc 1 602 0
+ 19129              		.cfi_startproc
+ 19130              		@ args = 0, pretend = 0, frame = 8
+ 19131              		@ frame_needed = 1, uses_anonymous_args = 0
+ 19132              		@ link register save eliminated.
+ 19133 0000 80B4     		push	{r7}
+ 19134              	.LCFI63:
+ 19135              		.cfi_def_cfa_offset 4
+ 19136 0002 83B0     		sub	sp, sp, #12
+ 19137              	.LCFI64:
+ 19138              		.cfi_def_cfa_offset 16
+ 19139 0004 00AF     		add	r7, sp, #0
+ 19140              		.cfi_offset 7, -4
+ 19141              	.LCFI65:
+ 19142              		.cfi_def_cfa_register 7
+ 19143 0006 0346     		mov	r3, r0
+ 19144 0008 FB71     		strb	r3, [r7, #7]
  603:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  604:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
  605:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  606:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   *(__IO uint32_t *) CMD_ENCMDCOMPL_BB = (uint32_t)NewState;
- 18404              		.loc 1 606 0
- 18405 000a 044B     		ldr	r3, .L67
- 18406 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 18407 000e 1A60     		str	r2, [r3, #0]
+ 19145              		.loc 1 606 0
+ 19146 000a 044B     		ldr	r3, .L67
+ 19147 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 19148 000e 1A60     		str	r2, [r3, #0]
  607:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 18408              		.loc 1 607 0
- 18409 0010 07F10C07 		add	r7, r7, #12
- 18410 0014 BD46     		mov	sp, r7
- 18411 0016 80BC     		pop	{r7}
- 18412 0018 7047     		bx	lr
- 18413              	.L68:
- 18414 001a 00BF     		.align	2
- 18415              	.L67:
- 18416 001c B0013042 		.word	1110442416
- 18417              		.cfi_endproc
- 18418              	.LFE52:
- 18420              		.section	.text.SDIO_CEATAITCmd,"ax",%progbits
- 18421              		.align	2
- 18422              		.global	SDIO_CEATAITCmd
- 18423              		.thumb
- 18424              		.thumb_func
- 18426              	SDIO_CEATAITCmd:
- 18427              	.LFB53:
+ 19149              		.loc 1 607 0
+ 19150 0010 07F10C07 		add	r7, r7, #12
+ 19151 0014 BD46     		mov	sp, r7
+ 19152 0016 80BC     		pop	{r7}
+ 19153 0018 7047     		bx	lr
+ 19154              	.L68:
+ 19155 001a 00BF     		.align	2
+ 19156              	.L67:
+ 19157 001c B0013042 		.word	1110442416
+ 19158              		.cfi_endproc
+ 19159              	.LFE52:
+ 19161              		.section	.text.SDIO_CEATAITCmd,"ax",%progbits
+ 19162              		.align	2
+ 19163              		.global	SDIO_CEATAITCmd
+ 19164              		.thumb
+ 19165              		.thumb_func
+ 19167              	SDIO_CEATAITCmd:
+ 19168              	.LFB53:
  608:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  609:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  610:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Enables or disables the CE-ATA interrupt.
@@ -1757,55 +1757,55 @@
  613:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  614:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_CEATAITCmd(FunctionalState NewState)
  615:../StdPeripheralDriver/src/stm32f10x_sdio.c **** { 
- 18428              		.loc 1 615 0
- 18429              		.cfi_startproc
- 18430              		@ args = 0, pretend = 0, frame = 8
- 18431              		@ frame_needed = 1, uses_anonymous_args = 0
- 18432              		@ link register save eliminated.
- 18433 0000 80B4     		push	{r7}
- 18434              	.LCFI66:
- 18435              		.cfi_def_cfa_offset 4
- 18436 0002 83B0     		sub	sp, sp, #12
- 18437              	.LCFI67:
- 18438              		.cfi_def_cfa_offset 16
- 18439 0004 00AF     		add	r7, sp, #0
- 18440              		.cfi_offset 7, -4
- 18441              	.LCFI68:
- 18442              		.cfi_def_cfa_register 7
- 18443 0006 0346     		mov	r3, r0
- 18444 0008 FB71     		strb	r3, [r7, #7]
+ 19169              		.loc 1 615 0
+ 19170              		.cfi_startproc
+ 19171              		@ args = 0, pretend = 0, frame = 8
+ 19172              		@ frame_needed = 1, uses_anonymous_args = 0
+ 19173              		@ link register save eliminated.
+ 19174 0000 80B4     		push	{r7}
+ 19175              	.LCFI66:
+ 19176              		.cfi_def_cfa_offset 4
+ 19177 0002 83B0     		sub	sp, sp, #12
+ 19178              	.LCFI67:
+ 19179              		.cfi_def_cfa_offset 16
+ 19180 0004 00AF     		add	r7, sp, #0
+ 19181              		.cfi_offset 7, -4
+ 19182              	.LCFI68:
+ 19183              		.cfi_def_cfa_register 7
+ 19184 0006 0346     		mov	r3, r0
+ 19185 0008 FB71     		strb	r3, [r7, #7]
  616:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  617:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
  618:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  619:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   *(__IO uint32_t *) CMD_NIEN_BB = (uint32_t)((~((uint32_t)NewState)) & ((uint32_t)0x1));
- 18445              		.loc 1 619 0
- 18446 000a 074B     		ldr	r3, .L70
- 18447 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 18448 000e 02F00102 		and	r2, r2, #1
- 18449 0012 002A     		cmp	r2, #0
- 18450 0014 14BF     		ite	ne
- 18451 0016 0022     		movne	r2, #0
- 18452 0018 0122     		moveq	r2, #1
- 18453 001a 1A60     		str	r2, [r3, #0]
+ 19186              		.loc 1 619 0
+ 19187 000a 074B     		ldr	r3, .L70
+ 19188 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 19189 000e 02F00102 		and	r2, r2, #1
+ 19190 0012 002A     		cmp	r2, #0
+ 19191 0014 14BF     		ite	ne
+ 19192 0016 0022     		movne	r2, #0
+ 19193 0018 0122     		moveq	r2, #1
+ 19194 001a 1A60     		str	r2, [r3, #0]
  620:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 18454              		.loc 1 620 0
- 18455 001c 07F10C07 		add	r7, r7, #12
- 18456 0020 BD46     		mov	sp, r7
- 18457 0022 80BC     		pop	{r7}
- 18458 0024 7047     		bx	lr
- 18459              	.L71:
- 18460 0026 00BF     		.align	2
- 18461              	.L70:
- 18462 0028 B4013042 		.word	1110442420
- 18463              		.cfi_endproc
- 18464              	.LFE53:
- 18466              		.section	.text.SDIO_SendCEATACmd,"ax",%progbits
- 18467              		.align	2
- 18468              		.global	SDIO_SendCEATACmd
- 18469              		.thumb
- 18470              		.thumb_func
- 18472              	SDIO_SendCEATACmd:
- 18473              	.LFB54:
+ 19195              		.loc 1 620 0
+ 19196 001c 07F10C07 		add	r7, r7, #12
+ 19197 0020 BD46     		mov	sp, r7
+ 19198 0022 80BC     		pop	{r7}
+ 19199 0024 7047     		bx	lr
+ 19200              	.L71:
+ 19201 0026 00BF     		.align	2
+ 19202              	.L70:
+ 19203 0028 B4013042 		.word	1110442420
+ 19204              		.cfi_endproc
+ 19205              	.LFE53:
+ 19207              		.section	.text.SDIO_SendCEATACmd,"ax",%progbits
+ 19208              		.align	2
+ 19209              		.global	SDIO_SendCEATACmd
+ 19210              		.thumb
+ 19211              		.thumb_func
+ 19213              	SDIO_SendCEATACmd:
+ 19214              	.LFB54:
  621:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  622:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  623:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Sends CE-ATA command (CMD61).
@@ -1814,50 +1814,50 @@
  626:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  627:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_SendCEATACmd(FunctionalState NewState)
  628:../StdPeripheralDriver/src/stm32f10x_sdio.c **** { 
- 18474              		.loc 1 628 0
- 18475              		.cfi_startproc
- 18476              		@ args = 0, pretend = 0, frame = 8
- 18477              		@ frame_needed = 1, uses_anonymous_args = 0
- 18478              		@ link register save eliminated.
- 18479 0000 80B4     		push	{r7}
- 18480              	.LCFI69:
- 18481              		.cfi_def_cfa_offset 4
- 18482 0002 83B0     		sub	sp, sp, #12
- 18483              	.LCFI70:
- 18484              		.cfi_def_cfa_offset 16
- 18485 0004 00AF     		add	r7, sp, #0
- 18486              		.cfi_offset 7, -4
- 18487              	.LCFI71:
- 18488              		.cfi_def_cfa_register 7
- 18489 0006 0346     		mov	r3, r0
- 18490 0008 FB71     		strb	r3, [r7, #7]
+ 19215              		.loc 1 628 0
+ 19216              		.cfi_startproc
+ 19217              		@ args = 0, pretend = 0, frame = 8
+ 19218              		@ frame_needed = 1, uses_anonymous_args = 0
+ 19219              		@ link register save eliminated.
+ 19220 0000 80B4     		push	{r7}
+ 19221              	.LCFI69:
+ 19222              		.cfi_def_cfa_offset 4
+ 19223 0002 83B0     		sub	sp, sp, #12
+ 19224              	.LCFI70:
+ 19225              		.cfi_def_cfa_offset 16
+ 19226 0004 00AF     		add	r7, sp, #0
+ 19227              		.cfi_offset 7, -4
+ 19228              	.LCFI71:
+ 19229              		.cfi_def_cfa_register 7
+ 19230 0006 0346     		mov	r3, r0
+ 19231 0008 FB71     		strb	r3, [r7, #7]
  629:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  630:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
  631:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  632:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   *(__IO uint32_t *) CMD_ATACMD_BB = (uint32_t)NewState;
- 18491              		.loc 1 632 0
- 18492 000a 044B     		ldr	r3, .L73
- 18493 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 18494 000e 1A60     		str	r2, [r3, #0]
+ 19232              		.loc 1 632 0
+ 19233 000a 044B     		ldr	r3, .L73
+ 19234 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 19235 000e 1A60     		str	r2, [r3, #0]
  633:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 18495              		.loc 1 633 0
- 18496 0010 07F10C07 		add	r7, r7, #12
- 18497 0014 BD46     		mov	sp, r7
- 18498 0016 80BC     		pop	{r7}
- 18499 0018 7047     		bx	lr
- 18500              	.L74:
- 18501 001a 00BF     		.align	2
- 18502              	.L73:
- 18503 001c B8013042 		.word	1110442424
- 18504              		.cfi_endproc
- 18505              	.LFE54:
- 18507              		.section	.text.SDIO_GetFlagStatus,"ax",%progbits
- 18508              		.align	2
- 18509              		.global	SDIO_GetFlagStatus
- 18510              		.thumb
- 18511              		.thumb_func
- 18513              	SDIO_GetFlagStatus:
- 18514              	.LFB55:
+ 19236              		.loc 1 633 0
+ 19237 0010 07F10C07 		add	r7, r7, #12
+ 19238 0014 BD46     		mov	sp, r7
+ 19239 0016 80BC     		pop	{r7}
+ 19240 0018 7047     		bx	lr
+ 19241              	.L74:
+ 19242 001a 00BF     		.align	2
+ 19243              	.L73:
+ 19244 001c B8013042 		.word	1110442424
+ 19245              		.cfi_endproc
+ 19246              	.LFE54:
+ 19248              		.section	.text.SDIO_GetFlagStatus,"ax",%progbits
+ 19249              		.align	2
+ 19250              		.global	SDIO_GetFlagStatus
+ 19251              		.thumb
+ 19252              		.thumb_func
+ 19254              	SDIO_GetFlagStatus:
+ 19255              	.LFB55:
  634:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  635:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  636:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Checks whether the specified SDIO flag is set or not.
@@ -1892,77 +1892,77 @@
  665:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  666:../StdPeripheralDriver/src/stm32f10x_sdio.c **** FlagStatus SDIO_GetFlagStatus(uint32_t SDIO_FLAG)
  667:../StdPeripheralDriver/src/stm32f10x_sdio.c **** { 
- 18515              		.loc 1 667 0
- 18516              		.cfi_startproc
- 18517              		@ args = 0, pretend = 0, frame = 16
- 18518              		@ frame_needed = 1, uses_anonymous_args = 0
- 18519              		@ link register save eliminated.
- 18520 0000 80B4     		push	{r7}
- 18521              	.LCFI72:
- 18522              		.cfi_def_cfa_offset 4
- 18523 0002 85B0     		sub	sp, sp, #20
- 18524              	.LCFI73:
- 18525              		.cfi_def_cfa_offset 24
- 18526 0004 00AF     		add	r7, sp, #0
- 18527              		.cfi_offset 7, -4
- 18528              	.LCFI74:
- 18529              		.cfi_def_cfa_register 7
- 18530 0006 7860     		str	r0, [r7, #4]
+ 19256              		.loc 1 667 0
+ 19257              		.cfi_startproc
+ 19258              		@ args = 0, pretend = 0, frame = 16
+ 19259              		@ frame_needed = 1, uses_anonymous_args = 0
+ 19260              		@ link register save eliminated.
+ 19261 0000 80B4     		push	{r7}
+ 19262              	.LCFI72:
+ 19263              		.cfi_def_cfa_offset 4
+ 19264 0002 85B0     		sub	sp, sp, #20
+ 19265              	.LCFI73:
+ 19266              		.cfi_def_cfa_offset 24
+ 19267 0004 00AF     		add	r7, sp, #0
+ 19268              		.cfi_offset 7, -4
+ 19269              	.LCFI74:
+ 19270              		.cfi_def_cfa_register 7
+ 19271 0006 7860     		str	r0, [r7, #4]
  668:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   FlagStatus bitstatus = RESET;
- 18531              		.loc 1 668 0
- 18532 0008 4FF00003 		mov	r3, #0
- 18533 000c FB73     		strb	r3, [r7, #15]
+ 19272              		.loc 1 668 0
+ 19273 0008 4FF00003 		mov	r3, #0
+ 19274 000c FB73     		strb	r3, [r7, #15]
  669:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  670:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  671:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_SDIO_FLAG(SDIO_FLAG));
  672:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  673:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   if ((SDIO->STA & SDIO_FLAG) != (uint32_t)RESET)
- 18534              		.loc 1 673 0
- 18535 000e 0A4B     		ldr	r3, .L78
- 18536 0010 5A6B     		ldr	r2, [r3, #52]
- 18537 0012 7B68     		ldr	r3, [r7, #4]
- 18538 0014 02EA0303 		and	r3, r2, r3
- 18539 0018 002B     		cmp	r3, #0
- 18540 001a 03D0     		beq	.L76
+ 19275              		.loc 1 673 0
+ 19276 000e 0A4B     		ldr	r3, .L78
+ 19277 0010 5A6B     		ldr	r2, [r3, #52]
+ 19278 0012 7B68     		ldr	r3, [r7, #4]
+ 19279 0014 02EA0303 		and	r3, r2, r3
+ 19280 0018 002B     		cmp	r3, #0
+ 19281 001a 03D0     		beq	.L76
  674:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   {
  675:../StdPeripheralDriver/src/stm32f10x_sdio.c ****     bitstatus = SET;
- 18541              		.loc 1 675 0
- 18542 001c 4FF00103 		mov	r3, #1
- 18543 0020 FB73     		strb	r3, [r7, #15]
- 18544 0022 02E0     		b	.L77
- 18545              	.L76:
+ 19282              		.loc 1 675 0
+ 19283 001c 4FF00103 		mov	r3, #1
+ 19284 0020 FB73     		strb	r3, [r7, #15]
+ 19285 0022 02E0     		b	.L77
+ 19286              	.L76:
  676:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   }
  677:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   else
  678:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   {
  679:../StdPeripheralDriver/src/stm32f10x_sdio.c ****     bitstatus = RESET;
- 18546              		.loc 1 679 0
- 18547 0024 4FF00003 		mov	r3, #0
- 18548 0028 FB73     		strb	r3, [r7, #15]
- 18549              	.L77:
+ 19287              		.loc 1 679 0
+ 19288 0024 4FF00003 		mov	r3, #0
+ 19289 0028 FB73     		strb	r3, [r7, #15]
+ 19290              	.L77:
  680:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   }
  681:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   return bitstatus;
- 18550              		.loc 1 681 0
- 18551 002a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 19291              		.loc 1 681 0
+ 19292 002a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  682:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 18552              		.loc 1 682 0
- 18553 002c 1846     		mov	r0, r3
- 18554 002e 07F11407 		add	r7, r7, #20
- 18555 0032 BD46     		mov	sp, r7
- 18556 0034 80BC     		pop	{r7}
- 18557 0036 7047     		bx	lr
- 18558              	.L79:
- 18559              		.align	2
- 18560              	.L78:
- 18561 0038 00800140 		.word	1073840128
- 18562              		.cfi_endproc
- 18563              	.LFE55:
- 18565              		.section	.text.SDIO_ClearFlag,"ax",%progbits
- 18566              		.align	2
- 18567              		.global	SDIO_ClearFlag
- 18568              		.thumb
- 18569              		.thumb_func
- 18571              	SDIO_ClearFlag:
- 18572              	.LFB56:
+ 19293              		.loc 1 682 0
+ 19294 002c 1846     		mov	r0, r3
+ 19295 002e 07F11407 		add	r7, r7, #20
+ 19296 0032 BD46     		mov	sp, r7
+ 19297 0034 80BC     		pop	{r7}
+ 19298 0036 7047     		bx	lr
+ 19299              	.L79:
+ 19300              		.align	2
+ 19301              	.L78:
+ 19302 0038 00800140 		.word	1073840128
+ 19303              		.cfi_endproc
+ 19304              	.LFE55:
+ 19306              		.section	.text.SDIO_ClearFlag,"ax",%progbits
+ 19307              		.align	2
+ 19308              		.global	SDIO_ClearFlag
+ 19309              		.thumb
+ 19310              		.thumb_func
+ 19312              	SDIO_ClearFlag:
+ 19313              	.LFB56:
  683:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  684:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  685:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Clears the SDIO's pending flags.
@@ -1986,49 +1986,49 @@
  703:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  704:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_ClearFlag(uint32_t SDIO_FLAG)
  705:../StdPeripheralDriver/src/stm32f10x_sdio.c **** { 
- 18573              		.loc 1 705 0
- 18574              		.cfi_startproc
- 18575              		@ args = 0, pretend = 0, frame = 8
- 18576              		@ frame_needed = 1, uses_anonymous_args = 0
- 18577              		@ link register save eliminated.
- 18578 0000 80B4     		push	{r7}
- 18579              	.LCFI75:
- 18580              		.cfi_def_cfa_offset 4
- 18581 0002 83B0     		sub	sp, sp, #12
- 18582              	.LCFI76:
- 18583              		.cfi_def_cfa_offset 16
- 18584 0004 00AF     		add	r7, sp, #0
- 18585              		.cfi_offset 7, -4
- 18586              	.LCFI77:
- 18587              		.cfi_def_cfa_register 7
- 18588 0006 7860     		str	r0, [r7, #4]
+ 19314              		.loc 1 705 0
+ 19315              		.cfi_startproc
+ 19316              		@ args = 0, pretend = 0, frame = 8
+ 19317              		@ frame_needed = 1, uses_anonymous_args = 0
+ 19318              		@ link register save eliminated.
+ 19319 0000 80B4     		push	{r7}
+ 19320              	.LCFI75:
+ 19321              		.cfi_def_cfa_offset 4
+ 19322 0002 83B0     		sub	sp, sp, #12
+ 19323              	.LCFI76:
+ 19324              		.cfi_def_cfa_offset 16
+ 19325 0004 00AF     		add	r7, sp, #0
+ 19326              		.cfi_offset 7, -4
+ 19327              	.LCFI77:
+ 19328              		.cfi_def_cfa_register 7
+ 19329 0006 7860     		str	r0, [r7, #4]
  706:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  707:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_SDIO_CLEAR_FLAG(SDIO_FLAG));
  708:../StdPeripheralDriver/src/stm32f10x_sdio.c ****    
  709:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->ICR = SDIO_FLAG;
- 18589              		.loc 1 709 0
- 18590 0008 034B     		ldr	r3, .L81
- 18591 000a 7A68     		ldr	r2, [r7, #4]
- 18592 000c 9A63     		str	r2, [r3, #56]
+ 19330              		.loc 1 709 0
+ 19331 0008 034B     		ldr	r3, .L81
+ 19332 000a 7A68     		ldr	r2, [r7, #4]
+ 19333 000c 9A63     		str	r2, [r3, #56]
  710:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 18593              		.loc 1 710 0
- 18594 000e 07F10C07 		add	r7, r7, #12
- 18595 0012 BD46     		mov	sp, r7
- 18596 0014 80BC     		pop	{r7}
- 18597 0016 7047     		bx	lr
- 18598              	.L82:
- 18599              		.align	2
- 18600              	.L81:
- 18601 0018 00800140 		.word	1073840128
- 18602              		.cfi_endproc
- 18603              	.LFE56:
- 18605              		.section	.text.SDIO_GetITStatus,"ax",%progbits
- 18606              		.align	2
- 18607              		.global	SDIO_GetITStatus
- 18608              		.thumb
- 18609              		.thumb_func
- 18611              	SDIO_GetITStatus:
- 18612              	.LFB57:
+ 19334              		.loc 1 710 0
+ 19335 000e 07F10C07 		add	r7, r7, #12
+ 19336 0012 BD46     		mov	sp, r7
+ 19337 0014 80BC     		pop	{r7}
+ 19338 0016 7047     		bx	lr
+ 19339              	.L82:
+ 19340              		.align	2
+ 19341              	.L81:
+ 19342 0018 00800140 		.word	1073840128
+ 19343              		.cfi_endproc
+ 19344              	.LFE56:
+ 19346              		.section	.text.SDIO_GetITStatus,"ax",%progbits
+ 19347              		.align	2
+ 19348              		.global	SDIO_GetITStatus
+ 19349              		.thumb
+ 19350              		.thumb_func
+ 19352              	SDIO_GetITStatus:
+ 19353              	.LFB57:
  711:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  712:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  713:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Checks whether the specified SDIO interrupt has occurred or not.
@@ -2063,76 +2063,76 @@
  742:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  743:../StdPeripheralDriver/src/stm32f10x_sdio.c **** ITStatus SDIO_GetITStatus(uint32_t SDIO_IT)
  744:../StdPeripheralDriver/src/stm32f10x_sdio.c **** { 
- 18613              		.loc 1 744 0
- 18614              		.cfi_startproc
- 18615              		@ args = 0, pretend = 0, frame = 16
- 18616              		@ frame_needed = 1, uses_anonymous_args = 0
- 18617              		@ link register save eliminated.
- 18618 0000 80B4     		push	{r7}
- 18619              	.LCFI78:
- 18620              		.cfi_def_cfa_offset 4
- 18621 0002 85B0     		sub	sp, sp, #20
- 18622              	.LCFI79:
- 18623              		.cfi_def_cfa_offset 24
- 18624 0004 00AF     		add	r7, sp, #0
- 18625              		.cfi_offset 7, -4
- 18626              	.LCFI80:
- 18627              		.cfi_def_cfa_register 7
- 18628 0006 7860     		str	r0, [r7, #4]
+ 19354              		.loc 1 744 0
+ 19355              		.cfi_startproc
+ 19356              		@ args = 0, pretend = 0, frame = 16
+ 19357              		@ frame_needed = 1, uses_anonymous_args = 0
+ 19358              		@ link register save eliminated.
+ 19359 0000 80B4     		push	{r7}
+ 19360              	.LCFI78:
+ 19361              		.cfi_def_cfa_offset 4
+ 19362 0002 85B0     		sub	sp, sp, #20
+ 19363              	.LCFI79:
+ 19364              		.cfi_def_cfa_offset 24
+ 19365 0004 00AF     		add	r7, sp, #0
+ 19366              		.cfi_offset 7, -4
+ 19367              	.LCFI80:
+ 19368              		.cfi_def_cfa_register 7
+ 19369 0006 7860     		str	r0, [r7, #4]
  745:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   ITStatus bitstatus = RESET;
- 18629              		.loc 1 745 0
- 18630 0008 4FF00003 		mov	r3, #0
- 18631 000c FB73     		strb	r3, [r7, #15]
+ 19370              		.loc 1 745 0
+ 19371 0008 4FF00003 		mov	r3, #0
+ 19372 000c FB73     		strb	r3, [r7, #15]
  746:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   
  747:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  748:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_SDIO_GET_IT(SDIO_IT));
  749:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   if ((SDIO->STA & SDIO_IT) != (uint32_t)RESET)  
- 18632              		.loc 1 749 0
- 18633 000e 0A4B     		ldr	r3, .L86
- 18634 0010 5A6B     		ldr	r2, [r3, #52]
- 18635 0012 7B68     		ldr	r3, [r7, #4]
- 18636 0014 02EA0303 		and	r3, r2, r3
- 18637 0018 002B     		cmp	r3, #0
- 18638 001a 03D0     		beq	.L84
+ 19373              		.loc 1 749 0
+ 19374 000e 0A4B     		ldr	r3, .L86
+ 19375 0010 5A6B     		ldr	r2, [r3, #52]
+ 19376 0012 7B68     		ldr	r3, [r7, #4]
+ 19377 0014 02EA0303 		and	r3, r2, r3
+ 19378 0018 002B     		cmp	r3, #0
+ 19379 001a 03D0     		beq	.L84
  750:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   {
  751:../StdPeripheralDriver/src/stm32f10x_sdio.c ****     bitstatus = SET;
- 18639              		.loc 1 751 0
- 18640 001c 4FF00103 		mov	r3, #1
- 18641 0020 FB73     		strb	r3, [r7, #15]
- 18642 0022 02E0     		b	.L85
- 18643              	.L84:
+ 19380              		.loc 1 751 0
+ 19381 001c 4FF00103 		mov	r3, #1
+ 19382 0020 FB73     		strb	r3, [r7, #15]
+ 19383 0022 02E0     		b	.L85
+ 19384              	.L84:
  752:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   }
  753:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   else
  754:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   {
  755:../StdPeripheralDriver/src/stm32f10x_sdio.c ****     bitstatus = RESET;
- 18644              		.loc 1 755 0
- 18645 0024 4FF00003 		mov	r3, #0
- 18646 0028 FB73     		strb	r3, [r7, #15]
- 18647              	.L85:
+ 19385              		.loc 1 755 0
+ 19386 0024 4FF00003 		mov	r3, #0
+ 19387 0028 FB73     		strb	r3, [r7, #15]
+ 19388              	.L85:
  756:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   }
  757:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   return bitstatus;
- 18648              		.loc 1 757 0
- 18649 002a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 19389              		.loc 1 757 0
+ 19390 002a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  758:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 18650              		.loc 1 758 0
- 18651 002c 1846     		mov	r0, r3
- 18652 002e 07F11407 		add	r7, r7, #20
- 18653 0032 BD46     		mov	sp, r7
- 18654 0034 80BC     		pop	{r7}
- 18655 0036 7047     		bx	lr
- 18656              	.L87:
- 18657              		.align	2
- 18658              	.L86:
- 18659 0038 00800140 		.word	1073840128
- 18660              		.cfi_endproc
- 18661              	.LFE57:
- 18663              		.section	.text.SDIO_ClearITPendingBit,"ax",%progbits
- 18664              		.align	2
- 18665              		.global	SDIO_ClearITPendingBit
- 18666              		.thumb
- 18667              		.thumb_func
- 18669              	SDIO_ClearITPendingBit:
- 18670              	.LFB58:
+ 19391              		.loc 1 758 0
+ 19392 002c 1846     		mov	r0, r3
+ 19393 002e 07F11407 		add	r7, r7, #20
+ 19394 0032 BD46     		mov	sp, r7
+ 19395 0034 80BC     		pop	{r7}
+ 19396 0036 7047     		bx	lr
+ 19397              	.L87:
+ 19398              		.align	2
+ 19399              	.L86:
+ 19400 0038 00800140 		.word	1073840128
+ 19401              		.cfi_endproc
+ 19402              	.LFE57:
+ 19404              		.section	.text.SDIO_ClearITPendingBit,"ax",%progbits
+ 19405              		.align	2
+ 19406              		.global	SDIO_ClearITPendingBit
+ 19407              		.thumb
+ 19408              		.thumb_func
+ 19410              	SDIO_ClearITPendingBit:
+ 19411              	.LFB58:
  759:../StdPeripheralDriver/src/stm32f10x_sdio.c **** 
  760:../StdPeripheralDriver/src/stm32f10x_sdio.c **** /**
  761:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   * @brief  Clears the SDIO's interrupt pending bits.
@@ -2155,133 +2155,133 @@
  778:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   */
  779:../StdPeripheralDriver/src/stm32f10x_sdio.c **** void SDIO_ClearITPendingBit(uint32_t SDIO_IT)
  780:../StdPeripheralDriver/src/stm32f10x_sdio.c **** { 
- 18671              		.loc 1 780 0
- 18672              		.cfi_startproc
- 18673              		@ args = 0, pretend = 0, frame = 8
- 18674              		@ frame_needed = 1, uses_anonymous_args = 0
- 18675              		@ link register save eliminated.
- 18676 0000 80B4     		push	{r7}
- 18677              	.LCFI81:
- 18678              		.cfi_def_cfa_offset 4
- 18679 0002 83B0     		sub	sp, sp, #12
- 18680              	.LCFI82:
- 18681              		.cfi_def_cfa_offset 16
- 18682 0004 00AF     		add	r7, sp, #0
- 18683              		.cfi_offset 7, -4
- 18684              	.LCFI83:
- 18685              		.cfi_def_cfa_register 7
- 18686 0006 7860     		str	r0, [r7, #4]
+ 19412              		.loc 1 780 0
+ 19413              		.cfi_startproc
+ 19414              		@ args = 0, pretend = 0, frame = 8
+ 19415              		@ frame_needed = 1, uses_anonymous_args = 0
+ 19416              		@ link register save eliminated.
+ 19417 0000 80B4     		push	{r7}
+ 19418              	.LCFI81:
+ 19419              		.cfi_def_cfa_offset 4
+ 19420 0002 83B0     		sub	sp, sp, #12
+ 19421              	.LCFI82:
+ 19422              		.cfi_def_cfa_offset 16
+ 19423 0004 00AF     		add	r7, sp, #0
+ 19424              		.cfi_offset 7, -4
+ 19425              	.LCFI83:
+ 19426              		.cfi_def_cfa_register 7
+ 19427 0006 7860     		str	r0, [r7, #4]
  781:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   /* Check the parameters */
  782:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   assert_param(IS_SDIO_CLEAR_IT(SDIO_IT));
  783:../StdPeripheralDriver/src/stm32f10x_sdio.c ****    
  784:../StdPeripheralDriver/src/stm32f10x_sdio.c ****   SDIO->ICR = SDIO_IT;
- 18687              		.loc 1 784 0
- 18688 0008 034B     		ldr	r3, .L89
- 18689 000a 7A68     		ldr	r2, [r7, #4]
- 18690 000c 9A63     		str	r2, [r3, #56]
+ 19428              		.loc 1 784 0
+ 19429 0008 034B     		ldr	r3, .L89
+ 19430 000a 7A68     		ldr	r2, [r7, #4]
+ 19431 000c 9A63     		str	r2, [r3, #56]
  785:../StdPeripheralDriver/src/stm32f10x_sdio.c **** }
- 18691              		.loc 1 785 0
- 18692 000e 07F10C07 		add	r7, r7, #12
- 18693 0012 BD46     		mov	sp, r7
- 18694 0014 80BC     		pop	{r7}
- 18695 0016 7047     		bx	lr
- 18696              	.L90:
- 18697              		.align	2
- 18698              	.L89:
- 18699 0018 00800140 		.word	1073840128
- 18700              		.cfi_endproc
- 18701              	.LFE58:
- 18703              		.text
- 18704              	.Letext0:
+ 19432              		.loc 1 785 0
+ 19433 000e 07F10C07 		add	r7, r7, #12
+ 19434 0012 BD46     		mov	sp, r7
+ 19435 0014 80BC     		pop	{r7}
+ 19436 0016 7047     		bx	lr
+ 19437              	.L90:
+ 19438              		.align	2
+ 19439              	.L89:
+ 19440 0018 00800140 		.word	1073840128
+ 19441              		.cfi_endproc
+ 19442              	.LFE58:
+ 19444              		.text
+ 19445              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f10x_sdio.c
-     /tmp/cchEymJw.s:17255  .text.SDIO_DeInit:00000000 $t
-     /tmp/cchEymJw.s:17260  .text.SDIO_DeInit:00000000 SDIO_DeInit
-     /tmp/cchEymJw.s:17317  .text.SDIO_DeInit:00000050 $d
-     /tmp/cchEymJw.s:17323  .text.SDIO_Init:00000000 $t
-     /tmp/cchEymJw.s:17328  .text.SDIO_Init:00000000 SDIO_Init
-     /tmp/cchEymJw.s:17399  .text.SDIO_Init:00000060 $d
-     /tmp/cchEymJw.s:17404  .text.SDIO_StructInit:00000000 $t
-     /tmp/cchEymJw.s:17409  .text.SDIO_StructInit:00000000 SDIO_StructInit
-     /tmp/cchEymJw.s:17460  .text.SDIO_ClockCmd:00000000 $t
-     /tmp/cchEymJw.s:17465  .text.SDIO_ClockCmd:00000000 SDIO_ClockCmd
-     /tmp/cchEymJw.s:17496  .text.SDIO_ClockCmd:0000001c $d
-     /tmp/cchEymJw.s:17501  .text.SDIO_SetPowerState:00000000 $t
-     /tmp/cchEymJw.s:17506  .text.SDIO_SetPowerState:00000000 SDIO_SetPowerState
-     /tmp/cchEymJw.s:17545  .text.SDIO_SetPowerState:0000002c $d
-     /tmp/cchEymJw.s:17550  .text.SDIO_GetPowerState:00000000 $t
-     /tmp/cchEymJw.s:17555  .text.SDIO_GetPowerState:00000000 SDIO_GetPowerState
-     /tmp/cchEymJw.s:17581  .text.SDIO_GetPowerState:00000014 $d
-     /tmp/cchEymJw.s:17586  .text.SDIO_ITConfig:00000000 $t
-     /tmp/cchEymJw.s:17591  .text.SDIO_ITConfig:00000000 SDIO_ITConfig
-     /tmp/cchEymJw.s:17641  .text.SDIO_ITConfig:00000040 $d
-     /tmp/cchEymJw.s:17646  .text.SDIO_DMACmd:00000000 $t
-     /tmp/cchEymJw.s:17651  .text.SDIO_DMACmd:00000000 SDIO_DMACmd
-     /tmp/cchEymJw.s:17682  .text.SDIO_DMACmd:0000001c $d
-     /tmp/cchEymJw.s:17687  .text.SDIO_SendCommand:00000000 $t
-     /tmp/cchEymJw.s:17692  .text.SDIO_SendCommand:00000000 SDIO_SendCommand
-     /tmp/cchEymJw.s:17756  .text.SDIO_SendCommand:00000058 $d
-     /tmp/cchEymJw.s:17761  .text.SDIO_CmdStructInit:00000000 $t
-     /tmp/cchEymJw.s:17766  .text.SDIO_CmdStructInit:00000000 SDIO_CmdStructInit
-     /tmp/cchEymJw.s:17813  .text.SDIO_GetCommandResponse:00000000 $t
-     /tmp/cchEymJw.s:17818  .text.SDIO_GetCommandResponse:00000000 SDIO_GetCommandResponse
-     /tmp/cchEymJw.s:17844  .text.SDIO_GetCommandResponse:00000014 $d
-     /tmp/cchEymJw.s:17849  .text.SDIO_GetResponse:00000000 $t
-     /tmp/cchEymJw.s:17854  .text.SDIO_GetResponse:00000000 SDIO_GetResponse
-     /tmp/cchEymJw.s:17892  .text.SDIO_GetResponse:00000028 $d
-     /tmp/cchEymJw.s:17897  .text.SDIO_DataConfig:00000000 $t
-     /tmp/cchEymJw.s:17902  .text.SDIO_DataConfig:00000000 SDIO_DataConfig
-     /tmp/cchEymJw.s:17970  .text.SDIO_DataConfig:0000005c $d
-     /tmp/cchEymJw.s:17975  .text.SDIO_DataStructInit:00000000 $t
-     /tmp/cchEymJw.s:17980  .text.SDIO_DataStructInit:00000000 SDIO_DataStructInit
-     /tmp/cchEymJw.s:18031  .text.SDIO_GetDataCounter:00000000 $t
-     /tmp/cchEymJw.s:18036  .text.SDIO_GetDataCounter:00000000 SDIO_GetDataCounter
-     /tmp/cchEymJw.s:18061  .text.SDIO_GetDataCounter:00000010 $d
-     /tmp/cchEymJw.s:18066  .text.SDIO_ReadData:00000000 $t
-     /tmp/cchEymJw.s:18071  .text.SDIO_ReadData:00000000 SDIO_ReadData
-     /tmp/cchEymJw.s:18096  .text.SDIO_ReadData:00000014 $d
-     /tmp/cchEymJw.s:18101  .text.SDIO_WriteData:00000000 $t
-     /tmp/cchEymJw.s:18106  .text.SDIO_WriteData:00000000 SDIO_WriteData
-     /tmp/cchEymJw.s:18136  .text.SDIO_WriteData:0000001c $d
-     /tmp/cchEymJw.s:18141  .text.SDIO_GetFIFOCount:00000000 $t
-     /tmp/cchEymJw.s:18146  .text.SDIO_GetFIFOCount:00000000 SDIO_GetFIFOCount
-     /tmp/cchEymJw.s:18171  .text.SDIO_GetFIFOCount:00000010 $d
-     /tmp/cchEymJw.s:18176  .text.SDIO_StartSDIOReadWait:00000000 $t
-     /tmp/cchEymJw.s:18181  .text.SDIO_StartSDIOReadWait:00000000 SDIO_StartSDIOReadWait
-     /tmp/cchEymJw.s:18212  .text.SDIO_StartSDIOReadWait:0000001c $d
-     /tmp/cchEymJw.s:18217  .text.SDIO_StopSDIOReadWait:00000000 $t
-     /tmp/cchEymJw.s:18222  .text.SDIO_StopSDIOReadWait:00000000 SDIO_StopSDIOReadWait
-     /tmp/cchEymJw.s:18253  .text.SDIO_StopSDIOReadWait:0000001c $d
-     /tmp/cchEymJw.s:18258  .text.SDIO_SetSDIOReadWaitMode:00000000 $t
-     /tmp/cchEymJw.s:18263  .text.SDIO_SetSDIOReadWaitMode:00000000 SDIO_SetSDIOReadWaitMode
-     /tmp/cchEymJw.s:18293  .text.SDIO_SetSDIOReadWaitMode:00000018 $d
-     /tmp/cchEymJw.s:18298  .text.SDIO_SetSDIOOperation:00000000 $t
-     /tmp/cchEymJw.s:18303  .text.SDIO_SetSDIOOperation:00000000 SDIO_SetSDIOOperation
-     /tmp/cchEymJw.s:18334  .text.SDIO_SetSDIOOperation:0000001c $d
-     /tmp/cchEymJw.s:18339  .text.SDIO_SendSDIOSuspendCmd:00000000 $t
-     /tmp/cchEymJw.s:18344  .text.SDIO_SendSDIOSuspendCmd:00000000 SDIO_SendSDIOSuspendCmd
-     /tmp/cchEymJw.s:18375  .text.SDIO_SendSDIOSuspendCmd:0000001c $d
-     /tmp/cchEymJw.s:18380  .text.SDIO_CommandCompletionCmd:00000000 $t
-     /tmp/cchEymJw.s:18385  .text.SDIO_CommandCompletionCmd:00000000 SDIO_CommandCompletionCmd
-     /tmp/cchEymJw.s:18416  .text.SDIO_CommandCompletionCmd:0000001c $d
-     /tmp/cchEymJw.s:18421  .text.SDIO_CEATAITCmd:00000000 $t
-     /tmp/cchEymJw.s:18426  .text.SDIO_CEATAITCmd:00000000 SDIO_CEATAITCmd
-     /tmp/cchEymJw.s:18462  .text.SDIO_CEATAITCmd:00000028 $d
-     /tmp/cchEymJw.s:18467  .text.SDIO_SendCEATACmd:00000000 $t
-     /tmp/cchEymJw.s:18472  .text.SDIO_SendCEATACmd:00000000 SDIO_SendCEATACmd
-     /tmp/cchEymJw.s:18503  .text.SDIO_SendCEATACmd:0000001c $d
-     /tmp/cchEymJw.s:18508  .text.SDIO_GetFlagStatus:00000000 $t
-     /tmp/cchEymJw.s:18513  .text.SDIO_GetFlagStatus:00000000 SDIO_GetFlagStatus
-     /tmp/cchEymJw.s:18561  .text.SDIO_GetFlagStatus:00000038 $d
-     /tmp/cchEymJw.s:18566  .text.SDIO_ClearFlag:00000000 $t
-     /tmp/cchEymJw.s:18571  .text.SDIO_ClearFlag:00000000 SDIO_ClearFlag
-     /tmp/cchEymJw.s:18601  .text.SDIO_ClearFlag:00000018 $d
-     /tmp/cchEymJw.s:18606  .text.SDIO_GetITStatus:00000000 $t
-     /tmp/cchEymJw.s:18611  .text.SDIO_GetITStatus:00000000 SDIO_GetITStatus
-     /tmp/cchEymJw.s:18659  .text.SDIO_GetITStatus:00000038 $d
-     /tmp/cchEymJw.s:18664  .text.SDIO_ClearITPendingBit:00000000 $t
-     /tmp/cchEymJw.s:18669  .text.SDIO_ClearITPendingBit:00000000 SDIO_ClearITPendingBit
-     /tmp/cchEymJw.s:18699  .text.SDIO_ClearITPendingBit:00000018 $d
+     /tmp/ccdUN4il.s:17996  .text.SDIO_DeInit:00000000 $t
+     /tmp/ccdUN4il.s:18001  .text.SDIO_DeInit:00000000 SDIO_DeInit
+     /tmp/ccdUN4il.s:18058  .text.SDIO_DeInit:00000050 $d
+     /tmp/ccdUN4il.s:18064  .text.SDIO_Init:00000000 $t
+     /tmp/ccdUN4il.s:18069  .text.SDIO_Init:00000000 SDIO_Init
+     /tmp/ccdUN4il.s:18140  .text.SDIO_Init:00000060 $d
+     /tmp/ccdUN4il.s:18145  .text.SDIO_StructInit:00000000 $t
+     /tmp/ccdUN4il.s:18150  .text.SDIO_StructInit:00000000 SDIO_StructInit
+     /tmp/ccdUN4il.s:18201  .text.SDIO_ClockCmd:00000000 $t
+     /tmp/ccdUN4il.s:18206  .text.SDIO_ClockCmd:00000000 SDIO_ClockCmd
+     /tmp/ccdUN4il.s:18237  .text.SDIO_ClockCmd:0000001c $d
+     /tmp/ccdUN4il.s:18242  .text.SDIO_SetPowerState:00000000 $t
+     /tmp/ccdUN4il.s:18247  .text.SDIO_SetPowerState:00000000 SDIO_SetPowerState
+     /tmp/ccdUN4il.s:18286  .text.SDIO_SetPowerState:0000002c $d
+     /tmp/ccdUN4il.s:18291  .text.SDIO_GetPowerState:00000000 $t
+     /tmp/ccdUN4il.s:18296  .text.SDIO_GetPowerState:00000000 SDIO_GetPowerState
+     /tmp/ccdUN4il.s:18322  .text.SDIO_GetPowerState:00000014 $d
+     /tmp/ccdUN4il.s:18327  .text.SDIO_ITConfig:00000000 $t
+     /tmp/ccdUN4il.s:18332  .text.SDIO_ITConfig:00000000 SDIO_ITConfig
+     /tmp/ccdUN4il.s:18382  .text.SDIO_ITConfig:00000040 $d
+     /tmp/ccdUN4il.s:18387  .text.SDIO_DMACmd:00000000 $t
+     /tmp/ccdUN4il.s:18392  .text.SDIO_DMACmd:00000000 SDIO_DMACmd
+     /tmp/ccdUN4il.s:18423  .text.SDIO_DMACmd:0000001c $d
+     /tmp/ccdUN4il.s:18428  .text.SDIO_SendCommand:00000000 $t
+     /tmp/ccdUN4il.s:18433  .text.SDIO_SendCommand:00000000 SDIO_SendCommand
+     /tmp/ccdUN4il.s:18497  .text.SDIO_SendCommand:00000058 $d
+     /tmp/ccdUN4il.s:18502  .text.SDIO_CmdStructInit:00000000 $t
+     /tmp/ccdUN4il.s:18507  .text.SDIO_CmdStructInit:00000000 SDIO_CmdStructInit
+     /tmp/ccdUN4il.s:18554  .text.SDIO_GetCommandResponse:00000000 $t
+     /tmp/ccdUN4il.s:18559  .text.SDIO_GetCommandResponse:00000000 SDIO_GetCommandResponse
+     /tmp/ccdUN4il.s:18585  .text.SDIO_GetCommandResponse:00000014 $d
+     /tmp/ccdUN4il.s:18590  .text.SDIO_GetResponse:00000000 $t
+     /tmp/ccdUN4il.s:18595  .text.SDIO_GetResponse:00000000 SDIO_GetResponse
+     /tmp/ccdUN4il.s:18633  .text.SDIO_GetResponse:00000028 $d
+     /tmp/ccdUN4il.s:18638  .text.SDIO_DataConfig:00000000 $t
+     /tmp/ccdUN4il.s:18643  .text.SDIO_DataConfig:00000000 SDIO_DataConfig
+     /tmp/ccdUN4il.s:18711  .text.SDIO_DataConfig:0000005c $d
+     /tmp/ccdUN4il.s:18716  .text.SDIO_DataStructInit:00000000 $t
+     /tmp/ccdUN4il.s:18721  .text.SDIO_DataStructInit:00000000 SDIO_DataStructInit
+     /tmp/ccdUN4il.s:18772  .text.SDIO_GetDataCounter:00000000 $t
+     /tmp/ccdUN4il.s:18777  .text.SDIO_GetDataCounter:00000000 SDIO_GetDataCounter
+     /tmp/ccdUN4il.s:18802  .text.SDIO_GetDataCounter:00000010 $d
+     /tmp/ccdUN4il.s:18807  .text.SDIO_ReadData:00000000 $t
+     /tmp/ccdUN4il.s:18812  .text.SDIO_ReadData:00000000 SDIO_ReadData
+     /tmp/ccdUN4il.s:18837  .text.SDIO_ReadData:00000014 $d
+     /tmp/ccdUN4il.s:18842  .text.SDIO_WriteData:00000000 $t
+     /tmp/ccdUN4il.s:18847  .text.SDIO_WriteData:00000000 SDIO_WriteData
+     /tmp/ccdUN4il.s:18877  .text.SDIO_WriteData:0000001c $d
+     /tmp/ccdUN4il.s:18882  .text.SDIO_GetFIFOCount:00000000 $t
+     /tmp/ccdUN4il.s:18887  .text.SDIO_GetFIFOCount:00000000 SDIO_GetFIFOCount
+     /tmp/ccdUN4il.s:18912  .text.SDIO_GetFIFOCount:00000010 $d
+     /tmp/ccdUN4il.s:18917  .text.SDIO_StartSDIOReadWait:00000000 $t
+     /tmp/ccdUN4il.s:18922  .text.SDIO_StartSDIOReadWait:00000000 SDIO_StartSDIOReadWait
+     /tmp/ccdUN4il.s:18953  .text.SDIO_StartSDIOReadWait:0000001c $d
+     /tmp/ccdUN4il.s:18958  .text.SDIO_StopSDIOReadWait:00000000 $t
+     /tmp/ccdUN4il.s:18963  .text.SDIO_StopSDIOReadWait:00000000 SDIO_StopSDIOReadWait
+     /tmp/ccdUN4il.s:18994  .text.SDIO_StopSDIOReadWait:0000001c $d
+     /tmp/ccdUN4il.s:18999  .text.SDIO_SetSDIOReadWaitMode:00000000 $t
+     /tmp/ccdUN4il.s:19004  .text.SDIO_SetSDIOReadWaitMode:00000000 SDIO_SetSDIOReadWaitMode
+     /tmp/ccdUN4il.s:19034  .text.SDIO_SetSDIOReadWaitMode:00000018 $d
+     /tmp/ccdUN4il.s:19039  .text.SDIO_SetSDIOOperation:00000000 $t
+     /tmp/ccdUN4il.s:19044  .text.SDIO_SetSDIOOperation:00000000 SDIO_SetSDIOOperation
+     /tmp/ccdUN4il.s:19075  .text.SDIO_SetSDIOOperation:0000001c $d
+     /tmp/ccdUN4il.s:19080  .text.SDIO_SendSDIOSuspendCmd:00000000 $t
+     /tmp/ccdUN4il.s:19085  .text.SDIO_SendSDIOSuspendCmd:00000000 SDIO_SendSDIOSuspendCmd
+     /tmp/ccdUN4il.s:19116  .text.SDIO_SendSDIOSuspendCmd:0000001c $d
+     /tmp/ccdUN4il.s:19121  .text.SDIO_CommandCompletionCmd:00000000 $t
+     /tmp/ccdUN4il.s:19126  .text.SDIO_CommandCompletionCmd:00000000 SDIO_CommandCompletionCmd
+     /tmp/ccdUN4il.s:19157  .text.SDIO_CommandCompletionCmd:0000001c $d
+     /tmp/ccdUN4il.s:19162  .text.SDIO_CEATAITCmd:00000000 $t
+     /tmp/ccdUN4il.s:19167  .text.SDIO_CEATAITCmd:00000000 SDIO_CEATAITCmd
+     /tmp/ccdUN4il.s:19203  .text.SDIO_CEATAITCmd:00000028 $d
+     /tmp/ccdUN4il.s:19208  .text.SDIO_SendCEATACmd:00000000 $t
+     /tmp/ccdUN4il.s:19213  .text.SDIO_SendCEATACmd:00000000 SDIO_SendCEATACmd
+     /tmp/ccdUN4il.s:19244  .text.SDIO_SendCEATACmd:0000001c $d
+     /tmp/ccdUN4il.s:19249  .text.SDIO_GetFlagStatus:00000000 $t
+     /tmp/ccdUN4il.s:19254  .text.SDIO_GetFlagStatus:00000000 SDIO_GetFlagStatus
+     /tmp/ccdUN4il.s:19302  .text.SDIO_GetFlagStatus:00000038 $d
+     /tmp/ccdUN4il.s:19307  .text.SDIO_ClearFlag:00000000 $t
+     /tmp/ccdUN4il.s:19312  .text.SDIO_ClearFlag:00000000 SDIO_ClearFlag
+     /tmp/ccdUN4il.s:19342  .text.SDIO_ClearFlag:00000018 $d
+     /tmp/ccdUN4il.s:19347  .text.SDIO_GetITStatus:00000000 $t
+     /tmp/ccdUN4il.s:19352  .text.SDIO_GetITStatus:00000000 SDIO_GetITStatus
+     /tmp/ccdUN4il.s:19400  .text.SDIO_GetITStatus:00000038 $d
+     /tmp/ccdUN4il.s:19405  .text.SDIO_ClearITPendingBit:00000000 $t
+     /tmp/ccdUN4il.s:19410  .text.SDIO_ClearITPendingBit:00000000 SDIO_ClearITPendingBit
+     /tmp/ccdUN4il.s:19440  .text.SDIO_ClearITPendingBit:00000018 $d
                      .debug_frame:00000010 $d
 
 NO UNDEFINED SYMBOLS

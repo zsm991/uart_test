@@ -13,11 +13,11 @@
   13              		.file	"stm32f10x_pwr.c"
   23              	.Ltext0:
   24              		.file 1 "../StdPeripheralDriver/src/stm32f10x_pwr.c"
- 16842              		.align	2
- 16843              		.thumb
- 16844              		.thumb_func
- 16846              	__WFI:
- 16847              	.LFB5:
+ 17583              		.align	2
+ 17584              		.thumb
+ 17585              		.thumb_func
+ 17587              	__WFI:
+ 17588              	.LFB5:
    1:/home/serg/arm/workspace/uart_test/CMSIS/core_cm3.h **** /**************************************************************************//**
    2:/home/serg/arm/workspace/uart_test/CMSIS/core_cm3.h ****  * @file     core_cm3.h
    3:/home/serg/arm/workspace/uart_test/CMSIS/core_cm3.h ****  * @brief    CMSIS Cortex-M3 Core Peripheral Access Layer Header File
@@ -1229,64 +1229,64 @@
 1209:/home/serg/arm/workspace/uart_test/CMSIS/core_cm3.h **** 
 1210:/home/serg/arm/workspace/uart_test/CMSIS/core_cm3.h **** static __INLINE void __NOP()                      { __ASM volatile ("nop"); }
 1211:/home/serg/arm/workspace/uart_test/CMSIS/core_cm3.h **** static __INLINE void __WFI()                      { __ASM volatile ("wfi"); }
- 16848              		.loc 4 1211 0
- 16849              		.cfi_startproc
- 16850              		@ args = 0, pretend = 0, frame = 0
- 16851              		@ frame_needed = 1, uses_anonymous_args = 0
- 16852              		@ link register save eliminated.
- 16853 0000 80B4     		push	{r7}
- 16854              	.LCFI0:
- 16855              		.cfi_def_cfa_offset 4
- 16856 0002 00AF     		add	r7, sp, #0
- 16857              		.cfi_offset 7, -4
- 16858              	.LCFI1:
- 16859              		.cfi_def_cfa_register 7
- 16860              		.loc 4 1211 0
- 16861              	@ 1211 "/home/serg/arm/workspace/uart_test/CMSIS/core_cm3.h" 1
- 16862 0004 30BF     		wfi
- 16863              	@ 0 "" 2
- 16864              		.thumb
- 16865 0006 BD46     		mov	sp, r7
- 16866 0008 80BC     		pop	{r7}
- 16867 000a 7047     		bx	lr
- 16868              		.cfi_endproc
- 16869              	.LFE5:
- 16871              		.section	.text.__WFE,"ax",%progbits
- 16872              		.align	2
- 16873              		.thumb
- 16874              		.thumb_func
- 16876              	__WFE:
- 16877              	.LFB6:
+ 17589              		.loc 4 1211 0
+ 17590              		.cfi_startproc
+ 17591              		@ args = 0, pretend = 0, frame = 0
+ 17592              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17593              		@ link register save eliminated.
+ 17594 0000 80B4     		push	{r7}
+ 17595              	.LCFI0:
+ 17596              		.cfi_def_cfa_offset 4
+ 17597 0002 00AF     		add	r7, sp, #0
+ 17598              		.cfi_offset 7, -4
+ 17599              	.LCFI1:
+ 17600              		.cfi_def_cfa_register 7
+ 17601              		.loc 4 1211 0
+ 17602              	@ 1211 "/home/serg/arm/workspace/uart_test/CMSIS/core_cm3.h" 1
+ 17603 0004 30BF     		wfi
+ 17604              	@ 0 "" 2
+ 17605              		.thumb
+ 17606 0006 BD46     		mov	sp, r7
+ 17607 0008 80BC     		pop	{r7}
+ 17608 000a 7047     		bx	lr
+ 17609              		.cfi_endproc
+ 17610              	.LFE5:
+ 17612              		.section	.text.__WFE,"ax",%progbits
+ 17613              		.align	2
+ 17614              		.thumb
+ 17615              		.thumb_func
+ 17617              	__WFE:
+ 17618              	.LFB6:
 1212:/home/serg/arm/workspace/uart_test/CMSIS/core_cm3.h **** static __INLINE void __WFE()                      { __ASM volatile ("wfe"); }
- 16878              		.loc 4 1212 0
- 16879              		.cfi_startproc
- 16880              		@ args = 0, pretend = 0, frame = 0
- 16881              		@ frame_needed = 1, uses_anonymous_args = 0
- 16882              		@ link register save eliminated.
- 16883 0000 80B4     		push	{r7}
- 16884              	.LCFI2:
- 16885              		.cfi_def_cfa_offset 4
- 16886 0002 00AF     		add	r7, sp, #0
- 16887              		.cfi_offset 7, -4
- 16888              	.LCFI3:
- 16889              		.cfi_def_cfa_register 7
- 16890              		.loc 4 1212 0
- 16891              	@ 1212 "/home/serg/arm/workspace/uart_test/CMSIS/core_cm3.h" 1
- 16892 0004 20BF     		wfe
- 16893              	@ 0 "" 2
- 16894              		.thumb
- 16895 0006 BD46     		mov	sp, r7
- 16896 0008 80BC     		pop	{r7}
- 16897 000a 7047     		bx	lr
- 16898              		.cfi_endproc
- 16899              	.LFE6:
- 16901              		.section	.text.PWR_DeInit,"ax",%progbits
- 16902              		.align	2
- 16903              		.global	PWR_DeInit
- 16904              		.thumb
- 16905              		.thumb_func
- 16907              	PWR_DeInit:
- 16908              	.LFB29:
+ 17619              		.loc 4 1212 0
+ 17620              		.cfi_startproc
+ 17621              		@ args = 0, pretend = 0, frame = 0
+ 17622              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17623              		@ link register save eliminated.
+ 17624 0000 80B4     		push	{r7}
+ 17625              	.LCFI2:
+ 17626              		.cfi_def_cfa_offset 4
+ 17627 0002 00AF     		add	r7, sp, #0
+ 17628              		.cfi_offset 7, -4
+ 17629              	.LCFI3:
+ 17630              		.cfi_def_cfa_register 7
+ 17631              		.loc 4 1212 0
+ 17632              	@ 1212 "/home/serg/arm/workspace/uart_test/CMSIS/core_cm3.h" 1
+ 17633 0004 20BF     		wfe
+ 17634              	@ 0 "" 2
+ 17635              		.thumb
+ 17636 0006 BD46     		mov	sp, r7
+ 17637 0008 80BC     		pop	{r7}
+ 17638 000a 7047     		bx	lr
+ 17639              		.cfi_endproc
+ 17640              	.LFE6:
+ 17642              		.section	.text.PWR_DeInit,"ax",%progbits
+ 17643              		.align	2
+ 17644              		.global	PWR_DeInit
+ 17645              		.thumb
+ 17646              		.thumb_func
+ 17648              	PWR_DeInit:
+ 17649              	.LFB29:
    1:../StdPeripheralDriver/src/stm32f10x_pwr.c **** /**
    2:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   ******************************************************************************
    3:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   * @file    stm32f10x_pwr.c
@@ -1400,40 +1400,40 @@
  111:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   */
  112:../StdPeripheralDriver/src/stm32f10x_pwr.c **** void PWR_DeInit(void)
  113:../StdPeripheralDriver/src/stm32f10x_pwr.c **** {
- 16909              		.loc 1 113 0
- 16910              		.cfi_startproc
- 16911              		@ args = 0, pretend = 0, frame = 0
- 16912              		@ frame_needed = 1, uses_anonymous_args = 0
- 16913 0000 80B5     		push	{r7, lr}
- 16914              	.LCFI4:
- 16915              		.cfi_def_cfa_offset 8
- 16916 0002 00AF     		add	r7, sp, #0
- 16917              		.cfi_offset 14, -4
- 16918              		.cfi_offset 7, -8
- 16919              	.LCFI5:
- 16920              		.cfi_def_cfa_register 7
+ 17650              		.loc 1 113 0
+ 17651              		.cfi_startproc
+ 17652              		@ args = 0, pretend = 0, frame = 0
+ 17653              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17654 0000 80B5     		push	{r7, lr}
+ 17655              	.LCFI4:
+ 17656              		.cfi_def_cfa_offset 8
+ 17657 0002 00AF     		add	r7, sp, #0
+ 17658              		.cfi_offset 14, -4
+ 17659              		.cfi_offset 7, -8
+ 17660              	.LCFI5:
+ 17661              		.cfi_def_cfa_register 7
  114:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   RCC_APB1PeriphResetCmd(RCC_APB1Periph_PWR, ENABLE);
- 16921              		.loc 1 114 0
- 16922 0004 4FF08050 		mov	r0, #268435456
- 16923 0008 4FF00101 		mov	r1, #1
- 16924 000c FFF7FEFF 		bl	RCC_APB1PeriphResetCmd
+ 17662              		.loc 1 114 0
+ 17663 0004 4FF08050 		mov	r0, #268435456
+ 17664 0008 4FF00101 		mov	r1, #1
+ 17665 000c FFF7FEFF 		bl	RCC_APB1PeriphResetCmd
  115:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   RCC_APB1PeriphResetCmd(RCC_APB1Periph_PWR, DISABLE);
- 16925              		.loc 1 115 0
- 16926 0010 4FF08050 		mov	r0, #268435456
- 16927 0014 4FF00001 		mov	r1, #0
- 16928 0018 FFF7FEFF 		bl	RCC_APB1PeriphResetCmd
+ 17666              		.loc 1 115 0
+ 17667 0010 4FF08050 		mov	r0, #268435456
+ 17668 0014 4FF00001 		mov	r1, #0
+ 17669 0018 FFF7FEFF 		bl	RCC_APB1PeriphResetCmd
  116:../StdPeripheralDriver/src/stm32f10x_pwr.c **** }
- 16929              		.loc 1 116 0
- 16930 001c 80BD     		pop	{r7, pc}
- 16931              		.cfi_endproc
- 16932              	.LFE29:
- 16934 001e 00BF     		.section	.text.PWR_BackupAccessCmd,"ax",%progbits
- 16935              		.align	2
- 16936              		.global	PWR_BackupAccessCmd
- 16937              		.thumb
- 16938              		.thumb_func
- 16940              	PWR_BackupAccessCmd:
- 16941              	.LFB30:
+ 17670              		.loc 1 116 0
+ 17671 001c 80BD     		pop	{r7, pc}
+ 17672              		.cfi_endproc
+ 17673              	.LFE29:
+ 17675 001e 00BF     		.section	.text.PWR_BackupAccessCmd,"ax",%progbits
+ 17676              		.align	2
+ 17677              		.global	PWR_BackupAccessCmd
+ 17678              		.thumb
+ 17679              		.thumb_func
+ 17681              	PWR_BackupAccessCmd:
+ 17682              	.LFB30:
  117:../StdPeripheralDriver/src/stm32f10x_pwr.c **** 
  118:../StdPeripheralDriver/src/stm32f10x_pwr.c **** /**
  119:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   * @brief  Enables or disables access to the RTC and backup registers.
@@ -1443,49 +1443,49 @@
  123:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   */
  124:../StdPeripheralDriver/src/stm32f10x_pwr.c **** void PWR_BackupAccessCmd(FunctionalState NewState)
  125:../StdPeripheralDriver/src/stm32f10x_pwr.c **** {
- 16942              		.loc 1 125 0
- 16943              		.cfi_startproc
- 16944              		@ args = 0, pretend = 0, frame = 8
- 16945              		@ frame_needed = 1, uses_anonymous_args = 0
- 16946              		@ link register save eliminated.
- 16947 0000 80B4     		push	{r7}
- 16948              	.LCFI6:
- 16949              		.cfi_def_cfa_offset 4
- 16950 0002 83B0     		sub	sp, sp, #12
- 16951              	.LCFI7:
- 16952              		.cfi_def_cfa_offset 16
- 16953 0004 00AF     		add	r7, sp, #0
- 16954              		.cfi_offset 7, -4
- 16955              	.LCFI8:
- 16956              		.cfi_def_cfa_register 7
- 16957 0006 0346     		mov	r3, r0
- 16958 0008 FB71     		strb	r3, [r7, #7]
+ 17683              		.loc 1 125 0
+ 17684              		.cfi_startproc
+ 17685              		@ args = 0, pretend = 0, frame = 8
+ 17686              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17687              		@ link register save eliminated.
+ 17688 0000 80B4     		push	{r7}
+ 17689              	.LCFI6:
+ 17690              		.cfi_def_cfa_offset 4
+ 17691 0002 83B0     		sub	sp, sp, #12
+ 17692              	.LCFI7:
+ 17693              		.cfi_def_cfa_offset 16
+ 17694 0004 00AF     		add	r7, sp, #0
+ 17695              		.cfi_offset 7, -4
+ 17696              	.LCFI8:
+ 17697              		.cfi_def_cfa_register 7
+ 17698 0006 0346     		mov	r3, r0
+ 17699 0008 FB71     		strb	r3, [r7, #7]
  126:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Check the parameters */
  127:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
  128:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   *(__IO uint32_t *) CR_DBP_BB = (uint32_t)NewState;
- 16959              		.loc 1 128 0
- 16960 000a 044B     		ldr	r3, .L5
- 16961 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 16962 000e 1A60     		str	r2, [r3, #0]
+ 17700              		.loc 1 128 0
+ 17701 000a 044B     		ldr	r3, .L5
+ 17702 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 17703 000e 1A60     		str	r2, [r3, #0]
  129:../StdPeripheralDriver/src/stm32f10x_pwr.c **** }
- 16963              		.loc 1 129 0
- 16964 0010 07F10C07 		add	r7, r7, #12
- 16965 0014 BD46     		mov	sp, r7
- 16966 0016 80BC     		pop	{r7}
- 16967 0018 7047     		bx	lr
- 16968              	.L6:
- 16969 001a 00BF     		.align	2
- 16970              	.L5:
- 16971 001c 20000E42 		.word	1108213792
- 16972              		.cfi_endproc
- 16973              	.LFE30:
- 16975              		.section	.text.PWR_PVDCmd,"ax",%progbits
- 16976              		.align	2
- 16977              		.global	PWR_PVDCmd
- 16978              		.thumb
- 16979              		.thumb_func
- 16981              	PWR_PVDCmd:
- 16982              	.LFB31:
+ 17704              		.loc 1 129 0
+ 17705 0010 07F10C07 		add	r7, r7, #12
+ 17706 0014 BD46     		mov	sp, r7
+ 17707 0016 80BC     		pop	{r7}
+ 17708 0018 7047     		bx	lr
+ 17709              	.L6:
+ 17710 001a 00BF     		.align	2
+ 17711              	.L5:
+ 17712 001c 20000E42 		.word	1108213792
+ 17713              		.cfi_endproc
+ 17714              	.LFE30:
+ 17716              		.section	.text.PWR_PVDCmd,"ax",%progbits
+ 17717              		.align	2
+ 17718              		.global	PWR_PVDCmd
+ 17719              		.thumb
+ 17720              		.thumb_func
+ 17722              	PWR_PVDCmd:
+ 17723              	.LFB31:
  130:../StdPeripheralDriver/src/stm32f10x_pwr.c **** 
  131:../StdPeripheralDriver/src/stm32f10x_pwr.c **** /**
  132:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   * @brief  Enables or disables the Power Voltage Detector(PVD).
@@ -1495,49 +1495,49 @@
  136:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   */
  137:../StdPeripheralDriver/src/stm32f10x_pwr.c **** void PWR_PVDCmd(FunctionalState NewState)
  138:../StdPeripheralDriver/src/stm32f10x_pwr.c **** {
- 16983              		.loc 1 138 0
- 16984              		.cfi_startproc
- 16985              		@ args = 0, pretend = 0, frame = 8
- 16986              		@ frame_needed = 1, uses_anonymous_args = 0
- 16987              		@ link register save eliminated.
- 16988 0000 80B4     		push	{r7}
- 16989              	.LCFI9:
- 16990              		.cfi_def_cfa_offset 4
- 16991 0002 83B0     		sub	sp, sp, #12
- 16992              	.LCFI10:
- 16993              		.cfi_def_cfa_offset 16
- 16994 0004 00AF     		add	r7, sp, #0
- 16995              		.cfi_offset 7, -4
- 16996              	.LCFI11:
- 16997              		.cfi_def_cfa_register 7
- 16998 0006 0346     		mov	r3, r0
- 16999 0008 FB71     		strb	r3, [r7, #7]
+ 17724              		.loc 1 138 0
+ 17725              		.cfi_startproc
+ 17726              		@ args = 0, pretend = 0, frame = 8
+ 17727              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17728              		@ link register save eliminated.
+ 17729 0000 80B4     		push	{r7}
+ 17730              	.LCFI9:
+ 17731              		.cfi_def_cfa_offset 4
+ 17732 0002 83B0     		sub	sp, sp, #12
+ 17733              	.LCFI10:
+ 17734              		.cfi_def_cfa_offset 16
+ 17735 0004 00AF     		add	r7, sp, #0
+ 17736              		.cfi_offset 7, -4
+ 17737              	.LCFI11:
+ 17738              		.cfi_def_cfa_register 7
+ 17739 0006 0346     		mov	r3, r0
+ 17740 0008 FB71     		strb	r3, [r7, #7]
  139:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Check the parameters */
  140:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
  141:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   *(__IO uint32_t *) CR_PVDE_BB = (uint32_t)NewState;
- 17000              		.loc 1 141 0
- 17001 000a 044B     		ldr	r3, .L8
- 17002 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 17003 000e 1A60     		str	r2, [r3, #0]
+ 17741              		.loc 1 141 0
+ 17742 000a 044B     		ldr	r3, .L8
+ 17743 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 17744 000e 1A60     		str	r2, [r3, #0]
  142:../StdPeripheralDriver/src/stm32f10x_pwr.c **** }
- 17004              		.loc 1 142 0
- 17005 0010 07F10C07 		add	r7, r7, #12
- 17006 0014 BD46     		mov	sp, r7
- 17007 0016 80BC     		pop	{r7}
- 17008 0018 7047     		bx	lr
- 17009              	.L9:
- 17010 001a 00BF     		.align	2
- 17011              	.L8:
- 17012 001c 10000E42 		.word	1108213776
- 17013              		.cfi_endproc
- 17014              	.LFE31:
- 17016              		.section	.text.PWR_PVDLevelConfig,"ax",%progbits
- 17017              		.align	2
- 17018              		.global	PWR_PVDLevelConfig
- 17019              		.thumb
- 17020              		.thumb_func
- 17022              	PWR_PVDLevelConfig:
- 17023              	.LFB32:
+ 17745              		.loc 1 142 0
+ 17746 0010 07F10C07 		add	r7, r7, #12
+ 17747 0014 BD46     		mov	sp, r7
+ 17748 0016 80BC     		pop	{r7}
+ 17749 0018 7047     		bx	lr
+ 17750              	.L9:
+ 17751 001a 00BF     		.align	2
+ 17752              	.L8:
+ 17753 001c 10000E42 		.word	1108213776
+ 17754              		.cfi_endproc
+ 17755              	.LFE31:
+ 17757              		.section	.text.PWR_PVDLevelConfig,"ax",%progbits
+ 17758              		.align	2
+ 17759              		.global	PWR_PVDLevelConfig
+ 17760              		.thumb
+ 17761              		.thumb_func
+ 17763              	PWR_PVDLevelConfig:
+ 17764              	.LFB32:
  143:../StdPeripheralDriver/src/stm32f10x_pwr.c **** 
  144:../StdPeripheralDriver/src/stm32f10x_pwr.c **** /**
  145:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   * @brief  Configures the voltage threshold detected by the Power Voltage Detector(PVD).
@@ -1555,71 +1555,71 @@
  157:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   */
  158:../StdPeripheralDriver/src/stm32f10x_pwr.c **** void PWR_PVDLevelConfig(uint32_t PWR_PVDLevel)
  159:../StdPeripheralDriver/src/stm32f10x_pwr.c **** {
- 17024              		.loc 1 159 0
- 17025              		.cfi_startproc
- 17026              		@ args = 0, pretend = 0, frame = 16
- 17027              		@ frame_needed = 1, uses_anonymous_args = 0
- 17028              		@ link register save eliminated.
- 17029 0000 80B4     		push	{r7}
- 17030              	.LCFI12:
- 17031              		.cfi_def_cfa_offset 4
- 17032 0002 85B0     		sub	sp, sp, #20
- 17033              	.LCFI13:
- 17034              		.cfi_def_cfa_offset 24
- 17035 0004 00AF     		add	r7, sp, #0
- 17036              		.cfi_offset 7, -4
- 17037              	.LCFI14:
- 17038              		.cfi_def_cfa_register 7
- 17039 0006 7860     		str	r0, [r7, #4]
+ 17765              		.loc 1 159 0
+ 17766              		.cfi_startproc
+ 17767              		@ args = 0, pretend = 0, frame = 16
+ 17768              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17769              		@ link register save eliminated.
+ 17770 0000 80B4     		push	{r7}
+ 17771              	.LCFI12:
+ 17772              		.cfi_def_cfa_offset 4
+ 17773 0002 85B0     		sub	sp, sp, #20
+ 17774              	.LCFI13:
+ 17775              		.cfi_def_cfa_offset 24
+ 17776 0004 00AF     		add	r7, sp, #0
+ 17777              		.cfi_offset 7, -4
+ 17778              	.LCFI14:
+ 17779              		.cfi_def_cfa_register 7
+ 17780 0006 7860     		str	r0, [r7, #4]
  160:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   uint32_t tmpreg = 0;
- 17040              		.loc 1 160 0
- 17041 0008 4FF00003 		mov	r3, #0
- 17042 000c FB60     		str	r3, [r7, #12]
+ 17781              		.loc 1 160 0
+ 17782 0008 4FF00003 		mov	r3, #0
+ 17783 000c FB60     		str	r3, [r7, #12]
  161:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Check the parameters */
  162:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   assert_param(IS_PWR_PVD_LEVEL(PWR_PVDLevel));
  163:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   tmpreg = PWR->CR;
- 17043              		.loc 1 163 0
- 17044 000e 0A4B     		ldr	r3, .L11
- 17045 0010 1B68     		ldr	r3, [r3, #0]
- 17046 0012 FB60     		str	r3, [r7, #12]
+ 17784              		.loc 1 163 0
+ 17785 000e 0A4B     		ldr	r3, .L11
+ 17786 0010 1B68     		ldr	r3, [r3, #0]
+ 17787 0012 FB60     		str	r3, [r7, #12]
  164:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Clear PLS[7:5] bits */
  165:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   tmpreg &= CR_PLS_MASK;
- 17047              		.loc 1 165 0
- 17048 0014 FB68     		ldr	r3, [r7, #12]
- 17049 0016 23F0E003 		bic	r3, r3, #224
- 17050 001a FB60     		str	r3, [r7, #12]
+ 17788              		.loc 1 165 0
+ 17789 0014 FB68     		ldr	r3, [r7, #12]
+ 17790 0016 23F0E003 		bic	r3, r3, #224
+ 17791 001a FB60     		str	r3, [r7, #12]
  166:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Set PLS[7:5] bits according to PWR_PVDLevel value */
  167:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   tmpreg |= PWR_PVDLevel;
- 17051              		.loc 1 167 0
- 17052 001c FA68     		ldr	r2, [r7, #12]
- 17053 001e 7B68     		ldr	r3, [r7, #4]
- 17054 0020 42EA0303 		orr	r3, r2, r3
- 17055 0024 FB60     		str	r3, [r7, #12]
+ 17792              		.loc 1 167 0
+ 17793 001c FA68     		ldr	r2, [r7, #12]
+ 17794 001e 7B68     		ldr	r3, [r7, #4]
+ 17795 0020 42EA0303 		orr	r3, r2, r3
+ 17796 0024 FB60     		str	r3, [r7, #12]
  168:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Store the new value */
  169:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   PWR->CR = tmpreg;
- 17056              		.loc 1 169 0
- 17057 0026 044B     		ldr	r3, .L11
- 17058 0028 FA68     		ldr	r2, [r7, #12]
- 17059 002a 1A60     		str	r2, [r3, #0]
+ 17797              		.loc 1 169 0
+ 17798 0026 044B     		ldr	r3, .L11
+ 17799 0028 FA68     		ldr	r2, [r7, #12]
+ 17800 002a 1A60     		str	r2, [r3, #0]
  170:../StdPeripheralDriver/src/stm32f10x_pwr.c **** }
- 17060              		.loc 1 170 0
- 17061 002c 07F11407 		add	r7, r7, #20
- 17062 0030 BD46     		mov	sp, r7
- 17063 0032 80BC     		pop	{r7}
- 17064 0034 7047     		bx	lr
- 17065              	.L12:
- 17066 0036 00BF     		.align	2
- 17067              	.L11:
- 17068 0038 00700040 		.word	1073770496
- 17069              		.cfi_endproc
- 17070              	.LFE32:
- 17072              		.section	.text.PWR_WakeUpPinCmd,"ax",%progbits
- 17073              		.align	2
- 17074              		.global	PWR_WakeUpPinCmd
- 17075              		.thumb
- 17076              		.thumb_func
- 17078              	PWR_WakeUpPinCmd:
- 17079              	.LFB33:
+ 17801              		.loc 1 170 0
+ 17802 002c 07F11407 		add	r7, r7, #20
+ 17803 0030 BD46     		mov	sp, r7
+ 17804 0032 80BC     		pop	{r7}
+ 17805 0034 7047     		bx	lr
+ 17806              	.L12:
+ 17807 0036 00BF     		.align	2
+ 17808              	.L11:
+ 17809 0038 00700040 		.word	1073770496
+ 17810              		.cfi_endproc
+ 17811              	.LFE32:
+ 17813              		.section	.text.PWR_WakeUpPinCmd,"ax",%progbits
+ 17814              		.align	2
+ 17815              		.global	PWR_WakeUpPinCmd
+ 17816              		.thumb
+ 17817              		.thumb_func
+ 17819              	PWR_WakeUpPinCmd:
+ 17820              	.LFB33:
  171:../StdPeripheralDriver/src/stm32f10x_pwr.c **** 
  172:../StdPeripheralDriver/src/stm32f10x_pwr.c **** /**
  173:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   * @brief  Enables or disables the WakeUp Pin functionality.
@@ -1629,49 +1629,49 @@
  177:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   */
  178:../StdPeripheralDriver/src/stm32f10x_pwr.c **** void PWR_WakeUpPinCmd(FunctionalState NewState)
  179:../StdPeripheralDriver/src/stm32f10x_pwr.c **** {
- 17080              		.loc 1 179 0
- 17081              		.cfi_startproc
- 17082              		@ args = 0, pretend = 0, frame = 8
- 17083              		@ frame_needed = 1, uses_anonymous_args = 0
- 17084              		@ link register save eliminated.
- 17085 0000 80B4     		push	{r7}
- 17086              	.LCFI15:
- 17087              		.cfi_def_cfa_offset 4
- 17088 0002 83B0     		sub	sp, sp, #12
- 17089              	.LCFI16:
- 17090              		.cfi_def_cfa_offset 16
- 17091 0004 00AF     		add	r7, sp, #0
- 17092              		.cfi_offset 7, -4
- 17093              	.LCFI17:
- 17094              		.cfi_def_cfa_register 7
- 17095 0006 0346     		mov	r3, r0
- 17096 0008 FB71     		strb	r3, [r7, #7]
+ 17821              		.loc 1 179 0
+ 17822              		.cfi_startproc
+ 17823              		@ args = 0, pretend = 0, frame = 8
+ 17824              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17825              		@ link register save eliminated.
+ 17826 0000 80B4     		push	{r7}
+ 17827              	.LCFI15:
+ 17828              		.cfi_def_cfa_offset 4
+ 17829 0002 83B0     		sub	sp, sp, #12
+ 17830              	.LCFI16:
+ 17831              		.cfi_def_cfa_offset 16
+ 17832 0004 00AF     		add	r7, sp, #0
+ 17833              		.cfi_offset 7, -4
+ 17834              	.LCFI17:
+ 17835              		.cfi_def_cfa_register 7
+ 17836 0006 0346     		mov	r3, r0
+ 17837 0008 FB71     		strb	r3, [r7, #7]
  180:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Check the parameters */
  181:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
  182:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   *(__IO uint32_t *) CSR_EWUP_BB = (uint32_t)NewState;
- 17097              		.loc 1 182 0
- 17098 000a 044B     		ldr	r3, .L14
- 17099 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 17100 000e 1A60     		str	r2, [r3, #0]
+ 17838              		.loc 1 182 0
+ 17839 000a 044B     		ldr	r3, .L14
+ 17840 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 17841 000e 1A60     		str	r2, [r3, #0]
  183:../StdPeripheralDriver/src/stm32f10x_pwr.c **** }
- 17101              		.loc 1 183 0
- 17102 0010 07F10C07 		add	r7, r7, #12
- 17103 0014 BD46     		mov	sp, r7
- 17104 0016 80BC     		pop	{r7}
- 17105 0018 7047     		bx	lr
- 17106              	.L15:
- 17107 001a 00BF     		.align	2
- 17108              	.L14:
- 17109 001c A0000E42 		.word	1108213920
- 17110              		.cfi_endproc
- 17111              	.LFE33:
- 17113              		.section	.text.PWR_EnterSTOPMode,"ax",%progbits
- 17114              		.align	2
- 17115              		.global	PWR_EnterSTOPMode
- 17116              		.thumb
- 17117              		.thumb_func
- 17119              	PWR_EnterSTOPMode:
- 17120              	.LFB34:
+ 17842              		.loc 1 183 0
+ 17843 0010 07F10C07 		add	r7, r7, #12
+ 17844 0014 BD46     		mov	sp, r7
+ 17845 0016 80BC     		pop	{r7}
+ 17846 0018 7047     		bx	lr
+ 17847              	.L15:
+ 17848 001a 00BF     		.align	2
+ 17849              	.L14:
+ 17850 001c A0000E42 		.word	1108213920
+ 17851              		.cfi_endproc
+ 17852              	.LFE33:
+ 17854              		.section	.text.PWR_EnterSTOPMode,"ax",%progbits
+ 17855              		.align	2
+ 17856              		.global	PWR_EnterSTOPMode
+ 17857              		.thumb
+ 17858              		.thumb_func
+ 17860              	PWR_EnterSTOPMode:
+ 17861              	.LFB34:
  184:../StdPeripheralDriver/src/stm32f10x_pwr.c **** 
  185:../StdPeripheralDriver/src/stm32f10x_pwr.c **** /**
  186:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   * @brief  Enters STOP mode.
@@ -1687,116 +1687,116 @@
  196:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   */
  197:../StdPeripheralDriver/src/stm32f10x_pwr.c **** void PWR_EnterSTOPMode(uint32_t PWR_Regulator, uint8_t PWR_STOPEntry)
  198:../StdPeripheralDriver/src/stm32f10x_pwr.c **** {
- 17121              		.loc 1 198 0
- 17122              		.cfi_startproc
- 17123              		@ args = 0, pretend = 0, frame = 16
- 17124              		@ frame_needed = 1, uses_anonymous_args = 0
- 17125 0000 80B5     		push	{r7, lr}
- 17126              	.LCFI18:
- 17127              		.cfi_def_cfa_offset 8
- 17128 0002 84B0     		sub	sp, sp, #16
- 17129              	.LCFI19:
- 17130              		.cfi_def_cfa_offset 24
- 17131 0004 00AF     		add	r7, sp, #0
- 17132              		.cfi_offset 14, -4
- 17133              		.cfi_offset 7, -8
- 17134              	.LCFI20:
- 17135              		.cfi_def_cfa_register 7
- 17136 0006 7860     		str	r0, [r7, #4]
- 17137 0008 0B46     		mov	r3, r1
- 17138 000a FB70     		strb	r3, [r7, #3]
+ 17862              		.loc 1 198 0
+ 17863              		.cfi_startproc
+ 17864              		@ args = 0, pretend = 0, frame = 16
+ 17865              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17866 0000 80B5     		push	{r7, lr}
+ 17867              	.LCFI18:
+ 17868              		.cfi_def_cfa_offset 8
+ 17869 0002 84B0     		sub	sp, sp, #16
+ 17870              	.LCFI19:
+ 17871              		.cfi_def_cfa_offset 24
+ 17872 0004 00AF     		add	r7, sp, #0
+ 17873              		.cfi_offset 14, -4
+ 17874              		.cfi_offset 7, -8
+ 17875              	.LCFI20:
+ 17876              		.cfi_def_cfa_register 7
+ 17877 0006 7860     		str	r0, [r7, #4]
+ 17878 0008 0B46     		mov	r3, r1
+ 17879 000a FB70     		strb	r3, [r7, #3]
  199:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   uint32_t tmpreg = 0;
- 17139              		.loc 1 199 0
- 17140 000c 4FF00003 		mov	r3, #0
- 17141 0010 FB60     		str	r3, [r7, #12]
+ 17880              		.loc 1 199 0
+ 17881 000c 4FF00003 		mov	r3, #0
+ 17882 0010 FB60     		str	r3, [r7, #12]
  200:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Check the parameters */
  201:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   assert_param(IS_PWR_REGULATOR(PWR_Regulator));
  202:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   assert_param(IS_PWR_STOP_ENTRY(PWR_STOPEntry));
  203:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   
  204:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Select the regulator state in STOP mode ---------------------------------*/
  205:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   tmpreg = PWR->CR;
- 17142              		.loc 1 205 0
- 17143 0012 134B     		ldr	r3, .L19
- 17144 0014 1B68     		ldr	r3, [r3, #0]
- 17145 0016 FB60     		str	r3, [r7, #12]
+ 17883              		.loc 1 205 0
+ 17884 0012 134B     		ldr	r3, .L19
+ 17885 0014 1B68     		ldr	r3, [r3, #0]
+ 17886 0016 FB60     		str	r3, [r7, #12]
  206:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Clear PDDS and LPDS bits */
  207:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   tmpreg &= CR_DS_MASK;
- 17146              		.loc 1 207 0
- 17147 0018 FB68     		ldr	r3, [r7, #12]
- 17148 001a 23F00303 		bic	r3, r3, #3
- 17149 001e FB60     		str	r3, [r7, #12]
+ 17887              		.loc 1 207 0
+ 17888 0018 FB68     		ldr	r3, [r7, #12]
+ 17889 001a 23F00303 		bic	r3, r3, #3
+ 17890 001e FB60     		str	r3, [r7, #12]
  208:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Set LPDS bit according to PWR_Regulator value */
  209:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   tmpreg |= PWR_Regulator;
- 17150              		.loc 1 209 0
- 17151 0020 FA68     		ldr	r2, [r7, #12]
- 17152 0022 7B68     		ldr	r3, [r7, #4]
- 17153 0024 42EA0303 		orr	r3, r2, r3
- 17154 0028 FB60     		str	r3, [r7, #12]
+ 17891              		.loc 1 209 0
+ 17892 0020 FA68     		ldr	r2, [r7, #12]
+ 17893 0022 7B68     		ldr	r3, [r7, #4]
+ 17894 0024 42EA0303 		orr	r3, r2, r3
+ 17895 0028 FB60     		str	r3, [r7, #12]
  210:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Store the new value */
  211:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   PWR->CR = tmpreg;
- 17155              		.loc 1 211 0
- 17156 002a 0D4B     		ldr	r3, .L19
- 17157 002c FA68     		ldr	r2, [r7, #12]
- 17158 002e 1A60     		str	r2, [r3, #0]
+ 17896              		.loc 1 211 0
+ 17897 002a 0D4B     		ldr	r3, .L19
+ 17898 002c FA68     		ldr	r2, [r7, #12]
+ 17899 002e 1A60     		str	r2, [r3, #0]
  212:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Set SLEEPDEEP bit of Cortex System Control Register */
  213:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   SCB->SCR |= SCB_SCR_SLEEPDEEP;
- 17159              		.loc 1 213 0
- 17160 0030 0C4B     		ldr	r3, .L19+4
- 17161 0032 0C4A     		ldr	r2, .L19+4
- 17162 0034 1269     		ldr	r2, [r2, #16]
- 17163 0036 42F00402 		orr	r2, r2, #4
- 17164 003a 1A61     		str	r2, [r3, #16]
+ 17900              		.loc 1 213 0
+ 17901 0030 0C4B     		ldr	r3, .L19+4
+ 17902 0032 0C4A     		ldr	r2, .L19+4
+ 17903 0034 1269     		ldr	r2, [r2, #16]
+ 17904 0036 42F00402 		orr	r2, r2, #4
+ 17905 003a 1A61     		str	r2, [r3, #16]
  214:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   
  215:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Select STOP mode entry --------------------------------------------------*/
  216:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   if(PWR_STOPEntry == PWR_STOPEntry_WFI)
- 17165              		.loc 1 216 0
- 17166 003c FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
- 17167 003e 012B     		cmp	r3, #1
- 17168 0040 02D1     		bne	.L17
+ 17906              		.loc 1 216 0
+ 17907 003c FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 17908 003e 012B     		cmp	r3, #1
+ 17909 0040 02D1     		bne	.L17
  217:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   {   
  218:../StdPeripheralDriver/src/stm32f10x_pwr.c ****     /* Request Wait For Interrupt */
  219:../StdPeripheralDriver/src/stm32f10x_pwr.c ****     __WFI();
- 17169              		.loc 1 219 0
- 17170 0042 FFF7FEFF 		bl	__WFI
- 17171 0046 01E0     		b	.L18
- 17172              	.L17:
+ 17910              		.loc 1 219 0
+ 17911 0042 FFF7FEFF 		bl	__WFI
+ 17912 0046 01E0     		b	.L18
+ 17913              	.L17:
  220:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   }
  221:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   else
  222:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   {
  223:../StdPeripheralDriver/src/stm32f10x_pwr.c ****     /* Request Wait For Event */
  224:../StdPeripheralDriver/src/stm32f10x_pwr.c ****     __WFE();
- 17173              		.loc 1 224 0
- 17174 0048 FFF7FEFF 		bl	__WFE
- 17175              	.L18:
+ 17914              		.loc 1 224 0
+ 17915 0048 FFF7FEFF 		bl	__WFE
+ 17916              	.L18:
  225:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   }
  226:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   
  227:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Reset SLEEPDEEP bit of Cortex System Control Register */
  228:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   SCB->SCR &= (uint32_t)~((uint32_t)SCB_SCR_SLEEPDEEP);  
- 17176              		.loc 1 228 0
- 17177 004c 054B     		ldr	r3, .L19+4
- 17178 004e 054A     		ldr	r2, .L19+4
- 17179 0050 1269     		ldr	r2, [r2, #16]
- 17180 0052 22F00402 		bic	r2, r2, #4
- 17181 0056 1A61     		str	r2, [r3, #16]
+ 17917              		.loc 1 228 0
+ 17918 004c 054B     		ldr	r3, .L19+4
+ 17919 004e 054A     		ldr	r2, .L19+4
+ 17920 0050 1269     		ldr	r2, [r2, #16]
+ 17921 0052 22F00402 		bic	r2, r2, #4
+ 17922 0056 1A61     		str	r2, [r3, #16]
  229:../StdPeripheralDriver/src/stm32f10x_pwr.c **** }
- 17182              		.loc 1 229 0
- 17183 0058 07F11007 		add	r7, r7, #16
- 17184 005c BD46     		mov	sp, r7
- 17185 005e 80BD     		pop	{r7, pc}
- 17186              	.L20:
- 17187              		.align	2
- 17188              	.L19:
- 17189 0060 00700040 		.word	1073770496
- 17190 0064 00ED00E0 		.word	-536810240
- 17191              		.cfi_endproc
- 17192              	.LFE34:
- 17194              		.section	.text.PWR_EnterSTANDBYMode,"ax",%progbits
- 17195              		.align	2
- 17196              		.global	PWR_EnterSTANDBYMode
- 17197              		.thumb
- 17198              		.thumb_func
- 17200              	PWR_EnterSTANDBYMode:
- 17201              	.LFB35:
+ 17923              		.loc 1 229 0
+ 17924 0058 07F11007 		add	r7, r7, #16
+ 17925 005c BD46     		mov	sp, r7
+ 17926 005e 80BD     		pop	{r7, pc}
+ 17927              	.L20:
+ 17928              		.align	2
+ 17929              	.L19:
+ 17930 0060 00700040 		.word	1073770496
+ 17931 0064 00ED00E0 		.word	-536810240
+ 17932              		.cfi_endproc
+ 17933              	.LFE34:
+ 17935              		.section	.text.PWR_EnterSTANDBYMode,"ax",%progbits
+ 17936              		.align	2
+ 17937              		.global	PWR_EnterSTANDBYMode
+ 17938              		.thumb
+ 17939              		.thumb_func
+ 17941              	PWR_EnterSTANDBYMode:
+ 17942              	.LFB35:
  230:../StdPeripheralDriver/src/stm32f10x_pwr.c **** 
  231:../StdPeripheralDriver/src/stm32f10x_pwr.c **** /**
  232:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   * @brief  Enters STANDBY mode.
@@ -1805,67 +1805,67 @@
  235:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   */
  236:../StdPeripheralDriver/src/stm32f10x_pwr.c **** void PWR_EnterSTANDBYMode(void)
  237:../StdPeripheralDriver/src/stm32f10x_pwr.c **** {
- 17202              		.loc 1 237 0
- 17203              		.cfi_startproc
- 17204              		@ args = 0, pretend = 0, frame = 0
- 17205              		@ frame_needed = 1, uses_anonymous_args = 0
- 17206 0000 80B5     		push	{r7, lr}
- 17207              	.LCFI21:
- 17208              		.cfi_def_cfa_offset 8
- 17209 0002 00AF     		add	r7, sp, #0
- 17210              		.cfi_offset 14, -4
- 17211              		.cfi_offset 7, -8
- 17212              	.LCFI22:
- 17213              		.cfi_def_cfa_register 7
+ 17943              		.loc 1 237 0
+ 17944              		.cfi_startproc
+ 17945              		@ args = 0, pretend = 0, frame = 0
+ 17946              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17947 0000 80B5     		push	{r7, lr}
+ 17948              	.LCFI21:
+ 17949              		.cfi_def_cfa_offset 8
+ 17950 0002 00AF     		add	r7, sp, #0
+ 17951              		.cfi_offset 14, -4
+ 17952              		.cfi_offset 7, -8
+ 17953              	.LCFI22:
+ 17954              		.cfi_def_cfa_register 7
  238:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Clear Wake-up flag */
  239:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   PWR->CR |= PWR_CR_CWUF;
- 17214              		.loc 1 239 0
- 17215 0004 0A4B     		ldr	r3, .L22
- 17216 0006 0A4A     		ldr	r2, .L22
- 17217 0008 1268     		ldr	r2, [r2, #0]
- 17218 000a 42F00402 		orr	r2, r2, #4
- 17219 000e 1A60     		str	r2, [r3, #0]
+ 17955              		.loc 1 239 0
+ 17956 0004 0A4B     		ldr	r3, .L22
+ 17957 0006 0A4A     		ldr	r2, .L22
+ 17958 0008 1268     		ldr	r2, [r2, #0]
+ 17959 000a 42F00402 		orr	r2, r2, #4
+ 17960 000e 1A60     		str	r2, [r3, #0]
  240:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Select STANDBY mode */
  241:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   PWR->CR |= PWR_CR_PDDS;
- 17220              		.loc 1 241 0
- 17221 0010 074B     		ldr	r3, .L22
- 17222 0012 074A     		ldr	r2, .L22
- 17223 0014 1268     		ldr	r2, [r2, #0]
- 17224 0016 42F00202 		orr	r2, r2, #2
- 17225 001a 1A60     		str	r2, [r3, #0]
+ 17961              		.loc 1 241 0
+ 17962 0010 074B     		ldr	r3, .L22
+ 17963 0012 074A     		ldr	r2, .L22
+ 17964 0014 1268     		ldr	r2, [r2, #0]
+ 17965 0016 42F00202 		orr	r2, r2, #2
+ 17966 001a 1A60     		str	r2, [r3, #0]
  242:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Set SLEEPDEEP bit of Cortex System Control Register */
  243:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   SCB->SCR |= SCB_SCR_SLEEPDEEP;
- 17226              		.loc 1 243 0
- 17227 001c 054B     		ldr	r3, .L22+4
- 17228 001e 054A     		ldr	r2, .L22+4
- 17229 0020 1269     		ldr	r2, [r2, #16]
- 17230 0022 42F00402 		orr	r2, r2, #4
- 17231 0026 1A61     		str	r2, [r3, #16]
+ 17967              		.loc 1 243 0
+ 17968 001c 054B     		ldr	r3, .L22+4
+ 17969 001e 054A     		ldr	r2, .L22+4
+ 17970 0020 1269     		ldr	r2, [r2, #16]
+ 17971 0022 42F00402 		orr	r2, r2, #4
+ 17972 0026 1A61     		str	r2, [r3, #16]
  244:../StdPeripheralDriver/src/stm32f10x_pwr.c **** /* This option is used to ensure that store operations are completed */
  245:../StdPeripheralDriver/src/stm32f10x_pwr.c **** #if defined ( __CC_ARM   )
  246:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   __force_stores();
  247:../StdPeripheralDriver/src/stm32f10x_pwr.c **** #endif
  248:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Request Wait For Interrupt */
  249:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   __WFI();
- 17232              		.loc 1 249 0
- 17233 0028 FFF7FEFF 		bl	__WFI
+ 17973              		.loc 1 249 0
+ 17974 0028 FFF7FEFF 		bl	__WFI
  250:../StdPeripheralDriver/src/stm32f10x_pwr.c **** }
- 17234              		.loc 1 250 0
- 17235 002c 80BD     		pop	{r7, pc}
- 17236              	.L23:
- 17237 002e 00BF     		.align	2
- 17238              	.L22:
- 17239 0030 00700040 		.word	1073770496
- 17240 0034 00ED00E0 		.word	-536810240
- 17241              		.cfi_endproc
- 17242              	.LFE35:
- 17244              		.section	.text.PWR_GetFlagStatus,"ax",%progbits
- 17245              		.align	2
- 17246              		.global	PWR_GetFlagStatus
- 17247              		.thumb
- 17248              		.thumb_func
- 17250              	PWR_GetFlagStatus:
- 17251              	.LFB36:
+ 17975              		.loc 1 250 0
+ 17976 002c 80BD     		pop	{r7, pc}
+ 17977              	.L23:
+ 17978 002e 00BF     		.align	2
+ 17979              	.L22:
+ 17980 0030 00700040 		.word	1073770496
+ 17981 0034 00ED00E0 		.word	-536810240
+ 17982              		.cfi_endproc
+ 17983              	.LFE35:
+ 17985              		.section	.text.PWR_GetFlagStatus,"ax",%progbits
+ 17986              		.align	2
+ 17987              		.global	PWR_GetFlagStatus
+ 17988              		.thumb
+ 17989              		.thumb_func
+ 17991              	PWR_GetFlagStatus:
+ 17992              	.LFB36:
  251:../StdPeripheralDriver/src/stm32f10x_pwr.c **** 
  252:../StdPeripheralDriver/src/stm32f10x_pwr.c **** /**
  253:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   * @brief  Checks whether the specified PWR flag is set or not.
@@ -1878,77 +1878,77 @@
  260:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   */
  261:../StdPeripheralDriver/src/stm32f10x_pwr.c **** FlagStatus PWR_GetFlagStatus(uint32_t PWR_FLAG)
  262:../StdPeripheralDriver/src/stm32f10x_pwr.c **** {
- 17252              		.loc 1 262 0
- 17253              		.cfi_startproc
- 17254              		@ args = 0, pretend = 0, frame = 16
- 17255              		@ frame_needed = 1, uses_anonymous_args = 0
- 17256              		@ link register save eliminated.
- 17257 0000 80B4     		push	{r7}
- 17258              	.LCFI23:
- 17259              		.cfi_def_cfa_offset 4
- 17260 0002 85B0     		sub	sp, sp, #20
- 17261              	.LCFI24:
- 17262              		.cfi_def_cfa_offset 24
- 17263 0004 00AF     		add	r7, sp, #0
- 17264              		.cfi_offset 7, -4
- 17265              	.LCFI25:
- 17266              		.cfi_def_cfa_register 7
- 17267 0006 7860     		str	r0, [r7, #4]
+ 17993              		.loc 1 262 0
+ 17994              		.cfi_startproc
+ 17995              		@ args = 0, pretend = 0, frame = 16
+ 17996              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17997              		@ link register save eliminated.
+ 17998 0000 80B4     		push	{r7}
+ 17999              	.LCFI23:
+ 18000              		.cfi_def_cfa_offset 4
+ 18001 0002 85B0     		sub	sp, sp, #20
+ 18002              	.LCFI24:
+ 18003              		.cfi_def_cfa_offset 24
+ 18004 0004 00AF     		add	r7, sp, #0
+ 18005              		.cfi_offset 7, -4
+ 18006              	.LCFI25:
+ 18007              		.cfi_def_cfa_register 7
+ 18008 0006 7860     		str	r0, [r7, #4]
  263:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   FlagStatus bitstatus = RESET;
- 17268              		.loc 1 263 0
- 17269 0008 4FF00003 		mov	r3, #0
- 17270 000c FB73     		strb	r3, [r7, #15]
+ 18009              		.loc 1 263 0
+ 18010 0008 4FF00003 		mov	r3, #0
+ 18011 000c FB73     		strb	r3, [r7, #15]
  264:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Check the parameters */
  265:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   assert_param(IS_PWR_GET_FLAG(PWR_FLAG));
  266:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   
  267:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   if ((PWR->CSR & PWR_FLAG) != (uint32_t)RESET)
- 17271              		.loc 1 267 0
- 17272 000e 0A4B     		ldr	r3, .L27
- 17273 0010 5A68     		ldr	r2, [r3, #4]
- 17274 0012 7B68     		ldr	r3, [r7, #4]
- 17275 0014 02EA0303 		and	r3, r2, r3
- 17276 0018 002B     		cmp	r3, #0
- 17277 001a 03D0     		beq	.L25
+ 18012              		.loc 1 267 0
+ 18013 000e 0A4B     		ldr	r3, .L27
+ 18014 0010 5A68     		ldr	r2, [r3, #4]
+ 18015 0012 7B68     		ldr	r3, [r7, #4]
+ 18016 0014 02EA0303 		and	r3, r2, r3
+ 18017 0018 002B     		cmp	r3, #0
+ 18018 001a 03D0     		beq	.L25
  268:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   {
  269:../StdPeripheralDriver/src/stm32f10x_pwr.c ****     bitstatus = SET;
- 17278              		.loc 1 269 0
- 17279 001c 4FF00103 		mov	r3, #1
- 17280 0020 FB73     		strb	r3, [r7, #15]
- 17281 0022 02E0     		b	.L26
- 17282              	.L25:
+ 18019              		.loc 1 269 0
+ 18020 001c 4FF00103 		mov	r3, #1
+ 18021 0020 FB73     		strb	r3, [r7, #15]
+ 18022 0022 02E0     		b	.L26
+ 18023              	.L25:
  270:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   }
  271:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   else
  272:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   {
  273:../StdPeripheralDriver/src/stm32f10x_pwr.c ****     bitstatus = RESET;
- 17283              		.loc 1 273 0
- 17284 0024 4FF00003 		mov	r3, #0
- 17285 0028 FB73     		strb	r3, [r7, #15]
- 17286              	.L26:
+ 18024              		.loc 1 273 0
+ 18025 0024 4FF00003 		mov	r3, #0
+ 18026 0028 FB73     		strb	r3, [r7, #15]
+ 18027              	.L26:
  274:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   }
  275:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Return the flag status */
  276:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   return bitstatus;
- 17287              		.loc 1 276 0
- 17288 002a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 18028              		.loc 1 276 0
+ 18029 002a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  277:../StdPeripheralDriver/src/stm32f10x_pwr.c **** }
- 17289              		.loc 1 277 0
- 17290 002c 1846     		mov	r0, r3
- 17291 002e 07F11407 		add	r7, r7, #20
- 17292 0032 BD46     		mov	sp, r7
- 17293 0034 80BC     		pop	{r7}
- 17294 0036 7047     		bx	lr
- 17295              	.L28:
- 17296              		.align	2
- 17297              	.L27:
- 17298 0038 00700040 		.word	1073770496
- 17299              		.cfi_endproc
- 17300              	.LFE36:
- 17302              		.section	.text.PWR_ClearFlag,"ax",%progbits
- 17303              		.align	2
- 17304              		.global	PWR_ClearFlag
- 17305              		.thumb
- 17306              		.thumb_func
- 17308              	PWR_ClearFlag:
- 17309              	.LFB37:
+ 18030              		.loc 1 277 0
+ 18031 002c 1846     		mov	r0, r3
+ 18032 002e 07F11407 		add	r7, r7, #20
+ 18033 0032 BD46     		mov	sp, r7
+ 18034 0034 80BC     		pop	{r7}
+ 18035 0036 7047     		bx	lr
+ 18036              	.L28:
+ 18037              		.align	2
+ 18038              	.L27:
+ 18039 0038 00700040 		.word	1073770496
+ 18040              		.cfi_endproc
+ 18041              	.LFE36:
+ 18043              		.section	.text.PWR_ClearFlag,"ax",%progbits
+ 18044              		.align	2
+ 18045              		.global	PWR_ClearFlag
+ 18046              		.thumb
+ 18047              		.thumb_func
+ 18049              	PWR_ClearFlag:
+ 18050              	.LFB37:
  278:../StdPeripheralDriver/src/stm32f10x_pwr.c **** 
  279:../StdPeripheralDriver/src/stm32f10x_pwr.c **** /**
  280:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   * @brief  Clears the PWR's pending flags.
@@ -1960,80 +1960,80 @@
  286:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   */
  287:../StdPeripheralDriver/src/stm32f10x_pwr.c **** void PWR_ClearFlag(uint32_t PWR_FLAG)
  288:../StdPeripheralDriver/src/stm32f10x_pwr.c **** {
- 17310              		.loc 1 288 0
- 17311              		.cfi_startproc
- 17312              		@ args = 0, pretend = 0, frame = 8
- 17313              		@ frame_needed = 1, uses_anonymous_args = 0
- 17314              		@ link register save eliminated.
- 17315 0000 80B4     		push	{r7}
- 17316              	.LCFI26:
- 17317              		.cfi_def_cfa_offset 4
- 17318 0002 83B0     		sub	sp, sp, #12
- 17319              	.LCFI27:
- 17320              		.cfi_def_cfa_offset 16
- 17321 0004 00AF     		add	r7, sp, #0
- 17322              		.cfi_offset 7, -4
- 17323              	.LCFI28:
- 17324              		.cfi_def_cfa_register 7
- 17325 0006 7860     		str	r0, [r7, #4]
+ 18051              		.loc 1 288 0
+ 18052              		.cfi_startproc
+ 18053              		@ args = 0, pretend = 0, frame = 8
+ 18054              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18055              		@ link register save eliminated.
+ 18056 0000 80B4     		push	{r7}
+ 18057              	.LCFI26:
+ 18058              		.cfi_def_cfa_offset 4
+ 18059 0002 83B0     		sub	sp, sp, #12
+ 18060              	.LCFI27:
+ 18061              		.cfi_def_cfa_offset 16
+ 18062 0004 00AF     		add	r7, sp, #0
+ 18063              		.cfi_offset 7, -4
+ 18064              	.LCFI28:
+ 18065              		.cfi_def_cfa_register 7
+ 18066 0006 7860     		str	r0, [r7, #4]
  289:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   /* Check the parameters */
  290:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   assert_param(IS_PWR_CLEAR_FLAG(PWR_FLAG));
  291:../StdPeripheralDriver/src/stm32f10x_pwr.c ****          
  292:../StdPeripheralDriver/src/stm32f10x_pwr.c ****   PWR->CR |=  PWR_FLAG << 2;
- 17326              		.loc 1 292 0
- 17327 0008 064B     		ldr	r3, .L30
- 17328 000a 064A     		ldr	r2, .L30
- 17329 000c 1168     		ldr	r1, [r2, #0]
- 17330 000e 7A68     		ldr	r2, [r7, #4]
- 17331 0010 4FEA8202 		lsl	r2, r2, #2
- 17332 0014 41EA0202 		orr	r2, r1, r2
- 17333 0018 1A60     		str	r2, [r3, #0]
+ 18067              		.loc 1 292 0
+ 18068 0008 064B     		ldr	r3, .L30
+ 18069 000a 064A     		ldr	r2, .L30
+ 18070 000c 1168     		ldr	r1, [r2, #0]
+ 18071 000e 7A68     		ldr	r2, [r7, #4]
+ 18072 0010 4FEA8202 		lsl	r2, r2, #2
+ 18073 0014 41EA0202 		orr	r2, r1, r2
+ 18074 0018 1A60     		str	r2, [r3, #0]
  293:../StdPeripheralDriver/src/stm32f10x_pwr.c **** }
- 17334              		.loc 1 293 0
- 17335 001a 07F10C07 		add	r7, r7, #12
- 17336 001e BD46     		mov	sp, r7
- 17337 0020 80BC     		pop	{r7}
- 17338 0022 7047     		bx	lr
- 17339              	.L31:
- 17340              		.align	2
- 17341              	.L30:
- 17342 0024 00700040 		.word	1073770496
- 17343              		.cfi_endproc
- 17344              	.LFE37:
- 17346              		.text
- 17347              	.Letext0:
+ 18075              		.loc 1 293 0
+ 18076 001a 07F10C07 		add	r7, r7, #12
+ 18077 001e BD46     		mov	sp, r7
+ 18078 0020 80BC     		pop	{r7}
+ 18079 0022 7047     		bx	lr
+ 18080              	.L31:
+ 18081              		.align	2
+ 18082              	.L30:
+ 18083 0024 00700040 		.word	1073770496
+ 18084              		.cfi_endproc
+ 18085              	.LFE37:
+ 18087              		.text
+ 18088              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f10x_pwr.c
-     /tmp/ccr7dQMF.s:16842  .text.__WFI:00000000 $t
-     /tmp/ccr7dQMF.s:16846  .text.__WFI:00000000 __WFI
-     /tmp/ccr7dQMF.s:16872  .text.__WFE:00000000 $t
-     /tmp/ccr7dQMF.s:16876  .text.__WFE:00000000 __WFE
-     /tmp/ccr7dQMF.s:16902  .text.PWR_DeInit:00000000 $t
-     /tmp/ccr7dQMF.s:16907  .text.PWR_DeInit:00000000 PWR_DeInit
-     /tmp/ccr7dQMF.s:16935  .text.PWR_BackupAccessCmd:00000000 $t
-     /tmp/ccr7dQMF.s:16940  .text.PWR_BackupAccessCmd:00000000 PWR_BackupAccessCmd
-     /tmp/ccr7dQMF.s:16971  .text.PWR_BackupAccessCmd:0000001c $d
-     /tmp/ccr7dQMF.s:16976  .text.PWR_PVDCmd:00000000 $t
-     /tmp/ccr7dQMF.s:16981  .text.PWR_PVDCmd:00000000 PWR_PVDCmd
-     /tmp/ccr7dQMF.s:17012  .text.PWR_PVDCmd:0000001c $d
-     /tmp/ccr7dQMF.s:17017  .text.PWR_PVDLevelConfig:00000000 $t
-     /tmp/ccr7dQMF.s:17022  .text.PWR_PVDLevelConfig:00000000 PWR_PVDLevelConfig
-     /tmp/ccr7dQMF.s:17068  .text.PWR_PVDLevelConfig:00000038 $d
-     /tmp/ccr7dQMF.s:17073  .text.PWR_WakeUpPinCmd:00000000 $t
-     /tmp/ccr7dQMF.s:17078  .text.PWR_WakeUpPinCmd:00000000 PWR_WakeUpPinCmd
-     /tmp/ccr7dQMF.s:17109  .text.PWR_WakeUpPinCmd:0000001c $d
-     /tmp/ccr7dQMF.s:17114  .text.PWR_EnterSTOPMode:00000000 $t
-     /tmp/ccr7dQMF.s:17119  .text.PWR_EnterSTOPMode:00000000 PWR_EnterSTOPMode
-     /tmp/ccr7dQMF.s:17189  .text.PWR_EnterSTOPMode:00000060 $d
-     /tmp/ccr7dQMF.s:17195  .text.PWR_EnterSTANDBYMode:00000000 $t
-     /tmp/ccr7dQMF.s:17200  .text.PWR_EnterSTANDBYMode:00000000 PWR_EnterSTANDBYMode
-     /tmp/ccr7dQMF.s:17239  .text.PWR_EnterSTANDBYMode:00000030 $d
-     /tmp/ccr7dQMF.s:17245  .text.PWR_GetFlagStatus:00000000 $t
-     /tmp/ccr7dQMF.s:17250  .text.PWR_GetFlagStatus:00000000 PWR_GetFlagStatus
-     /tmp/ccr7dQMF.s:17298  .text.PWR_GetFlagStatus:00000038 $d
-     /tmp/ccr7dQMF.s:17303  .text.PWR_ClearFlag:00000000 $t
-     /tmp/ccr7dQMF.s:17308  .text.PWR_ClearFlag:00000000 PWR_ClearFlag
-     /tmp/ccr7dQMF.s:17342  .text.PWR_ClearFlag:00000024 $d
+     /tmp/ccuG3fIf.s:17583  .text.__WFI:00000000 $t
+     /tmp/ccuG3fIf.s:17587  .text.__WFI:00000000 __WFI
+     /tmp/ccuG3fIf.s:17613  .text.__WFE:00000000 $t
+     /tmp/ccuG3fIf.s:17617  .text.__WFE:00000000 __WFE
+     /tmp/ccuG3fIf.s:17643  .text.PWR_DeInit:00000000 $t
+     /tmp/ccuG3fIf.s:17648  .text.PWR_DeInit:00000000 PWR_DeInit
+     /tmp/ccuG3fIf.s:17676  .text.PWR_BackupAccessCmd:00000000 $t
+     /tmp/ccuG3fIf.s:17681  .text.PWR_BackupAccessCmd:00000000 PWR_BackupAccessCmd
+     /tmp/ccuG3fIf.s:17712  .text.PWR_BackupAccessCmd:0000001c $d
+     /tmp/ccuG3fIf.s:17717  .text.PWR_PVDCmd:00000000 $t
+     /tmp/ccuG3fIf.s:17722  .text.PWR_PVDCmd:00000000 PWR_PVDCmd
+     /tmp/ccuG3fIf.s:17753  .text.PWR_PVDCmd:0000001c $d
+     /tmp/ccuG3fIf.s:17758  .text.PWR_PVDLevelConfig:00000000 $t
+     /tmp/ccuG3fIf.s:17763  .text.PWR_PVDLevelConfig:00000000 PWR_PVDLevelConfig
+     /tmp/ccuG3fIf.s:17809  .text.PWR_PVDLevelConfig:00000038 $d
+     /tmp/ccuG3fIf.s:17814  .text.PWR_WakeUpPinCmd:00000000 $t
+     /tmp/ccuG3fIf.s:17819  .text.PWR_WakeUpPinCmd:00000000 PWR_WakeUpPinCmd
+     /tmp/ccuG3fIf.s:17850  .text.PWR_WakeUpPinCmd:0000001c $d
+     /tmp/ccuG3fIf.s:17855  .text.PWR_EnterSTOPMode:00000000 $t
+     /tmp/ccuG3fIf.s:17860  .text.PWR_EnterSTOPMode:00000000 PWR_EnterSTOPMode
+     /tmp/ccuG3fIf.s:17930  .text.PWR_EnterSTOPMode:00000060 $d
+     /tmp/ccuG3fIf.s:17936  .text.PWR_EnterSTANDBYMode:00000000 $t
+     /tmp/ccuG3fIf.s:17941  .text.PWR_EnterSTANDBYMode:00000000 PWR_EnterSTANDBYMode
+     /tmp/ccuG3fIf.s:17980  .text.PWR_EnterSTANDBYMode:00000030 $d
+     /tmp/ccuG3fIf.s:17986  .text.PWR_GetFlagStatus:00000000 $t
+     /tmp/ccuG3fIf.s:17991  .text.PWR_GetFlagStatus:00000000 PWR_GetFlagStatus
+     /tmp/ccuG3fIf.s:18039  .text.PWR_GetFlagStatus:00000038 $d
+     /tmp/ccuG3fIf.s:18044  .text.PWR_ClearFlag:00000000 $t
+     /tmp/ccuG3fIf.s:18049  .text.PWR_ClearFlag:00000000 PWR_ClearFlag
+     /tmp/ccuG3fIf.s:18083  .text.PWR_ClearFlag:00000024 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

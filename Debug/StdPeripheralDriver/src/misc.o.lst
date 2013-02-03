@@ -13,12 +13,12 @@
   13              		.file	"misc.c"
   23              	.Ltext0:
   24              		.file 1 "../StdPeripheralDriver/src/misc.c"
- 16253              		.align	2
- 16254              		.global	NVIC_PriorityGroupConfig
- 16255              		.thumb
- 16256              		.thumb_func
- 16258              	NVIC_PriorityGroupConfig:
- 16259              	.LFB29:
+ 17475              		.align	2
+ 17476              		.global	NVIC_PriorityGroupConfig
+ 17477              		.thumb
+ 17478              		.thumb_func
+ 17480              	NVIC_PriorityGroupConfig:
+ 17481              	.LFB29:
    1:../StdPeripheralDriver/src/misc.c **** /**
    2:../StdPeripheralDriver/src/misc.c ****   ******************************************************************************
    3:../StdPeripheralDriver/src/misc.c ****   * @file    misc.c
@@ -116,52 +116,52 @@
   95:../StdPeripheralDriver/src/misc.c ****   */
   96:../StdPeripheralDriver/src/misc.c **** void NVIC_PriorityGroupConfig(uint32_t NVIC_PriorityGroup)
   97:../StdPeripheralDriver/src/misc.c **** {
- 16260              		.loc 1 97 0
- 16261              		.cfi_startproc
- 16262              		@ args = 0, pretend = 0, frame = 8
- 16263              		@ frame_needed = 1, uses_anonymous_args = 0
- 16264              		@ link register save eliminated.
- 16265 0000 80B4     		push	{r7}
- 16266              	.LCFI0:
- 16267              		.cfi_def_cfa_offset 4
- 16268 0002 83B0     		sub	sp, sp, #12
- 16269              	.LCFI1:
- 16270              		.cfi_def_cfa_offset 16
- 16271 0004 00AF     		add	r7, sp, #0
- 16272              		.cfi_offset 7, -4
- 16273              	.LCFI2:
- 16274              		.cfi_def_cfa_register 7
- 16275 0006 7860     		str	r0, [r7, #4]
+ 17482              		.loc 1 97 0
+ 17483              		.cfi_startproc
+ 17484              		@ args = 0, pretend = 0, frame = 8
+ 17485              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17486              		@ link register save eliminated.
+ 17487 0000 80B4     		push	{r7}
+ 17488              	.LCFI0:
+ 17489              		.cfi_def_cfa_offset 4
+ 17490 0002 83B0     		sub	sp, sp, #12
+ 17491              	.LCFI1:
+ 17492              		.cfi_def_cfa_offset 16
+ 17493 0004 00AF     		add	r7, sp, #0
+ 17494              		.cfi_offset 7, -4
+ 17495              	.LCFI2:
+ 17496              		.cfi_def_cfa_register 7
+ 17497 0006 7860     		str	r0, [r7, #4]
   98:../StdPeripheralDriver/src/misc.c ****   /* Check the parameters */
   99:../StdPeripheralDriver/src/misc.c ****   assert_param(IS_NVIC_PRIORITY_GROUP(NVIC_PriorityGroup));
  100:../StdPeripheralDriver/src/misc.c ****   
  101:../StdPeripheralDriver/src/misc.c ****   /* Set the PRIGROUP[10:8] bits according to NVIC_PriorityGroup value */
  102:../StdPeripheralDriver/src/misc.c ****   SCB->AIRCR = AIRCR_VECTKEY_MASK | NVIC_PriorityGroup;
- 16276              		.loc 1 102 0
- 16277 0008 054A     		ldr	r2, .L2
- 16278 000a 7B68     		ldr	r3, [r7, #4]
- 16279 000c 43F0BE63 		orr	r3, r3, #99614720
- 16280 0010 43F42023 		orr	r3, r3, #655360
- 16281 0014 D360     		str	r3, [r2, #12]
+ 17498              		.loc 1 102 0
+ 17499 0008 054A     		ldr	r2, .L2
+ 17500 000a 7B68     		ldr	r3, [r7, #4]
+ 17501 000c 43F0BE63 		orr	r3, r3, #99614720
+ 17502 0010 43F42023 		orr	r3, r3, #655360
+ 17503 0014 D360     		str	r3, [r2, #12]
  103:../StdPeripheralDriver/src/misc.c **** }
- 16282              		.loc 1 103 0
- 16283 0016 07F10C07 		add	r7, r7, #12
- 16284 001a BD46     		mov	sp, r7
- 16285 001c 80BC     		pop	{r7}
- 16286 001e 7047     		bx	lr
- 16287              	.L3:
- 16288              		.align	2
- 16289              	.L2:
- 16290 0020 00ED00E0 		.word	-536810240
- 16291              		.cfi_endproc
- 16292              	.LFE29:
- 16294              		.section	.text.NVIC_Init,"ax",%progbits
- 16295              		.align	2
- 16296              		.global	NVIC_Init
- 16297              		.thumb
- 16298              		.thumb_func
- 16300              	NVIC_Init:
- 16301              	.LFB30:
+ 17504              		.loc 1 103 0
+ 17505 0016 07F10C07 		add	r7, r7, #12
+ 17506 001a BD46     		mov	sp, r7
+ 17507 001c 80BC     		pop	{r7}
+ 17508 001e 7047     		bx	lr
+ 17509              	.L3:
+ 17510              		.align	2
+ 17511              	.L2:
+ 17512 0020 00ED00E0 		.word	-536810240
+ 17513              		.cfi_endproc
+ 17514              	.LFE29:
+ 17516              		.section	.text.NVIC_Init,"ax",%progbits
+ 17517              		.align	2
+ 17518              		.global	NVIC_Init
+ 17519              		.thumb
+ 17520              		.thumb_func
+ 17522              	NVIC_Init:
+ 17523              	.LFB30:
  104:../StdPeripheralDriver/src/misc.c **** 
  105:../StdPeripheralDriver/src/misc.c **** /**
  106:../StdPeripheralDriver/src/misc.c ****   * @brief  Initializes the NVIC peripheral according to the specified
@@ -172,30 +172,30 @@
  111:../StdPeripheralDriver/src/misc.c ****   */
  112:../StdPeripheralDriver/src/misc.c **** void NVIC_Init(NVIC_InitTypeDef* NVIC_InitStruct)
  113:../StdPeripheralDriver/src/misc.c **** {
- 16302              		.loc 1 113 0
- 16303              		.cfi_startproc
- 16304              		@ args = 0, pretend = 0, frame = 24
- 16305              		@ frame_needed = 1, uses_anonymous_args = 0
- 16306              		@ link register save eliminated.
- 16307 0000 80B4     		push	{r7}
- 16308              	.LCFI3:
- 16309              		.cfi_def_cfa_offset 4
- 16310 0002 87B0     		sub	sp, sp, #28
- 16311              	.LCFI4:
- 16312              		.cfi_def_cfa_offset 32
- 16313 0004 00AF     		add	r7, sp, #0
- 16314              		.cfi_offset 7, -4
- 16315              	.LCFI5:
- 16316              		.cfi_def_cfa_register 7
- 16317 0006 7860     		str	r0, [r7, #4]
+ 17524              		.loc 1 113 0
+ 17525              		.cfi_startproc
+ 17526              		@ args = 0, pretend = 0, frame = 24
+ 17527              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17528              		@ link register save eliminated.
+ 17529 0000 80B4     		push	{r7}
+ 17530              	.LCFI3:
+ 17531              		.cfi_def_cfa_offset 4
+ 17532 0002 87B0     		sub	sp, sp, #28
+ 17533              	.LCFI4:
+ 17534              		.cfi_def_cfa_offset 32
+ 17535 0004 00AF     		add	r7, sp, #0
+ 17536              		.cfi_offset 7, -4
+ 17537              	.LCFI5:
+ 17538              		.cfi_def_cfa_register 7
+ 17539 0006 7860     		str	r0, [r7, #4]
  114:../StdPeripheralDriver/src/misc.c ****   uint32_t tmppriority = 0x00, tmppre = 0x00, tmpsub = 0x0F;
- 16318              		.loc 1 114 0
- 16319 0008 4FF00003 		mov	r3, #0
- 16320 000c 7B61     		str	r3, [r7, #20]
- 16321 000e 4FF00003 		mov	r3, #0
- 16322 0012 3B61     		str	r3, [r7, #16]
- 16323 0014 4FF00F03 		mov	r3, #15
- 16324 0018 FB60     		str	r3, [r7, #12]
+ 17540              		.loc 1 114 0
+ 17541 0008 4FF00003 		mov	r3, #0
+ 17542 000c 7B61     		str	r3, [r7, #20]
+ 17543 000e 4FF00003 		mov	r3, #0
+ 17544 0012 3B61     		str	r3, [r7, #16]
+ 17545 0014 4FF00F03 		mov	r3, #15
+ 17546 0018 FB60     		str	r3, [r7, #12]
  115:../StdPeripheralDriver/src/misc.c ****   
  116:../StdPeripheralDriver/src/misc.c ****   /* Check the parameters */
  117:../StdPeripheralDriver/src/misc.c ****   assert_param(IS_FUNCTIONAL_STATE(NVIC_InitStruct->NVIC_IRQChannelCmd));
@@ -203,131 +203,131 @@
  119:../StdPeripheralDriver/src/misc.c ****   assert_param(IS_NVIC_SUB_PRIORITY(NVIC_InitStruct->NVIC_IRQChannelSubPriority));
  120:../StdPeripheralDriver/src/misc.c ****     
  121:../StdPeripheralDriver/src/misc.c ****   if (NVIC_InitStruct->NVIC_IRQChannelCmd != DISABLE)
- 16325              		.loc 1 121 0
- 16326 001a 7B68     		ldr	r3, [r7, #4]
- 16327 001c DB78     		ldrb	r3, [r3, #3]	@ zero_extendqisi2
- 16328 001e 002B     		cmp	r3, #0
- 16329 0020 3FD0     		beq	.L5
+ 17547              		.loc 1 121 0
+ 17548 001a 7B68     		ldr	r3, [r7, #4]
+ 17549 001c DB78     		ldrb	r3, [r3, #3]	@ zero_extendqisi2
+ 17550 001e 002B     		cmp	r3, #0
+ 17551 0020 3FD0     		beq	.L5
  122:../StdPeripheralDriver/src/misc.c ****   {
  123:../StdPeripheralDriver/src/misc.c ****     /* Compute the Corresponding IRQ Priority --------------------------------*/    
  124:../StdPeripheralDriver/src/misc.c ****     tmppriority = (0x700 - ((SCB->AIRCR) & (uint32_t)0x700))>> 0x08;
- 16330              		.loc 1 124 0
- 16331 0022 2B4B     		ldr	r3, .L7
- 16332 0024 DB68     		ldr	r3, [r3, #12]
- 16333 0026 6FEA0303 		mvn	r3, r3
- 16334 002a 03F4E063 		and	r3, r3, #1792
- 16335 002e 4FEA1323 		lsr	r3, r3, #8
- 16336 0032 7B61     		str	r3, [r7, #20]
+ 17552              		.loc 1 124 0
+ 17553 0022 2B4B     		ldr	r3, .L7
+ 17554 0024 DB68     		ldr	r3, [r3, #12]
+ 17555 0026 6FEA0303 		mvn	r3, r3
+ 17556 002a 03F4E063 		and	r3, r3, #1792
+ 17557 002e 4FEA1323 		lsr	r3, r3, #8
+ 17558 0032 7B61     		str	r3, [r7, #20]
  125:../StdPeripheralDriver/src/misc.c ****     tmppre = (0x4 - tmppriority);
- 16337              		.loc 1 125 0
- 16338 0034 7B69     		ldr	r3, [r7, #20]
- 16339 0036 C3F10403 		rsb	r3, r3, #4
- 16340 003a 3B61     		str	r3, [r7, #16]
+ 17559              		.loc 1 125 0
+ 17560 0034 7B69     		ldr	r3, [r7, #20]
+ 17561 0036 C3F10403 		rsb	r3, r3, #4
+ 17562 003a 3B61     		str	r3, [r7, #16]
  126:../StdPeripheralDriver/src/misc.c ****     tmpsub = tmpsub >> tmppriority;
- 16341              		.loc 1 126 0
- 16342 003c 7B69     		ldr	r3, [r7, #20]
- 16343 003e FA68     		ldr	r2, [r7, #12]
- 16344 0040 22FA03F3 		lsr	r3, r2, r3
- 16345 0044 FB60     		str	r3, [r7, #12]
+ 17563              		.loc 1 126 0
+ 17564 003c 7B69     		ldr	r3, [r7, #20]
+ 17565 003e FA68     		ldr	r2, [r7, #12]
+ 17566 0040 22FA03F3 		lsr	r3, r2, r3
+ 17567 0044 FB60     		str	r3, [r7, #12]
  127:../StdPeripheralDriver/src/misc.c **** 
  128:../StdPeripheralDriver/src/misc.c ****     tmppriority = (uint32_t)NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority << tmppre;
- 16346              		.loc 1 128 0
- 16347 0046 7B68     		ldr	r3, [r7, #4]
- 16348 0048 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
- 16349 004a 1A46     		mov	r2, r3
- 16350 004c 3B69     		ldr	r3, [r7, #16]
- 16351 004e 02FA03F3 		lsl	r3, r2, r3
- 16352 0052 7B61     		str	r3, [r7, #20]
+ 17568              		.loc 1 128 0
+ 17569 0046 7B68     		ldr	r3, [r7, #4]
+ 17570 0048 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 17571 004a 1A46     		mov	r2, r3
+ 17572 004c 3B69     		ldr	r3, [r7, #16]
+ 17573 004e 02FA03F3 		lsl	r3, r2, r3
+ 17574 0052 7B61     		str	r3, [r7, #20]
  129:../StdPeripheralDriver/src/misc.c ****     tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
- 16353              		.loc 1 129 0
- 16354 0054 7B68     		ldr	r3, [r7, #4]
- 16355 0056 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
- 16356 0058 1A46     		mov	r2, r3
- 16357 005a FB68     		ldr	r3, [r7, #12]
- 16358 005c 02EA0303 		and	r3, r2, r3
- 16359 0060 7A69     		ldr	r2, [r7, #20]
- 16360 0062 42EA0303 		orr	r3, r2, r3
- 16361 0066 7B61     		str	r3, [r7, #20]
+ 17575              		.loc 1 129 0
+ 17576 0054 7B68     		ldr	r3, [r7, #4]
+ 17577 0056 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+ 17578 0058 1A46     		mov	r2, r3
+ 17579 005a FB68     		ldr	r3, [r7, #12]
+ 17580 005c 02EA0303 		and	r3, r2, r3
+ 17581 0060 7A69     		ldr	r2, [r7, #20]
+ 17582 0062 42EA0303 		orr	r3, r2, r3
+ 17583 0066 7B61     		str	r3, [r7, #20]
  130:../StdPeripheralDriver/src/misc.c ****     tmppriority = tmppriority << 0x04;
- 16362              		.loc 1 130 0
- 16363 0068 7B69     		ldr	r3, [r7, #20]
- 16364 006a 4FEA0313 		lsl	r3, r3, #4
- 16365 006e 7B61     		str	r3, [r7, #20]
+ 17584              		.loc 1 130 0
+ 17585 0068 7B69     		ldr	r3, [r7, #20]
+ 17586 006a 4FEA0313 		lsl	r3, r3, #4
+ 17587 006e 7B61     		str	r3, [r7, #20]
  131:../StdPeripheralDriver/src/misc.c ****         
  132:../StdPeripheralDriver/src/misc.c ****     NVIC->IP[NVIC_InitStruct->NVIC_IRQChannel] = tmppriority;
- 16366              		.loc 1 132 0
- 16367 0070 1849     		ldr	r1, .L7+4
- 16368 0072 7B68     		ldr	r3, [r7, #4]
- 16369 0074 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
- 16370 0076 7A69     		ldr	r2, [r7, #20]
- 16371 0078 D2B2     		uxtb	r2, r2
- 16372 007a CB18     		adds	r3, r1, r3
- 16373 007c 83F80023 		strb	r2, [r3, #768]
+ 17588              		.loc 1 132 0
+ 17589 0070 1849     		ldr	r1, .L7+4
+ 17590 0072 7B68     		ldr	r3, [r7, #4]
+ 17591 0074 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 17592 0076 7A69     		ldr	r2, [r7, #20]
+ 17593 0078 D2B2     		uxtb	r2, r2
+ 17594 007a CB18     		adds	r3, r1, r3
+ 17595 007c 83F80023 		strb	r2, [r3, #768]
  133:../StdPeripheralDriver/src/misc.c ****     
  134:../StdPeripheralDriver/src/misc.c ****     /* Enable the Selected IRQ Channels --------------------------------------*/
  135:../StdPeripheralDriver/src/misc.c ****     NVIC->ISER[NVIC_InitStruct->NVIC_IRQChannel >> 0x05] =
- 16374              		.loc 1 135 0
- 16375 0080 144B     		ldr	r3, .L7+4
- 16376 0082 7A68     		ldr	r2, [r7, #4]
- 16377 0084 1278     		ldrb	r2, [r2, #0]	@ zero_extendqisi2
- 16378 0086 4FEA5212 		lsr	r2, r2, #5
- 16379 008a D2B2     		uxtb	r2, r2
+ 17596              		.loc 1 135 0
+ 17597 0080 144B     		ldr	r3, .L7+4
+ 17598 0082 7A68     		ldr	r2, [r7, #4]
+ 17599 0084 1278     		ldrb	r2, [r2, #0]	@ zero_extendqisi2
+ 17600 0086 4FEA5212 		lsr	r2, r2, #5
+ 17601 008a D2B2     		uxtb	r2, r2
  136:../StdPeripheralDriver/src/misc.c ****       (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
- 16380              		.loc 1 136 0
- 16381 008c 7968     		ldr	r1, [r7, #4]
- 16382 008e 0978     		ldrb	r1, [r1, #0]	@ zero_extendqisi2
- 16383 0090 01F01F01 		and	r1, r1, #31
- 16384 0094 4FF00100 		mov	r0, #1
- 16385 0098 00FA01F1 		lsl	r1, r0, r1
+ 17602              		.loc 1 136 0
+ 17603 008c 7968     		ldr	r1, [r7, #4]
+ 17604 008e 0978     		ldrb	r1, [r1, #0]	@ zero_extendqisi2
+ 17605 0090 01F01F01 		and	r1, r1, #31
+ 17606 0094 4FF00100 		mov	r0, #1
+ 17607 0098 00FA01F1 		lsl	r1, r0, r1
  135:../StdPeripheralDriver/src/misc.c ****     NVIC->ISER[NVIC_InitStruct->NVIC_IRQChannel >> 0x05] =
- 16386              		.loc 1 135 0
- 16387 009c 43F82210 		str	r1, [r3, r2, lsl #2]
- 16388 00a0 11E0     		b	.L4
- 16389              	.L5:
+ 17608              		.loc 1 135 0
+ 17609 009c 43F82210 		str	r1, [r3, r2, lsl #2]
+ 17610 00a0 11E0     		b	.L4
+ 17611              	.L5:
  137:../StdPeripheralDriver/src/misc.c ****   }
  138:../StdPeripheralDriver/src/misc.c ****   else
  139:../StdPeripheralDriver/src/misc.c ****   {
  140:../StdPeripheralDriver/src/misc.c ****     /* Disable the Selected IRQ Channels -------------------------------------*/
  141:../StdPeripheralDriver/src/misc.c ****     NVIC->ICER[NVIC_InitStruct->NVIC_IRQChannel >> 0x05] =
- 16390              		.loc 1 141 0
- 16391 00a2 0C4B     		ldr	r3, .L7+4
- 16392 00a4 7A68     		ldr	r2, [r7, #4]
- 16393 00a6 1278     		ldrb	r2, [r2, #0]	@ zero_extendqisi2
- 16394 00a8 4FEA5212 		lsr	r2, r2, #5
- 16395 00ac D2B2     		uxtb	r2, r2
+ 17612              		.loc 1 141 0
+ 17613 00a2 0C4B     		ldr	r3, .L7+4
+ 17614 00a4 7A68     		ldr	r2, [r7, #4]
+ 17615 00a6 1278     		ldrb	r2, [r2, #0]	@ zero_extendqisi2
+ 17616 00a8 4FEA5212 		lsr	r2, r2, #5
+ 17617 00ac D2B2     		uxtb	r2, r2
  142:../StdPeripheralDriver/src/misc.c ****       (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
- 16396              		.loc 1 142 0
- 16397 00ae 7968     		ldr	r1, [r7, #4]
- 16398 00b0 0978     		ldrb	r1, [r1, #0]	@ zero_extendqisi2
- 16399 00b2 01F01F01 		and	r1, r1, #31
- 16400 00b6 4FF00100 		mov	r0, #1
- 16401 00ba 00FA01F1 		lsl	r1, r0, r1
+ 17618              		.loc 1 142 0
+ 17619 00ae 7968     		ldr	r1, [r7, #4]
+ 17620 00b0 0978     		ldrb	r1, [r1, #0]	@ zero_extendqisi2
+ 17621 00b2 01F01F01 		and	r1, r1, #31
+ 17622 00b6 4FF00100 		mov	r0, #1
+ 17623 00ba 00FA01F1 		lsl	r1, r0, r1
  141:../StdPeripheralDriver/src/misc.c ****     NVIC->ICER[NVIC_InitStruct->NVIC_IRQChannel >> 0x05] =
- 16402              		.loc 1 141 0
- 16403 00be 02F12002 		add	r2, r2, #32
- 16404 00c2 43F82210 		str	r1, [r3, r2, lsl #2]
- 16405              	.L4:
+ 17624              		.loc 1 141 0
+ 17625 00be 02F12002 		add	r2, r2, #32
+ 17626 00c2 43F82210 		str	r1, [r3, r2, lsl #2]
+ 17627              	.L4:
  143:../StdPeripheralDriver/src/misc.c ****   }
  144:../StdPeripheralDriver/src/misc.c **** }
- 16406              		.loc 1 144 0
- 16407 00c6 07F11C07 		add	r7, r7, #28
- 16408 00ca BD46     		mov	sp, r7
- 16409 00cc 80BC     		pop	{r7}
- 16410 00ce 7047     		bx	lr
- 16411              	.L8:
- 16412              		.align	2
- 16413              	.L7:
- 16414 00d0 00ED00E0 		.word	-536810240
- 16415 00d4 00E100E0 		.word	-536813312
- 16416              		.cfi_endproc
- 16417              	.LFE30:
- 16419              		.section	.text.NVIC_SetVectorTable,"ax",%progbits
- 16420              		.align	2
- 16421              		.global	NVIC_SetVectorTable
- 16422              		.thumb
- 16423              		.thumb_func
- 16425              	NVIC_SetVectorTable:
- 16426              	.LFB31:
+ 17628              		.loc 1 144 0
+ 17629 00c6 07F11C07 		add	r7, r7, #28
+ 17630 00ca BD46     		mov	sp, r7
+ 17631 00cc 80BC     		pop	{r7}
+ 17632 00ce 7047     		bx	lr
+ 17633              	.L8:
+ 17634              		.align	2
+ 17635              	.L7:
+ 17636 00d0 00ED00E0 		.word	-536810240
+ 17637 00d4 00E100E0 		.word	-536813312
+ 17638              		.cfi_endproc
+ 17639              	.LFE30:
+ 17641              		.section	.text.NVIC_SetVectorTable,"ax",%progbits
+ 17642              		.align	2
+ 17643              		.global	NVIC_SetVectorTable
+ 17644              		.thumb
+ 17645              		.thumb_func
+ 17647              	NVIC_SetVectorTable:
+ 17648              	.LFB31:
  145:../StdPeripheralDriver/src/misc.c **** 
  146:../StdPeripheralDriver/src/misc.c **** /**
  147:../StdPeripheralDriver/src/misc.c ****   * @brief  Sets the vector table location and Offset.
@@ -341,55 +341,55 @@
  155:../StdPeripheralDriver/src/misc.c ****   */
  156:../StdPeripheralDriver/src/misc.c **** void NVIC_SetVectorTable(uint32_t NVIC_VectTab, uint32_t Offset)
  157:../StdPeripheralDriver/src/misc.c **** { 
- 16427              		.loc 1 157 0
- 16428              		.cfi_startproc
- 16429              		@ args = 0, pretend = 0, frame = 8
- 16430              		@ frame_needed = 1, uses_anonymous_args = 0
- 16431              		@ link register save eliminated.
- 16432 0000 80B4     		push	{r7}
- 16433              	.LCFI6:
- 16434              		.cfi_def_cfa_offset 4
- 16435 0002 83B0     		sub	sp, sp, #12
- 16436              	.LCFI7:
- 16437              		.cfi_def_cfa_offset 16
- 16438 0004 00AF     		add	r7, sp, #0
- 16439              		.cfi_offset 7, -4
- 16440              	.LCFI8:
- 16441              		.cfi_def_cfa_register 7
- 16442 0006 7860     		str	r0, [r7, #4]
- 16443 0008 3960     		str	r1, [r7, #0]
+ 17649              		.loc 1 157 0
+ 17650              		.cfi_startproc
+ 17651              		@ args = 0, pretend = 0, frame = 8
+ 17652              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17653              		@ link register save eliminated.
+ 17654 0000 80B4     		push	{r7}
+ 17655              	.LCFI6:
+ 17656              		.cfi_def_cfa_offset 4
+ 17657 0002 83B0     		sub	sp, sp, #12
+ 17658              	.LCFI7:
+ 17659              		.cfi_def_cfa_offset 16
+ 17660 0004 00AF     		add	r7, sp, #0
+ 17661              		.cfi_offset 7, -4
+ 17662              	.LCFI8:
+ 17663              		.cfi_def_cfa_register 7
+ 17664 0006 7860     		str	r0, [r7, #4]
+ 17665 0008 3960     		str	r1, [r7, #0]
  158:../StdPeripheralDriver/src/misc.c ****   /* Check the parameters */
  159:../StdPeripheralDriver/src/misc.c ****   assert_param(IS_NVIC_VECTTAB(NVIC_VectTab));
  160:../StdPeripheralDriver/src/misc.c ****   assert_param(IS_NVIC_OFFSET(Offset));  
  161:../StdPeripheralDriver/src/misc.c ****    
  162:../StdPeripheralDriver/src/misc.c ****   SCB->VTOR = NVIC_VectTab | (Offset & (uint32_t)0x1FFFFF80);
- 16444              		.loc 1 162 0
- 16445 000a 074A     		ldr	r2, .L10
- 16446 000c 3B68     		ldr	r3, [r7, #0]
- 16447 000e 23F06043 		bic	r3, r3, #-536870912
- 16448 0012 23F07F03 		bic	r3, r3, #127
- 16449 0016 7968     		ldr	r1, [r7, #4]
- 16450 0018 0B43     		orrs	r3, r3, r1
- 16451 001a 9360     		str	r3, [r2, #8]
+ 17666              		.loc 1 162 0
+ 17667 000a 074A     		ldr	r2, .L10
+ 17668 000c 3B68     		ldr	r3, [r7, #0]
+ 17669 000e 23F06043 		bic	r3, r3, #-536870912
+ 17670 0012 23F07F03 		bic	r3, r3, #127
+ 17671 0016 7968     		ldr	r1, [r7, #4]
+ 17672 0018 0B43     		orrs	r3, r3, r1
+ 17673 001a 9360     		str	r3, [r2, #8]
  163:../StdPeripheralDriver/src/misc.c **** }
- 16452              		.loc 1 163 0
- 16453 001c 07F10C07 		add	r7, r7, #12
- 16454 0020 BD46     		mov	sp, r7
- 16455 0022 80BC     		pop	{r7}
- 16456 0024 7047     		bx	lr
- 16457              	.L11:
- 16458 0026 00BF     		.align	2
- 16459              	.L10:
- 16460 0028 00ED00E0 		.word	-536810240
- 16461              		.cfi_endproc
- 16462              	.LFE31:
- 16464              		.section	.text.NVIC_SystemLPConfig,"ax",%progbits
- 16465              		.align	2
- 16466              		.global	NVIC_SystemLPConfig
- 16467              		.thumb
- 16468              		.thumb_func
- 16470              	NVIC_SystemLPConfig:
- 16471              	.LFB32:
+ 17674              		.loc 1 163 0
+ 17675 001c 07F10C07 		add	r7, r7, #12
+ 17676 0020 BD46     		mov	sp, r7
+ 17677 0022 80BC     		pop	{r7}
+ 17678 0024 7047     		bx	lr
+ 17679              	.L11:
+ 17680 0026 00BF     		.align	2
+ 17681              	.L10:
+ 17682 0028 00ED00E0 		.word	-536810240
+ 17683              		.cfi_endproc
+ 17684              	.LFE31:
+ 17686              		.section	.text.NVIC_SystemLPConfig,"ax",%progbits
+ 17687              		.align	2
+ 17688              		.global	NVIC_SystemLPConfig
+ 17689              		.thumb
+ 17690              		.thumb_func
+ 17692              	NVIC_SystemLPConfig:
+ 17693              	.LFB32:
  164:../StdPeripheralDriver/src/misc.c **** 
  165:../StdPeripheralDriver/src/misc.c **** /**
  166:../StdPeripheralDriver/src/misc.c ****   * @brief  Selects the condition for the system to enter low power mode.
@@ -403,78 +403,78 @@
  174:../StdPeripheralDriver/src/misc.c ****   */
  175:../StdPeripheralDriver/src/misc.c **** void NVIC_SystemLPConfig(uint8_t LowPowerMode, FunctionalState NewState)
  176:../StdPeripheralDriver/src/misc.c **** {
- 16472              		.loc 1 176 0
- 16473              		.cfi_startproc
- 16474              		@ args = 0, pretend = 0, frame = 8
- 16475              		@ frame_needed = 1, uses_anonymous_args = 0
- 16476              		@ link register save eliminated.
- 16477 0000 80B4     		push	{r7}
- 16478              	.LCFI9:
- 16479              		.cfi_def_cfa_offset 4
- 16480 0002 83B0     		sub	sp, sp, #12
- 16481              	.LCFI10:
- 16482              		.cfi_def_cfa_offset 16
- 16483 0004 00AF     		add	r7, sp, #0
- 16484              		.cfi_offset 7, -4
- 16485              	.LCFI11:
- 16486              		.cfi_def_cfa_register 7
- 16487 0006 0246     		mov	r2, r0
- 16488 0008 0B46     		mov	r3, r1
- 16489 000a FA71     		strb	r2, [r7, #7]
- 16490 000c BB71     		strb	r3, [r7, #6]
+ 17694              		.loc 1 176 0
+ 17695              		.cfi_startproc
+ 17696              		@ args = 0, pretend = 0, frame = 8
+ 17697              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17698              		@ link register save eliminated.
+ 17699 0000 80B4     		push	{r7}
+ 17700              	.LCFI9:
+ 17701              		.cfi_def_cfa_offset 4
+ 17702 0002 83B0     		sub	sp, sp, #12
+ 17703              	.LCFI10:
+ 17704              		.cfi_def_cfa_offset 16
+ 17705 0004 00AF     		add	r7, sp, #0
+ 17706              		.cfi_offset 7, -4
+ 17707              	.LCFI11:
+ 17708              		.cfi_def_cfa_register 7
+ 17709 0006 0246     		mov	r2, r0
+ 17710 0008 0B46     		mov	r3, r1
+ 17711 000a FA71     		strb	r2, [r7, #7]
+ 17712 000c BB71     		strb	r3, [r7, #6]
  177:../StdPeripheralDriver/src/misc.c ****   /* Check the parameters */
  178:../StdPeripheralDriver/src/misc.c ****   assert_param(IS_NVIC_LP(LowPowerMode));
  179:../StdPeripheralDriver/src/misc.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));  
  180:../StdPeripheralDriver/src/misc.c ****   
  181:../StdPeripheralDriver/src/misc.c ****   if (NewState != DISABLE)
- 16491              		.loc 1 181 0
- 16492 000e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
- 16493 0010 002B     		cmp	r3, #0
- 16494 0012 07D0     		beq	.L13
+ 17713              		.loc 1 181 0
+ 17714 000e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 17715 0010 002B     		cmp	r3, #0
+ 17716 0012 07D0     		beq	.L13
  182:../StdPeripheralDriver/src/misc.c ****   {
  183:../StdPeripheralDriver/src/misc.c ****     SCB->SCR |= LowPowerMode;
- 16495              		.loc 1 183 0
- 16496 0014 0A4B     		ldr	r3, .L15
- 16497 0016 0A4A     		ldr	r2, .L15
- 16498 0018 1169     		ldr	r1, [r2, #16]
- 16499 001a FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 16500 001c 41EA0202 		orr	r2, r1, r2
- 16501 0020 1A61     		str	r2, [r3, #16]
- 16502 0022 08E0     		b	.L12
- 16503              	.L13:
+ 17717              		.loc 1 183 0
+ 17718 0014 0A4B     		ldr	r3, .L15
+ 17719 0016 0A4A     		ldr	r2, .L15
+ 17720 0018 1169     		ldr	r1, [r2, #16]
+ 17721 001a FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 17722 001c 41EA0202 		orr	r2, r1, r2
+ 17723 0020 1A61     		str	r2, [r3, #16]
+ 17724 0022 08E0     		b	.L12
+ 17725              	.L13:
  184:../StdPeripheralDriver/src/misc.c ****   }
  185:../StdPeripheralDriver/src/misc.c ****   else
  186:../StdPeripheralDriver/src/misc.c ****   {
  187:../StdPeripheralDriver/src/misc.c ****     SCB->SCR &= (uint32_t)(~(uint32_t)LowPowerMode);
- 16504              		.loc 1 187 0
- 16505 0024 064B     		ldr	r3, .L15
- 16506 0026 064A     		ldr	r2, .L15
- 16507 0028 1169     		ldr	r1, [r2, #16]
- 16508 002a FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 16509 002c 6FEA0202 		mvn	r2, r2
- 16510 0030 01EA0202 		and	r2, r1, r2
- 16511 0034 1A61     		str	r2, [r3, #16]
- 16512              	.L12:
+ 17726              		.loc 1 187 0
+ 17727 0024 064B     		ldr	r3, .L15
+ 17728 0026 064A     		ldr	r2, .L15
+ 17729 0028 1169     		ldr	r1, [r2, #16]
+ 17730 002a FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 17731 002c 6FEA0202 		mvn	r2, r2
+ 17732 0030 01EA0202 		and	r2, r1, r2
+ 17733 0034 1A61     		str	r2, [r3, #16]
+ 17734              	.L12:
  188:../StdPeripheralDriver/src/misc.c ****   }
  189:../StdPeripheralDriver/src/misc.c **** }
- 16513              		.loc 1 189 0
- 16514 0036 07F10C07 		add	r7, r7, #12
- 16515 003a BD46     		mov	sp, r7
- 16516 003c 80BC     		pop	{r7}
- 16517 003e 7047     		bx	lr
- 16518              	.L16:
- 16519              		.align	2
- 16520              	.L15:
- 16521 0040 00ED00E0 		.word	-536810240
- 16522              		.cfi_endproc
- 16523              	.LFE32:
- 16525              		.section	.text.SysTick_CLKSourceConfig,"ax",%progbits
- 16526              		.align	2
- 16527              		.global	SysTick_CLKSourceConfig
- 16528              		.thumb
- 16529              		.thumb_func
- 16531              	SysTick_CLKSourceConfig:
- 16532              	.LFB33:
+ 17735              		.loc 1 189 0
+ 17736 0036 07F10C07 		add	r7, r7, #12
+ 17737 003a BD46     		mov	sp, r7
+ 17738 003c 80BC     		pop	{r7}
+ 17739 003e 7047     		bx	lr
+ 17740              	.L16:
+ 17741              		.align	2
+ 17742              	.L15:
+ 17743 0040 00ED00E0 		.word	-536810240
+ 17744              		.cfi_endproc
+ 17745              	.LFE32:
+ 17747              		.section	.text.SysTick_CLKSourceConfig,"ax",%progbits
+ 17748              		.align	2
+ 17749              		.global	SysTick_CLKSourceConfig
+ 17750              		.thumb
+ 17751              		.thumb_func
+ 17753              	SysTick_CLKSourceConfig:
+ 17754              	.LFB33:
  190:../StdPeripheralDriver/src/misc.c **** 
  191:../StdPeripheralDriver/src/misc.c **** /**
  192:../StdPeripheralDriver/src/misc.c ****   * @brief  Configures the SysTick clock source.
@@ -486,82 +486,82 @@
  198:../StdPeripheralDriver/src/misc.c ****   */
  199:../StdPeripheralDriver/src/misc.c **** void SysTick_CLKSourceConfig(uint32_t SysTick_CLKSource)
  200:../StdPeripheralDriver/src/misc.c **** {
- 16533              		.loc 1 200 0
- 16534              		.cfi_startproc
- 16535              		@ args = 0, pretend = 0, frame = 8
- 16536              		@ frame_needed = 1, uses_anonymous_args = 0
- 16537              		@ link register save eliminated.
- 16538 0000 80B4     		push	{r7}
- 16539              	.LCFI12:
- 16540              		.cfi_def_cfa_offset 4
- 16541 0002 83B0     		sub	sp, sp, #12
- 16542              	.LCFI13:
- 16543              		.cfi_def_cfa_offset 16
- 16544 0004 00AF     		add	r7, sp, #0
- 16545              		.cfi_offset 7, -4
- 16546              	.LCFI14:
- 16547              		.cfi_def_cfa_register 7
- 16548 0006 7860     		str	r0, [r7, #4]
+ 17755              		.loc 1 200 0
+ 17756              		.cfi_startproc
+ 17757              		@ args = 0, pretend = 0, frame = 8
+ 17758              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17759              		@ link register save eliminated.
+ 17760 0000 80B4     		push	{r7}
+ 17761              	.LCFI12:
+ 17762              		.cfi_def_cfa_offset 4
+ 17763 0002 83B0     		sub	sp, sp, #12
+ 17764              	.LCFI13:
+ 17765              		.cfi_def_cfa_offset 16
+ 17766 0004 00AF     		add	r7, sp, #0
+ 17767              		.cfi_offset 7, -4
+ 17768              	.LCFI14:
+ 17769              		.cfi_def_cfa_register 7
+ 17770 0006 7860     		str	r0, [r7, #4]
  201:../StdPeripheralDriver/src/misc.c ****   /* Check the parameters */
  202:../StdPeripheralDriver/src/misc.c ****   assert_param(IS_SYSTICK_CLK_SOURCE(SysTick_CLKSource));
  203:../StdPeripheralDriver/src/misc.c ****   if (SysTick_CLKSource == SysTick_CLKSource_HCLK)
- 16549              		.loc 1 203 0
- 16550 0008 7B68     		ldr	r3, [r7, #4]
- 16551 000a 042B     		cmp	r3, #4
- 16552 000c 06D1     		bne	.L18
+ 17771              		.loc 1 203 0
+ 17772 0008 7B68     		ldr	r3, [r7, #4]
+ 17773 000a 042B     		cmp	r3, #4
+ 17774 000c 06D1     		bne	.L18
  204:../StdPeripheralDriver/src/misc.c ****   {
  205:../StdPeripheralDriver/src/misc.c ****     SysTick->CTRL |= SysTick_CLKSource_HCLK;
- 16553              		.loc 1 205 0
- 16554 000e 094B     		ldr	r3, .L20
- 16555 0010 084A     		ldr	r2, .L20
- 16556 0012 1268     		ldr	r2, [r2, #0]
- 16557 0014 42F00402 		orr	r2, r2, #4
- 16558 0018 1A60     		str	r2, [r3, #0]
- 16559 001a 05E0     		b	.L17
- 16560              	.L18:
+ 17775              		.loc 1 205 0
+ 17776 000e 094B     		ldr	r3, .L20
+ 17777 0010 084A     		ldr	r2, .L20
+ 17778 0012 1268     		ldr	r2, [r2, #0]
+ 17779 0014 42F00402 		orr	r2, r2, #4
+ 17780 0018 1A60     		str	r2, [r3, #0]
+ 17781 001a 05E0     		b	.L17
+ 17782              	.L18:
  206:../StdPeripheralDriver/src/misc.c ****   }
  207:../StdPeripheralDriver/src/misc.c ****   else
  208:../StdPeripheralDriver/src/misc.c ****   {
  209:../StdPeripheralDriver/src/misc.c ****     SysTick->CTRL &= SysTick_CLKSource_HCLK_Div8;
- 16561              		.loc 1 209 0
- 16562 001c 054B     		ldr	r3, .L20
- 16563 001e 054A     		ldr	r2, .L20
- 16564 0020 1268     		ldr	r2, [r2, #0]
- 16565 0022 22F00402 		bic	r2, r2, #4
- 16566 0026 1A60     		str	r2, [r3, #0]
- 16567              	.L17:
+ 17783              		.loc 1 209 0
+ 17784 001c 054B     		ldr	r3, .L20
+ 17785 001e 054A     		ldr	r2, .L20
+ 17786 0020 1268     		ldr	r2, [r2, #0]
+ 17787 0022 22F00402 		bic	r2, r2, #4
+ 17788 0026 1A60     		str	r2, [r3, #0]
+ 17789              	.L17:
  210:../StdPeripheralDriver/src/misc.c ****   }
  211:../StdPeripheralDriver/src/misc.c **** }
- 16568              		.loc 1 211 0
- 16569 0028 07F10C07 		add	r7, r7, #12
- 16570 002c BD46     		mov	sp, r7
- 16571 002e 80BC     		pop	{r7}
- 16572 0030 7047     		bx	lr
- 16573              	.L21:
- 16574 0032 00BF     		.align	2
- 16575              	.L20:
- 16576 0034 10E000E0 		.word	-536813552
- 16577              		.cfi_endproc
- 16578              	.LFE33:
- 16580              		.text
- 16581              	.Letext0:
+ 17790              		.loc 1 211 0
+ 17791 0028 07F10C07 		add	r7, r7, #12
+ 17792 002c BD46     		mov	sp, r7
+ 17793 002e 80BC     		pop	{r7}
+ 17794 0030 7047     		bx	lr
+ 17795              	.L21:
+ 17796 0032 00BF     		.align	2
+ 17797              	.L20:
+ 17798 0034 10E000E0 		.word	-536813552
+ 17799              		.cfi_endproc
+ 17800              	.LFE33:
+ 17802              		.text
+ 17803              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 misc.c
-     /tmp/cc3UM8op.s:16253  .text.NVIC_PriorityGroupConfig:00000000 $t
-     /tmp/cc3UM8op.s:16258  .text.NVIC_PriorityGroupConfig:00000000 NVIC_PriorityGroupConfig
-     /tmp/cc3UM8op.s:16290  .text.NVIC_PriorityGroupConfig:00000020 $d
-     /tmp/cc3UM8op.s:16295  .text.NVIC_Init:00000000 $t
-     /tmp/cc3UM8op.s:16300  .text.NVIC_Init:00000000 NVIC_Init
-     /tmp/cc3UM8op.s:16414  .text.NVIC_Init:000000d0 $d
-     /tmp/cc3UM8op.s:16420  .text.NVIC_SetVectorTable:00000000 $t
-     /tmp/cc3UM8op.s:16425  .text.NVIC_SetVectorTable:00000000 NVIC_SetVectorTable
-     /tmp/cc3UM8op.s:16460  .text.NVIC_SetVectorTable:00000028 $d
-     /tmp/cc3UM8op.s:16465  .text.NVIC_SystemLPConfig:00000000 $t
-     /tmp/cc3UM8op.s:16470  .text.NVIC_SystemLPConfig:00000000 NVIC_SystemLPConfig
-     /tmp/cc3UM8op.s:16521  .text.NVIC_SystemLPConfig:00000040 $d
-     /tmp/cc3UM8op.s:16526  .text.SysTick_CLKSourceConfig:00000000 $t
-     /tmp/cc3UM8op.s:16531  .text.SysTick_CLKSourceConfig:00000000 SysTick_CLKSourceConfig
-     /tmp/cc3UM8op.s:16576  .text.SysTick_CLKSourceConfig:00000034 $d
+     /tmp/ccx0UGPq.s:17475  .text.NVIC_PriorityGroupConfig:00000000 $t
+     /tmp/ccx0UGPq.s:17480  .text.NVIC_PriorityGroupConfig:00000000 NVIC_PriorityGroupConfig
+     /tmp/ccx0UGPq.s:17512  .text.NVIC_PriorityGroupConfig:00000020 $d
+     /tmp/ccx0UGPq.s:17517  .text.NVIC_Init:00000000 $t
+     /tmp/ccx0UGPq.s:17522  .text.NVIC_Init:00000000 NVIC_Init
+     /tmp/ccx0UGPq.s:17636  .text.NVIC_Init:000000d0 $d
+     /tmp/ccx0UGPq.s:17642  .text.NVIC_SetVectorTable:00000000 $t
+     /tmp/ccx0UGPq.s:17647  .text.NVIC_SetVectorTable:00000000 NVIC_SetVectorTable
+     /tmp/ccx0UGPq.s:17682  .text.NVIC_SetVectorTable:00000028 $d
+     /tmp/ccx0UGPq.s:17687  .text.NVIC_SystemLPConfig:00000000 $t
+     /tmp/ccx0UGPq.s:17692  .text.NVIC_SystemLPConfig:00000000 NVIC_SystemLPConfig
+     /tmp/ccx0UGPq.s:17743  .text.NVIC_SystemLPConfig:00000040 $d
+     /tmp/ccx0UGPq.s:17748  .text.SysTick_CLKSourceConfig:00000000 $t
+     /tmp/ccx0UGPq.s:17753  .text.SysTick_CLKSourceConfig:00000000 SysTick_CLKSourceConfig
+     /tmp/ccx0UGPq.s:17798  .text.SysTick_CLKSourceConfig:00000034 $d
                      .debug_frame:00000010 $d
 
 NO UNDEFINED SYMBOLS

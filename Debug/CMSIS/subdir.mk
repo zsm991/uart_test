@@ -27,14 +27,14 @@ S_UPPER_DEPS += \
 CMSIS/%.o: ../CMSIS/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: ARM Sourcery Linux GCC C Compiler'
-	arm-none-eabi-gcc -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD_VL -I"/home/serg/arm/workspace/uart_test/CMSIS" -I"/home/serg/arm/workspace/uart_test/StdPeripheralDriver/inc" -I"/home/serg/arm/workspace/uart_test/uart_test" -O0 -ffunction-sections -fdata-sections -Wall -Wa,-adhlns="$@.lst" -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -mcpu=cortex-m3 -mthumb -g3 -gdwarf-2 -o"$@" "$<"
+	arm-none-eabi-gcc -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD_VL -I"/home/serg/arm/workspace/uart_test/CMSIS" -I"/home/serg/arm/workspace/uart_test/StdPeripheralDriver/src" -I"/home/serg/arm/workspace/uart_test/StdPeripheralDriver/inc" -I"/home/serg/arm/workspace/uart_test/src" -O0 -ffunction-sections -fdata-sections -Wall -Wa,-adhlns="$@.lst" -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -mcpu=cortex-m3 -mthumb -g3 -gdwarf-2 -o"$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
 CMSIS/%.o: ../CMSIS/%.S
 	@echo 'Building file: $<'
 	@echo 'Invoking: ARM Sourcery Linux GCC Assembler'
-	arm-none-eabi-gcc -x assembler-with-cpp -Wall -Wa,-adhlns="$@.lst" -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -mcpu=cortex-m3 -mthumb -g3 -gdwarf-2 -o"$@" "$<"
+	arm-none-eabi-gcc -x assembler-with-cpp -I"/home/serg/arm/workspace/uart_test/src" -I"/home/serg/arm/workspace/uart_test/CMSIS" -I"/home/serg/arm/workspace/uart_test/StdPeripheralDriver/inc" -I"/home/serg/arm/workspace/uart_test/StdPeripheralDriver/src" -Wall -Wa,-adhlns="$@.lst" -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -mcpu=cortex-m3 -mthumb -g3 -gdwarf-2 -o"$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

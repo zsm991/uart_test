@@ -13,12 +13,12 @@
   13              		.file	"stm32f10x_cec.c"
   23              	.Ltext0:
   24              		.file 1 "../StdPeripheralDriver/src/stm32f10x_cec.c"
- 16881              		.align	2
- 16882              		.global	CEC_DeInit
- 16883              		.thumb
- 16884              		.thumb_func
- 16886              	CEC_DeInit:
- 16887              	.LFB29:
+ 17622              		.align	2
+ 17623              		.global	CEC_DeInit
+ 17624              		.thumb
+ 17625              		.thumb_func
+ 17627              	CEC_DeInit:
+ 17628              	.LFB29:
    1:../StdPeripheralDriver/src/stm32f10x_cec.c **** /**
    2:../StdPeripheralDriver/src/stm32f10x_cec.c ****   ******************************************************************************
    3:../StdPeripheralDriver/src/stm32f10x_cec.c ****   * @file    stm32f10x_cec.c
@@ -138,42 +138,42 @@
  117:../StdPeripheralDriver/src/stm32f10x_cec.c ****   */
  118:../StdPeripheralDriver/src/stm32f10x_cec.c **** void CEC_DeInit(void)
  119:../StdPeripheralDriver/src/stm32f10x_cec.c **** {
- 16888              		.loc 1 119 0
- 16889              		.cfi_startproc
- 16890              		@ args = 0, pretend = 0, frame = 0
- 16891              		@ frame_needed = 1, uses_anonymous_args = 0
- 16892 0000 80B5     		push	{r7, lr}
- 16893              	.LCFI0:
- 16894              		.cfi_def_cfa_offset 8
- 16895 0002 00AF     		add	r7, sp, #0
- 16896              		.cfi_offset 14, -4
- 16897              		.cfi_offset 7, -8
- 16898              	.LCFI1:
- 16899              		.cfi_def_cfa_register 7
+ 17629              		.loc 1 119 0
+ 17630              		.cfi_startproc
+ 17631              		@ args = 0, pretend = 0, frame = 0
+ 17632              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17633 0000 80B5     		push	{r7, lr}
+ 17634              	.LCFI0:
+ 17635              		.cfi_def_cfa_offset 8
+ 17636 0002 00AF     		add	r7, sp, #0
+ 17637              		.cfi_offset 14, -4
+ 17638              		.cfi_offset 7, -8
+ 17639              	.LCFI1:
+ 17640              		.cfi_def_cfa_register 7
  120:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Enable CEC reset state */
  121:../StdPeripheralDriver/src/stm32f10x_cec.c ****   RCC_APB1PeriphResetCmd(RCC_APB1Periph_CEC, ENABLE);  
- 16900              		.loc 1 121 0
- 16901 0004 4FF08040 		mov	r0, #1073741824
- 16902 0008 4FF00101 		mov	r1, #1
- 16903 000c FFF7FEFF 		bl	RCC_APB1PeriphResetCmd
+ 17641              		.loc 1 121 0
+ 17642 0004 4FF08040 		mov	r0, #1073741824
+ 17643 0008 4FF00101 		mov	r1, #1
+ 17644 000c FFF7FEFF 		bl	RCC_APB1PeriphResetCmd
  122:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Release CEC from reset state */
  123:../StdPeripheralDriver/src/stm32f10x_cec.c ****   RCC_APB1PeriphResetCmd(RCC_APB1Periph_CEC, DISABLE); 
- 16904              		.loc 1 123 0
- 16905 0010 4FF08040 		mov	r0, #1073741824
- 16906 0014 4FF00001 		mov	r1, #0
- 16907 0018 FFF7FEFF 		bl	RCC_APB1PeriphResetCmd
+ 17645              		.loc 1 123 0
+ 17646 0010 4FF08040 		mov	r0, #1073741824
+ 17647 0014 4FF00001 		mov	r1, #0
+ 17648 0018 FFF7FEFF 		bl	RCC_APB1PeriphResetCmd
  124:../StdPeripheralDriver/src/stm32f10x_cec.c **** }
- 16908              		.loc 1 124 0
- 16909 001c 80BD     		pop	{r7, pc}
- 16910              		.cfi_endproc
- 16911              	.LFE29:
- 16913 001e 00BF     		.section	.text.CEC_Init,"ax",%progbits
- 16914              		.align	2
- 16915              		.global	CEC_Init
- 16916              		.thumb
- 16917              		.thumb_func
- 16919              	CEC_Init:
- 16920              	.LFB30:
+ 17649              		.loc 1 124 0
+ 17650 001c 80BD     		pop	{r7, pc}
+ 17651              		.cfi_endproc
+ 17652              	.LFE29:
+ 17654 001e 00BF     		.section	.text.CEC_Init,"ax",%progbits
+ 17655              		.align	2
+ 17656              		.global	CEC_Init
+ 17657              		.thumb
+ 17658              		.thumb_func
+ 17660              	CEC_Init:
+ 17661              	.LFB30:
  125:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  126:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  127:../StdPeripheralDriver/src/stm32f10x_cec.c **** /**
@@ -186,26 +186,26 @@
  134:../StdPeripheralDriver/src/stm32f10x_cec.c ****   */
  135:../StdPeripheralDriver/src/stm32f10x_cec.c **** void CEC_Init(CEC_InitTypeDef* CEC_InitStruct)
  136:../StdPeripheralDriver/src/stm32f10x_cec.c **** {
- 16921              		.loc 1 136 0
- 16922              		.cfi_startproc
- 16923              		@ args = 0, pretend = 0, frame = 16
- 16924              		@ frame_needed = 1, uses_anonymous_args = 0
- 16925              		@ link register save eliminated.
- 16926 0000 80B4     		push	{r7}
- 16927              	.LCFI2:
- 16928              		.cfi_def_cfa_offset 4
- 16929 0002 85B0     		sub	sp, sp, #20
- 16930              	.LCFI3:
- 16931              		.cfi_def_cfa_offset 24
- 16932 0004 00AF     		add	r7, sp, #0
- 16933              		.cfi_offset 7, -4
- 16934              	.LCFI4:
- 16935              		.cfi_def_cfa_register 7
- 16936 0006 7860     		str	r0, [r7, #4]
+ 17662              		.loc 1 136 0
+ 17663              		.cfi_startproc
+ 17664              		@ args = 0, pretend = 0, frame = 16
+ 17665              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17666              		@ link register save eliminated.
+ 17667 0000 80B4     		push	{r7}
+ 17668              	.LCFI2:
+ 17669              		.cfi_def_cfa_offset 4
+ 17670 0002 85B0     		sub	sp, sp, #20
+ 17671              	.LCFI3:
+ 17672              		.cfi_def_cfa_offset 24
+ 17673 0004 00AF     		add	r7, sp, #0
+ 17674              		.cfi_offset 7, -4
+ 17675              	.LCFI4:
+ 17676              		.cfi_def_cfa_register 7
+ 17677 0006 7860     		str	r0, [r7, #4]
  137:../StdPeripheralDriver/src/stm32f10x_cec.c ****   uint16_t tmpreg = 0;
- 16937              		.loc 1 137 0
- 16938 0008 4FF00003 		mov	r3, #0
- 16939 000c FB81     		strh	r3, [r7, #14]	@ movhi
+ 17678              		.loc 1 137 0
+ 17679 0008 4FF00003 		mov	r3, #0
+ 17680 000c FB81     		strh	r3, [r7, #14]	@ movhi
  138:../StdPeripheralDriver/src/stm32f10x_cec.c ****  
  139:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Check the parameters */
  140:../StdPeripheralDriver/src/stm32f10x_cec.c ****   assert_param(IS_CEC_BIT_TIMING_ERROR_MODE(CEC_InitStruct->CEC_BitTimingMode)); 
@@ -214,57 +214,57 @@
  143:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /*---------------------------- CEC CFGR Configuration -----------------*/
  144:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Get the CEC CFGR value */
  145:../StdPeripheralDriver/src/stm32f10x_cec.c ****   tmpreg = CEC->CFGR;
- 16940              		.loc 1 145 0
- 16941 000e 0D4B     		ldr	r3, .L3
- 16942 0010 1B68     		ldr	r3, [r3, #0]
- 16943 0012 FB81     		strh	r3, [r7, #14]	@ movhi
+ 17681              		.loc 1 145 0
+ 17682 000e 0D4B     		ldr	r3, .L3
+ 17683 0010 1B68     		ldr	r3, [r3, #0]
+ 17684 0012 FB81     		strh	r3, [r7, #14]	@ movhi
  146:../StdPeripheralDriver/src/stm32f10x_cec.c ****   
  147:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Clear BTEM and BPEM bits */
  148:../StdPeripheralDriver/src/stm32f10x_cec.c ****   tmpreg &= CFGR_CLEAR_Mask;
- 16944              		.loc 1 148 0
- 16945 0014 FB89     		ldrh	r3, [r7, #14]	@ movhi
- 16946 0016 03F0F303 		and	r3, r3, #243
- 16947 001a FB81     		strh	r3, [r7, #14]	@ movhi
+ 17685              		.loc 1 148 0
+ 17686 0014 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 17687 0016 03F0F303 		and	r3, r3, #243
+ 17688 001a FB81     		strh	r3, [r7, #14]	@ movhi
  149:../StdPeripheralDriver/src/stm32f10x_cec.c ****   
  150:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Configure CEC: Bit Timing Error and Bit Period Error */
  151:../StdPeripheralDriver/src/stm32f10x_cec.c ****   tmpreg |= (uint16_t)(CEC_InitStruct->CEC_BitTimingMode | CEC_InitStruct->CEC_BitPeriodMode);
- 16948              		.loc 1 151 0
- 16949 001c 7B68     		ldr	r3, [r7, #4]
- 16950 001e 1A88     		ldrh	r2, [r3, #0]
- 16951 0020 7B68     		ldr	r3, [r7, #4]
- 16952 0022 5B88     		ldrh	r3, [r3, #2]
- 16953 0024 42EA0303 		orr	r3, r2, r3
- 16954 0028 9AB2     		uxth	r2, r3
- 16955 002a FB89     		ldrh	r3, [r7, #14]	@ movhi
- 16956 002c 42EA0303 		orr	r3, r2, r3
- 16957 0030 FB81     		strh	r3, [r7, #14]	@ movhi
+ 17689              		.loc 1 151 0
+ 17690 001c 7B68     		ldr	r3, [r7, #4]
+ 17691 001e 1A88     		ldrh	r2, [r3, #0]
+ 17692 0020 7B68     		ldr	r3, [r7, #4]
+ 17693 0022 5B88     		ldrh	r3, [r3, #2]
+ 17694 0024 42EA0303 		orr	r3, r2, r3
+ 17695 0028 9AB2     		uxth	r2, r3
+ 17696 002a FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 17697 002c 42EA0303 		orr	r3, r2, r3
+ 17698 0030 FB81     		strh	r3, [r7, #14]	@ movhi
  152:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  153:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Write to CEC CFGR  register*/
  154:../StdPeripheralDriver/src/stm32f10x_cec.c ****   CEC->CFGR = tmpreg;
- 16958              		.loc 1 154 0
- 16959 0032 044B     		ldr	r3, .L3
- 16960 0034 FA89     		ldrh	r2, [r7, #14]
- 16961 0036 1A60     		str	r2, [r3, #0]
+ 17699              		.loc 1 154 0
+ 17700 0032 044B     		ldr	r3, .L3
+ 17701 0034 FA89     		ldrh	r2, [r7, #14]
+ 17702 0036 1A60     		str	r2, [r3, #0]
  155:../StdPeripheralDriver/src/stm32f10x_cec.c ****   
  156:../StdPeripheralDriver/src/stm32f10x_cec.c **** }
- 16962              		.loc 1 156 0
- 16963 0038 07F11407 		add	r7, r7, #20
- 16964 003c BD46     		mov	sp, r7
- 16965 003e 80BC     		pop	{r7}
- 16966 0040 7047     		bx	lr
- 16967              	.L4:
- 16968 0042 00BF     		.align	2
- 16969              	.L3:
- 16970 0044 00780040 		.word	1073772544
- 16971              		.cfi_endproc
- 16972              	.LFE30:
- 16974              		.section	.text.CEC_Cmd,"ax",%progbits
- 16975              		.align	2
- 16976              		.global	CEC_Cmd
- 16977              		.thumb
- 16978              		.thumb_func
- 16980              	CEC_Cmd:
- 16981              	.LFB31:
+ 17703              		.loc 1 156 0
+ 17704 0038 07F11407 		add	r7, r7, #20
+ 17705 003c BD46     		mov	sp, r7
+ 17706 003e 80BC     		pop	{r7}
+ 17707 0040 7047     		bx	lr
+ 17708              	.L4:
+ 17709 0042 00BF     		.align	2
+ 17710              	.L3:
+ 17711 0044 00780040 		.word	1073772544
+ 17712              		.cfi_endproc
+ 17713              	.LFE30:
+ 17715              		.section	.text.CEC_Cmd,"ax",%progbits
+ 17716              		.align	2
+ 17717              		.global	CEC_Cmd
+ 17718              		.thumb
+ 17719              		.thumb_func
+ 17721              	CEC_Cmd:
+ 17722              	.LFB31:
  157:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  158:../StdPeripheralDriver/src/stm32f10x_cec.c **** /**
  159:../StdPeripheralDriver/src/stm32f10x_cec.c ****   * @brief  Enables or disables the specified CEC peripheral.
@@ -274,74 +274,74 @@
  163:../StdPeripheralDriver/src/stm32f10x_cec.c ****   */
  164:../StdPeripheralDriver/src/stm32f10x_cec.c **** void CEC_Cmd(FunctionalState NewState)
  165:../StdPeripheralDriver/src/stm32f10x_cec.c **** {
- 16982              		.loc 1 165 0
- 16983              		.cfi_startproc
- 16984              		@ args = 0, pretend = 0, frame = 8
- 16985              		@ frame_needed = 1, uses_anonymous_args = 0
- 16986              		@ link register save eliminated.
- 16987 0000 80B4     		push	{r7}
- 16988              	.LCFI5:
- 16989              		.cfi_def_cfa_offset 4
- 16990 0002 83B0     		sub	sp, sp, #12
- 16991              	.LCFI6:
- 16992              		.cfi_def_cfa_offset 16
- 16993 0004 00AF     		add	r7, sp, #0
- 16994              		.cfi_offset 7, -4
- 16995              	.LCFI7:
- 16996              		.cfi_def_cfa_register 7
- 16997 0006 0346     		mov	r3, r0
- 16998 0008 FB71     		strb	r3, [r7, #7]
+ 17723              		.loc 1 165 0
+ 17724              		.cfi_startproc
+ 17725              		@ args = 0, pretend = 0, frame = 8
+ 17726              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17727              		@ link register save eliminated.
+ 17728 0000 80B4     		push	{r7}
+ 17729              	.LCFI5:
+ 17730              		.cfi_def_cfa_offset 4
+ 17731 0002 83B0     		sub	sp, sp, #12
+ 17732              	.LCFI6:
+ 17733              		.cfi_def_cfa_offset 16
+ 17734 0004 00AF     		add	r7, sp, #0
+ 17735              		.cfi_offset 7, -4
+ 17736              	.LCFI7:
+ 17737              		.cfi_def_cfa_register 7
+ 17738 0006 0346     		mov	r3, r0
+ 17739 0008 FB71     		strb	r3, [r7, #7]
  166:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Check the parameters */
  167:../StdPeripheralDriver/src/stm32f10x_cec.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
  168:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  169:../StdPeripheralDriver/src/stm32f10x_cec.c ****   *(__IO uint32_t *) CFGR_PE_BB = (uint32_t)NewState;
- 16999              		.loc 1 169 0
- 17000 000a 094B     		ldr	r3, .L8
- 17001 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 17002 000e 1A60     		str	r2, [r3, #0]
+ 17740              		.loc 1 169 0
+ 17741 000a 094B     		ldr	r3, .L8
+ 17742 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 17743 000e 1A60     		str	r2, [r3, #0]
  170:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  171:../StdPeripheralDriver/src/stm32f10x_cec.c ****   if(NewState == DISABLE)
- 17003              		.loc 1 171 0
- 17004 0010 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 17005 0012 002B     		cmp	r3, #0
- 17006 0014 07D1     		bne	.L5
+ 17744              		.loc 1 171 0
+ 17745 0010 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 17746 0012 002B     		cmp	r3, #0
+ 17747 0014 07D1     		bne	.L5
  172:../StdPeripheralDriver/src/stm32f10x_cec.c ****   {
  173:../StdPeripheralDriver/src/stm32f10x_cec.c ****     /* Wait until the PE bit is cleared by hardware (Idle Line detected) */
  174:../StdPeripheralDriver/src/stm32f10x_cec.c ****     while((CEC->CFGR & CEC_CFGR_PE) != (uint32_t)RESET)
- 17007              		.loc 1 174 0
- 17008 0016 00BF     		nop
- 17009              	.L7:
- 17010              		.loc 1 174 0 is_stmt 0 discriminator 1
- 17011 0018 064B     		ldr	r3, .L8+4
- 17012 001a 1B68     		ldr	r3, [r3, #0]
- 17013 001c 03F00103 		and	r3, r3, #1
- 17014 0020 DBB2     		uxtb	r3, r3
- 17015 0022 002B     		cmp	r3, #0
- 17016 0024 F8D1     		bne	.L7
- 17017              	.L5:
+ 17748              		.loc 1 174 0
+ 17749 0016 00BF     		nop
+ 17750              	.L7:
+ 17751              		.loc 1 174 0 is_stmt 0 discriminator 1
+ 17752 0018 064B     		ldr	r3, .L8+4
+ 17753 001a 1B68     		ldr	r3, [r3, #0]
+ 17754 001c 03F00103 		and	r3, r3, #1
+ 17755 0020 DBB2     		uxtb	r3, r3
+ 17756 0022 002B     		cmp	r3, #0
+ 17757 0024 F8D1     		bne	.L7
+ 17758              	.L5:
  175:../StdPeripheralDriver/src/stm32f10x_cec.c ****     {
  176:../StdPeripheralDriver/src/stm32f10x_cec.c ****     }  
  177:../StdPeripheralDriver/src/stm32f10x_cec.c ****   }  
  178:../StdPeripheralDriver/src/stm32f10x_cec.c **** }
- 17018              		.loc 1 178 0 is_stmt 1
- 17019 0026 07F10C07 		add	r7, r7, #12
- 17020 002a BD46     		mov	sp, r7
- 17021 002c 80BC     		pop	{r7}
- 17022 002e 7047     		bx	lr
- 17023              	.L9:
- 17024              		.align	2
- 17025              	.L8:
- 17026 0030 00000F42 		.word	1108279296
- 17027 0034 00780040 		.word	1073772544
- 17028              		.cfi_endproc
- 17029              	.LFE31:
- 17031              		.section	.text.CEC_ITConfig,"ax",%progbits
- 17032              		.align	2
- 17033              		.global	CEC_ITConfig
- 17034              		.thumb
- 17035              		.thumb_func
- 17037              	CEC_ITConfig:
- 17038              	.LFB32:
+ 17759              		.loc 1 178 0 is_stmt 1
+ 17760 0026 07F10C07 		add	r7, r7, #12
+ 17761 002a BD46     		mov	sp, r7
+ 17762 002c 80BC     		pop	{r7}
+ 17763 002e 7047     		bx	lr
+ 17764              	.L9:
+ 17765              		.align	2
+ 17766              	.L8:
+ 17767 0030 00000F42 		.word	1108279296
+ 17768 0034 00780040 		.word	1073772544
+ 17769              		.cfi_endproc
+ 17770              	.LFE31:
+ 17772              		.section	.text.CEC_ITConfig,"ax",%progbits
+ 17773              		.align	2
+ 17774              		.global	CEC_ITConfig
+ 17775              		.thumb
+ 17776              		.thumb_func
+ 17778              	CEC_ITConfig:
+ 17779              	.LFB32:
  179:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  180:../StdPeripheralDriver/src/stm32f10x_cec.c **** /**
  181:../StdPeripheralDriver/src/stm32f10x_cec.c ****   * @brief  Enables or disables the CEC interrupt.
@@ -351,50 +351,50 @@
  185:../StdPeripheralDriver/src/stm32f10x_cec.c ****   */
  186:../StdPeripheralDriver/src/stm32f10x_cec.c **** void CEC_ITConfig(FunctionalState NewState)
  187:../StdPeripheralDriver/src/stm32f10x_cec.c **** {
- 17039              		.loc 1 187 0
- 17040              		.cfi_startproc
- 17041              		@ args = 0, pretend = 0, frame = 8
- 17042              		@ frame_needed = 1, uses_anonymous_args = 0
- 17043              		@ link register save eliminated.
- 17044 0000 80B4     		push	{r7}
- 17045              	.LCFI8:
- 17046              		.cfi_def_cfa_offset 4
- 17047 0002 83B0     		sub	sp, sp, #12
- 17048              	.LCFI9:
- 17049              		.cfi_def_cfa_offset 16
- 17050 0004 00AF     		add	r7, sp, #0
- 17051              		.cfi_offset 7, -4
- 17052              	.LCFI10:
- 17053              		.cfi_def_cfa_register 7
- 17054 0006 0346     		mov	r3, r0
- 17055 0008 FB71     		strb	r3, [r7, #7]
+ 17780              		.loc 1 187 0
+ 17781              		.cfi_startproc
+ 17782              		@ args = 0, pretend = 0, frame = 8
+ 17783              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17784              		@ link register save eliminated.
+ 17785 0000 80B4     		push	{r7}
+ 17786              	.LCFI8:
+ 17787              		.cfi_def_cfa_offset 4
+ 17788 0002 83B0     		sub	sp, sp, #12
+ 17789              	.LCFI9:
+ 17790              		.cfi_def_cfa_offset 16
+ 17791 0004 00AF     		add	r7, sp, #0
+ 17792              		.cfi_offset 7, -4
+ 17793              	.LCFI10:
+ 17794              		.cfi_def_cfa_register 7
+ 17795 0006 0346     		mov	r3, r0
+ 17796 0008 FB71     		strb	r3, [r7, #7]
  188:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Check the parameters */
  189:../StdPeripheralDriver/src/stm32f10x_cec.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
  190:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  191:../StdPeripheralDriver/src/stm32f10x_cec.c ****   *(__IO uint32_t *) CFGR_IE_BB = (uint32_t)NewState;
- 17056              		.loc 1 191 0
- 17057 000a 044B     		ldr	r3, .L11
- 17058 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 17059 000e 1A60     		str	r2, [r3, #0]
+ 17797              		.loc 1 191 0
+ 17798 000a 044B     		ldr	r3, .L11
+ 17799 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 17800 000e 1A60     		str	r2, [r3, #0]
  192:../StdPeripheralDriver/src/stm32f10x_cec.c **** }
- 17060              		.loc 1 192 0
- 17061 0010 07F10C07 		add	r7, r7, #12
- 17062 0014 BD46     		mov	sp, r7
- 17063 0016 80BC     		pop	{r7}
- 17064 0018 7047     		bx	lr
- 17065              	.L12:
- 17066 001a 00BF     		.align	2
- 17067              	.L11:
- 17068 001c 04000F42 		.word	1108279300
- 17069              		.cfi_endproc
- 17070              	.LFE32:
- 17072              		.section	.text.CEC_OwnAddressConfig,"ax",%progbits
- 17073              		.align	2
- 17074              		.global	CEC_OwnAddressConfig
- 17075              		.thumb
- 17076              		.thumb_func
- 17078              	CEC_OwnAddressConfig:
- 17079              	.LFB33:
+ 17801              		.loc 1 192 0
+ 17802 0010 07F10C07 		add	r7, r7, #12
+ 17803 0014 BD46     		mov	sp, r7
+ 17804 0016 80BC     		pop	{r7}
+ 17805 0018 7047     		bx	lr
+ 17806              	.L12:
+ 17807 001a 00BF     		.align	2
+ 17808              	.L11:
+ 17809 001c 04000F42 		.word	1108279300
+ 17810              		.cfi_endproc
+ 17811              	.LFE32:
+ 17813              		.section	.text.CEC_OwnAddressConfig,"ax",%progbits
+ 17814              		.align	2
+ 17815              		.global	CEC_OwnAddressConfig
+ 17816              		.thumb
+ 17817              		.thumb_func
+ 17819              	CEC_OwnAddressConfig:
+ 17820              	.LFB33:
  193:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  194:../StdPeripheralDriver/src/stm32f10x_cec.c **** /**
  195:../StdPeripheralDriver/src/stm32f10x_cec.c ****   * @brief  Defines the Own Address of the CEC device.
@@ -403,51 +403,51 @@
  198:../StdPeripheralDriver/src/stm32f10x_cec.c ****   */
  199:../StdPeripheralDriver/src/stm32f10x_cec.c **** void CEC_OwnAddressConfig(uint8_t CEC_OwnAddress)
  200:../StdPeripheralDriver/src/stm32f10x_cec.c **** {
- 17080              		.loc 1 200 0
- 17081              		.cfi_startproc
- 17082              		@ args = 0, pretend = 0, frame = 8
- 17083              		@ frame_needed = 1, uses_anonymous_args = 0
- 17084              		@ link register save eliminated.
- 17085 0000 80B4     		push	{r7}
- 17086              	.LCFI11:
- 17087              		.cfi_def_cfa_offset 4
- 17088 0002 83B0     		sub	sp, sp, #12
- 17089              	.LCFI12:
- 17090              		.cfi_def_cfa_offset 16
- 17091 0004 00AF     		add	r7, sp, #0
- 17092              		.cfi_offset 7, -4
- 17093              	.LCFI13:
- 17094              		.cfi_def_cfa_register 7
- 17095 0006 0346     		mov	r3, r0
- 17096 0008 FB71     		strb	r3, [r7, #7]
+ 17821              		.loc 1 200 0
+ 17822              		.cfi_startproc
+ 17823              		@ args = 0, pretend = 0, frame = 8
+ 17824              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17825              		@ link register save eliminated.
+ 17826 0000 80B4     		push	{r7}
+ 17827              	.LCFI11:
+ 17828              		.cfi_def_cfa_offset 4
+ 17829 0002 83B0     		sub	sp, sp, #12
+ 17830              	.LCFI12:
+ 17831              		.cfi_def_cfa_offset 16
+ 17832 0004 00AF     		add	r7, sp, #0
+ 17833              		.cfi_offset 7, -4
+ 17834              	.LCFI13:
+ 17835              		.cfi_def_cfa_register 7
+ 17836 0006 0346     		mov	r3, r0
+ 17837 0008 FB71     		strb	r3, [r7, #7]
  201:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Check the parameters */
  202:../StdPeripheralDriver/src/stm32f10x_cec.c ****   assert_param(IS_CEC_ADDRESS(CEC_OwnAddress));
  203:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  204:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Set the CEC own address */
  205:../StdPeripheralDriver/src/stm32f10x_cec.c ****   CEC->OAR = CEC_OwnAddress;
- 17097              		.loc 1 205 0
- 17098 000a 044B     		ldr	r3, .L14
- 17099 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 17100 000e 5A60     		str	r2, [r3, #4]
+ 17838              		.loc 1 205 0
+ 17839 000a 044B     		ldr	r3, .L14
+ 17840 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 17841 000e 5A60     		str	r2, [r3, #4]
  206:../StdPeripheralDriver/src/stm32f10x_cec.c **** }
- 17101              		.loc 1 206 0
- 17102 0010 07F10C07 		add	r7, r7, #12
- 17103 0014 BD46     		mov	sp, r7
- 17104 0016 80BC     		pop	{r7}
- 17105 0018 7047     		bx	lr
- 17106              	.L15:
- 17107 001a 00BF     		.align	2
- 17108              	.L14:
- 17109 001c 00780040 		.word	1073772544
- 17110              		.cfi_endproc
- 17111              	.LFE33:
- 17113              		.section	.text.CEC_SetPrescaler,"ax",%progbits
- 17114              		.align	2
- 17115              		.global	CEC_SetPrescaler
- 17116              		.thumb
- 17117              		.thumb_func
- 17119              	CEC_SetPrescaler:
- 17120              	.LFB34:
+ 17842              		.loc 1 206 0
+ 17843 0010 07F10C07 		add	r7, r7, #12
+ 17844 0014 BD46     		mov	sp, r7
+ 17845 0016 80BC     		pop	{r7}
+ 17846 0018 7047     		bx	lr
+ 17847              	.L15:
+ 17848 001a 00BF     		.align	2
+ 17849              	.L14:
+ 17850 001c 00780040 		.word	1073772544
+ 17851              		.cfi_endproc
+ 17852              	.LFE33:
+ 17854              		.section	.text.CEC_SetPrescaler,"ax",%progbits
+ 17855              		.align	2
+ 17856              		.global	CEC_SetPrescaler
+ 17857              		.thumb
+ 17858              		.thumb_func
+ 17860              	CEC_SetPrescaler:
+ 17861              	.LFB34:
  207:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  208:../StdPeripheralDriver/src/stm32f10x_cec.c **** /**
  209:../StdPeripheralDriver/src/stm32f10x_cec.c ****   * @brief  Sets the CEC prescaler value.
@@ -456,51 +456,51 @@
  212:../StdPeripheralDriver/src/stm32f10x_cec.c ****   */
  213:../StdPeripheralDriver/src/stm32f10x_cec.c **** void CEC_SetPrescaler(uint16_t CEC_Prescaler)
  214:../StdPeripheralDriver/src/stm32f10x_cec.c **** {
- 17121              		.loc 1 214 0
- 17122              		.cfi_startproc
- 17123              		@ args = 0, pretend = 0, frame = 8
- 17124              		@ frame_needed = 1, uses_anonymous_args = 0
- 17125              		@ link register save eliminated.
- 17126 0000 80B4     		push	{r7}
- 17127              	.LCFI14:
- 17128              		.cfi_def_cfa_offset 4
- 17129 0002 83B0     		sub	sp, sp, #12
- 17130              	.LCFI15:
- 17131              		.cfi_def_cfa_offset 16
- 17132 0004 00AF     		add	r7, sp, #0
- 17133              		.cfi_offset 7, -4
- 17134              	.LCFI16:
- 17135              		.cfi_def_cfa_register 7
- 17136 0006 0346     		mov	r3, r0
- 17137 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 17862              		.loc 1 214 0
+ 17863              		.cfi_startproc
+ 17864              		@ args = 0, pretend = 0, frame = 8
+ 17865              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17866              		@ link register save eliminated.
+ 17867 0000 80B4     		push	{r7}
+ 17868              	.LCFI14:
+ 17869              		.cfi_def_cfa_offset 4
+ 17870 0002 83B0     		sub	sp, sp, #12
+ 17871              	.LCFI15:
+ 17872              		.cfi_def_cfa_offset 16
+ 17873 0004 00AF     		add	r7, sp, #0
+ 17874              		.cfi_offset 7, -4
+ 17875              	.LCFI16:
+ 17876              		.cfi_def_cfa_register 7
+ 17877 0006 0346     		mov	r3, r0
+ 17878 0008 FB80     		strh	r3, [r7, #6]	@ movhi
  215:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Check the parameters */
  216:../StdPeripheralDriver/src/stm32f10x_cec.c ****   assert_param(IS_CEC_PRESCALER(CEC_Prescaler));
  217:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  218:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Set the  Prescaler value*/
  219:../StdPeripheralDriver/src/stm32f10x_cec.c ****   CEC->PRES = CEC_Prescaler;
- 17138              		.loc 1 219 0
- 17139 000a 044B     		ldr	r3, .L17
- 17140 000c FA88     		ldrh	r2, [r7, #6]
- 17141 000e 9A60     		str	r2, [r3, #8]
+ 17879              		.loc 1 219 0
+ 17880 000a 044B     		ldr	r3, .L17
+ 17881 000c FA88     		ldrh	r2, [r7, #6]
+ 17882 000e 9A60     		str	r2, [r3, #8]
  220:../StdPeripheralDriver/src/stm32f10x_cec.c **** }
- 17142              		.loc 1 220 0
- 17143 0010 07F10C07 		add	r7, r7, #12
- 17144 0014 BD46     		mov	sp, r7
- 17145 0016 80BC     		pop	{r7}
- 17146 0018 7047     		bx	lr
- 17147              	.L18:
- 17148 001a 00BF     		.align	2
- 17149              	.L17:
- 17150 001c 00780040 		.word	1073772544
- 17151              		.cfi_endproc
- 17152              	.LFE34:
- 17154              		.section	.text.CEC_SendDataByte,"ax",%progbits
- 17155              		.align	2
- 17156              		.global	CEC_SendDataByte
- 17157              		.thumb
- 17158              		.thumb_func
- 17160              	CEC_SendDataByte:
- 17161              	.LFB35:
+ 17883              		.loc 1 220 0
+ 17884 0010 07F10C07 		add	r7, r7, #12
+ 17885 0014 BD46     		mov	sp, r7
+ 17886 0016 80BC     		pop	{r7}
+ 17887 0018 7047     		bx	lr
+ 17888              	.L18:
+ 17889 001a 00BF     		.align	2
+ 17890              	.L17:
+ 17891 001c 00780040 		.word	1073772544
+ 17892              		.cfi_endproc
+ 17893              	.LFE34:
+ 17895              		.section	.text.CEC_SendDataByte,"ax",%progbits
+ 17896              		.align	2
+ 17897              		.global	CEC_SendDataByte
+ 17898              		.thumb
+ 17899              		.thumb_func
+ 17901              	CEC_SendDataByte:
+ 17902              	.LFB35:
  221:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  222:../StdPeripheralDriver/src/stm32f10x_cec.c **** /**
  223:../StdPeripheralDriver/src/stm32f10x_cec.c ****   * @brief  Transmits single data through the CEC peripheral.
@@ -509,48 +509,48 @@
  226:../StdPeripheralDriver/src/stm32f10x_cec.c ****   */
  227:../StdPeripheralDriver/src/stm32f10x_cec.c **** void CEC_SendDataByte(uint8_t Data)
  228:../StdPeripheralDriver/src/stm32f10x_cec.c **** {  
- 17162              		.loc 1 228 0
- 17163              		.cfi_startproc
- 17164              		@ args = 0, pretend = 0, frame = 8
- 17165              		@ frame_needed = 1, uses_anonymous_args = 0
- 17166              		@ link register save eliminated.
- 17167 0000 80B4     		push	{r7}
- 17168              	.LCFI17:
- 17169              		.cfi_def_cfa_offset 4
- 17170 0002 83B0     		sub	sp, sp, #12
- 17171              	.LCFI18:
- 17172              		.cfi_def_cfa_offset 16
- 17173 0004 00AF     		add	r7, sp, #0
- 17174              		.cfi_offset 7, -4
- 17175              	.LCFI19:
- 17176              		.cfi_def_cfa_register 7
- 17177 0006 0346     		mov	r3, r0
- 17178 0008 FB71     		strb	r3, [r7, #7]
+ 17903              		.loc 1 228 0
+ 17904              		.cfi_startproc
+ 17905              		@ args = 0, pretend = 0, frame = 8
+ 17906              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17907              		@ link register save eliminated.
+ 17908 0000 80B4     		push	{r7}
+ 17909              	.LCFI17:
+ 17910              		.cfi_def_cfa_offset 4
+ 17911 0002 83B0     		sub	sp, sp, #12
+ 17912              	.LCFI18:
+ 17913              		.cfi_def_cfa_offset 16
+ 17914 0004 00AF     		add	r7, sp, #0
+ 17915              		.cfi_offset 7, -4
+ 17916              	.LCFI19:
+ 17917              		.cfi_def_cfa_register 7
+ 17918 0006 0346     		mov	r3, r0
+ 17919 0008 FB71     		strb	r3, [r7, #7]
  229:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Transmit Data */
  230:../StdPeripheralDriver/src/stm32f10x_cec.c ****   CEC->TXD = Data ;
- 17179              		.loc 1 230 0
- 17180 000a 044B     		ldr	r3, .L20
- 17181 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 17182 000e 5A61     		str	r2, [r3, #20]
+ 17920              		.loc 1 230 0
+ 17921 000a 044B     		ldr	r3, .L20
+ 17922 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 17923 000e 5A61     		str	r2, [r3, #20]
  231:../StdPeripheralDriver/src/stm32f10x_cec.c **** }
- 17183              		.loc 1 231 0
- 17184 0010 07F10C07 		add	r7, r7, #12
- 17185 0014 BD46     		mov	sp, r7
- 17186 0016 80BC     		pop	{r7}
- 17187 0018 7047     		bx	lr
- 17188              	.L21:
- 17189 001a 00BF     		.align	2
- 17190              	.L20:
- 17191 001c 00780040 		.word	1073772544
- 17192              		.cfi_endproc
- 17193              	.LFE35:
- 17195              		.section	.text.CEC_ReceiveDataByte,"ax",%progbits
- 17196              		.align	2
- 17197              		.global	CEC_ReceiveDataByte
- 17198              		.thumb
- 17199              		.thumb_func
- 17201              	CEC_ReceiveDataByte:
- 17202              	.LFB36:
+ 17924              		.loc 1 231 0
+ 17925 0010 07F10C07 		add	r7, r7, #12
+ 17926 0014 BD46     		mov	sp, r7
+ 17927 0016 80BC     		pop	{r7}
+ 17928 0018 7047     		bx	lr
+ 17929              	.L21:
+ 17930 001a 00BF     		.align	2
+ 17931              	.L20:
+ 17932 001c 00780040 		.word	1073772544
+ 17933              		.cfi_endproc
+ 17934              	.LFE35:
+ 17936              		.section	.text.CEC_ReceiveDataByte,"ax",%progbits
+ 17937              		.align	2
+ 17938              		.global	CEC_ReceiveDataByte
+ 17939              		.thumb
+ 17940              		.thumb_func
+ 17942              	CEC_ReceiveDataByte:
+ 17943              	.LFB36:
  232:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  233:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  234:../StdPeripheralDriver/src/stm32f10x_cec.c **** /**
@@ -560,43 +560,43 @@
  238:../StdPeripheralDriver/src/stm32f10x_cec.c ****   */
  239:../StdPeripheralDriver/src/stm32f10x_cec.c **** uint8_t CEC_ReceiveDataByte(void)
  240:../StdPeripheralDriver/src/stm32f10x_cec.c **** {
- 17203              		.loc 1 240 0
- 17204              		.cfi_startproc
- 17205              		@ args = 0, pretend = 0, frame = 0
- 17206              		@ frame_needed = 1, uses_anonymous_args = 0
- 17207              		@ link register save eliminated.
- 17208 0000 80B4     		push	{r7}
- 17209              	.LCFI20:
- 17210              		.cfi_def_cfa_offset 4
- 17211 0002 00AF     		add	r7, sp, #0
- 17212              		.cfi_offset 7, -4
- 17213              	.LCFI21:
- 17214              		.cfi_def_cfa_register 7
+ 17944              		.loc 1 240 0
+ 17945              		.cfi_startproc
+ 17946              		@ args = 0, pretend = 0, frame = 0
+ 17947              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17948              		@ link register save eliminated.
+ 17949 0000 80B4     		push	{r7}
+ 17950              	.LCFI20:
+ 17951              		.cfi_def_cfa_offset 4
+ 17952 0002 00AF     		add	r7, sp, #0
+ 17953              		.cfi_offset 7, -4
+ 17954              	.LCFI21:
+ 17955              		.cfi_def_cfa_register 7
  241:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Receive Data */
  242:../StdPeripheralDriver/src/stm32f10x_cec.c ****   return (uint8_t)(CEC->RXD);
- 17215              		.loc 1 242 0
- 17216 0004 034B     		ldr	r3, .L23
- 17217 0006 9B69     		ldr	r3, [r3, #24]
- 17218 0008 DBB2     		uxtb	r3, r3
+ 17956              		.loc 1 242 0
+ 17957 0004 034B     		ldr	r3, .L23
+ 17958 0006 9B69     		ldr	r3, [r3, #24]
+ 17959 0008 DBB2     		uxtb	r3, r3
  243:../StdPeripheralDriver/src/stm32f10x_cec.c **** }
- 17219              		.loc 1 243 0
- 17220 000a 1846     		mov	r0, r3
- 17221 000c BD46     		mov	sp, r7
- 17222 000e 80BC     		pop	{r7}
- 17223 0010 7047     		bx	lr
- 17224              	.L24:
- 17225 0012 00BF     		.align	2
- 17226              	.L23:
- 17227 0014 00780040 		.word	1073772544
- 17228              		.cfi_endproc
- 17229              	.LFE36:
- 17231              		.section	.text.CEC_StartOfMessage,"ax",%progbits
- 17232              		.align	2
- 17233              		.global	CEC_StartOfMessage
- 17234              		.thumb
- 17235              		.thumb_func
- 17237              	CEC_StartOfMessage:
- 17238              	.LFB37:
+ 17960              		.loc 1 243 0
+ 17961 000a 1846     		mov	r0, r3
+ 17962 000c BD46     		mov	sp, r7
+ 17963 000e 80BC     		pop	{r7}
+ 17964 0010 7047     		bx	lr
+ 17965              	.L24:
+ 17966 0012 00BF     		.align	2
+ 17967              	.L23:
+ 17968 0014 00780040 		.word	1073772544
+ 17969              		.cfi_endproc
+ 17970              	.LFE36:
+ 17972              		.section	.text.CEC_StartOfMessage,"ax",%progbits
+ 17973              		.align	2
+ 17974              		.global	CEC_StartOfMessage
+ 17975              		.thumb
+ 17976              		.thumb_func
+ 17978              	CEC_StartOfMessage:
+ 17979              	.LFB37:
  244:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  245:../StdPeripheralDriver/src/stm32f10x_cec.c **** /**
  246:../StdPeripheralDriver/src/stm32f10x_cec.c ****   * @brief  Starts a new message.
@@ -605,42 +605,42 @@
  249:../StdPeripheralDriver/src/stm32f10x_cec.c ****   */
  250:../StdPeripheralDriver/src/stm32f10x_cec.c **** void CEC_StartOfMessage(void)
  251:../StdPeripheralDriver/src/stm32f10x_cec.c **** {  
- 17239              		.loc 1 251 0
- 17240              		.cfi_startproc
- 17241              		@ args = 0, pretend = 0, frame = 0
- 17242              		@ frame_needed = 1, uses_anonymous_args = 0
- 17243              		@ link register save eliminated.
- 17244 0000 80B4     		push	{r7}
- 17245              	.LCFI22:
- 17246              		.cfi_def_cfa_offset 4
- 17247 0002 00AF     		add	r7, sp, #0
- 17248              		.cfi_offset 7, -4
- 17249              	.LCFI23:
- 17250              		.cfi_def_cfa_register 7
+ 17980              		.loc 1 251 0
+ 17981              		.cfi_startproc
+ 17982              		@ args = 0, pretend = 0, frame = 0
+ 17983              		@ frame_needed = 1, uses_anonymous_args = 0
+ 17984              		@ link register save eliminated.
+ 17985 0000 80B4     		push	{r7}
+ 17986              	.LCFI22:
+ 17987              		.cfi_def_cfa_offset 4
+ 17988 0002 00AF     		add	r7, sp, #0
+ 17989              		.cfi_offset 7, -4
+ 17990              	.LCFI23:
+ 17991              		.cfi_def_cfa_register 7
  252:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Starts of new message */
  253:../StdPeripheralDriver/src/stm32f10x_cec.c ****   *(__IO uint32_t *) CSR_TSOM_BB = (uint32_t)0x1;
- 17251              		.loc 1 253 0
- 17252 0004 034B     		ldr	r3, .L26
- 17253 0006 4FF00102 		mov	r2, #1
- 17254 000a 1A60     		str	r2, [r3, #0]
+ 17992              		.loc 1 253 0
+ 17993 0004 034B     		ldr	r3, .L26
+ 17994 0006 4FF00102 		mov	r2, #1
+ 17995 000a 1A60     		str	r2, [r3, #0]
  254:../StdPeripheralDriver/src/stm32f10x_cec.c **** }
- 17255              		.loc 1 254 0
- 17256 000c BD46     		mov	sp, r7
- 17257 000e 80BC     		pop	{r7}
- 17258 0010 7047     		bx	lr
- 17259              	.L27:
- 17260 0012 00BF     		.align	2
- 17261              	.L26:
- 17262 0014 00020F42 		.word	1108279808
- 17263              		.cfi_endproc
- 17264              	.LFE37:
- 17266              		.section	.text.CEC_EndOfMessageCmd,"ax",%progbits
- 17267              		.align	2
- 17268              		.global	CEC_EndOfMessageCmd
- 17269              		.thumb
- 17270              		.thumb_func
- 17272              	CEC_EndOfMessageCmd:
- 17273              	.LFB38:
+ 17996              		.loc 1 254 0
+ 17997 000c BD46     		mov	sp, r7
+ 17998 000e 80BC     		pop	{r7}
+ 17999 0010 7047     		bx	lr
+ 18000              	.L27:
+ 18001 0012 00BF     		.align	2
+ 18002              	.L26:
+ 18003 0014 00020F42 		.word	1108279808
+ 18004              		.cfi_endproc
+ 18005              	.LFE37:
+ 18007              		.section	.text.CEC_EndOfMessageCmd,"ax",%progbits
+ 18008              		.align	2
+ 18009              		.global	CEC_EndOfMessageCmd
+ 18010              		.thumb
+ 18011              		.thumb_func
+ 18013              	CEC_EndOfMessageCmd:
+ 18014              	.LFB38:
  255:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  256:../StdPeripheralDriver/src/stm32f10x_cec.c **** /**
  257:../StdPeripheralDriver/src/stm32f10x_cec.c ****   * @brief  Transmits message with or without an EOM bit.
@@ -650,51 +650,51 @@
  261:../StdPeripheralDriver/src/stm32f10x_cec.c ****   */
  262:../StdPeripheralDriver/src/stm32f10x_cec.c **** void CEC_EndOfMessageCmd(FunctionalState NewState)
  263:../StdPeripheralDriver/src/stm32f10x_cec.c **** {   
- 17274              		.loc 1 263 0
- 17275              		.cfi_startproc
- 17276              		@ args = 0, pretend = 0, frame = 8
- 17277              		@ frame_needed = 1, uses_anonymous_args = 0
- 17278              		@ link register save eliminated.
- 17279 0000 80B4     		push	{r7}
- 17280              	.LCFI24:
- 17281              		.cfi_def_cfa_offset 4
- 17282 0002 83B0     		sub	sp, sp, #12
- 17283              	.LCFI25:
- 17284              		.cfi_def_cfa_offset 16
- 17285 0004 00AF     		add	r7, sp, #0
- 17286              		.cfi_offset 7, -4
- 17287              	.LCFI26:
- 17288              		.cfi_def_cfa_register 7
- 17289 0006 0346     		mov	r3, r0
- 17290 0008 FB71     		strb	r3, [r7, #7]
+ 18015              		.loc 1 263 0
+ 18016              		.cfi_startproc
+ 18017              		@ args = 0, pretend = 0, frame = 8
+ 18018              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18019              		@ link register save eliminated.
+ 18020 0000 80B4     		push	{r7}
+ 18021              	.LCFI24:
+ 18022              		.cfi_def_cfa_offset 4
+ 18023 0002 83B0     		sub	sp, sp, #12
+ 18024              	.LCFI25:
+ 18025              		.cfi_def_cfa_offset 16
+ 18026 0004 00AF     		add	r7, sp, #0
+ 18027              		.cfi_offset 7, -4
+ 18028              	.LCFI26:
+ 18029              		.cfi_def_cfa_register 7
+ 18030 0006 0346     		mov	r3, r0
+ 18031 0008 FB71     		strb	r3, [r7, #7]
  264:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Check the parameters */
  265:../StdPeripheralDriver/src/stm32f10x_cec.c ****   assert_param(IS_FUNCTIONAL_STATE(NewState));
  266:../StdPeripheralDriver/src/stm32f10x_cec.c ****   
  267:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* The data byte will be transmitted with or without an EOM bit*/
  268:../StdPeripheralDriver/src/stm32f10x_cec.c ****   *(__IO uint32_t *) CSR_TEOM_BB = (uint32_t)NewState;
- 17291              		.loc 1 268 0
- 17292 000a 044B     		ldr	r3, .L29
- 17293 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 17294 000e 1A60     		str	r2, [r3, #0]
+ 18032              		.loc 1 268 0
+ 18033 000a 044B     		ldr	r3, .L29
+ 18034 000c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 18035 000e 1A60     		str	r2, [r3, #0]
  269:../StdPeripheralDriver/src/stm32f10x_cec.c **** }
- 17295              		.loc 1 269 0
- 17296 0010 07F10C07 		add	r7, r7, #12
- 17297 0014 BD46     		mov	sp, r7
- 17298 0016 80BC     		pop	{r7}
- 17299 0018 7047     		bx	lr
- 17300              	.L30:
- 17301 001a 00BF     		.align	2
- 17302              	.L29:
- 17303 001c 04020F42 		.word	1108279812
- 17304              		.cfi_endproc
- 17305              	.LFE38:
- 17307              		.section	.text.CEC_GetFlagStatus,"ax",%progbits
- 17308              		.align	2
- 17309              		.global	CEC_GetFlagStatus
- 17310              		.thumb
- 17311              		.thumb_func
- 17313              	CEC_GetFlagStatus:
- 17314              	.LFB39:
+ 18036              		.loc 1 269 0
+ 18037 0010 07F10C07 		add	r7, r7, #12
+ 18038 0014 BD46     		mov	sp, r7
+ 18039 0016 80BC     		pop	{r7}
+ 18040 0018 7047     		bx	lr
+ 18041              	.L30:
+ 18042 001a 00BF     		.align	2
+ 18043              	.L29:
+ 18044 001c 04020F42 		.word	1108279812
+ 18045              		.cfi_endproc
+ 18046              	.LFE38:
+ 18048              		.section	.text.CEC_GetFlagStatus,"ax",%progbits
+ 18049              		.align	2
+ 18050              		.global	CEC_GetFlagStatus
+ 18051              		.thumb
+ 18052              		.thumb_func
+ 18054              	CEC_GetFlagStatus:
+ 18055              	.LFB39:
  270:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  271:../StdPeripheralDriver/src/stm32f10x_cec.c **** /**
  272:../StdPeripheralDriver/src/stm32f10x_cec.c ****   * @brief  Gets the CEC flag status
@@ -718,140 +718,140 @@
  290:../StdPeripheralDriver/src/stm32f10x_cec.c ****   */
  291:../StdPeripheralDriver/src/stm32f10x_cec.c **** FlagStatus CEC_GetFlagStatus(uint32_t CEC_FLAG) 
  292:../StdPeripheralDriver/src/stm32f10x_cec.c **** {
- 17315              		.loc 1 292 0
- 17316              		.cfi_startproc
- 17317              		@ args = 0, pretend = 0, frame = 24
- 17318              		@ frame_needed = 1, uses_anonymous_args = 0
- 17319              		@ link register save eliminated.
- 17320 0000 80B4     		push	{r7}
- 17321              	.LCFI27:
- 17322              		.cfi_def_cfa_offset 4
- 17323 0002 87B0     		sub	sp, sp, #28
- 17324              	.LCFI28:
- 17325              		.cfi_def_cfa_offset 32
- 17326 0004 00AF     		add	r7, sp, #0
- 17327              		.cfi_offset 7, -4
- 17328              	.LCFI29:
- 17329              		.cfi_def_cfa_register 7
- 17330 0006 7860     		str	r0, [r7, #4]
+ 18056              		.loc 1 292 0
+ 18057              		.cfi_startproc
+ 18058              		@ args = 0, pretend = 0, frame = 24
+ 18059              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18060              		@ link register save eliminated.
+ 18061 0000 80B4     		push	{r7}
+ 18062              	.LCFI27:
+ 18063              		.cfi_def_cfa_offset 4
+ 18064 0002 87B0     		sub	sp, sp, #28
+ 18065              	.LCFI28:
+ 18066              		.cfi_def_cfa_offset 32
+ 18067 0004 00AF     		add	r7, sp, #0
+ 18068              		.cfi_offset 7, -4
+ 18069              	.LCFI29:
+ 18070              		.cfi_def_cfa_register 7
+ 18071 0006 7860     		str	r0, [r7, #4]
  293:../StdPeripheralDriver/src/stm32f10x_cec.c ****   FlagStatus bitstatus = RESET;
- 17331              		.loc 1 293 0
- 17332 0008 4FF00003 		mov	r3, #0
- 17333 000c FB75     		strb	r3, [r7, #23]
+ 18072              		.loc 1 293 0
+ 18073 0008 4FF00003 		mov	r3, #0
+ 18074 000c FB75     		strb	r3, [r7, #23]
  294:../StdPeripheralDriver/src/stm32f10x_cec.c ****   uint32_t cecreg = 0, cecbase = 0;
- 17334              		.loc 1 294 0
- 17335 000e 4FF00003 		mov	r3, #0
- 17336 0012 FB60     		str	r3, [r7, #12]
- 17337 0014 4FF00003 		mov	r3, #0
- 17338 0018 3B61     		str	r3, [r7, #16]
+ 18075              		.loc 1 294 0
+ 18076 000e 4FF00003 		mov	r3, #0
+ 18077 0012 FB60     		str	r3, [r7, #12]
+ 18078 0014 4FF00003 		mov	r3, #0
+ 18079 0018 3B61     		str	r3, [r7, #16]
  295:../StdPeripheralDriver/src/stm32f10x_cec.c ****   
  296:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Check the parameters */
  297:../StdPeripheralDriver/src/stm32f10x_cec.c ****   assert_param(IS_CEC_GET_FLAG(CEC_FLAG));
  298:../StdPeripheralDriver/src/stm32f10x_cec.c ****  
  299:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Get the CEC peripheral base address */
  300:../StdPeripheralDriver/src/stm32f10x_cec.c ****   cecbase = (uint32_t)(CEC_BASE);
- 17339              		.loc 1 300 0
- 17340 001a 174B     		ldr	r3, .L36
- 17341 001c 3B61     		str	r3, [r7, #16]
+ 18080              		.loc 1 300 0
+ 18081 001a 174B     		ldr	r3, .L36
+ 18082 001c 3B61     		str	r3, [r7, #16]
  301:../StdPeripheralDriver/src/stm32f10x_cec.c ****   
  302:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Read flag register index */
  303:../StdPeripheralDriver/src/stm32f10x_cec.c ****   cecreg = CEC_FLAG >> 28;
- 17342              		.loc 1 303 0
- 17343 001e 7B68     		ldr	r3, [r7, #4]
- 17344 0020 4FEA1373 		lsr	r3, r3, #28
- 17345 0024 FB60     		str	r3, [r7, #12]
+ 18083              		.loc 1 303 0
+ 18084 001e 7B68     		ldr	r3, [r7, #4]
+ 18085 0020 4FEA1373 		lsr	r3, r3, #28
+ 18086 0024 FB60     		str	r3, [r7, #12]
  304:../StdPeripheralDriver/src/stm32f10x_cec.c ****   
  305:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Get bit[23:0] of the flag */
  306:../StdPeripheralDriver/src/stm32f10x_cec.c ****   CEC_FLAG &= FLAG_Mask;
- 17346              		.loc 1 306 0
- 17347 0026 7B68     		ldr	r3, [r7, #4]
- 17348 0028 23F07F43 		bic	r3, r3, #-16777216
- 17349 002c 7B60     		str	r3, [r7, #4]
+ 18087              		.loc 1 306 0
+ 18088 0026 7B68     		ldr	r3, [r7, #4]
+ 18089 0028 23F07F43 		bic	r3, r3, #-16777216
+ 18090 002c 7B60     		str	r3, [r7, #4]
  307:../StdPeripheralDriver/src/stm32f10x_cec.c ****   
  308:../StdPeripheralDriver/src/stm32f10x_cec.c ****   if(cecreg != 0)
- 17350              		.loc 1 308 0
- 17351 002e FB68     		ldr	r3, [r7, #12]
- 17352 0030 002B     		cmp	r3, #0
- 17353 0032 08D0     		beq	.L32
+ 18091              		.loc 1 308 0
+ 18092 002e FB68     		ldr	r3, [r7, #12]
+ 18093 0030 002B     		cmp	r3, #0
+ 18094 0032 08D0     		beq	.L32
  309:../StdPeripheralDriver/src/stm32f10x_cec.c ****   {
  310:../StdPeripheralDriver/src/stm32f10x_cec.c ****     /* Flag in CEC ESR Register */
  311:../StdPeripheralDriver/src/stm32f10x_cec.c ****     CEC_FLAG = (uint32_t)(CEC_FLAG >> 16);
- 17354              		.loc 1 311 0
- 17355 0034 7B68     		ldr	r3, [r7, #4]
- 17356 0036 4FEA1343 		lsr	r3, r3, #16
- 17357 003a 7B60     		str	r3, [r7, #4]
+ 18095              		.loc 1 311 0
+ 18096 0034 7B68     		ldr	r3, [r7, #4]
+ 18097 0036 4FEA1343 		lsr	r3, r3, #16
+ 18098 003a 7B60     		str	r3, [r7, #4]
  312:../StdPeripheralDriver/src/stm32f10x_cec.c ****     
  313:../StdPeripheralDriver/src/stm32f10x_cec.c ****     /* Get the CEC ESR register address */
  314:../StdPeripheralDriver/src/stm32f10x_cec.c ****     cecbase += 0xC;
- 17358              		.loc 1 314 0
- 17359 003c 3B69     		ldr	r3, [r7, #16]
- 17360 003e 03F10C03 		add	r3, r3, #12
- 17361 0042 3B61     		str	r3, [r7, #16]
- 17362 0044 03E0     		b	.L33
- 17363              	.L32:
+ 18099              		.loc 1 314 0
+ 18100 003c 3B69     		ldr	r3, [r7, #16]
+ 18101 003e 03F10C03 		add	r3, r3, #12
+ 18102 0042 3B61     		str	r3, [r7, #16]
+ 18103 0044 03E0     		b	.L33
+ 18104              	.L32:
  315:../StdPeripheralDriver/src/stm32f10x_cec.c ****   }
  316:../StdPeripheralDriver/src/stm32f10x_cec.c ****   else
  317:../StdPeripheralDriver/src/stm32f10x_cec.c ****   {
  318:../StdPeripheralDriver/src/stm32f10x_cec.c ****     /* Get the CEC CSR register address */
  319:../StdPeripheralDriver/src/stm32f10x_cec.c ****     cecbase += 0x10;
- 17364              		.loc 1 319 0
- 17365 0046 3B69     		ldr	r3, [r7, #16]
- 17366 0048 03F11003 		add	r3, r3, #16
- 17367 004c 3B61     		str	r3, [r7, #16]
- 17368              	.L33:
+ 18105              		.loc 1 319 0
+ 18106 0046 3B69     		ldr	r3, [r7, #16]
+ 18107 0048 03F11003 		add	r3, r3, #16
+ 18108 004c 3B61     		str	r3, [r7, #16]
+ 18109              	.L33:
  320:../StdPeripheralDriver/src/stm32f10x_cec.c ****   }
  321:../StdPeripheralDriver/src/stm32f10x_cec.c ****   
  322:../StdPeripheralDriver/src/stm32f10x_cec.c ****   if(((*(__IO uint32_t *)cecbase) & CEC_FLAG) != (uint32_t)RESET)
- 17369              		.loc 1 322 0
- 17370 004e 3B69     		ldr	r3, [r7, #16]
- 17371 0050 1A68     		ldr	r2, [r3, #0]
- 17372 0052 7B68     		ldr	r3, [r7, #4]
- 17373 0054 02EA0303 		and	r3, r2, r3
- 17374 0058 002B     		cmp	r3, #0
- 17375 005a 03D0     		beq	.L34
+ 18110              		.loc 1 322 0
+ 18111 004e 3B69     		ldr	r3, [r7, #16]
+ 18112 0050 1A68     		ldr	r2, [r3, #0]
+ 18113 0052 7B68     		ldr	r3, [r7, #4]
+ 18114 0054 02EA0303 		and	r3, r2, r3
+ 18115 0058 002B     		cmp	r3, #0
+ 18116 005a 03D0     		beq	.L34
  323:../StdPeripheralDriver/src/stm32f10x_cec.c ****   {
  324:../StdPeripheralDriver/src/stm32f10x_cec.c ****     /* CEC_FLAG is set */
  325:../StdPeripheralDriver/src/stm32f10x_cec.c ****     bitstatus = SET;
- 17376              		.loc 1 325 0
- 17377 005c 4FF00103 		mov	r3, #1
- 17378 0060 FB75     		strb	r3, [r7, #23]
- 17379 0062 02E0     		b	.L35
- 17380              	.L34:
+ 18117              		.loc 1 325 0
+ 18118 005c 4FF00103 		mov	r3, #1
+ 18119 0060 FB75     		strb	r3, [r7, #23]
+ 18120 0062 02E0     		b	.L35
+ 18121              	.L34:
  326:../StdPeripheralDriver/src/stm32f10x_cec.c ****   }
  327:../StdPeripheralDriver/src/stm32f10x_cec.c ****   else
  328:../StdPeripheralDriver/src/stm32f10x_cec.c ****   {
  329:../StdPeripheralDriver/src/stm32f10x_cec.c ****     /* CEC_FLAG is reset */
  330:../StdPeripheralDriver/src/stm32f10x_cec.c ****     bitstatus = RESET;
- 17381              		.loc 1 330 0
- 17382 0064 4FF00003 		mov	r3, #0
- 17383 0068 FB75     		strb	r3, [r7, #23]
- 17384              	.L35:
+ 18122              		.loc 1 330 0
+ 18123 0064 4FF00003 		mov	r3, #0
+ 18124 0068 FB75     		strb	r3, [r7, #23]
+ 18125              	.L35:
  331:../StdPeripheralDriver/src/stm32f10x_cec.c ****   }
  332:../StdPeripheralDriver/src/stm32f10x_cec.c ****   
  333:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Return the CEC_FLAG status */
  334:../StdPeripheralDriver/src/stm32f10x_cec.c ****   return  bitstatus;
- 17385              		.loc 1 334 0
- 17386 006a FB7D     		ldrb	r3, [r7, #23]	@ zero_extendqisi2
+ 18126              		.loc 1 334 0
+ 18127 006a FB7D     		ldrb	r3, [r7, #23]	@ zero_extendqisi2
  335:../StdPeripheralDriver/src/stm32f10x_cec.c **** }
- 17387              		.loc 1 335 0
- 17388 006c 1846     		mov	r0, r3
- 17389 006e 07F11C07 		add	r7, r7, #28
- 17390 0072 BD46     		mov	sp, r7
- 17391 0074 80BC     		pop	{r7}
- 17392 0076 7047     		bx	lr
- 17393              	.L37:
- 17394              		.align	2
- 17395              	.L36:
- 17396 0078 00780040 		.word	1073772544
- 17397              		.cfi_endproc
- 17398              	.LFE39:
- 17400              		.section	.text.CEC_ClearFlag,"ax",%progbits
- 17401              		.align	2
- 17402              		.global	CEC_ClearFlag
- 17403              		.thumb
- 17404              		.thumb_func
- 17406              	CEC_ClearFlag:
- 17407              	.LFB40:
+ 18128              		.loc 1 335 0
+ 18129 006c 1846     		mov	r0, r3
+ 18130 006e 07F11C07 		add	r7, r7, #28
+ 18131 0072 BD46     		mov	sp, r7
+ 18132 0074 80BC     		pop	{r7}
+ 18133 0076 7047     		bx	lr
+ 18134              	.L37:
+ 18135              		.align	2
+ 18136              	.L36:
+ 18137 0078 00780040 		.word	1073772544
+ 18138              		.cfi_endproc
+ 18139              	.LFE39:
+ 18141              		.section	.text.CEC_ClearFlag,"ax",%progbits
+ 18142              		.align	2
+ 18143              		.global	CEC_ClearFlag
+ 18144              		.thumb
+ 18145              		.thumb_func
+ 18147              	CEC_ClearFlag:
+ 18148              	.LFB40:
  336:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  337:../StdPeripheralDriver/src/stm32f10x_cec.c **** /**
  338:../StdPeripheralDriver/src/stm32f10x_cec.c ****   * @brief  Clears the CEC's pending flags.
@@ -867,69 +867,69 @@
  348:../StdPeripheralDriver/src/stm32f10x_cec.c ****   */
  349:../StdPeripheralDriver/src/stm32f10x_cec.c **** void CEC_ClearFlag(uint32_t CEC_FLAG)
  350:../StdPeripheralDriver/src/stm32f10x_cec.c **** { 
- 17408              		.loc 1 350 0
- 17409              		.cfi_startproc
- 17410              		@ args = 0, pretend = 0, frame = 16
- 17411              		@ frame_needed = 1, uses_anonymous_args = 0
- 17412              		@ link register save eliminated.
- 17413 0000 80B4     		push	{r7}
- 17414              	.LCFI30:
- 17415              		.cfi_def_cfa_offset 4
- 17416 0002 85B0     		sub	sp, sp, #20
- 17417              	.LCFI31:
- 17418              		.cfi_def_cfa_offset 24
- 17419 0004 00AF     		add	r7, sp, #0
- 17420              		.cfi_offset 7, -4
- 17421              	.LCFI32:
- 17422              		.cfi_def_cfa_register 7
- 17423 0006 7860     		str	r0, [r7, #4]
+ 18149              		.loc 1 350 0
+ 18150              		.cfi_startproc
+ 18151              		@ args = 0, pretend = 0, frame = 16
+ 18152              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18153              		@ link register save eliminated.
+ 18154 0000 80B4     		push	{r7}
+ 18155              	.LCFI30:
+ 18156              		.cfi_def_cfa_offset 4
+ 18157 0002 85B0     		sub	sp, sp, #20
+ 18158              	.LCFI31:
+ 18159              		.cfi_def_cfa_offset 24
+ 18160 0004 00AF     		add	r7, sp, #0
+ 18161              		.cfi_offset 7, -4
+ 18162              	.LCFI32:
+ 18163              		.cfi_def_cfa_register 7
+ 18164 0006 7860     		str	r0, [r7, #4]
  351:../StdPeripheralDriver/src/stm32f10x_cec.c ****   uint32_t tmp = 0x0;
- 17424              		.loc 1 351 0
- 17425 0008 4FF00003 		mov	r3, #0
- 17426 000c FB60     		str	r3, [r7, #12]
+ 18165              		.loc 1 351 0
+ 18166 0008 4FF00003 		mov	r3, #0
+ 18167 000c FB60     		str	r3, [r7, #12]
  352:../StdPeripheralDriver/src/stm32f10x_cec.c ****   
  353:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Check the parameters */
  354:../StdPeripheralDriver/src/stm32f10x_cec.c ****   assert_param(IS_CEC_CLEAR_FLAG(CEC_FLAG));
  355:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  356:../StdPeripheralDriver/src/stm32f10x_cec.c ****   tmp = CEC->CSR & 0x2;
- 17427              		.loc 1 356 0
- 17428 000e 0C4B     		ldr	r3, .L39
- 17429 0010 1B69     		ldr	r3, [r3, #16]
- 17430 0012 03F00203 		and	r3, r3, #2
- 17431 0016 FB60     		str	r3, [r7, #12]
+ 18168              		.loc 1 356 0
+ 18169 000e 0C4B     		ldr	r3, .L39
+ 18170 0010 1B69     		ldr	r3, [r3, #16]
+ 18171 0012 03F00203 		and	r3, r3, #2
+ 18172 0016 FB60     		str	r3, [r7, #12]
  357:../StdPeripheralDriver/src/stm32f10x_cec.c ****        
  358:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Clear the selected CEC flags */
  359:../StdPeripheralDriver/src/stm32f10x_cec.c ****   CEC->CSR &= (uint32_t)(((~(uint32_t)CEC_FLAG) & 0xFFFFFFFC) | tmp);
- 17432              		.loc 1 359 0
- 17433 0018 094B     		ldr	r3, .L39
- 17434 001a 094A     		ldr	r2, .L39
- 17435 001c 1169     		ldr	r1, [r2, #16]
- 17436 001e 7A68     		ldr	r2, [r7, #4]
- 17437 0020 6FEA0202 		mvn	r2, r2
- 17438 0024 22F00300 		bic	r0, r2, #3
- 17439 0028 FA68     		ldr	r2, [r7, #12]
- 17440 002a 40EA0202 		orr	r2, r0, r2
- 17441 002e 01EA0202 		and	r2, r1, r2
- 17442 0032 1A61     		str	r2, [r3, #16]
+ 18173              		.loc 1 359 0
+ 18174 0018 094B     		ldr	r3, .L39
+ 18175 001a 094A     		ldr	r2, .L39
+ 18176 001c 1169     		ldr	r1, [r2, #16]
+ 18177 001e 7A68     		ldr	r2, [r7, #4]
+ 18178 0020 6FEA0202 		mvn	r2, r2
+ 18179 0024 22F00300 		bic	r0, r2, #3
+ 18180 0028 FA68     		ldr	r2, [r7, #12]
+ 18181 002a 40EA0202 		orr	r2, r0, r2
+ 18182 002e 01EA0202 		and	r2, r1, r2
+ 18183 0032 1A61     		str	r2, [r3, #16]
  360:../StdPeripheralDriver/src/stm32f10x_cec.c **** }
- 17443              		.loc 1 360 0
- 17444 0034 07F11407 		add	r7, r7, #20
- 17445 0038 BD46     		mov	sp, r7
- 17446 003a 80BC     		pop	{r7}
- 17447 003c 7047     		bx	lr
- 17448              	.L40:
- 17449 003e 00BF     		.align	2
- 17450              	.L39:
- 17451 0040 00780040 		.word	1073772544
- 17452              		.cfi_endproc
- 17453              	.LFE40:
- 17455              		.section	.text.CEC_GetITStatus,"ax",%progbits
- 17456              		.align	2
- 17457              		.global	CEC_GetITStatus
- 17458              		.thumb
- 17459              		.thumb_func
- 17461              	CEC_GetITStatus:
- 17462              	.LFB41:
+ 18184              		.loc 1 360 0
+ 18185 0034 07F11407 		add	r7, r7, #20
+ 18186 0038 BD46     		mov	sp, r7
+ 18187 003a 80BC     		pop	{r7}
+ 18188 003c 7047     		bx	lr
+ 18189              	.L40:
+ 18190 003e 00BF     		.align	2
+ 18191              	.L39:
+ 18192 0040 00780040 		.word	1073772544
+ 18193              		.cfi_endproc
+ 18194              	.LFE40:
+ 18196              		.section	.text.CEC_GetITStatus,"ax",%progbits
+ 18197              		.align	2
+ 18198              		.global	CEC_GetITStatus
+ 18199              		.thumb
+ 18200              		.thumb_func
+ 18202              	CEC_GetITStatus:
+ 18203              	.LFB41:
  361:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  362:../StdPeripheralDriver/src/stm32f10x_cec.c **** /**
  363:../StdPeripheralDriver/src/stm32f10x_cec.c ****   * @brief  Checks whether the specified CEC interrupt has occurred or not.
@@ -943,98 +943,98 @@
  371:../StdPeripheralDriver/src/stm32f10x_cec.c ****   */
  372:../StdPeripheralDriver/src/stm32f10x_cec.c **** ITStatus CEC_GetITStatus(uint8_t CEC_IT)
  373:../StdPeripheralDriver/src/stm32f10x_cec.c **** {
- 17463              		.loc 1 373 0
- 17464              		.cfi_startproc
- 17465              		@ args = 0, pretend = 0, frame = 16
- 17466              		@ frame_needed = 1, uses_anonymous_args = 0
- 17467              		@ link register save eliminated.
- 17468 0000 80B4     		push	{r7}
- 17469              	.LCFI33:
- 17470              		.cfi_def_cfa_offset 4
- 17471 0002 85B0     		sub	sp, sp, #20
- 17472              	.LCFI34:
- 17473              		.cfi_def_cfa_offset 24
- 17474 0004 00AF     		add	r7, sp, #0
- 17475              		.cfi_offset 7, -4
- 17476              	.LCFI35:
- 17477              		.cfi_def_cfa_register 7
- 17478 0006 0346     		mov	r3, r0
- 17479 0008 FB71     		strb	r3, [r7, #7]
+ 18204              		.loc 1 373 0
+ 18205              		.cfi_startproc
+ 18206              		@ args = 0, pretend = 0, frame = 16
+ 18207              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18208              		@ link register save eliminated.
+ 18209 0000 80B4     		push	{r7}
+ 18210              	.LCFI33:
+ 18211              		.cfi_def_cfa_offset 4
+ 18212 0002 85B0     		sub	sp, sp, #20
+ 18213              	.LCFI34:
+ 18214              		.cfi_def_cfa_offset 24
+ 18215 0004 00AF     		add	r7, sp, #0
+ 18216              		.cfi_offset 7, -4
+ 18217              	.LCFI35:
+ 18218              		.cfi_def_cfa_register 7
+ 18219 0006 0346     		mov	r3, r0
+ 18220 0008 FB71     		strb	r3, [r7, #7]
  374:../StdPeripheralDriver/src/stm32f10x_cec.c ****   ITStatus bitstatus = RESET;
- 17480              		.loc 1 374 0
- 17481 000a 4FF00003 		mov	r3, #0
- 17482 000e FB73     		strb	r3, [r7, #15]
+ 18221              		.loc 1 374 0
+ 18222 000a 4FF00003 		mov	r3, #0
+ 18223 000e FB73     		strb	r3, [r7, #15]
  375:../StdPeripheralDriver/src/stm32f10x_cec.c ****   uint32_t enablestatus = 0;
- 17483              		.loc 1 375 0
- 17484 0010 4FF00003 		mov	r3, #0
- 17485 0014 BB60     		str	r3, [r7, #8]
+ 18224              		.loc 1 375 0
+ 18225 0010 4FF00003 		mov	r3, #0
+ 18226 0014 BB60     		str	r3, [r7, #8]
  376:../StdPeripheralDriver/src/stm32f10x_cec.c ****   
  377:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Check the parameters */
  378:../StdPeripheralDriver/src/stm32f10x_cec.c ****    assert_param(IS_CEC_GET_IT(CEC_IT));
  379:../StdPeripheralDriver/src/stm32f10x_cec.c ****    
  380:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Get the CEC IT enable bit status */
  381:../StdPeripheralDriver/src/stm32f10x_cec.c ****   enablestatus = (CEC->CFGR & (uint8_t)CEC_CFGR_IE) ;
- 17486              		.loc 1 381 0
- 17487 0016 0E4B     		ldr	r3, .L44
- 17488 0018 1B68     		ldr	r3, [r3, #0]
- 17489 001a 03F00203 		and	r3, r3, #2
- 17490 001e BB60     		str	r3, [r7, #8]
+ 18227              		.loc 1 381 0
+ 18228 0016 0E4B     		ldr	r3, .L44
+ 18229 0018 1B68     		ldr	r3, [r3, #0]
+ 18230 001a 03F00203 		and	r3, r3, #2
+ 18231 001e BB60     		str	r3, [r7, #8]
  382:../StdPeripheralDriver/src/stm32f10x_cec.c ****   
  383:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Check the status of the specified CEC interrupt */
  384:../StdPeripheralDriver/src/stm32f10x_cec.c ****   if (((CEC->CSR & CEC_IT) != (uint32_t)RESET) && enablestatus)
- 17491              		.loc 1 384 0
- 17492 0020 0B4B     		ldr	r3, .L44
- 17493 0022 1A69     		ldr	r2, [r3, #16]
- 17494 0024 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 17495 0026 02EA0303 		and	r3, r2, r3
- 17496 002a 002B     		cmp	r3, #0
- 17497 002c 06D0     		beq	.L42
- 17498              		.loc 1 384 0 is_stmt 0 discriminator 1
- 17499 002e BB68     		ldr	r3, [r7, #8]
- 17500 0030 002B     		cmp	r3, #0
- 17501 0032 03D0     		beq	.L42
+ 18232              		.loc 1 384 0
+ 18233 0020 0B4B     		ldr	r3, .L44
+ 18234 0022 1A69     		ldr	r2, [r3, #16]
+ 18235 0024 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 18236 0026 02EA0303 		and	r3, r2, r3
+ 18237 002a 002B     		cmp	r3, #0
+ 18238 002c 06D0     		beq	.L42
+ 18239              		.loc 1 384 0 is_stmt 0 discriminator 1
+ 18240 002e BB68     		ldr	r3, [r7, #8]
+ 18241 0030 002B     		cmp	r3, #0
+ 18242 0032 03D0     		beq	.L42
  385:../StdPeripheralDriver/src/stm32f10x_cec.c ****   {
  386:../StdPeripheralDriver/src/stm32f10x_cec.c ****     /* CEC_IT is set */
  387:../StdPeripheralDriver/src/stm32f10x_cec.c ****     bitstatus = SET;
- 17502              		.loc 1 387 0 is_stmt 1
- 17503 0034 4FF00103 		mov	r3, #1
- 17504 0038 FB73     		strb	r3, [r7, #15]
- 17505 003a 02E0     		b	.L43
- 17506              	.L42:
+ 18243              		.loc 1 387 0 is_stmt 1
+ 18244 0034 4FF00103 		mov	r3, #1
+ 18245 0038 FB73     		strb	r3, [r7, #15]
+ 18246 003a 02E0     		b	.L43
+ 18247              	.L42:
  388:../StdPeripheralDriver/src/stm32f10x_cec.c ****   }
  389:../StdPeripheralDriver/src/stm32f10x_cec.c ****   else
  390:../StdPeripheralDriver/src/stm32f10x_cec.c ****   {
  391:../StdPeripheralDriver/src/stm32f10x_cec.c ****     /* CEC_IT is reset */
  392:../StdPeripheralDriver/src/stm32f10x_cec.c ****     bitstatus = RESET;
- 17507              		.loc 1 392 0
- 17508 003c 4FF00003 		mov	r3, #0
- 17509 0040 FB73     		strb	r3, [r7, #15]
- 17510              	.L43:
+ 18248              		.loc 1 392 0
+ 18249 003c 4FF00003 		mov	r3, #0
+ 18250 0040 FB73     		strb	r3, [r7, #15]
+ 18251              	.L43:
  393:../StdPeripheralDriver/src/stm32f10x_cec.c ****   }
  394:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Return the CEC_IT status */
  395:../StdPeripheralDriver/src/stm32f10x_cec.c ****   return  bitstatus;
- 17511              		.loc 1 395 0
- 17512 0042 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 18252              		.loc 1 395 0
+ 18253 0042 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  396:../StdPeripheralDriver/src/stm32f10x_cec.c **** }
- 17513              		.loc 1 396 0
- 17514 0044 1846     		mov	r0, r3
- 17515 0046 07F11407 		add	r7, r7, #20
- 17516 004a BD46     		mov	sp, r7
- 17517 004c 80BC     		pop	{r7}
- 17518 004e 7047     		bx	lr
- 17519              	.L45:
- 17520              		.align	2
- 17521              	.L44:
- 17522 0050 00780040 		.word	1073772544
- 17523              		.cfi_endproc
- 17524              	.LFE41:
- 17526              		.section	.text.CEC_ClearITPendingBit,"ax",%progbits
- 17527              		.align	2
- 17528              		.global	CEC_ClearITPendingBit
- 17529              		.thumb
- 17530              		.thumb_func
- 17532              	CEC_ClearITPendingBit:
- 17533              	.LFB42:
+ 18254              		.loc 1 396 0
+ 18255 0044 1846     		mov	r0, r3
+ 18256 0046 07F11407 		add	r7, r7, #20
+ 18257 004a BD46     		mov	sp, r7
+ 18258 004c 80BC     		pop	{r7}
+ 18259 004e 7047     		bx	lr
+ 18260              	.L45:
+ 18261              		.align	2
+ 18262              	.L44:
+ 18263 0050 00780040 		.word	1073772544
+ 18264              		.cfi_endproc
+ 18265              	.LFE41:
+ 18267              		.section	.text.CEC_ClearITPendingBit,"ax",%progbits
+ 18268              		.align	2
+ 18269              		.global	CEC_ClearITPendingBit
+ 18270              		.thumb
+ 18271              		.thumb_func
+ 18273              	CEC_ClearITPendingBit:
+ 18274              	.LFB42:
  397:../StdPeripheralDriver/src/stm32f10x_cec.c **** 
  398:../StdPeripheralDriver/src/stm32f10x_cec.c **** /**
  399:../StdPeripheralDriver/src/stm32f10x_cec.c ****   * @brief  Clears the CEC's interrupt pending bits.
@@ -1048,108 +1048,108 @@
  407:../StdPeripheralDriver/src/stm32f10x_cec.c ****   */
  408:../StdPeripheralDriver/src/stm32f10x_cec.c **** void CEC_ClearITPendingBit(uint16_t CEC_IT)
  409:../StdPeripheralDriver/src/stm32f10x_cec.c **** {
- 17534              		.loc 1 409 0
- 17535              		.cfi_startproc
- 17536              		@ args = 0, pretend = 0, frame = 16
- 17537              		@ frame_needed = 1, uses_anonymous_args = 0
- 17538              		@ link register save eliminated.
- 17539 0000 80B4     		push	{r7}
- 17540              	.LCFI36:
- 17541              		.cfi_def_cfa_offset 4
- 17542 0002 85B0     		sub	sp, sp, #20
- 17543              	.LCFI37:
- 17544              		.cfi_def_cfa_offset 24
- 17545 0004 00AF     		add	r7, sp, #0
- 17546              		.cfi_offset 7, -4
- 17547              	.LCFI38:
- 17548              		.cfi_def_cfa_register 7
- 17549 0006 0346     		mov	r3, r0
- 17550 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 18275              		.loc 1 409 0
+ 18276              		.cfi_startproc
+ 18277              		@ args = 0, pretend = 0, frame = 16
+ 18278              		@ frame_needed = 1, uses_anonymous_args = 0
+ 18279              		@ link register save eliminated.
+ 18280 0000 80B4     		push	{r7}
+ 18281              	.LCFI36:
+ 18282              		.cfi_def_cfa_offset 4
+ 18283 0002 85B0     		sub	sp, sp, #20
+ 18284              	.LCFI37:
+ 18285              		.cfi_def_cfa_offset 24
+ 18286 0004 00AF     		add	r7, sp, #0
+ 18287              		.cfi_offset 7, -4
+ 18288              	.LCFI38:
+ 18289              		.cfi_def_cfa_register 7
+ 18290 0006 0346     		mov	r3, r0
+ 18291 0008 FB80     		strh	r3, [r7, #6]	@ movhi
  410:../StdPeripheralDriver/src/stm32f10x_cec.c ****   uint32_t tmp = 0x0;
- 17551              		.loc 1 410 0
- 17552 000a 4FF00003 		mov	r3, #0
- 17553 000e FB60     		str	r3, [r7, #12]
+ 18292              		.loc 1 410 0
+ 18293 000a 4FF00003 		mov	r3, #0
+ 18294 000e FB60     		str	r3, [r7, #12]
  411:../StdPeripheralDriver/src/stm32f10x_cec.c ****   
  412:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Check the parameters */
  413:../StdPeripheralDriver/src/stm32f10x_cec.c ****   assert_param(IS_CEC_GET_IT(CEC_IT));
  414:../StdPeripheralDriver/src/stm32f10x_cec.c ****   
  415:../StdPeripheralDriver/src/stm32f10x_cec.c ****   tmp = CEC->CSR & 0x2;
- 17554              		.loc 1 415 0
- 17555 0010 0B4B     		ldr	r3, .L47
- 17556 0012 1B69     		ldr	r3, [r3, #16]
- 17557 0014 03F00203 		and	r3, r3, #2
- 17558 0018 FB60     		str	r3, [r7, #12]
+ 18295              		.loc 1 415 0
+ 18296 0010 0B4B     		ldr	r3, .L47
+ 18297 0012 1B69     		ldr	r3, [r3, #16]
+ 18298 0014 03F00203 		and	r3, r3, #2
+ 18299 0018 FB60     		str	r3, [r7, #12]
  416:../StdPeripheralDriver/src/stm32f10x_cec.c ****   
  417:../StdPeripheralDriver/src/stm32f10x_cec.c ****   /* Clear the selected CEC interrupt pending bits */
  418:../StdPeripheralDriver/src/stm32f10x_cec.c ****   CEC->CSR &= (uint32_t)(((~(uint32_t)CEC_IT) & 0xFFFFFFFC) | tmp);
- 17559              		.loc 1 418 0
- 17560 001a 094B     		ldr	r3, .L47
- 17561 001c 084A     		ldr	r2, .L47
- 17562 001e 1169     		ldr	r1, [r2, #16]
- 17563 0020 FA88     		ldrh	r2, [r7, #6]
- 17564 0022 6FEA0202 		mvn	r2, r2
- 17565 0026 22F00300 		bic	r0, r2, #3
- 17566 002a FA68     		ldr	r2, [r7, #12]
- 17567 002c 40EA0202 		orr	r2, r0, r2
- 17568 0030 01EA0202 		and	r2, r1, r2
- 17569 0034 1A61     		str	r2, [r3, #16]
+ 18300              		.loc 1 418 0
+ 18301 001a 094B     		ldr	r3, .L47
+ 18302 001c 084A     		ldr	r2, .L47
+ 18303 001e 1169     		ldr	r1, [r2, #16]
+ 18304 0020 FA88     		ldrh	r2, [r7, #6]
+ 18305 0022 6FEA0202 		mvn	r2, r2
+ 18306 0026 22F00300 		bic	r0, r2, #3
+ 18307 002a FA68     		ldr	r2, [r7, #12]
+ 18308 002c 40EA0202 		orr	r2, r0, r2
+ 18309 0030 01EA0202 		and	r2, r1, r2
+ 18310 0034 1A61     		str	r2, [r3, #16]
  419:../StdPeripheralDriver/src/stm32f10x_cec.c **** }
- 17570              		.loc 1 419 0
- 17571 0036 07F11407 		add	r7, r7, #20
- 17572 003a BD46     		mov	sp, r7
- 17573 003c 80BC     		pop	{r7}
- 17574 003e 7047     		bx	lr
- 17575              	.L48:
- 17576              		.align	2
- 17577              	.L47:
- 17578 0040 00780040 		.word	1073772544
- 17579              		.cfi_endproc
- 17580              	.LFE42:
- 17582              		.text
- 17583              	.Letext0:
+ 18311              		.loc 1 419 0
+ 18312 0036 07F11407 		add	r7, r7, #20
+ 18313 003a BD46     		mov	sp, r7
+ 18314 003c 80BC     		pop	{r7}
+ 18315 003e 7047     		bx	lr
+ 18316              	.L48:
+ 18317              		.align	2
+ 18318              	.L47:
+ 18319 0040 00780040 		.word	1073772544
+ 18320              		.cfi_endproc
+ 18321              	.LFE42:
+ 18323              		.text
+ 18324              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f10x_cec.c
-     /tmp/cczatdHj.s:16881  .text.CEC_DeInit:00000000 $t
-     /tmp/cczatdHj.s:16886  .text.CEC_DeInit:00000000 CEC_DeInit
-     /tmp/cczatdHj.s:16914  .text.CEC_Init:00000000 $t
-     /tmp/cczatdHj.s:16919  .text.CEC_Init:00000000 CEC_Init
-     /tmp/cczatdHj.s:16970  .text.CEC_Init:00000044 $d
-     /tmp/cczatdHj.s:16975  .text.CEC_Cmd:00000000 $t
-     /tmp/cczatdHj.s:16980  .text.CEC_Cmd:00000000 CEC_Cmd
-     /tmp/cczatdHj.s:17026  .text.CEC_Cmd:00000030 $d
-     /tmp/cczatdHj.s:17032  .text.CEC_ITConfig:00000000 $t
-     /tmp/cczatdHj.s:17037  .text.CEC_ITConfig:00000000 CEC_ITConfig
-     /tmp/cczatdHj.s:17068  .text.CEC_ITConfig:0000001c $d
-     /tmp/cczatdHj.s:17073  .text.CEC_OwnAddressConfig:00000000 $t
-     /tmp/cczatdHj.s:17078  .text.CEC_OwnAddressConfig:00000000 CEC_OwnAddressConfig
-     /tmp/cczatdHj.s:17109  .text.CEC_OwnAddressConfig:0000001c $d
-     /tmp/cczatdHj.s:17114  .text.CEC_SetPrescaler:00000000 $t
-     /tmp/cczatdHj.s:17119  .text.CEC_SetPrescaler:00000000 CEC_SetPrescaler
-     /tmp/cczatdHj.s:17150  .text.CEC_SetPrescaler:0000001c $d
-     /tmp/cczatdHj.s:17155  .text.CEC_SendDataByte:00000000 $t
-     /tmp/cczatdHj.s:17160  .text.CEC_SendDataByte:00000000 CEC_SendDataByte
-     /tmp/cczatdHj.s:17191  .text.CEC_SendDataByte:0000001c $d
-     /tmp/cczatdHj.s:17196  .text.CEC_ReceiveDataByte:00000000 $t
-     /tmp/cczatdHj.s:17201  .text.CEC_ReceiveDataByte:00000000 CEC_ReceiveDataByte
-     /tmp/cczatdHj.s:17227  .text.CEC_ReceiveDataByte:00000014 $d
-     /tmp/cczatdHj.s:17232  .text.CEC_StartOfMessage:00000000 $t
-     /tmp/cczatdHj.s:17237  .text.CEC_StartOfMessage:00000000 CEC_StartOfMessage
-     /tmp/cczatdHj.s:17262  .text.CEC_StartOfMessage:00000014 $d
-     /tmp/cczatdHj.s:17267  .text.CEC_EndOfMessageCmd:00000000 $t
-     /tmp/cczatdHj.s:17272  .text.CEC_EndOfMessageCmd:00000000 CEC_EndOfMessageCmd
-     /tmp/cczatdHj.s:17303  .text.CEC_EndOfMessageCmd:0000001c $d
-     /tmp/cczatdHj.s:17308  .text.CEC_GetFlagStatus:00000000 $t
-     /tmp/cczatdHj.s:17313  .text.CEC_GetFlagStatus:00000000 CEC_GetFlagStatus
-     /tmp/cczatdHj.s:17396  .text.CEC_GetFlagStatus:00000078 $d
-     /tmp/cczatdHj.s:17401  .text.CEC_ClearFlag:00000000 $t
-     /tmp/cczatdHj.s:17406  .text.CEC_ClearFlag:00000000 CEC_ClearFlag
-     /tmp/cczatdHj.s:17451  .text.CEC_ClearFlag:00000040 $d
-     /tmp/cczatdHj.s:17456  .text.CEC_GetITStatus:00000000 $t
-     /tmp/cczatdHj.s:17461  .text.CEC_GetITStatus:00000000 CEC_GetITStatus
-     /tmp/cczatdHj.s:17522  .text.CEC_GetITStatus:00000050 $d
-     /tmp/cczatdHj.s:17527  .text.CEC_ClearITPendingBit:00000000 $t
-     /tmp/cczatdHj.s:17532  .text.CEC_ClearITPendingBit:00000000 CEC_ClearITPendingBit
-     /tmp/cczatdHj.s:17578  .text.CEC_ClearITPendingBit:00000040 $d
+     /tmp/cc5vO6nf.s:17622  .text.CEC_DeInit:00000000 $t
+     /tmp/cc5vO6nf.s:17627  .text.CEC_DeInit:00000000 CEC_DeInit
+     /tmp/cc5vO6nf.s:17655  .text.CEC_Init:00000000 $t
+     /tmp/cc5vO6nf.s:17660  .text.CEC_Init:00000000 CEC_Init
+     /tmp/cc5vO6nf.s:17711  .text.CEC_Init:00000044 $d
+     /tmp/cc5vO6nf.s:17716  .text.CEC_Cmd:00000000 $t
+     /tmp/cc5vO6nf.s:17721  .text.CEC_Cmd:00000000 CEC_Cmd
+     /tmp/cc5vO6nf.s:17767  .text.CEC_Cmd:00000030 $d
+     /tmp/cc5vO6nf.s:17773  .text.CEC_ITConfig:00000000 $t
+     /tmp/cc5vO6nf.s:17778  .text.CEC_ITConfig:00000000 CEC_ITConfig
+     /tmp/cc5vO6nf.s:17809  .text.CEC_ITConfig:0000001c $d
+     /tmp/cc5vO6nf.s:17814  .text.CEC_OwnAddressConfig:00000000 $t
+     /tmp/cc5vO6nf.s:17819  .text.CEC_OwnAddressConfig:00000000 CEC_OwnAddressConfig
+     /tmp/cc5vO6nf.s:17850  .text.CEC_OwnAddressConfig:0000001c $d
+     /tmp/cc5vO6nf.s:17855  .text.CEC_SetPrescaler:00000000 $t
+     /tmp/cc5vO6nf.s:17860  .text.CEC_SetPrescaler:00000000 CEC_SetPrescaler
+     /tmp/cc5vO6nf.s:17891  .text.CEC_SetPrescaler:0000001c $d
+     /tmp/cc5vO6nf.s:17896  .text.CEC_SendDataByte:00000000 $t
+     /tmp/cc5vO6nf.s:17901  .text.CEC_SendDataByte:00000000 CEC_SendDataByte
+     /tmp/cc5vO6nf.s:17932  .text.CEC_SendDataByte:0000001c $d
+     /tmp/cc5vO6nf.s:17937  .text.CEC_ReceiveDataByte:00000000 $t
+     /tmp/cc5vO6nf.s:17942  .text.CEC_ReceiveDataByte:00000000 CEC_ReceiveDataByte
+     /tmp/cc5vO6nf.s:17968  .text.CEC_ReceiveDataByte:00000014 $d
+     /tmp/cc5vO6nf.s:17973  .text.CEC_StartOfMessage:00000000 $t
+     /tmp/cc5vO6nf.s:17978  .text.CEC_StartOfMessage:00000000 CEC_StartOfMessage
+     /tmp/cc5vO6nf.s:18003  .text.CEC_StartOfMessage:00000014 $d
+     /tmp/cc5vO6nf.s:18008  .text.CEC_EndOfMessageCmd:00000000 $t
+     /tmp/cc5vO6nf.s:18013  .text.CEC_EndOfMessageCmd:00000000 CEC_EndOfMessageCmd
+     /tmp/cc5vO6nf.s:18044  .text.CEC_EndOfMessageCmd:0000001c $d
+     /tmp/cc5vO6nf.s:18049  .text.CEC_GetFlagStatus:00000000 $t
+     /tmp/cc5vO6nf.s:18054  .text.CEC_GetFlagStatus:00000000 CEC_GetFlagStatus
+     /tmp/cc5vO6nf.s:18137  .text.CEC_GetFlagStatus:00000078 $d
+     /tmp/cc5vO6nf.s:18142  .text.CEC_ClearFlag:00000000 $t
+     /tmp/cc5vO6nf.s:18147  .text.CEC_ClearFlag:00000000 CEC_ClearFlag
+     /tmp/cc5vO6nf.s:18192  .text.CEC_ClearFlag:00000040 $d
+     /tmp/cc5vO6nf.s:18197  .text.CEC_GetITStatus:00000000 $t
+     /tmp/cc5vO6nf.s:18202  .text.CEC_GetITStatus:00000000 CEC_GetITStatus
+     /tmp/cc5vO6nf.s:18263  .text.CEC_GetITStatus:00000050 $d
+     /tmp/cc5vO6nf.s:18268  .text.CEC_ClearITPendingBit:00000000 $t
+     /tmp/cc5vO6nf.s:18273  .text.CEC_ClearITPendingBit:00000000 CEC_ClearITPendingBit
+     /tmp/cc5vO6nf.s:18319  .text.CEC_ClearITPendingBit:00000040 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

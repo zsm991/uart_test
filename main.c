@@ -9,8 +9,11 @@
 
 #include "stm32f10x_conf.h"
 #include "system_stm32f10x.h"
-//#include "init.h"
 #include "vldiscovery.h"
+#include "init.h"
+#include "stm32f10x_it.h"
+
+volatile uint32_t syscounter;
 
 /**
   * @brief   Main program
@@ -18,50 +21,38 @@
   * @retval None
   */
 
-void GPIO_init(void)
+
+void TimingDelay_Decrement(void)
 {
-GPIO_InitTypeDef GPIO_InitStructure;
-
-GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
-GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-
-GPIO_Init(GPIOC, &GPIO_InitStructure);
-};
-
-
-void delay (void)
-{
-	int i, j;
-
-for (i=1; i< 500000; i++)
-{
-//	for (j=1; j< 10; j++)
-//	{
-//
-//	}
-};
+	  if (syscounter != 0x00)
+	  {
+	    syscounter--;
+	  }
 }
+
+
+void delay (uint32_t TimeToDelay)
+{
+	  syscounter = TimeToDelay;
+
+	  while(syscounter != 0);
+
+}
+
 int main(void)
 {
 	SystemInit();
-//	RCC_init();
-	  /* Enable GPIO clock */
-	RCC_APB2PeriphClockCmd(USARTx_GPIO_CLK | RCC_APB2Periph_AFIO, ENABLE);
-
-	  /* Enable USARTx Clock */
-	RCC_APB2PeriphClockCmd(USARTx_CLK, ENABLE);
-
-	// Enable GPIOC Clock
-	RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOC, ENABLE);
-
+	RCC_init();
 	GPIO_init();
+	SysTick_Config(SystemCoreClock / 1000);
+	syscounter=0;
+
 	while(1)
 
 	{
-		delay();
+		delay(500);
 		GPIO_SetBits(GPIOC,GPIO_Pin_9);
-		delay();
+		delay(500);
 		GPIO_ResetBits(GPIOC,GPIO_Pin_9);
 
 	};
